@@ -20,6 +20,9 @@ GAME24_CSV_URL = (
     "https://huggingface.co/datasets/test-time-compute/game-of-24/"
     "resolve/main/game24.csv"
 )
+GAME24_LOCAL_CSV = os.path.join(
+    os.path.dirname(__file__), "..", "dataset_cache", "game24_official.csv"
+)
 
 
 def _dataset_split(ds) -> Dataset:
@@ -169,6 +172,13 @@ def _exclude_indices(dataset: Dataset, start: int, end: int) -> Dataset:
 
 
 def _load_official_game24_dataset(config: DataConfig) -> Optional[Dataset]:
+    if os.path.exists(GAME24_LOCAL_CSV):
+        print(f"Loading cached official game24.csv: {GAME24_LOCAL_CSV}")
+        ood_ds = _dataset_split(load_dataset("csv", data_files=GAME24_LOCAL_CSV))
+        official = _normalize_dataset(ood_ds, "test-time-compute/game-of-24", default_target=24)
+        print(f"  Official game-of-24 examples: {len(official)}")
+        return official
+
     try:
         print(f"Loading official OOD dataset: {config.test_dataset}...")
         ood_ds = _dataset_split(load_dataset(config.test_dataset))

@@ -1,0 +1,6302 @@
+[
+  {
+    "loss": -0.08868408203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 1,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      5,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10137939453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (13-((2-3)*7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((2-3)*7))</answer>",
+      "<think>Use the expression ((2+3)+(7+13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2+3)+(7+13))</answer>"
+    ],
+    "step": 2,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      7,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09222412109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((6/6)+1)*5). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((6/6)+1)*5)</answer>",
+      "<think>Use the expression ((6-(1-5))*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6-(1-5))*6)</answer>"
+    ],
+    "step": 3,
+    "epoch": 1,
+    "numbers": [
+      1,
+      5,
+      6,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.00164794921875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (2*((1*2)+12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2*((1*2)+12))</answer>"
+    ],
+    "step": 4,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      2,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0048675537109375,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (7+2-8)*8. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7+2-8)*8</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 5,
+    "epoch": 1,
+    "numbers": [
+      2,
+      7,
+      8,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08941650390625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 6,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      11,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.07305908203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (((1-7)+12)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1-7)+12)*12)</answer>"
+    ],
+    "step": 7,
+    "epoch": 1,
+    "numbers": [
+      1,
+      7,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0797119140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((5-13)*(8-9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((5-13)*(8-9))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 8,
+    "epoch": 1,
+    "numbers": [
+      5,
+      8,
+      9,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0020599365234375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((10+12)-(13/13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10+12)-(13/13))</answer>",
+      "<think>Use the expression (13-((10-12)-13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((10-12)-13))</answer>"
+    ],
+    "step": 9,
+    "epoch": 1,
+    "numbers": [
+      10,
+      12,
+      13,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10540771484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12/((6-5)/12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12/((6-5)/12))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 10,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.083251953125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((11-10)*(5+7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((11-10)*(5+7))</answer>",
+      "<think>Use the expression (11+((7/5)+10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11+((7/5)+10))</answer>"
+    ],
+    "step": 11,
+    "epoch": 1,
+    "numbers": [
+      5,
+      7,
+      10,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.01287841796875,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((3/3)+4)*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((3/3)+4)*8)</answer>",
+      "<think>Use the expression ((3*(3+4))+8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*(3+4))+8)</answer>"
+    ],
+    "step": 12,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      4,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12646484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (11-5)*10+6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-5)*10+6</answer>"
+    ],
+    "step": 13,
+    "epoch": 1,
+    "numbers": [
+      4,
+      6,
+      10,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1094970703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (5+1)*8-6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5+1)*8-6</answer>",
+      "<think>Use the expression ((6-(1+5))*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6-(1+5))*8)</answer>"
+    ],
+    "step": 14,
+    "epoch": 1,
+    "numbers": [
+      1,
+      5,
+      6,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11846923828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4*((6-9)+10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*((6-9)+10))</answer>",
+      "<think>Use the expression (((4+6)-10)*9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((4+6)-10)*9)</answer>"
+    ],
+    "step": 15,
+    "epoch": 1,
+    "numbers": [
+      4,
+      6,
+      9,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09100341796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((4-(1-4))*5). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4-(1-4))*5)</answer>"
+    ],
+    "step": 16,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      4,
+      5
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0172271728515625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8+11)/(6/8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((8+11)/(6/8))</answer>",
+      "<think>Use the expression (11+8-8)*6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11+8-8)*6</answer>"
+    ],
+    "step": 17,
+    "epoch": 1,
+    "numbers": [
+      6,
+      8,
+      8,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.008148193359375,
+    "avg_reward": 0.21625000000000005,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.17499999999999993,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (7+5)*2*1. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7+5)*2*1</answer>",
+      "<think>Use the expression (7+1)*(5-2). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7+1)*(5-2)</answer>"
+    ],
+    "step": 18,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      5,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.00018310546875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 19,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      4,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0850830078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12-((4-10)*4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-((4-10)*4))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 20,
+    "epoch": 1,
+    "numbers": [
+      4,
+      4,
+      10,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0043487548828125,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((3*(4+7))-9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*(4+7))-9)</answer>"
+    ],
+    "step": 21,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      7,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12298583984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2*(7+8))-3). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*(7+8))-3)</answer>",
+      "<think>Use the expression (((2+3)+7)+8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((2+3)+7)+8)</answer>"
+    ],
+    "step": 22,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      7,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0948486328125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((1-2)+(5*12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1-2)+(5*12))</answer>",
+      "<think>Use the expression ((5-(1-2))*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((5-(1-2))*12)</answer>"
+    ],
+    "step": 23,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      5,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.098388671875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2*(1+6))-9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*(1+6))-9)</answer>",
+      "<think>Use the expression (((1+2)+6)+9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1+2)+6)+9)</answer>"
+    ],
+    "step": 24,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      6,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0183258056640625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 25,
+    "epoch": 1,
+    "numbers": [
+      4,
+      7,
+      7,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11309814453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (13+3)*6/5. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13+3)*6/5</answer>",
+      "<think>Use the expression ((3-(13/5))*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3-(13/5))*6)</answer>"
+    ],
+    "step": 26,
+    "epoch": 1,
+    "numbers": [
+      3,
+      5,
+      6,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09613037109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10-((7-11)*10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10-((7-11)*10))</answer>",
+      "<think>Use the expression (7-11/10)*10. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7-11/10)*10</answer>"
+    ],
+    "step": 27,
+    "epoch": 1,
+    "numbers": [
+      7,
+      10,
+      10,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.100341796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3*5)-(9-12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*5)-(9-12))</answer>",
+      "<think>Use the expression (5*3+9-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5*3+9-12)</answer>"
+    ],
+    "step": 28,
+    "epoch": 1,
+    "numbers": [
+      3,
+      5,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0019683837890625,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (9+9)*12/9. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9+9)*12/9</answer>",
+      "<think>Use the expression ((9+9)/(12-9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((9+9)/(12-9))</answer>"
+    ],
+    "step": 29,
+    "epoch": 1,
+    "numbers": [
+      9,
+      9,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10357666015625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3*(7+9))-11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*(7+9))-11)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 30,
+    "epoch": 1,
+    "numbers": [
+      3,
+      7,
+      9,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0043487548828125,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((10-(2+4))*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10-(2+4))*12)</answer>",
+      "<think>Use the expression (10+2-12)*4. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+2-12)*4</answer>"
+    ],
+    "step": 31,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      10,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0855712890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11-((2-3)*11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((2-3)*11))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 32,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      11,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10943603515625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3-(6/4))*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3-(6/4))*6)</answer>",
+      "<think>Use the expression ((6-4)*(3*6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6-4)*(3*6))</answer>"
+    ],
+    "step": 33,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      6,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10418701171875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (13-5)*8/4. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-5)*8/4</answer>"
+    ],
+    "step": 34,
+    "epoch": 1,
+    "numbers": [
+      4,
+      5,
+      8,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10296630859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((5+6)-6)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((5+6)-6)*12)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 35,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      6,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.00273895263671875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((1+1)*12-13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1+1)*12-13)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 36,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.001556396484375,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (4*((3-4)+5)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*((3-4)+5))</answer>"
+    ],
+    "step": 37,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      4,
+      5
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.078826904296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 38,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      10,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 39,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      7,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.07568359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 40,
+    "epoch": 1,
+    "numbers": [
+      2,
+      7,
+      7,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.004608154296875,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (9-6)*6+6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9-6)*6+6</answer>",
+      "<think>Use the expression ((9-6)*(6+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((9-6)*(6+6))</answer>"
+    ],
+    "step": 41,
+    "epoch": 1,
+    "numbers": [
+      6,
+      6,
+      6,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11968994140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4-(1-3))*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4-(1-3))*6)</answer>",
+      "<think>Use the expression ((4-((1-3)*6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4-((1-3)*6))</answer>"
+    ],
+    "step": 42,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      4,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0031890869140625,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (11-((4-7)-10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((4-7)-10))</answer>"
+    ],
+    "step": 43,
+    "epoch": 1,
+    "numbers": [
+      4,
+      7,
+      10,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0038909912109375,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 44,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      4,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.116943359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((1+2)*3)+13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1+2)*3)+13)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 45,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      3,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.01528167724609375,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10+((4/1)+10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+((4/1)+10))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 46,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      10,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.01458740234375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((12-11)*(11+11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-11)*(11+11))</answer>",
+      "<think>Use the expression ((12-11)*(11+11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-11)*(11+11))</answer>"
+    ],
+    "step": 47,
+    "epoch": 1,
+    "numbers": [
+      11,
+      11,
+      11,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0006103515625,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3+1)*7-4. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3+1)*7-4</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 48,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      4,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08489990234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (2*(9-(11/11))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2*(9-(11/11)))</answer>",
+      "<think>Use the expression (((11-2)*11)-9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((11-2)*11)-9)</answer>"
+    ],
+    "step": 49,
+    "epoch": 1,
+    "numbers": [
+      2,
+      9,
+      11,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.078155517578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((1+7)-10)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1+7)-10)*12)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 50,
+    "epoch": 1,
+    "numbers": [
+      1,
+      7,
+      10,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10498046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10-3-1)*6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10-3-1)*6</answer>",
+      "<think>Use the expression (10-1)*6/3. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10-1)*6/3</answer>"
+    ],
+    "step": 51,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      6,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0916748046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((1+4)-5)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1+4)-5)*12)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 52,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      5,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1195068359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (5+3)*(2-2/2). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5+3)*(2-2/2)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 53,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      3,
+      5
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10845947265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3*((3-3)+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*((3-3)+6))</answer>",
+      "<think>Use the expression (3*(6-(3/3))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*(6-(3/3)))</answer>"
+    ],
+    "step": 54,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      3,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.109527587890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((7+10)-12)*10). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((7+10)-12)*10)</answer>",
+      "<think>Use the expression (12/((7-10)/10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12/((7-10)/10))</answer>"
+    ],
+    "step": 55,
+    "epoch": 1,
+    "numbers": [
+      7,
+      10,
+      10,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.137451171875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3*((3-7)+7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*((3-7)+7))</answer>",
+      "<think>Use the expression ((7+7)-(3-3)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((7+7)-(3-3))</answer>"
+    ],
+    "step": 56,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      7,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12158203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2*3)+(2*7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*3)+(2*7))</answer>",
+      "<think>Use the expression ((7-2)*2+3). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((7-2)*2+3)</answer>"
+    ],
+    "step": 57,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      3,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0088653564453125,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (4*(7-(7/7))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(7-(7/7)))</answer>"
+    ],
+    "step": 58,
+    "epoch": 1,
+    "numbers": [
+      4,
+      7,
+      7,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.094970703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (9-7)*4+4. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9-7)*4+4</answer>",
+      "<think>Use the expression (7+4)*4-9. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7+4)*4-9</answer>"
+    ],
+    "step": 59,
+    "epoch": 1,
+    "numbers": [
+      4,
+      4,
+      7,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1033935546875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4*(11-(3/3))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(11-(3/3)))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 60,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      4,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12640380859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((4*(1+6))-6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4*(1+6))-6)</answer>"
+    ],
+    "step": 61,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      6,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.07025146484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (5*5-9)*5. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5*5-9)*5</answer>"
+    ],
+    "step": 62,
+    "epoch": 1,
+    "numbers": [
+      5,
+      5,
+      5,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.057098388671875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((12-(1+11))*13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-(1+11))*13)</answer>"
+    ],
+    "step": 63,
+    "epoch": 1,
+    "numbers": [
+      1,
+      11,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0928955078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (4*((1+8)+11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*((1+8)+11))</answer>"
+    ],
+    "step": 64,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      8,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1104736328125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (5+1)*11/3. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5+1)*11/3</answer>"
+    ],
+    "step": 65,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      5,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08404541015625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (13+5)*2-5. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13+5)*2-5</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 66,
+    "epoch": 1,
+    "numbers": [
+      2,
+      5,
+      5,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08685302734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((6-12)+(3*8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6-12)+(3*8))</answer>"
+    ],
+    "step": 67,
+    "epoch": 1,
+    "numbers": [
+      3,
+      6,
+      8,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09033203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (4+((1+4)*12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4+((1+4)*12))</answer>"
+    ],
+    "step": 68,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      4,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.095458984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 69,
+    "epoch": 1,
+    "numbers": [
+      5,
+      7,
+      9,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0032501220703125,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (7+7)*11/1. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7+7)*11/1</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 70,
+    "epoch": 1,
+    "numbers": [
+      1,
+      7,
+      7,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08319091796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((7-11)+(5*9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((7-11)+(5*9))</answer>"
+    ],
+    "step": 71,
+    "epoch": 1,
+    "numbers": [
+      5,
+      7,
+      9,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.085784912109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10+6-12)*5. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+6-12)*5</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 72,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      10,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11370849609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (8*6-6)/5. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8*6-6)/5</answer>",
+      "<think>Use the expression (5*6-8)*6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5*6-8)*6</answer>"
+    ],
+    "step": 73,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      6,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.072357177734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (5+((1*1)+5)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5+((1*1)+5))</answer>"
+    ],
+    "step": 74,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      5,
+      5
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.068878173828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 75,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      3,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0775146484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (10-2)*(12-11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10-2)*(12-11)</answer>"
+    ],
+    "step": 76,
+    "epoch": 1,
+    "numbers": [
+      2,
+      10,
+      11,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0137939453125,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (6/((6-1)/3)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6/((6-1)/3))</answer>",
+      "<think>Use the expression ((1-6)+(3*6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1-6)+(3*6))</answer>"
+    ],
+    "step": 77,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      6,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.016510009765625,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3-(8/10))*9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3-(8/10))*9)</answer>",
+      "<think>Use the expression (8*3-10)*9. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8*3-10)*9</answer>"
+    ],
+    "step": 78,
+    "epoch": 1,
+    "numbers": [
+      3,
+      8,
+      9,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.003448486328125,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (11+((2+5)+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11+((2+5)+6))</answer>"
+    ],
+    "step": 79,
+    "epoch": 1,
+    "numbers": [
+      2,
+      5,
+      6,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10595703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (8+5)*8/8. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8+5)*8/8</answer>",
+      "<think>Use the expression ((8-(5-8))*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((8-(5-8))*8)</answer>"
+    ],
+    "step": 80,
+    "epoch": 1,
+    "numbers": [
+      5,
+      8,
+      8,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.074951171875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (13-((3-9)-13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((3-9)-13))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 81,
+    "epoch": 1,
+    "numbers": [
+      3,
+      9,
+      13,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0828857421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 82,
+    "epoch": 1,
+    "numbers": [
+      3,
+      7,
+      13,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.13909912109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (6+2)*5-12. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6+2)*5-12</answer>",
+      "<think>Use the expression (5+2)*12-6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5+2)*12-6</answer>"
+    ],
+    "step": 83,
+    "epoch": 1,
+    "numbers": [
+      2,
+      5,
+      6,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0643310546875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (3*(12-(1+1))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*(12-(1+1)))</answer>"
+    ],
+    "step": 84,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      3,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.080291748046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12-12/6)*10. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-12/6)*10</answer>",
+      "<think>Use the expression ((10-12)+(6*12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10-12)+(6*12))</answer>"
+    ],
+    "step": 85,
+    "epoch": 1,
+    "numbers": [
+      6,
+      10,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09674072265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (2*(3-(2-3))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2*(3-(2-3)))</answer>",
+      "<think>Use the expression (3*((2/2)+3)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*((2/2)+3))</answer>"
+    ],
+    "step": 86,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      3,
+      3
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (10-((1-3)-5)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10-((1-3)-5))</answer>"
+    ],
+    "step": 87,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.101806640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (12-((2-4)-9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-((2-4)-9))</answer>"
+    ],
+    "step": 88,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.00347900390625,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4+((4/4)+9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4+((4/4)+9))</answer>",
+      "<think>Use the expression (4*((4-4)+9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*((4-4)+9))</answer>"
+    ],
+    "step": 89,
+    "epoch": 1,
+    "numbers": [
+      4,
+      4,
+      4,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0106964111328125,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12-12/3)*2. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-12/3)*2</answer>",
+      "<think>Use the expression ((2-(12/12))*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2-(12/12))*12)</answer>"
+    ],
+    "step": 90,
+    "epoch": 1,
+    "numbers": [
+      2,
+      12,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1143798828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (((1-2)+7)*9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1-2)+7)*9)</answer>"
+    ],
+    "step": 91,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      7,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0040740966796875,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (3*((3*7)-3)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*((3*7)-3))</answer>"
+    ],
+    "step": 92,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      3,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.009307861328125,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (8+((5-3)*9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8+((5-3)*9))</answer>",
+      "<think>Use the expression ((3-(8/5))*9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3-(8/5))*9)</answer>"
+    ],
+    "step": 93,
+    "epoch": 1,
+    "numbers": [
+      3,
+      5,
+      8,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.078399658203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((10*12)-(10*12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10*12)-(10*12))</answer>",
+      "<think>Use the expression (12-((12/10)-10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-((12/10)-10))</answer>"
+    ],
+    "step": 94,
+    "epoch": 1,
+    "numbers": [
+      10,
+      10,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1134033203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 95,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      7,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.100341796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2+2)*(12-2)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2+2)*(12-2))</answer>",
+      "<think>Use the expression ((2*(2+2))+12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*(2+2))+12)</answer>"
+    ],
+    "step": 96,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      2,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0062408447265625,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((13-(3+6))*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((13-(3+6))*6)</answer>",
+      "<think>Use the expression (3*((6/6)+13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*((6/6)+13))</answer>"
+    ],
+    "step": 97,
+    "epoch": 1,
+    "numbers": [
+      3,
+      6,
+      6,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0044403076171875,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((10-(2*8))*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10-(2*8))*8)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 98,
+    "epoch": 1,
+    "numbers": [
+      2,
+      8,
+      8,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10791015625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((7-2)*12)-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((7-2)*12)-12)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 99,
+    "epoch": 1,
+    "numbers": [
+      2,
+      7,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0850830078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((10-(6-8))*11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10-(6-8))*11)</answer>",
+      "<think>Use the expression (((6+8)-10)*11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((6+8)-10)*11)</answer>"
+    ],
+    "step": 100,
+    "epoch": 1,
+    "numbers": [
+      6,
+      8,
+      10,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.07879638671875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4-12)+(1*12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4-12)+(1*12))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 101,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12347412109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 102,
+    "epoch": 1,
+    "numbers": [
+      3,
+      6,
+      8,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.13494873046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12-((3/3)+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-((3/3)+6))</answer>",
+      "<think>Use the expression (12/(3-(3-6))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12/(3-(3-6)))</answer>"
+    ],
+    "step": 103,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      6,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0052947998046875,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 104,
+    "epoch": 1,
+    "numbers": [
+      5,
+      9,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0928955078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (9+8-11)*11. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9+8-11)*11</answer>"
+    ],
+    "step": 105,
+    "epoch": 1,
+    "numbers": [
+      8,
+      9,
+      11,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10711669921875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (2+1)*13-10. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2+1)*13-10</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 106,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      10,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.083282470703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2-1)*(2*10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2-1)*(2*10))</answer>",
+      "<think>Use the expression (2*(10-(1-2))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2*(10-(1-2)))</answer>"
+    ],
+    "step": 107,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      2,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12042236328125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((6-12)+(6*9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6-12)+(6*9))</answer>",
+      "<think>Use the expression ((9-12)+(6*6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((9-12)+(6*6))</answer>"
+    ],
+    "step": 108,
+    "epoch": 1,
+    "numbers": [
+      6,
+      6,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.130615234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (5*((4-5)+9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5*((4-5)+9))</answer>",
+      "<think>Use the expression (4*(9-(1/5))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(9-(1/5)))</answer>"
+    ],
+    "step": 109,
+    "epoch": 1,
+    "numbers": [
+      4,
+      5,
+      5,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12371826171875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3*2+10)*5. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*2+10)*5</answer>",
+      "<think>Use the expression ((3*(2+5))-10). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*(2+5))-10)</answer>"
+    ],
+    "step": 110,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      5,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09954833984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((7-(2-8))*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((7-(2-8))*12)</answer>",
+      "<think>Use the expression (7+2-8)*12. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7+2-8)*12</answer>"
+    ],
+    "step": 111,
+    "epoch": 1,
+    "numbers": [
+      2,
+      7,
+      8,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.00946044921875,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((7-4)*(2+4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((7-4)*(2+4))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 112,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      4,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.01458740234375,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (11-((3-8)-11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((3-8)-11))</answer>"
+    ],
+    "step": 113,
+    "epoch": 1,
+    "numbers": [
+      3,
+      8,
+      11,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11358642578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((12-(4+6))*9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-(4+6))*9)</answer>"
+    ],
+    "step": 114,
+    "epoch": 1,
+    "numbers": [
+      4,
+      6,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1070556640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((2+2)*6)-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((2+2)*6)-12)</answer>",
+      "<think>Use the expression ((2*(2+6))-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*(2+6))-12)</answer>"
+    ],
+    "step": 115,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      6,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11419677734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (9/((2-2/8))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9/((2-2/8)))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 116,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      8,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11956787109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4-2)*(11-3)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4-2)*(11-3))</answer>",
+      "<think>Use the expression (3-2)*11*4. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3-2)*11*4</answer>"
+    ],
+    "step": 117,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      4,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09515380859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11+((2*4)+8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11+((2*4)+8))</answer>",
+      "<think>Use the expression (4*((2-8)+11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*((2-8)+11))</answer>"
+    ],
+    "step": 118,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      8,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.00164794921875,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3-6)+(3*6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3-6)+(3*6))</answer>",
+      "<think>Use the expression (6/3+6)*3. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6/3+6)*3</answer>"
+    ],
+    "step": 119,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      6,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08868408203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((13-(4*4))*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((13-(4*4))*8)</answer>"
+    ],
+    "step": 120,
+    "epoch": 1,
+    "numbers": [
+      4,
+      4,
+      8,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12255859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (5*((4-5)+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5*((4-5)+6))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 121,
+    "epoch": 1,
+    "numbers": [
+      4,
+      5,
+      5,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08563232421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 122,
+    "epoch": 1,
+    "numbers": [
+      1,
+      6,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0088348388671875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (9/9+11)+13. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9/9+11)+13</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 123,
+    "epoch": 1,
+    "numbers": [
+      9,
+      9,
+      11,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.14105224609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (2-((8/2)-8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2-((8/2)-8))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 124,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      8,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10137939453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3*3)+(4+5)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*3)+(4+5))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 125,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      4,
+      5
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0712890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 126,
+    "epoch": 1,
+    "numbers": [
+      1,
+      7,
+      7,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1019287109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 127,
+    "epoch": 1,
+    "numbers": [
+      4,
+      5,
+      8,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08905029296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 128,
+    "epoch": 1,
+    "numbers": [
+      1,
+      5,
+      7,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.00848388671875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((12-7)/(7/7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-7)/(7/7))</answer>",
+      "<think>Use the expression (7+7-7)*12. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7+7-7)*12</answer>"
+    ],
+    "step": 129,
+    "epoch": 1,
+    "numbers": [
+      7,
+      7,
+      7,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09765625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12-((8-11)*12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-((8-11)*12))</answer>",
+      "<think>Use the expression (12+12)*(11-8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12+12)*(11-8)</answer>"
+    ],
+    "step": 130,
+    "epoch": 1,
+    "numbers": [
+      8,
+      11,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0052642822265625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (8*8-10)*7. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8*8-10)*7</answer>",
+      "<think>Use the expression (10-((7-8)*8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10-((7-8)*8))</answer>"
+    ],
+    "step": 131,
+    "epoch": 1,
+    "numbers": [
+      7,
+      8,
+      8,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1114501953125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((3*3)-7)*13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((3*3)-7)*13)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 132,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      7,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1292724609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((9-(8-6))*4). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((9-(8-6))*4)</answer>"
+    ],
+    "step": 133,
+    "epoch": 1,
+    "numbers": [
+      4,
+      6,
+      8,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0867919921875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 134,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      13,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08563232421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4-(13/5))*13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4-(13/5))*13)</answer>",
+      "<think>Use the expression ((13-13)+(4*5)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((13-13)+(4*5))</answer>"
+    ],
+    "step": 135,
+    "epoch": 1,
+    "numbers": [
+      4,
+      5,
+      13,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10150146484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (13-((2-4)-8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((2-4)-8))</answer>"
+    ],
+    "step": 136,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      8,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0728759765625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((1+9)/(10/12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1+9)/(10/12))</answer>"
+    ],
+    "step": 137,
+    "epoch": 1,
+    "numbers": [
+      1,
+      9,
+      10,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.07513427734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 138,
+    "epoch": 1,
+    "numbers": [
+      4,
+      10,
+      10,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1070556640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4*8)-(7-12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4*8)-(7-12))</answer>",
+      "<think>Use the expression (((7-4)*12)-8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((7-4)*12)-8)</answer>"
+    ],
+    "step": 139,
+    "epoch": 1,
+    "numbers": [
+      4,
+      7,
+      8,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.13824462890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((9-12)+(6*9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((9-12)+(6*9))</answer>",
+      "<think>Use the expression (12-9)*6+9. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-9)*6+9</answer>"
+    ],
+    "step": 140,
+    "epoch": 1,
+    "numbers": [
+      6,
+      9,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.126220703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((3-3)+4)*13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((3-3)+4)*13)</answer>",
+      "<think>Use the expression (13-3)*(4/3). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-3)*(4/3)</answer>"
+    ],
+    "step": 141,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      4,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1009521484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (13+12-3)*2. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13+12-3)*2</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 142,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.093658447265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 143,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      6,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0655517578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((1+12)/(6/13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1+12)/(6/13))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 144,
+    "epoch": 1,
+    "numbers": [
+      1,
+      6,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.07037353515625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10+((1+3)*10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+((1+3)*10))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 145,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      10,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.103424072265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12+10)*4/3. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12+10)*4/3</answer>",
+      "<think>Use the expression (((12-3)*10)-4). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((12-3)*10)-4)</answer>"
+    ],
+    "step": 146,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      10,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1229248046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (5-2)*4+6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5-2)*4+6</answer>"
+    ],
+    "step": 147,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      5,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.002105712890625,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 148,
+    "epoch": 1,
+    "numbers": [
+      4,
+      6,
+      7,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0618896484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (13+11)*1-1. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13+11)*1-1</answer>"
+    ],
+    "step": 149,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      11,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09088134765625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (10+4-7)*10. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+4-7)*10</answer>"
+    ],
+    "step": 150,
+    "epoch": 1,
+    "numbers": [
+      4,
+      7,
+      10,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.072601318359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (((2-8)+13)*13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((2-8)+13)*13)</answer>"
+    ],
+    "step": 151,
+    "epoch": 1,
+    "numbers": [
+      2,
+      8,
+      13,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0155029296875,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (5+9)*8/6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5+9)*8/6</answer>",
+      "<think>Use the expression (9+((8/5)+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9+((8/5)+6))</answer>"
+    ],
+    "step": 152,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      8,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0882568359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((13-(2+10))*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((13-(2+10))*8)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 153,
+    "epoch": 1,
+    "numbers": [
+      2,
+      8,
+      10,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.13525390625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3*5)+(5+9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*5)+(5+9))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 154,
+    "epoch": 1,
+    "numbers": [
+      3,
+      5,
+      5,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0019378662109375,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (9-8)*12*7. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9-8)*12*7</answer>",
+      "<think>Use the expression (((7-8)+9)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((7-8)+9)*12)</answer>"
+    ],
+    "step": 155,
+    "epoch": 1,
+    "numbers": [
+      7,
+      8,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09881591796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (6+3)*7-13. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6+3)*7-13</answer>",
+      "<think>Use the expression (((6-3)*7)-13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((6-3)*7)-13)</answer>"
+    ],
+    "step": 156,
+    "epoch": 1,
+    "numbers": [
+      3,
+      6,
+      7,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10186767578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10+((1*3)+7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+((1*3)+7))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 157,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      7,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10845947265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 158,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      5,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10748291015625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((1+3)*12)-3). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1+3)*12)-3)</answer>",
+      "<think>Use the expression (((1+3)*3)-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1+3)*3)-12)</answer>"
+    ],
+    "step": 159,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      3,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09503173828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((7-2)*11)-10). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((7-2)*11)-10)</answer>",
+      "<think>Use the expression (11+((2+7)+10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11+((2+7)+10))</answer>"
+    ],
+    "step": 160,
+    "epoch": 1,
+    "numbers": [
+      2,
+      7,
+      10,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0094451904296875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((1+1)*7)-4). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1+1)*7)-4)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 161,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      4,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.093505859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (13-((1-2)-12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((1-2)-12))</answer>"
+    ],
+    "step": 162,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10003662109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((1-2)+4)*11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1-2)+4)*11)</answer>",
+      "<think>Use the expression ((1*(2*4))+11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1*(2*4))+11)</answer>"
+    ],
+    "step": 163,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      4,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11029052734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11+((5+6)/10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11+((5+6)/10))</answer>",
+      "<think>Use the expression (11-6)*10/5. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-6)*10/5</answer>"
+    ],
+    "step": 164,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      10,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08990478515625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11-((5/5)-8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((5/5)-8))</answer>",
+      "<think>Use the expression ((5*5)-(8-11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((5*5)-(8-11))</answer>"
+    ],
+    "step": 165,
+    "epoch": 1,
+    "numbers": [
+      5,
+      5,
+      8,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0131072998046875,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((6*7)-(6*11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6*7)-(6*11))</answer>",
+      "<think>Use the expression ((6*11)-(6*7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6*11)-(6*7))</answer>"
+    ],
+    "step": 166,
+    "epoch": 1,
+    "numbers": [
+      6,
+      6,
+      7,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0097198486328125,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((3-(4/4))*5). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3-(4/4))*5)</answer>"
+    ],
+    "step": 167,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      4,
+      4
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.104827880859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11/((9-4)/11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11/((9-4)/11))</answer>",
+      "<think>Use the expression ((11+(4+9))-11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((11+(4+9))-11)</answer>"
+    ],
+    "step": 168,
+    "epoch": 1,
+    "numbers": [
+      4,
+      9,
+      11,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0035400390625,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (2*(13-(12/12))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2*(13-(12/12)))</answer>",
+      "<think>Use the expression ((2*(12/12))+13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*(12/12))+13)</answer>"
+    ],
+    "step": 169,
+    "epoch": 1,
+    "numbers": [
+      2,
+      12,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.06829833984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 170,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      1,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.093658447265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8*12)-(8*8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((8*12)-(8*8))</answer>",
+      "<think>Use the expression (((8+8)-12)*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((8+8)-12)*8)</answer>"
+    ],
+    "step": 171,
+    "epoch": 1,
+    "numbers": [
+      8,
+      8,
+      8,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0018768310546875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 172,
+    "epoch": 1,
+    "numbers": [
+      5,
+      8,
+      11,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1217041015625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11-((1-3)-4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((1-3)-4))</answer>",
+      "<think>Use the expression (11-((1-3)*4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((1-3)*4))</answer>"
+    ],
+    "step": 173,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      4,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0936279296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((5/5)+1)*13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((5/5)+1)*13)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 174,
+    "epoch": 1,
+    "numbers": [
+      1,
+      5,
+      5,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.004425048828125,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (8+((3*4)+4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8+((3*4)+4))</answer>",
+      "<think>Use the expression (8+((4/3)+4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8+((4/3)+4))</answer>"
+    ],
+    "step": 175,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      4,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.02642822265625,
+    "avg_reward": 0.346875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((8-8)+12)+12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((8-8)+12)+12)</answer>",
+      "<think>Use the expression (8-((12/8)-12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8-((12/8)-12))</answer>"
+    ],
+    "step": 176,
+    "epoch": 1,
+    "numbers": [
+      8,
+      8,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0077972412109375,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((13-4)*4)-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((13-4)*4)-12)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 177,
+    "epoch": 1,
+    "numbers": [
+      4,
+      4,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0714111328125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (9-((1*1)-6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9-((1*1)-6))</answer>"
+    ],
+    "step": 178,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      6,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.13812255859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3*(12/(4/12))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*(12/(4/12)))</answer>",
+      "<think>Use the expression ((12-(3+4))*4). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-(3+4))*4)</answer>"
+    ],
+    "step": 179,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      4,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.04669189453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 180,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      11,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0836181640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10-5-3)*13. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10-5-3)*13</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 181,
+    "epoch": 1,
+    "numbers": [
+      3,
+      5,
+      10,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11224365234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (13+12-9)/9. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13+12-9)/9</answer>",
+      "<think>Use the expression ((9*13)-(9*12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((9*13)-(9*12))</answer>"
+    ],
+    "step": 182,
+    "epoch": 1,
+    "numbers": [
+      9,
+      9,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11358642578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (6+((5-10)+13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6+((5-10)+13))</answer>",
+      "<think>Use the expression (((5+6)-10)*13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((5+6)-10)*13)</answer>"
+    ],
+    "step": 183,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      10,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.00396728515625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((6-(4-6))*10). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6-(4-6))*10)</answer>"
+    ],
+    "step": 184,
+    "epoch": 1,
+    "numbers": [
+      4,
+      6,
+      6,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1282958984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4-((4/4)-4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4-((4/4)-4))</answer>",
+      "<think>Use the expression ((4+4)+(4+4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4+4)+(4+4))</answer>"
+    ],
+    "step": 185,
+    "epoch": 1,
+    "numbers": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.105224609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((5+10)/(8/12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((5+10)/(8/12))</answer>"
+    ],
+    "step": 186,
+    "epoch": 1,
+    "numbers": [
+      5,
+      8,
+      10,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.13189697265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3*(7-6))-9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*(7-6))-9)</answer>",
+      "<think>Use the expression (7*3-9)*6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7*3-9)*6</answer>"
+    ],
+    "step": 187,
+    "epoch": 1,
+    "numbers": [
+      3,
+      6,
+      7,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1109619140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (13-((1-5)-6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((1-5)-6))</answer>",
+      "<think>Use the expression (13-((1-5)-6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((1-5)-6))</answer>"
+    ],
+    "step": 188,
+    "epoch": 1,
+    "numbers": [
+      1,
+      5,
+      6,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1068115234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((5*(4+6))-10). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((5*(4+6))-10)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 189,
+    "epoch": 1,
+    "numbers": [
+      4,
+      5,
+      6,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0128021240234375,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3*(2+4))-4). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*(2+4))-4)</answer>",
+      "<think>Use the expression (4*2-3)*4. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*2-3)*4</answer>"
+    ],
+    "step": 190,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      4,
+      4
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1134033203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11-((3/3)-7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((3/3)-7))</answer>",
+      "<think>Use the expression (3*(11-(3-7))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*(11-(3-7)))</answer>"
+    ],
+    "step": 191,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      7,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09716796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (5-6/11)*11. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5-6/11)*11</answer>"
+    ],
+    "step": 192,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      11,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.087738037109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4*((3-12)+12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*((3-12)+12))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 193,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.087890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12-6)*6+6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-6)*6+6</answer>",
+      "<think>Use the expression (((6+6)-12)*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((6+6)-12)*6)</answer>"
+    ],
+    "step": 194,
+    "epoch": 1,
+    "numbers": [
+      6,
+      6,
+      6,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.105224609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (4+4)*(5-4). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4+4)*(5-4)</answer>"
+    ],
+    "step": 195,
+    "epoch": 1,
+    "numbers": [
+      4,
+      4,
+      4,
+      5
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10308837890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (10+((4/1)+4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+((4/1)+4))</answer>"
+    ],
+    "step": 196,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      4,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1422119140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((5*7)-(4+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((5*7)-(4+6))</answer>",
+      "<think>Use the expression (6+4)*7/5. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6+4)*7/5</answer>"
+    ],
+    "step": 197,
+    "epoch": 1,
+    "numbers": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.00115966796875,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2*5)-(2-10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*5)-(2-10))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 198,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      5,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10992431640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 199,
+    "epoch": 1,
+    "numbers": [
+      3,
+      6,
+      8,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.00689697265625,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4*(9-(9-6))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(9-(9-6)))</answer>",
+      "<think>Use the expression ((4*9)-(6-9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4*9)-(6-9))</answer>"
+    ],
+    "step": 200,
+    "epoch": 1,
+    "numbers": [
+      4,
+      6,
+      9,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0142669677734375,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4*(3+5))-8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4*(3+5))-8)</answer>",
+      "<think>Use the expression (5+3-2)*8. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5+3-2)*8</answer>"
+    ],
+    "step": 201,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      5,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.01812744140625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10+6-4)*3. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+6-4)*3</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 202,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      6,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10601806640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((5-(1-2))*5). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((5-(1-2))*5)</answer>"
+    ],
+    "step": 203,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      5,
+      5
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.08233642578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (4*(5-(1/1))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(5-(1/1)))</answer>"
+    ],
+    "step": 204,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      4,
+      5
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.087158203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10-((6-10)*13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10-((6-10)*13))</answer>",
+      "<think>Use the expression ((10+10)-(6-13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10+10)-(6-13))</answer>"
+    ],
+    "step": 205,
+    "epoch": 1,
+    "numbers": [
+      6,
+      10,
+      10,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1173095703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (8+2-1)*2. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8+2-1)*2</answer>",
+      "<think>Use the expression (8-2+1)*2. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8-2+1)*2</answer>"
+    ],
+    "step": 206,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      2,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0094757080078125,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11+((4+8)+9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11+((4+8)+9))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 207,
+    "epoch": 1,
+    "numbers": [
+      4,
+      8,
+      9,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12335205078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (7+2)*4-8. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7+2)*4-8</answer>",
+      "<think>Use the expression ((7-(2+4))*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((7-(2+4))*8)</answer>"
+    ],
+    "step": 208,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      7,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.119415283203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3*(1+2)+10). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*(1+2)+10)</answer>",
+      "<think>Use the expression (3*(10-(1-2))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*(10-(1-2)))</answer>"
+    ],
+    "step": 209,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      3,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.055755615234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12/((8-1)/12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12/((8-1)/12))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 210,
+    "epoch": 1,
+    "numbers": [
+      1,
+      8,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11029052734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (((3+7)-8)*11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((3+7)-8)*11)</answer>"
+    ],
+    "step": 211,
+    "epoch": 1,
+    "numbers": [
+      3,
+      7,
+      8,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10211181640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 212,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10162353515625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12+((1-7)+9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12+((1-7)+9))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 213,
+    "epoch": 1,
+    "numbers": [
+      1,
+      7,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1053466796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11+3)*(9-4). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11+3)*(9-4)</answer>",
+      "<think>Use the expression ((3-(4-9))*11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3-(4-9))*11)</answer>"
+    ],
+    "step": 214,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      9,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1185302734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4+((2*5)-11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4+((2*5)-11))</answer>",
+      "<think>Use the expression (11-((2-4)*5)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((2-4)*5))</answer>"
+    ],
+    "step": 215,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      5,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09625244140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((5-11)+12)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((5-11)+12)*12)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 216,
+    "epoch": 1,
+    "numbers": [
+      5,
+      11,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11126708984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((10-(2+3))*9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10-(2+3))*9)</answer>",
+      "<think>Use the expression ((2*(3+9))-10). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*(3+9))-10)</answer>"
+    ],
+    "step": 217,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      9,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0045318603515625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4*(4-(1-4))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(4-(1-4)))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 218,
+    "epoch": 1,
+    "numbers": [
+      1,
+      4,
+      4,
+      4
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1309814453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((6+7)-(8-9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6+7)-(8-9))</answer>"
+    ],
+    "step": 219,
+    "epoch": 1,
+    "numbers": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1153564453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4*(10-(7-8))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(10-(7-8)))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 220,
+    "epoch": 1,
+    "numbers": [
+      4,
+      7,
+      8,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.003662109375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (8+4)*(2-2/2). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8+4)*(2-2/2)</answer>",
+      "<think>Use the expression ((4-(2/2))*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4-(2/2))*8)</answer>"
+    ],
+    "step": 221,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      4,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10247802734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (11-((2-6)-10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((2-6)-10))</answer>"
+    ],
+    "step": 222,
+    "epoch": 1,
+    "numbers": [
+      2,
+      6,
+      10,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.010284423828125,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (13-2)*8/5. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-2)*8/5</answer>"
+    ],
+    "step": 223,
+    "epoch": 1,
+    "numbers": [
+      2,
+      5,
+      8,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.06390380859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 224,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      13,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11004638671875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8-(8/11))*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((8-(8/11))*8)</answer>",
+      "<think>Use the expression (8-((8-11)*8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8-((8-11)*8))</answer>"
+    ],
+    "step": 225,
+    "epoch": 1,
+    "numbers": [
+      8,
+      8,
+      8,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1214599609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((2*(5+8))-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*(5+8))-12)</answer>"
+    ],
+    "step": 226,
+    "epoch": 1,
+    "numbers": [
+      2,
+      5,
+      8,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.01214599609375,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((1+3)+6)+8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1+3)+6)+8)</answer>",
+      "<think>Use the expression ((8-(1+3))*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((8-(1+3))*6)</answer>"
+    ],
+    "step": 227,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      6,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1346435546875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (9/(5-(3/3))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9/(5-(3/3)))</answer>"
+    ],
+    "step": 228,
+    "epoch": 1,
+    "numbers": [
+      3,
+      3,
+      5,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11151123046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2*(2+5))-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*(2+5))-12)</answer>",
+      "<think>Use the expression (2+2)*5+12. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2+2)*5+12</answer>"
+    ],
+    "step": 229,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      5,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1265869140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3*((3/1)+10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*((3/1)+10))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 230,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      3,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0079803466796875,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8-(1*3))*5). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((8-(1*3))*5)</answer>",
+      "<think>Use the expression (5+1-3)*8. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5+1-3)*8</answer>"
+    ],
+    "step": 231,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      5,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0222930908203125,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((12-(2+6))*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-(2+6))*12)</answer>",
+      "<think>Use the expression (((2+6)-12)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((2+6)-12)*12)</answer>"
+    ],
+    "step": 232,
+    "epoch": 1,
+    "numbers": [
+      2,
+      6,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12615966796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((12-7)/(6/6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-7)/(6/6))</answer>",
+      "<think>Use the expression (((7+6)-12)*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((7+6)-12)*6)</answer>"
+    ],
+    "step": 233,
+    "epoch": 1,
+    "numbers": [
+      6,
+      6,
+      7,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.005859375,
+    "avg_reward": 0.21624999999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.17500000000000002,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((9-12)+(3*9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((9-12)+(3*9))</answer>",
+      "<think>Use the expression (3*(12-(9/9))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*(12-(9/9)))</answer>"
+    ],
+    "step": 234,
+    "epoch": 1,
+    "numbers": [
+      3,
+      9,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.006561279296875,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((6-6)+7)*9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((6-6)+7)*9)</answer>",
+      "<think>Use the expression (6+6-7)*9. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6+6-7)*9</answer>"
+    ],
+    "step": 235,
+    "epoch": 1,
+    "numbers": [
+      6,
+      6,
+      7,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0087890625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (((5+5)-9)*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((5+5)-9)*8)</answer>"
+    ],
+    "step": 236,
+    "epoch": 1,
+    "numbers": [
+      5,
+      5,
+      8,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11004638671875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (13+11)*9/8. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13+11)*9/8</answer>"
+    ],
+    "step": 237,
+    "epoch": 1,
+    "numbers": [
+      8,
+      9,
+      11,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.017913818359375,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.44999999999999996,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12*8-12)/2. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12*8-12)/2</answer>",
+      "<think>Use the expression ((12-(2+8))*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-(2+8))*12)</answer>"
+    ],
+    "step": 238,
+    "epoch": 1,
+    "numbers": [
+      2,
+      8,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.07733154296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 239,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      3,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11114501953125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 240,
+    "epoch": 1,
+    "numbers": [
+      3,
+      7,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.074432373046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((1-6)+8)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1-6)+8)*12)</answer>",
+      "<think>Use the expression ((1+6)+(8+12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1+6)+(8+12))</answer>"
+    ],
+    "step": 241,
+    "epoch": 1,
+    "numbers": [
+      1,
+      6,
+      8,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.02899169921875,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((1+5)+(6-12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1+5)+(6-12))</answer>"
+    ],
+    "step": 242,
+    "epoch": 1,
+    "numbers": [
+      1,
+      5,
+      6,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.002105712890625,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12/(1-(1/2))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12/(1-(1/2)))</answer>",
+      "<think>Use the expression ((1+2)*(12-1)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1+2)*(12-1))</answer>"
+    ],
+    "step": 243,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      2,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.108642578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((10-13)+(9+10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10-13)+(9+10))</answer>",
+      "<think>Use the expression ((9-10)+(10+13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((9-10)+(10+13))</answer>"
+    ],
+    "step": 244,
+    "epoch": 1,
+    "numbers": [
+      9,
+      10,
+      10,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12811279296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (4+2+1)*3. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4+2+1)*3</answer>"
+    ],
+    "step": 245,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0120697021484375,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((13-(8/8))*11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((13-(8/8))*11)</answer>",
+      "<think>Use the expression ((11-13)+(8*8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((11-13)+(8*8))</answer>"
+    ],
+    "step": 246,
+    "epoch": 1,
+    "numbers": [
+      8,
+      8,
+      11,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.139892578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (6/(5-3)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6/(5-3))</answer>",
+      "<think>Use the expression (8+3-5)*6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8+3-5)*6</answer>"
+    ],
+    "step": 247,
+    "epoch": 1,
+    "numbers": [
+      3,
+      5,
+      6,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.113525390625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10+((2+5)+9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+((2+5)+9))</answer>",
+      "<think>Use the expression (10+((2*5)+9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+((2*5)+9))</answer>"
+    ],
+    "step": 248,
+    "epoch": 1,
+    "numbers": [
+      2,
+      5,
+      9,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.130126953125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (5*3-2-1). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5*3-2-1)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 249,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      5,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1148681640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((10+8)/(7/11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10+8)/(7/11))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 250,
+    "epoch": 1,
+    "numbers": [
+      7,
+      8,
+      10,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.02423095703125,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((6/5)+(6*6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6/5)+(6*6))</answer>",
+      "<think>Use the expression (5-6/6)*6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5-6/6)*6</answer>"
+    ],
+    "step": 251,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      6,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.011749267578125,
+    "avg_reward": 0.21624999999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.17500000000000002,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (13+5-6)*2. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13+5-6)*2</answer>",
+      "<think>Use the expression ((5*13)-(2+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((5*13)-(2+6))</answer>"
+    ],
+    "step": 252,
+    "epoch": 1,
+    "numbers": [
+      2,
+      5,
+      6,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.121337890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (((4+4)-4)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((4+4)-4)*12)</answer>"
+    ],
+    "step": 253,
+    "epoch": 1,
+    "numbers": [
+      4,
+      4,
+      4,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10369873046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((12-(5+6))*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-(5+6))*8)</answer>",
+      "<think>Use the expression (12/((6-5)/8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12/((6-5)/8))</answer>"
+    ],
+    "step": 254,
+    "epoch": 1,
+    "numbers": [
+      5,
+      6,
+      8,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1014404296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (13+2)*8/7. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13+2)*8/7</answer>"
+    ],
+    "step": 255,
+    "epoch": 1,
+    "numbers": [
+      2,
+      7,
+      8,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11248779296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((1-5)+(3*6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1-5)+(3*6))</answer>",
+      "<think>Use the expression ((1+3)+(5*6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1+3)+(5*6))</answer>"
+    ],
+    "step": 256,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      5,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0992431640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((2+11)-12)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((2+11)-12)*12)</answer>",
+      "<think>Use the expression (12/((11-2)/12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12/((11-2)/12))</answer>"
+    ],
+    "step": 257,
+    "epoch": 1,
+    "numbers": [
+      2,
+      11,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.09552001953125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((12/12)+(3*13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12/12)+(3*13))</answer>",
+      "<think>Use the expression ((13-12)*(3+12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((13-12)*(3+12))</answer>"
+    ],
+    "step": 258,
+    "epoch": 1,
+    "numbers": [
+      3,
+      12,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.014404296875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((8-3)*9)-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((8-3)*9)-12)</answer>",
+      "<think>Use the expression ((12-9)*(3+8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-9)*(3+8))</answer>"
+    ],
+    "step": 259,
+    "epoch": 1,
+    "numbers": [
+      3,
+      8,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.14630126953125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2+4)+(6+9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2+4)+(6+9))</answer>",
+      "<think>Use the expression (6+4-9)*2. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6+4-9)*2</answer>"
+    ],
+    "step": 260,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      6,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11700439453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (2*(6-(2-6))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2*(6-(2-6)))</answer>",
+      "<think>Use the expression ((2+2)+(6+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2+2)+(6+6))</answer>"
+    ],
+    "step": 261,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      6,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12127685546875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (3*(1+2)+11). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*(1+2)+11)</answer>"
+    ],
+    "step": 262,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      3,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.01171875,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4+4)*5-8. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4+4)*5-8</answer>",
+      "<think>Use the expression (4*(8-(4-5))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(8-(4-5)))</answer>"
+    ],
+    "step": 263,
+    "epoch": 1,
+    "numbers": [
+      4,
+      4,
+      5,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0097198486328125,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12/(5-2/9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12/(5-2/9))</answer>",
+      "<think>Use the expression ((2*9)-(5-12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*9)-(5-12))</answer>"
+    ],
+    "step": 264,
+    "epoch": 1,
+    "numbers": [
+      2,
+      5,
+      9,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.12530517578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((10-(3-9))*10). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10-(3-9))*10)</answer>"
+    ],
+    "step": 265,
+    "epoch": 1,
+    "numbers": [
+      3,
+      9,
+      10,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.00909423828125,
+    "avg_reward": 0.21625000000000003,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((6-(4-5))*13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6-(4-5))*13)</answer>",
+      "<think>Use the expression ((4*6)-(5-13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4*6)-(5-13))</answer>"
+    ],
+    "step": 266,
+    "epoch": 1,
+    "numbers": [
+      4,
+      5,
+      6,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11773681640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3*(3+2))+13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*(3+2))+13)</answer>",
+      "<think>Use the expression ((3*(3+2))+13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*(3+2))+13)</answer>"
+    ],
+    "step": 267,
+    "epoch": 1,
+    "numbers": [
+      2,
+      3,
+      3,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1378173828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((2*4)+(4+5)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*4)+(4+5))</answer>"
+    ],
+    "step": 268,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      4,
+      5
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1221923828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11-((3-8)-9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((3-8)-9))</answer>",
+      "<think>Use the expression (11-((3-8)-9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((3-8)-9))</answer>"
+    ],
+    "step": 269,
+    "epoch": 1,
+    "numbers": [
+      3,
+      8,
+      9,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0078125,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4*((7+9)-9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*((7+9)-9))</answer>",
+      "<think>Use the expression (4*(7-(9/9))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(7-(9/9)))</answer>"
+    ],
+    "step": 270,
+    "epoch": 1,
+    "numbers": [
+      4,
+      7,
+      9,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0023345947265625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4*(9+12))-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4*(9+12))-12)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 271,
+    "epoch": 1,
+    "numbers": [
+      4,
+      9,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1201171875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 272,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      7,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10076904296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (5-((5-7)*7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5-((5-7)*7))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 273,
+    "epoch": 1,
+    "numbers": [
+      5,
+      5,
+      7,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.00054931640625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12+12)*(6-3). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12+12)*(6-3)</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 274,
+    "epoch": 1,
+    "numbers": [
+      3,
+      6,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11273193359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10+((3+4)+10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+((3+4)+10))</answer>",
+      "<think>Use the expression (4*((3-10)+10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*((3-10)+10))</answer>"
+    ],
+    "step": 275,
+    "epoch": 1,
+    "numbers": [
+      3,
+      4,
+      10,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.112030029296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (4*(5-(1-3))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(5-(1-3)))</answer>"
+    ],
+    "step": 276,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.000335693359375,
+    "avg_reward": 0.346875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (12-((1-2)*10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-((1-2)*10))</answer>",
+      "<think>Use the expression (((1*2)+10)+12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1*2)+10)+12)</answer>"
+    ],
+    "step": 277,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      10,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0011138916015625,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((12-8)*(2+4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((12-8)*(2+4))</answer>",
+      "<think>Use the expression (12/((4-2)/8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12/((4-2)/8))</answer>"
+    ],
+    "step": 278,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      8,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0105743408203125,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4*(2+7))-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4*(2+7))-12)</answer>",
+      "<think>Use the expression (12-((2-4)-7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-((2-4)-7))</answer>"
+    ],
+    "step": 279,
+    "epoch": 1,
+    "numbers": [
+      2,
+      4,
+      7,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0124053955078125,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((4/4)+2)*2). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((4/4)+2)*2)</answer>",
+      "<think>Use the expression (((2/2)+4)*4). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((2/2)+4)*4)</answer>"
+    ],
+    "step": 280,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      4,
+      4
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10980224609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((1-3)+4)*10). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1-3)+4)*10)</answer>",
+      "<think>Use the expression (3*((1-4)+10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*((1-4)+10))</answer>"
+    ],
+    "step": 281,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      4,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11810302734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((11-9)*(6+13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((11-9)*(6+13))</answer>",
+      "<think>Use the expression ((6*11)-(9+13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6*11)-(9+13))</answer>"
+    ],
+    "step": 282,
+    "epoch": 1,
+    "numbers": [
+      6,
+      9,
+      11,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.092529296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (3+((1*1)+4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3+((1*1)+4))</answer>"
+    ],
+    "step": 283,
+    "epoch": 1,
+    "numbers": [
+      1,
+      1,
+      3,
+      4
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0179443359375,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (11-((1-5)-8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((1-5)-8))</answer>",
+      "<think>Use the expression (11-((1-5)-8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-((1-5)-8))</answer>"
+    ],
+    "step": 284,
+    "epoch": 1,
+    "numbers": [
+      1,
+      5,
+      8,
+      11
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.009429931640625,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (6/6+7)*10. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6/6+7)*10</answer>",
+      "<think>Use the expression ((10-7)*(6+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10-7)*(6+6))</answer>"
+    ],
+    "step": 285,
+    "epoch": 1,
+    "numbers": [
+      6,
+      6,
+      7,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.004669189453125,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (2*(6-(1-2))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2*(6-(1-2)))</answer>",
+      "<think>Use the expression (((1+2)*6)-2). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1+2)*6)-2)</answer>"
+    ],
+    "step": 286,
+    "epoch": 1,
+    "numbers": [
+      1,
+      2,
+      2,
+      6
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0063018798828125,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3*((2/2)+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*((2/2)+6))</answer>",
+      "<think>Use the expression (2*(12-(2-3))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2*(12-(2-3)))</answer>"
+    ],
+    "step": 287,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      3,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11956787109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10+((10/4)+4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+((10/4)+4))</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 288,
+    "epoch": 1,
+    "numbers": [
+      4,
+      4,
+      10,
+      10
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.091033935546875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 289,
+    "epoch": 1,
+    "numbers": [
+      5,
+      7,
+      12,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.07861328125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>"
+    ],
+    "step": 290,
+    "epoch": 1,
+    "numbers": [
+      1,
+      6,
+      9,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0758056640625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression ((1+8)+(8*8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1+8)+(8*8))</answer>"
+    ],
+    "step": 291,
+    "epoch": 1,
+    "numbers": [
+      1,
+      8,
+      8,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.091796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (13-((7-10)-11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((7-10)-11))</answer>",
+      "<think>Use the expression (10+7-13)*11. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+7-13)*11</answer>"
+    ],
+    "step": 292,
+    "epoch": 1,
+    "numbers": [
+      7,
+      10,
+      11,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.10186767578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+      "<think>Use the expression (3+3-1)*8. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3+3-1)*8</answer>"
+    ],
+    "step": 293,
+    "epoch": 1,
+    "numbers": [
+      1,
+      3,
+      3,
+      8
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.0148773193359375,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (5+7)*(7-2). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5+7)*(7-2)</answer>",
+      "<think>Use the expression ((2-(5-7))*7). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2-(5-7))*7)</answer>"
+    ],
+    "step": 294,
+    "epoch": 1,
+    "numbers": [
+      2,
+      5,
+      7,
+      7
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.007476806640625,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (7+8-12)*8. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7+8-12)*8</answer>",
+      "<think>Use the expression (12-((7-8)*8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12-((7-8)*8))</answer>"
+    ],
+    "step": 295,
+    "epoch": 1,
+    "numbers": [
+      7,
+      8,
+      8,
+      12
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0205841064453125,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4*(5+13))-12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4*(5+13))-12)</answer>",
+      "<think>Use the expression (5+12)*13/4. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(5+12)*13/4</answer>"
+    ],
+    "step": 296,
+    "epoch": 1,
+    "numbers": [
+      4,
+      5,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0302581787109375,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.44999999999999996,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((13-13)+(11+13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((13-13)+(11+13))</answer>",
+      "<think>Use the expression ((11+12)-(13/13)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((11+12)-(13/13))</answer>"
+    ],
+    "step": 297,
+    "epoch": 1,
+    "numbers": [
+      11,
+      13,
+      13,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0106658935546875,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((9-10)+12)+13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((9-10)+12)+13)</answer>",
+      "<think>Use the expression (10+9-13)*12. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+9-13)*12</answer>"
+    ],
+    "step": 298,
+    "epoch": 1,
+    "numbers": [
+      9,
+      10,
+      12,
+      13
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.115234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (7+4-9)*6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(7+4-9)*6</answer>",
+      "<think>Use the expression (((4+6)-7)*9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((4+6)-7)*9)</answer>"
+    ],
+    "step": 299,
+    "epoch": 1,
+    "numbers": [
+      4,
+      6,
+      7,
+      9
+    ],
+    "target": 24
+  },
+  {
+    "loss": 4.57763671875e-05,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (4*(6-(2-2))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4*(6-(2-2)))</answer>",
+      "<think>Use the expression ((4-(2/2))*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4-(2/2))*6)</answer>"
+    ],
+    "step": 300,
+    "epoch": 1,
+    "numbers": [
+      2,
+      2,
+      4,
+      6
+    ],
+    "target": 24
+  }
+]

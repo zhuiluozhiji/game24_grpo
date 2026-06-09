@@ -13,9 +13,10 @@
 
 1. `docs/runbook.md`：远端完整实验操作指南。
 2. `docs/RUNNING.md`：从环境创建到完整重跑命令。
-3. `docs/EXPERIMENTS.md`：实验目的、结果表、结论。
-4. `docs/todo.md`：后续待办与亮点状态。
-5. `docs/FILES.md`：代码和结果文件说明。
+3. `docs/experiment_15b_mainline_summary.md`：实验4（1.5B题目主线）完整远端复跑结果。
+4. `docs/EXPERIMENTS.md`：实验目的、结果表、结论。
+5. `docs/todo.md`：后续待办与亮点状态。
+6. `docs/FILES.md`：代码和结果文件说明。
 
 最快复现 1.5B 主线：
 

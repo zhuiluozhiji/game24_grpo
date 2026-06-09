@@ -41,11 +41,11 @@
 
 说明：Countdown 使用同一套验证器，但目标值来自每条样本的 `target` 字段，不固定为 24。
 
-## 正式实验 A：1.5B 题目主线，待远端补跑
+## 正式实验 A：1.5B 题目主线，已完成远端复跑
 
 目的：严格对齐作业要求中的 Backbone 模型 `Qwen2.5-1.5B-Instruct`，形成最终报告主实验。
 
-复现命令见 `docs/runbook.md` 第 4 节，或 `docs/RUNNING.md` 第 4 节。
+复现命令见 `docs/runbook.md` 第 4 节，或 `docs/RUNNING.md` 第 4 节。完整复跑记录见 `docs/experiment_15b_mainline_summary.md`。
 
 计划配置：
 
@@ -59,16 +59,16 @@
 | `num_generations` | 默认 8，可用 `GRPO_GENERATIONS` 调整 |
 | 评估规模 | ID/OOD/unsolvable 默认 200，ToT hard 默认 100 |
 
-结果待补：
-
 | 模型阶段 | 解码 | ID | Official OOD | ToT hard 900-1000 | Unsolvable 幻觉率 |
 | --- | --- | ---: | ---: | ---: | ---: |
-| 1.5B base | greedy | 待跑 | 待跑 | 待跑 | 待跑 |
-| 1.5B base | best-of-8 | 待跑 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT | greedy | 待跑 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT | best-of-8 | 待跑 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT+GRPO | greedy | 待跑 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT+GRPO | best-of-8 | 待跑 | 待跑 | 待跑 | 待跑 |
+| 1.5B base | greedy | 0.0% | 2.0% | 1.0% | 100.0% |
+| 1.5B base | best-of-8 | 1.5% | 3.0% | 1.0% | 80.0% |
+| 1.5B SFT | greedy | 4.0% | 11.0% | 10.0% | 4.0% |
+| 1.5B SFT | best-of-8 | 22.0% | 31.0% | 13.0% | 0.0% |
+| 1.5B SFT+GRPO | greedy | 7.5% | 14.5% | 12.0% | 34.0% |
+| 1.5B SFT+GRPO | best-of-8 | 27.5% | 43.5% | 32.0% | 1.0% |
+
+结论：最佳主线配置为 `1.5B SFT+GRPO + best-of-8`。相比 SFT best-of-8，Official OOD 从 31.0% 提升到 43.5%，ToT hard 从 13.0% 提升到 32.0%，不可解幻觉率保持在 1.0%。
 
 ## 正式实验 B：Countdown 加分项，待远端补跑
 

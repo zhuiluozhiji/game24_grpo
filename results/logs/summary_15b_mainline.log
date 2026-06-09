@@ -1,0 +1,84 @@
+
+# output/game24-15b-base/quick_eval_200.json
+- in_distribution: total=200 best_of=None solve=0.000 format=0.490 hallucination=-
+  errors={'wrong_value': 50, 'format_error': 102, 'invalid_expression': 45, 'number_mismatch': 3}
+- out_of_distribution: total=200 best_of=None solve=0.020 format=0.485 hallucination=-
+  errors={'wrong_value': 29, 'format_error': 103, 'invalid_expression': 64}
+  difficulty=items=200 avg_dataset_solved_rate=0.970 avg_rank=100.5
+  buckets={'75-100%': {'total': 200, 'solved': 4, 'solve_rate': 0.02}}
+- tot_hard_900_1000: total=100 best_of=None solve=0.010 format=0.480 hallucination=-
+  errors={'format_error': 52, 'wrong_value': 25, 'invalid_expression': 21, 'number_mismatch': 1}
+  difficulty=items=100 avg_dataset_solved_rate=0.859 avg_rank=950.5
+  buckets={'75-100%': {'total': 100, 'solved': 1, 'solve_rate': 0.01}}
+- unsolvable: total=100 best_of=None solve=0.000 format=0.580 hallucination=1.0
+  errors={'invalid_expression': 32, 'format_error': 42, 'wrong_value': 26}
+
+# output/game24-15b-base/bestof8_eval_200.json
+- in_distribution: total=200 best_of=8 solve=0.015 format=0.425 hallucination=-
+  errors={'wrong_value': 43, 'format_error': 115, 'invalid_expression': 34, 'refusal_or_no_answer': 2, 'number_mismatch': 3}
+- out_of_distribution: total=200 best_of=8 solve=0.030 format=0.460 hallucination=-
+  errors={'format_error': 108, 'wrong_value': 53, 'invalid_expression': 28, 'number_mismatch': 5}
+  difficulty=items=200 avg_dataset_solved_rate=0.970 avg_rank=100.5
+  buckets={'75-100%': {'total': 200, 'solved': 6, 'solve_rate': 0.03}}
+- unsolvable: total=100 best_of=8 solve=0.000 format=0.420 hallucination=0.8
+  errors={'format_error': 58, 'invalid_expression': 12, 'refused': 3, 'wrong_value': 25, 'number_mismatch': 2}
+- tot_hard_900_1000: total=100 best_of=8 solve=0.010 format=0.370 hallucination=-
+  errors={'wrong_value': 16, 'format_error': 63, 'invalid_expression': 17, 'number_mismatch': 3}
+  difficulty=items=100 avg_dataset_solved_rate=0.859 avg_rank=950.5
+  buckets={'75-100%': {'total': 100, 'solved': 1, 'solve_rate': 0.01}}
+
+# output/game24-sft-15b-curriculum/quick_eval_200.json
+- in_distribution: total=200 best_of=None solve=0.040 format=1.000 hallucination=-
+  errors={'wrong_value': 118, 'refusal_or_no_answer': 74}
+- out_of_distribution: total=200 best_of=None solve=0.110 format=1.000 hallucination=-
+  errors={'refusal_or_no_answer': 107, 'wrong_value': 71}
+  difficulty=items=200 avg_dataset_solved_rate=0.970 avg_rank=100.5
+  buckets={'75-100%': {'total': 200, 'solved': 22, 'solve_rate': 0.11}}
+- tot_hard_900_1000: total=100 best_of=None solve=0.100 format=1.000 hallucination=-
+  errors={'wrong_value': 59, 'refusal_or_no_answer': 31}
+  difficulty=items=100 avg_dataset_solved_rate=0.859 avg_rank=950.5
+  buckets={'75-100%': {'total': 100, 'solved': 10, 'solve_rate': 0.1}}
+- unsolvable: total=100 best_of=None solve=0.000 format=1.000 hallucination=0.04
+  errors={'refused': 96, 'wrong_value': 4}
+
+# output/game24-sft-15b-curriculum/bestof8_eval_200.json
+- in_distribution: total=200 best_of=8 solve=0.220 format=1.000 hallucination=-
+  errors={'refusal_or_no_answer': 86, 'wrong_value': 69, 'number_mismatch': 1}
+- out_of_distribution: total=200 best_of=8 solve=0.310 format=1.000 hallucination=-
+  errors={'wrong_value': 59, 'refusal_or_no_answer': 77, 'number_mismatch': 1, 'invalid_expression': 1}
+  difficulty=items=200 avg_dataset_solved_rate=0.970 avg_rank=100.5
+  buckets={'75-100%': {'total': 200, 'solved': 62, 'solve_rate': 0.31}}
+- unsolvable: total=100 best_of=8 solve=0.000 format=1.000 hallucination=0.0
+  errors={'refused': 100}
+- tot_hard_900_1000: total=100 best_of=8 solve=0.130 format=1.000 hallucination=-
+  errors={'refusal_or_no_answer': 49, 'wrong_value': 38}
+  difficulty=items=100 avg_dataset_solved_rate=0.859 avg_rank=950.5
+  buckets={'75-100%': {'total': 100, 'solved': 13, 'solve_rate': 0.13}}
+
+# output/game24-grpo-15b-curriculum/quick_eval_200.json
+- in_distribution: total=200 best_of=None solve=0.075 format=1.000 hallucination=-
+  errors={'wrong_value': 171, 'refusal_or_no_answer': 14}
+- out_of_distribution: total=200 best_of=None solve=0.145 format=1.000 hallucination=-
+  errors={'refusal_or_no_answer': 43, 'wrong_value': 128}
+  difficulty=items=200 avg_dataset_solved_rate=0.970 avg_rank=100.5
+  buckets={'75-100%': {'total': 200, 'solved': 29, 'solve_rate': 0.145}}
+- tot_hard_900_1000: total=100 best_of=None solve=0.120 format=1.000 hallucination=-
+  errors={'wrong_value': 84, 'refusal_or_no_answer': 4}
+  difficulty=items=100 avg_dataset_solved_rate=0.859 avg_rank=950.5
+  buckets={'75-100%': {'total': 100, 'solved': 12, 'solve_rate': 0.12}}
+- unsolvable: total=100 best_of=None solve=0.000 format=1.000 hallucination=0.34
+  errors={'refused': 66, 'wrong_value': 34}
+
+# output/game24-grpo-15b-curriculum/bestof8_eval_200.json
+- in_distribution: total=200 best_of=8 solve=0.275 format=1.000 hallucination=-
+  errors={'wrong_value': 110, 'refusal_or_no_answer': 35}
+- out_of_distribution: total=200 best_of=8 solve=0.435 format=1.000 hallucination=-
+  errors={'refusal_or_no_answer': 42, 'wrong_value': 70, 'number_mismatch': 1}
+  difficulty=items=200 avg_dataset_solved_rate=0.970 avg_rank=100.5
+  buckets={'75-100%': {'total': 200, 'solved': 87, 'solve_rate': 0.435}}
+- unsolvable: total=100 best_of=8 solve=0.000 format=1.000 hallucination=0.01
+  errors={'refused': 99, 'wrong_value': 1}
+- tot_hard_900_1000: total=100 best_of=8 solve=0.320 format=1.000 hallucination=-
+  errors={'wrong_value': 56, 'refusal_or_no_answer': 12}
+  difficulty=items=100 avg_dataset_solved_rate=0.859 avg_rank=950.5
+  buckets={'75-100%': {'total': 100, 'solved': 32, 'solve_rate': 0.32}}
