@@ -34,11 +34,19 @@ class DataConfig:
     """Data configuration."""
     train_dataset: str = "nlile/24-game"
     test_dataset: str = "test-time-compute/game-of-24"
+    countdown_dataset: str = "Jiayi-Pan/Countdown-Tasks-3to4"
     max_train_samples: Optional[int] = None  # None = all ~1089 solvable
     max_test_samples: Optional[int] = None
     max_prompt_length: int = 256
     max_completion_length: int = 512
     num_unsolvable_test: int = 100
+    target: int = 24
+    official_hard_start: int = 900
+    official_hard_end: int = 1000
+    exclude_hard_from_train: bool = False
+    load_official_eval: bool = True
+    countdown_train_samples: Optional[int] = None
+    countdown_test_samples: int = 200
 
 
 @dataclass

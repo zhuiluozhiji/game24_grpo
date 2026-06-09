@@ -3,7 +3,10 @@
 Key change: accuracy reward is now binary with penalty for invalid-number shortcuts.
 """
 
+from __future__ import annotations
+
 import re
+import ast
 from typing import List, Dict, Any
 
 from game24.utils import validate_solution, extract_answer_from_completion, extract_numbers, safe_eval, ExpressionError
@@ -47,8 +50,29 @@ def format_reward(completions: List[str], **kwargs) -> List[float]:
     return rewards
 
 
-def accuracy_reward(completions: List[str], numbers: List[List[int]], **kwargs) -> List[float]:
-    """Binary accuracy reward for 24-point solving.
+def _coerce_numbers(nums):
+    if isinstance(nums, str):
+        return list(ast.literal_eval(nums))
+    return list(nums)
+
+
+def _target_at(targets, idx: int, default: int | float = 24) -> int | float:
+    if targets is None:
+        return default
+    if isinstance(targets, (int, float)):
+        return targets
+    if isinstance(targets, str):
+        return ast.literal_eval(targets)
+    return targets[idx]
+
+
+def accuracy_reward(
+    completions: List[str],
+    numbers: List[List[int]],
+    targets: List[int | float] | int | float | None = None,
+    **kwargs,
+) -> List[float]:
+    """Binary accuracy reward for target-number solving.
 
     V2 CHANGES:
     - No partial credit for getting 24 with wrong numbers (prevents "24" shortcut)
@@ -60,15 +84,20 @@ def accuracy_reward(completions: List[str], numbers: List[List[int]], **kwargs) 
         -0.1 - wrong answer or invalid expression
     """
     rewards = []
-    for completion, nums in zip(completions, numbers):
-        nums = list(nums) if not isinstance(nums, str) else eval(nums)
+    if targets is None:
+        targets = kwargs.get("target")
+    if targets is None:
+        targets = kwargs.get("targets")
+    for idx, (completion, nums) in enumerate(zip(completions, numbers)):
+        nums = _coerce_numbers(nums)
+        target = _target_at(targets, idx)
 
         expression = extract_answer_from_completion(completion)
         if expression is None:
             rewards.append(-0.1)
             continue
 
-        is_valid, reason = validate_solution(nums, expression, target=24)
+        is_valid, reason = validate_solution(nums, expression, target=target)
 
         if is_valid:
             rewards.append(1.0)
@@ -94,13 +123,14 @@ def strict_format_reward(completions: List[str], **kwargs) -> List[float]:
 def combined_reward(
     completions: List[str],
     numbers: List[List[int]],
+    targets: List[int | float] | int | float | None = None,
     format_weight: float = 0.3,
     accuracy_weight: float = 0.7,
     **kwargs,
 ) -> List[float]:
     """Combined reward: weighted sum of format and accuracy rewards."""
     fmt_scores = format_reward(completions)
-    acc_scores = accuracy_reward(completions, numbers=numbers)
+    acc_scores = accuracy_reward(completions, numbers=numbers, targets=targets, **kwargs)
 
     combined = []
     for fmt, acc in zip(fmt_scores, acc_scores):

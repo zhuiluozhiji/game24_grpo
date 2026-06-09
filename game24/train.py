@@ -30,23 +30,29 @@ from peft import LoraConfig, get_peft_model
 from tqdm import tqdm
 
 from game24.config import ModelConfig, LoRAConfig as LoRACfg, DataConfig, GRPOConfig
-from game24.data import load_24game_dataset, format_dataset_for_grpo, get_number_list, SYSTEM_PROMPT
+from game24.data import (
+    load_24game_dataset,
+    format_dataset_for_grpo,
+    get_number_list,
+    get_target_value,
+    SYSTEM_PROMPT,
+)
 from game24.rewards import format_reward, accuracy_reward
 from game24.utils import extract_answer_from_completion, format_prompt
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 
-def build_prompt(numbers: List[int]) -> str:
-    """Build a prompt string for the 24-point game."""
-    return format_prompt(numbers)
+def build_prompt(numbers: List[int], target: int = 24) -> str:
+    """Build a prompt string for a target-number game."""
+    return format_prompt(numbers, target=target)
 
 
-def get_chat_messages(numbers: List[int]) -> List[Dict]:
+def get_chat_messages(numbers: List[int], target: int = 24) -> List[Dict]:
     """Build Qwen chat messages."""
     return [
         {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": build_prompt(numbers)},
+        {"role": "user", "content": build_prompt(numbers, target=target)},
     ]
 
 
@@ -91,6 +97,7 @@ def generate_completions(
     num_generations: int,
     max_new_tokens: int,
     temperature: float,
+    device=None,
 ) -> Tuple[List[str], List[torch.Tensor]]:
     """Generate multiple completions for a single prompt.
 
@@ -102,6 +109,8 @@ def generate_completions(
         messages, tokenize=False, add_generation_prompt=True
     )
     prompt_ids = tokenizer.encode(prompt_text, return_tensors="pt")
+    if device is not None:
+        prompt_ids = prompt_ids.to(device)
     prompt_len = prompt_ids.shape[1]
 
     completions = []
@@ -120,7 +129,7 @@ def generate_completions(
             )
 
         # Extract only the generated part
-        full_ids = outputs[0]
+        full_ids = outputs[0].detach().cpu()
         generated_ids = full_ids[prompt_len:]  # tokens after prompt
         completion = tokenizer.decode(generated_ids, skip_special_tokens=True)
 
@@ -157,6 +166,7 @@ def train_step(
     tokenizer,
     messages: List[Dict],
     numbers: List[int],
+    target: int,
     grpo_cfg: GRPOConfig,
     data_cfg: DataConfig,
     global_step: int,
@@ -182,7 +192,11 @@ def train_step(
 
     # === Phase 2: Compute rewards ===
     fmt_rewards = format_reward(completions)
-    acc_rewards = accuracy_reward(completions, numbers=[numbers] * G)
+    acc_rewards = accuracy_reward(
+        completions,
+        numbers=[numbers] * G,
+        targets=[target] * G,
+    )
 
     combined_rewards = [
         0.3 * f + 0.7 * a for f, a in zip(fmt_rewards, acc_rewards)
@@ -399,9 +413,10 @@ def run_training(
         for idx in pbar:
             example = train_ds[idx]
             numbers = get_number_list(example)
+            target = get_target_value(example)
 
             # Build chat messages
-            messages = get_chat_messages(numbers)
+            messages = get_chat_messages(numbers, target=target)
 
             # Current learning rate
             current_lr = scheduler.get_last_lr()[0]
@@ -409,7 +424,7 @@ def run_training(
             # Train step
             metrics = train_step(
                 model, optimizer, tokenizer,
-                messages, numbers, grpo_cfg, data_cfg, global_step
+                messages, numbers, target, grpo_cfg, data_cfg, global_step
             )
 
             # Update LR
@@ -514,7 +529,7 @@ def main():
 
     model_cfg = ModelConfig()
     lora_cfg = LoRACfg()
-    data_cfg = DataConfig(max_train_samples=args.max_train_samples)
+    data_cfg = DataConfig(max_train_samples=args.max_train_samples, load_official_eval=False)
     grpo_cfg = GRPOConfig(
         output_dir=args.output_dir,
         num_train_epochs=args.epochs,

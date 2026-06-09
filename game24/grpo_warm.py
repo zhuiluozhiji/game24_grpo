@@ -13,13 +13,18 @@ from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from game24.config import DataConfig, GRPOConfig
-from game24.data import get_number_list, load_24game_dataset
+from game24.data import (
+    get_number_list,
+    get_target_value,
+    load_24game_dataset,
+    load_countdown_dataset,
+)
 from game24.rewards import accuracy_reward, format_reward
 from game24.train import compute_advantages, generate_completions, get_chat_messages
 
 
-def grpo_step(model, optimizer, tokenizer, numbers, cfg, data_cfg, device):
-    messages = get_chat_messages(numbers)
+def grpo_step(model, optimizer, tokenizer, numbers, target, cfg, data_cfg, device):
+    messages = get_chat_messages(numbers, target=target)
     model.eval()
     completions, _ = generate_completions(
         model,
@@ -31,7 +36,11 @@ def grpo_step(model, optimizer, tokenizer, numbers, cfg, data_cfg, device):
         device=device,
     )
     fmt = format_reward(completions)
-    acc = accuracy_reward(completions, numbers=[numbers] * len(completions))
+    acc = accuracy_reward(
+        completions,
+        numbers=[numbers] * len(completions),
+        targets=[target] * len(completions),
+    )
     rewards = [0.05 * f + 0.95 * a for f, a in zip(fmt, acc)]
     advantages = compute_advantages(rewards)
 
@@ -99,6 +108,7 @@ def main():
     p.add_argument("--num_generations", type=int, default=8)
     p.add_argument("--max_new_tokens", type=int, default=96)
     p.add_argument("--temperature", type=float, default=0.9)
+    p.add_argument("--task", choices=["game24", "countdown"], default="game24")
     p.add_argument("--seed", type=int, default=42)
     args = p.parse_args()
 
@@ -118,8 +128,15 @@ def main():
     model = PeftModel.from_pretrained(base, args.init_adapter, is_trainable=True)
     model.train()
 
-    data_cfg = DataConfig(max_train_samples=args.max_train_samples)
-    data = load_24game_dataset(data_cfg)["train"]
+    data_cfg = DataConfig(
+        max_train_samples=args.max_train_samples,
+        countdown_train_samples=args.max_train_samples,
+        load_official_eval=False,
+    )
+    if args.task == "countdown":
+        data = load_countdown_dataset(data_cfg)["train"]
+    else:
+        data = load_24game_dataset(data_cfg)["train"]
     cfg = GRPOConfig(
         output_dir=args.output_dir,
         num_train_epochs=args.epochs,
@@ -138,9 +155,10 @@ def main():
         order = torch.randperm(len(data)).tolist()
         for idx in tqdm(order, desc=f"GRPO epoch {epoch + 1}"):
             nums = get_number_list(data[idx])
-            m = grpo_step(model, optimizer, tokenizer, nums, cfg, data_cfg, device)
+            target = get_target_value(data[idx])
+            m = grpo_step(model, optimizer, tokenizer, nums, target, cfg, data_cfg, device)
             step += 1
-            m.update({"step": step, "epoch": epoch + 1, "numbers": nums})
+            m.update({"step": step, "epoch": epoch + 1, "numbers": nums, "target": target})
             metrics.append(m)
             if step % 10 == 0:
                 recent = metrics[-10:]
@@ -157,6 +175,7 @@ def main():
     summary = {
         "base_model": args.base_model,
         "init_adapter": args.init_adapter,
+        "task": args.task,
         "train_samples": len(data),
         "epochs": args.epochs,
         "total_steps": step,

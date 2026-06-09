@@ -10,7 +10,10 @@ Where:
 Returns a list of float rewards, one per completion.
 """
 
+from __future__ import annotations
+
 import re
+import ast
 from typing import List, Dict, Any
 
 from game24.utils import validate_solution, extract_answer_from_completion, extract_numbers
@@ -55,24 +58,51 @@ def format_reward(completions: List[str], **kwargs) -> List[float]:
     return rewards
 
 
-def accuracy_reward(completions: List[str], numbers: List[List[int]], **kwargs) -> List[float]:
-    """Reward for correctly solving the 24-point puzzle.
+def _coerce_numbers(nums):
+    if isinstance(nums, str):
+        return list(ast.literal_eval(nums))
+    return list(nums)
+
+
+def _target_at(targets, idx: int, default: int | float = 24) -> int | float:
+    if targets is None:
+        return default
+    if isinstance(targets, (int, float)):
+        return targets
+    if isinstance(targets, str):
+        return ast.literal_eval(targets)
+    return targets[idx]
+
+
+def accuracy_reward(
+    completions: List[str],
+    numbers: List[List[int]],
+    targets: List[int | float] | int | float | None = None,
+    **kwargs,
+) -> List[float]:
+    """Reward for correctly solving a target-number puzzle.
 
     Checks:
     - Expression can be extracted from completion
-    - Expression evaluates to 24
-    - Expression uses exactly the given 4 numbers, each once
+    - Expression evaluates to the example target
+    - Expression uses exactly the given numbers, each once
 
     Args:
         completions: Model completions.
         numbers: List of input number lists corresponding to each completion.
+        targets: Optional target values corresponding to each completion.
 
     Returns:
         Reward of 1.0 for a correct solution, -0.1 otherwise.
     """
     rewards = []
-    for completion, nums in zip(completions, numbers):
-        nums = list(nums) if not isinstance(nums, str) else eval(nums)
+    if targets is None:
+        targets = kwargs.get("target")
+    if targets is None:
+        targets = kwargs.get("targets")
+    for idx, (completion, nums) in enumerate(zip(completions, numbers)):
+        nums = _coerce_numbers(nums)
+        target = _target_at(targets, idx)
 
         # Extract expression from completion
         expression = extract_answer_from_completion(completion)
@@ -81,7 +111,7 @@ def accuracy_reward(completions: List[str], numbers: List[List[int]], **kwargs) 
             continue
 
         # Validate the solution
-        is_valid, reason = validate_solution(nums, expression, target=24)
+        is_valid, reason = validate_solution(nums, expression, target=target)
 
         rewards.append(1.0 if is_valid else -0.1)
 
@@ -107,6 +137,7 @@ def strict_format_reward(completions: List[str], **kwargs) -> List[float]:
 def combined_reward(
     completions: List[str],
     numbers: List[List[int]],
+    targets: List[int | float] | int | float | None = None,
     format_weight: float = 0.3,
     accuracy_weight: float = 0.7,
     **kwargs,
@@ -119,11 +150,12 @@ def combined_reward(
     Args:
         completions: Model completions.
         numbers: Input number lists.
+        targets: Optional target values.
         format_weight: Weight for format reward (default 0.3).
         accuracy_weight: Weight for accuracy reward (default 0.7).
     """
     fmt_scores = format_reward(completions)
-    acc_scores = accuracy_reward(completions, numbers=numbers)
+    acc_scores = accuracy_reward(completions, numbers=numbers, targets=targets, **kwargs)
 
     combined = []
     for fmt, acc in zip(fmt_scores, acc_scores):
@@ -132,7 +164,7 @@ def combined_reward(
     return combined
 
 
-def make_reward_dict(numbers_column: str = "numbers"):
+def make_reward_dict(numbers_column: str = "numbers", target_column: str = "target"):
     """Create a reward function dict that passes dataset columns to reward functions.
 
     TRL GRPOTrainer can accept reward functions that receive kwargs from the dataset.
@@ -149,6 +181,11 @@ def make_reward_dict(numbers_column: str = "numbers"):
     """
     def reward_wrapper(completions: List[str], numbers: List = None, **kwargs) -> List[float]:
         if numbers is not None:
-            return accuracy_reward(completions, numbers=numbers, **kwargs)
+            return accuracy_reward(
+                completions,
+                numbers=numbers,
+                targets=kwargs.get(target_column),
+                **kwargs,
+            )
         return [0.0] * len(completions)
     return reward_wrapper

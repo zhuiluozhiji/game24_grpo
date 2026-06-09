@@ -4,6 +4,8 @@ This trains a LoRA adapter on verified dataset expressions before RL. The goal i
 to prevent the policy from learning the easy format-only shortcut.
 """
 
+from __future__ import annotations
+
 import argparse
 import json
 import os
@@ -19,8 +21,14 @@ from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from game24.config import DataConfig, LoRAConfig as LoRACfg, ModelConfig
-from game24.data import SYSTEM_PROMPT, get_number_list, load_24game_dataset
-from game24.solver import curriculum_examples
+from game24.data import (
+    SYSTEM_PROMPT,
+    get_number_list,
+    get_target_value,
+    load_24game_dataset,
+    load_countdown_dataset,
+)
+from game24.solver import curriculum_examples, solve_target
 from game24.utils import format_prompt, validate_solution
 
 
@@ -32,44 +40,48 @@ def normalize_expr(expr: str) -> str:
 
 def pick_solution(example) -> str | None:
     numbers = get_number_list(example)
+    target = get_target_value(example)
     for raw in example.get("solutions") or []:
         expr = normalize_expr(str(raw))
-        valid, _ = validate_solution(numbers, expr)
+        valid, _ = validate_solution(numbers, expr, target=target)
         if valid:
             return expr
-    return None
+    if example.get("solution"):
+        expr = normalize_expr(str(example["solution"]))
+        valid, _ = validate_solution(numbers, expr, target=target)
+        if valid:
+            return expr
+    return solve_target(numbers, target=target)
 
 
-def format_completion(expr: str | None) -> str:
+def format_completion(expr: str | None, target: int = 24) -> str:
     if expr is None:
         return (
             "<think>I checked the possible arithmetic combinations and did not "
-            "find a valid way to make 24 using each number exactly once.</think>\n"
+            f"find a valid way to make {target} using each number exactly once.</think>\n"
             "<answer>NO_SOLUTION</answer>"
         )
     return (
         f"<think>Use the expression {expr}. It uses each given number exactly "
-        f"once and evaluates to 24.</think>\n<answer>{expr}</answer>"
+        f"once and evaluates to {target}.</think>\n<answer>{expr}</answer>"
     )
 
 
 def build_example(tokenizer, example):
     numbers = get_number_list(example)
-    if "solution" in example:
-        expr = example["solution"]
-    else:
-        expr = pick_solution(example)
+    target = get_target_value(example)
+    expr = pick_solution(example)
     if expr is None and example.get("solvable", True):
         return None
 
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": format_prompt(numbers)},
+        {"role": "user", "content": format_prompt(numbers, target=target)},
     ]
     prompt = tokenizer.apply_chat_template(
         messages, tokenize=False, add_generation_prompt=True
     )
-    completion = format_completion(expr)
+    completion = format_completion(expr, target=target)
     return prompt, completion
 
 
@@ -82,11 +94,13 @@ def main():
     parser.add_argument("--learning_rate", type=float, default=1e-4)
     parser.add_argument("--max_length", type=int, default=768)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--task", choices=["game24", "countdown", "mixed"], default="game24")
     parser.add_argument("--synthetic", action="store_true")
     parser.add_argument("--synthetic_low", type=int, default=1)
     parser.add_argument("--synthetic_high", type=int, default=13)
     parser.add_argument("--synthetic_ood_low", type=int, default=10)
     parser.add_argument("--synthetic_ood_high", type=int, default=20)
+    parser.add_argument("--synthetic_target", type=int, default=24)
     parser.add_argument("--unsolvable_limit", type=int, default=300)
     args = parser.parse_args()
 
@@ -127,20 +141,48 @@ def main():
     model.print_trainable_parameters()
     model.train()
 
-    data_cfg = DataConfig(max_train_samples=args.max_train_samples)
-    train_ds = load_24game_dataset(data_cfg)["train"]
-    raw_examples = list(train_ds)
+    data_cfg = DataConfig(
+        max_train_samples=args.max_train_samples,
+        countdown_train_samples=args.max_train_samples,
+        load_official_eval=False,
+    )
+    raw_examples = []
+    if args.task in {"game24", "mixed"}:
+        raw_examples.extend(list(load_24game_dataset(data_cfg)["train"]))
+    if args.task in {"countdown", "mixed"}:
+        raw_examples.extend(list(load_countdown_dataset(data_cfg)["train"]))
     if args.synthetic:
-        raw_examples.extend(curriculum_examples(args.synthetic_low, args.synthetic_high, True))
-        raw_examples.extend(curriculum_examples(args.synthetic_ood_low, args.synthetic_ood_high, True))
+        raw_examples.extend(curriculum_examples(
+            args.synthetic_low,
+            args.synthetic_high,
+            True,
+            target=args.synthetic_target,
+        ))
+        raw_examples.extend(curriculum_examples(
+            args.synthetic_ood_low,
+            args.synthetic_ood_high,
+            True,
+            target=args.synthetic_target,
+        ))
         raw_examples.extend(
-            curriculum_examples(args.synthetic_low, args.synthetic_high, False, args.unsolvable_limit)
+            curriculum_examples(
+                args.synthetic_low,
+                args.synthetic_high,
+                False,
+                args.unsolvable_limit,
+                target=args.synthetic_target,
+            )
         )
 
     examples = []
     seen = set()
     for ex in raw_examples:
-        key = (tuple(get_number_list(ex)), ex.get("solution"), ex.get("solvable", True))
+        key = (
+            tuple(get_number_list(ex)),
+            get_target_value(ex),
+            ex.get("solution"),
+            ex.get("solvable", True),
+        )
         if key in seen:
             continue
         seen.add(key)
@@ -186,6 +228,7 @@ def main():
     tokenizer.save_pretrained(final_dir)
     summary = {
         "model": model_cfg.model_name,
+        "task": args.task,
         "train_examples": len(examples),
         "epochs": args.epochs,
         "total_steps": global_step,

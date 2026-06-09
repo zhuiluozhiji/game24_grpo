@@ -6,7 +6,7 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 NLP course project — **Topic 3: 24-Point Game Solving with GRPO Reinforcement Learning**.
 
-Trains Qwen2.5-0.5B-Instruct to solve the 24-point game using GRPO (Group Relative Policy Optimization) with verifiable rewards (RLVR), following the DeepSeek-R1 paradigm.
+Trains Qwen2.5-1.5B-Instruct to solve the 24-point game using SFT warm-up plus GRPO (Group Relative Policy Optimization) with verifiable rewards (RLVR), following the DeepSeek-R1 paradigm. Countdown 3-4 number arbitrary-target solving is included as the bonus extension.
 
 ## Project Structure
 
@@ -25,14 +25,14 @@ game24/
 ## Commands
 
 ```bash
-# Quick test (50 samples, 1 epoch) — always run this first
-python game24/run_experiment.py --quick
+# Main 1.5B experiment pipeline
+bash scripts/run_15b_mainline.sh "$QWEN_15B" 0
 
-# Full training + evaluation
-python game24/run_experiment.py --epochs 3 --output_dir ./output/game24
+# Countdown bonus pipeline
+bash scripts/run_countdown_bonus.sh "$QWEN_15B" 0
 
-# Train only
-python game24/train.py --epochs 3 --output_dir ./output/game24
+# Quick legacy smoke test
+python game24/run_experiment.py --quick --base_model "$QWEN_15B"
 
 # Evaluate only (after training)
 python game24/evaluate.py --model_path ./output/game24/final_model
@@ -43,11 +43,12 @@ python -c "from game24.utils import validate_solution; print(validate_solution([
 
 ## Key Design Decisions
 
-- **CPU-only**: No vLLM, no bf16/fp16. 4-bit quantization preferred with float32 fallback.
-- **Model**: Qwen2.5-0.5B-Instruct (small enough for CPU). LoRA rank=16, ~2% trainable params.
+- **Main model**: Qwen2.5-1.5B-Instruct. LoRA rank=16.
 - **Rewards**: Format (think/answer tags, weight 0.3) + Accuracy (expression evaluates to 24, weight 0.7).
-- **Data**: Train on `nlile/24-game` solvable=True (~1009 examples). Test on held-out + OOD + unsolvable (hallucination check).
+- **Data**: Train on `nlile/24-game` solvable=True. Test on held-out ID, official `test-time-compute/game-of-24`, ToT hard 900-1000, and unsolvable hallucination check.
+- **Bonus**: `Jiayi-Pan/Countdown-Tasks-3to4` uses per-example arbitrary `target`.
 - **GRPO params**: num_generations=4, beta=0.04, temperature=0.9.
+- **Archived results**: Existing 0.5B and 3B outputs are preserved as historical pre-experiments, not formal model-size comparisons.
 
 ## Key References
 

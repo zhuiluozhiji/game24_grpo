@@ -1,10 +1,12 @@
-"""Expression evaluator and utilities for the 24-Point Game.
+"""Expression evaluator and utilities for arithmetic target games.
 
 Core functionality:
 - Parse and evaluate arithmetic expressions safely
-- Verify that an expression is a valid 24-point solution
+- Verify that an expression is a valid target-number solution
 - Extract numbers from expressions and validate they match input
 """
+
+from __future__ import annotations
 
 import re
 import ast
@@ -105,16 +107,21 @@ def extract_numbers(expr: str) -> List[int]:
     return [int(n) for n in numbers]
 
 
-def validate_solution(numbers: List[int], expression: str, target: int = 24, tolerance: float = 1e-6) -> Tuple[bool, str]:
-    """Validate whether an expression is a valid 24-point solution.
+def validate_solution(
+    numbers: List[int],
+    expression: str,
+    target: int | float = 24,
+    tolerance: float = 1e-6,
+) -> Tuple[bool, str]:
+    """Validate whether an expression is a valid arithmetic target solution.
 
     Checks:
-    1. Expression evaluates to target (24) within tolerance
+    1. Expression evaluates to target within tolerance
     2. Expression uses exactly the given numbers, each exactly once
     3. Only allowed operators are used
 
     Args:
-        numbers: List of 4 input integers.
+        numbers: List of input integers.
         expression: The arithmetic expression string.
         target: Target value (default 24).
         tolerance: Floating point tolerance for comparison.
@@ -174,8 +181,20 @@ def extract_answer_from_completion(completion: str) -> Optional[str]:
     return None
 
 
-def format_prompt(numbers: List[int]) -> str:
-    """Create a standard prompt for the 24-point game.
+def format_system_prompt() -> str:
+    """Create a system prompt shared by 24-point and Countdown tasks."""
+    return (
+        "You are a math puzzle solver. Given a list of numbers and a target, "
+        "find an expression using each given number exactly once with +, -, *, "
+        "/ and parentheses to reach the target. Think step by step inside "
+        "<think>...</think> tags, then give the final expression inside "
+        "<answer>...</answer> tags. If no solution exists, answer "
+        "NO_SOLUTION inside the answer tags."
+    )
+
+
+def format_prompt(numbers: List[int], target: int | float = 24) -> str:
+    """Create a standard prompt for a target-number arithmetic game.
 
     Uses Qwen chat format with R1-style think/answer template.
     """
@@ -183,7 +202,7 @@ def format_prompt(numbers: List[int]) -> str:
     prompt = (
         f"Given the numbers [{nums_str}], use each number exactly once "
         f"with basic arithmetic operations (+, -, *, /) and parentheses "
-        f"to make 24.\n\n"
+        f"to make {target}.\n\n"
         f"Think step by step inside <think>...</think> tags, "
         f"then provide your final expression inside <answer>...</answer> tags."
     )

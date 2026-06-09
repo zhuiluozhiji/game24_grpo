@@ -24,7 +24,7 @@ def main():
                         help="Skip training, only evaluate")
     parser.add_argument("--model_path", type=str, default=None,
                         help="Path to trained model for evaluation")
-    parser.add_argument("--base_model", type=str, default="Qwen/Qwen2.5-0.5B-Instruct")
+    parser.add_argument("--base_model", type=str, default="Qwen/Qwen2.5-1.5B-Instruct")
 
     args = parser.parse_args()
 
@@ -51,7 +51,7 @@ def main():
         from game24.config import ModelConfig, LoRAConfig as LoRACfg, DataConfig, GRPOConfig
 
         if args.quick:
-            data_cfg = DataConfig(max_train_samples=10, num_unsolvable_test=5)
+            data_cfg = DataConfig(max_train_samples=10, num_unsolvable_test=5, load_official_eval=False)
             grpo_cfg = GRPOConfig(
                 output_dir=args.output_dir,
                 num_train_epochs=1,
@@ -64,7 +64,7 @@ def main():
                 warmup_ratio=0.0,
             )
         else:
-            data_cfg = DataConfig()
+            data_cfg = DataConfig(load_official_eval=False)
             grpo_cfg = GRPOConfig(
                 output_dir=args.output_dir,
                 num_train_epochs=args.epochs,
@@ -74,6 +74,7 @@ def main():
             )
 
         model_cfg = ModelConfig()
+        model_cfg.model_name = args.base_model
         lora_cfg = LoRACfg()
 
         torch.manual_seed(grpo_cfg.seed)

@@ -2,6 +2,8 @@
 
 更新时间：2026-06-07
 
+> 说明：本文档记录的是旧版 Qwen2.5-0.5B direct GRPO 失败基线，不是最终作业总结。当前代码已经新增 1.5B 主线、official hard split、Countdown 加分项、错误统计和曲线绘图；最终报告应优先参考 `docs/runbook.md`、`docs/todo.md`、`docs/RUNNING.md` 和 `docs/EXPERIMENTS.md` 中的新增实验流程。
+
 ## 1. 实验状态
 
 本次已完成 24 点游戏强化学习的端到端流程：

@@ -35,7 +35,7 @@ def get_device():
 
 def load_trained_model(
     model_path: str,
-    base_model: str = "/data/ysf/.cache/modelscope/Qwen/Qwen2___5-0___5B-Instruct",
+    base_model: str = "/data/ysf/.cache/modelscope/Qwen/Qwen2___5-1___5B-Instruct",
 ) -> Tuple:
     """Load a trained (LoRA) model and tokenizer on GPU."""
     device = get_device()
@@ -248,7 +248,7 @@ def print_eval_results(results: Dict):
 
 def run_full_evaluation(
     model_path: str,
-    base_model: str = "/data/ysf/.cache/modelscope/Qwen/Qwen2___5-0___5B-Instruct",
+    base_model: str = "/data/ysf/.cache/modelscope/Qwen/Qwen2___5-1___5B-Instruct",
     output_file: Optional[str] = None,
 ):
     """Run full evaluation suite."""
@@ -319,7 +319,7 @@ def main():
     parser.add_argument("--model_path", type=str, required=True,
                         help="Path to trained model (LoRA adapter)")
     parser.add_argument("--base_model", type=str,
-                        default="/data/ysf/.cache/modelscope/Qwen/Qwen2___5-0___5B-Instruct",
+                        default="/data/ysf/.cache/modelscope/Qwen/Qwen2___5-1___5B-Instruct",
                         help="Base model name")
     parser.add_argument("--output_file", type=str, default=None,
                         help="Output file for results JSON")

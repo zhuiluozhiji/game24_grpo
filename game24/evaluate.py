@@ -37,7 +37,7 @@ from game24.rewards import format_reward
 
 def load_trained_model(
     model_path: str,
-    base_model: str = "Qwen/Qwen2.5-0.5B-Instruct",
+    base_model: str = "Qwen/Qwen2.5-1.5B-Instruct",
 ) -> Tuple:
     """Load a trained (LoRA) model and tokenizer."""
     print(f"Loading base model: {base_model}")
@@ -283,7 +283,7 @@ def print_eval_results(results: Dict):
 
 def run_full_evaluation(
     model_path: str,
-    base_model: str = "Qwen/Qwen2.5-0.5B-Instruct",
+    base_model: str = "Qwen/Qwen2.5-1.5B-Instruct",
     output_file: Optional[str] = None,
 ):
     """Run full evaluation suite."""
@@ -357,7 +357,7 @@ def main():
     parser = argparse.ArgumentParser(description="Evaluate 24-Point Game model")
     parser.add_argument("--model_path", type=str, required=True,
                         help="Path to trained model (LoRA adapter)")
-    parser.add_argument("--base_model", type=str, default="Qwen/Qwen2.5-0.5B-Instruct",
+    parser.add_argument("--base_model", type=str, default="Qwen/Qwen2.5-1.5B-Instruct",
                         help="Base model name")
     parser.add_argument("--output_file", type=str, default=None,
                         help="Output file for results JSON")

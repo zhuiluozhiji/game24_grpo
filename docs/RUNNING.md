@@ -20,148 +20,133 @@ export PYTHONPATH=$PWD
 
 ## 2. 模型与数据准备
 
-推荐使用本地模型路径，避免训练中反复联网下载：
+如果服务器可以访问 Hugging Face，可以直接使用模型名，`transformers` 会自动下载：
 
 ```bash
-export QWEN_05B=/data/ysf/.cache/modelscope/Qwen/Qwen2___5-0___5B-Instruct
-export QWEN_3B=/data/ysf/.cache/modelscope/Qwen/Qwen2___5-3B-Instruct
+export QWEN_15B=Qwen/Qwen2.5-1.5B-Instruct
 ```
 
-如果使用 Hugging Face 名称，可将上面变量替换为：
+更推荐提前下载到本地目录，避免训练中反复联网。Hugging Face 下载方式：
 
 ```bash
-export QWEN_05B=Qwen/Qwen2.5-0.5B-Instruct
-export QWEN_3B=Qwen/Qwen2.5-3B-Instruct
+pip install -U huggingface_hub
+mkdir -p /data/models
+
+huggingface-cli download Qwen/Qwen2.5-1.5B-Instruct \
+  --local-dir /data/models/Qwen2.5-1.5B-Instruct
+
+export QWEN_15B=/data/models/Qwen2.5-1.5B-Instruct
+```
+
+国内服务器可以用 ModelScope：
+
+```bash
+pip install -U modelscope
+mkdir -p /data/models
+
+modelscope download --model Qwen/Qwen2.5-1.5B-Instruct \
+  --local_dir /data/models/Qwen2.5-1.5B-Instruct
+
+export QWEN_15B=/data/models/Qwen2.5-1.5B-Instruct
 ```
 
 本包包含 `dataset_cache/train.json`，训练脚本会优先使用该缓存。若需要重新下载 `nlile/24-game`，删除该缓存并保证服务器可访问 Hugging Face datasets。
 
-## 3. 快速连通性测试
+## 3. 快速检查
 
-先跑一个小实验，确认环境、CUDA、模型加载、数据加载均正常：
+正式训练前先做不加载模型的轻量检查：
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python game24/run_experiment.py \
-  --quick \
-  --output_dir ./output/game24-quick-rerun
+python -m compileall game24
+bash -n scripts/run_15b_mainline.sh
+bash -n scripts/run_countdown_bonus.sh
+bash -n scripts/run_ttc_sweep.sh
+```
+
+检查 solver、validator、target-aware reward：
+
+```bash
+python - <<'PY'
+from game24.solver import solve_target
+from game24.utils import validate_solution
+from game24.rewards import accuracy_reward
+
+expr = solve_target([2, 3, 7], 13)
+print(expr)
+print(validate_solution([2, 3, 7], expr, 13))
+print(accuracy_reward([f"<think>x</think><answer>{expr}</answer>"], [[2, 3, 7]], targets=[13]))
+PY
+```
+
+## 4. 复现题目指定 1.5B 主线
+
+该脚本会依次跑 base 评估、SFT warm-up、SFT 评估、GRPO continuation、GRPO 评估，并覆盖 official OOD 与 ToT hard split 900-1000。
+
+```bash
+CUDA_VISIBLE_DEVICES=0 bash scripts/run_15b_mainline.sh "$QWEN_15B" 0
+```
+
+可用环境变量控制规模：
+
+```bash
+N_EVAL=200 N_HARD=100 BEST_OF=8 GRPO_SAMPLES=300 GRPO_GENERATIONS=8 \
+  bash scripts/run_15b_mainline.sh "$QWEN_15B" 0
 ```
 
 输出位置：
 
-- `./output/game24-quick-rerun/final_model/`：LoRA adapter 与 tokenizer 文件。
-- `./output/game24-quick-rerun/training_summary.json`：训练摘要。
-- `./output/game24-quick-rerun/training_metrics.json`：逐步训练指标。
+- `./output/game24-15b-base/`
+- `./output/game24-sft-15b-curriculum/`
+- `./output/game24-grpo-15b-curriculum/`
 
-## 4. 复现旧版 0.5B GRPO 基线
+## 5. 复现 Countdown 加分项
 
-旧版 `run_experiment.py` 的训练阶段读取 `game24/config.py` 中的 `ModelConfig.model_name`。在服务器上运行前，请确认该字段指向 `$QWEN_05B` 对应的本地路径或 Hugging Face 名称。
+该脚本使用 `Jiayi-Pan/Countdown-Tasks-3to4`，任务形式为 3-4 个数字凑任意目标数。验证器、奖励、prompt 均读取每条样本的 `target` 字段。
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python game24/run_experiment.py \
-  --epochs 3 \
-  --learning_rate 2e-5 \
-  --beta 0.04 \
-  --num_generations 4 \
-  --output_dir ./output/game24-grpo-full-rerun \
-  --base_model "$QWEN_05B"
+CUDA_VISIBLE_DEVICES=0 bash scripts/run_countdown_bonus.sh "$QWEN_15B" 0
 ```
 
-预期输出：
-
-- `./output/game24-grpo-full-rerun/final_model/`
-- `./output/game24-grpo-full-rerun/training_summary.json`
-- `./output/game24-grpo-full-rerun/training_metrics.json`
-- `./output/game24-grpo-full-rerun/evaluation_results.json`
-- `./output/game24-grpo-full-rerun/experiment_summary.json`
-
-该实验在原始记录中失败：模型主要学会 `<think>...</think><answer>...</answer>` 输出模板，ID/OOD 解题率均为 0。
-
-## 5. 复现 3B 课程 SFT
-
-这是用于解决“小模型只学到输出模板”的关键改动：先用可验证表达式和部分不可解样本做课程式 SFT warm-up，让模型先学会表达式求解和拒答行为，再接 GRPO。
+可用环境变量控制规模：
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python game24/sft_warmup.py \
-  --model_name "$QWEN_3B" \
-  --output_dir ./output/game24-sft-3b-curriculum \
-  --epochs 2 \
-  --learning_rate 8e-5 \
-  --synthetic \
-  --unsolvable_limit 300
+COUNTDOWN_TRAIN=3000 COUNTDOWN_EVAL=200 BEST_OF=8 GRPO_SAMPLES=300 \
+  bash scripts/run_countdown_bonus.sh "$QWEN_15B" 0
 ```
 
 输出位置：
 
-- `./output/game24-sft-3b-curriculum/final_model/`
-- `./output/game24-sft-3b-curriculum/sft_summary.json`
-- `./output/game24-sft-3b-curriculum/sft_metrics.json`
+- `./output/countdown-sft-15b/`
+- `./output/countdown-grpo-15b/`
 
-复现本实验后，运行 greedy 评估：
+## 6. 补跑 test-time compute sweep
 
-```bash
-CUDA_VISIBLE_DEVICES=0 python game24/quick_eval.py \
-  --base_model "$QWEN_3B" \
-  --model_path ./output/game24-sft-3b-curriculum/final_model \
-  --output_file ./output/game24-sft-3b-curriculum/quick_eval_60.json \
-  --n 60 \
-  --max_new_tokens 96
-```
-
-运行 best-of-8 评估：
+主线跑完后，可以只做评估、不重新训练，比较同一模型在不同候选数下的 solve rate。
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python game24/bestof_eval.py \
-  --base_model "$QWEN_3B" \
-  --model_path ./output/game24-sft-3b-curriculum/final_model \
-  --output_file ./output/game24-sft-3b-curriculum/bestof8_eval_30.json \
-  --n 30 \
-  --best_of 8 \
-  --max_new_tokens 96 \
-  --temperature 0.9
+N_EVAL=200 N_HARD=100 BEST_OF_LIST="1 4 8 16" \
+  bash scripts/run_ttc_sweep.sh "$QWEN_15B" 0
 ```
 
-## 6. 复现 3B SFT 后短程 GRPO
+说明：
 
-```bash
-CUDA_VISIBLE_DEVICES=0 python game24/grpo_warm.py \
-  --base_model "$QWEN_3B" \
-  --init_adapter ./output/game24-sft-3b-curriculum/final_model \
-  --output_dir ./output/game24-grpo-3b-curriculum-short \
-  --epochs 1 \
-  --max_train_samples 50 \
-  --learning_rate 8e-7 \
-  --num_generations 4 \
-  --max_new_tokens 96 \
-  --temperature 0.9
+- Greedy 是 `quick_eval.py` 的确定性单次输出。
+- `best-of-1` 是采样一个候选，不等同于 greedy。
+- `best-of-4/8/16` 用同一验证器从多个候选中选择第一个正确表达式。
+
+## 7. 历史预实验归档
+
+仓库保留了早期 0.5B direct GRPO 和 3B SFT/GRPO 结果：
+
+```text
+results/game24-grpo-full/
+results/game24-sft-3b-curriculum/
+results/game24-grpo-3b-curriculum-short/
 ```
 
-输出位置：
+这些结果不作为正式主实验，也不作为模型大小对照，因为训练协议不同。对应复现脚本仍保留在 `scripts/run_old_05b_grpo.sh` 和 `scripts/run_3b_curriculum.sh`，仅供归档或排查使用。
 
-- `./output/game24-grpo-3b-curriculum-short/final_model/`
-- `./output/game24-grpo-3b-curriculum-short/grpo_summary.json`
-- `./output/game24-grpo-3b-curriculum-short/grpo_metrics.json`
-
-评估：
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python game24/quick_eval.py \
-  --base_model "$QWEN_3B" \
-  --model_path ./output/game24-grpo-3b-curriculum-short/final_model \
-  --output_file ./output/game24-grpo-3b-curriculum-short/quick_eval_30.json \
-  --n 30 \
-  --max_new_tokens 96
-
-CUDA_VISIBLE_DEVICES=0 python game24/bestof_eval.py \
-  --base_model "$QWEN_3B" \
-  --model_path ./output/game24-grpo-3b-curriculum-short/final_model \
-  --output_file ./output/game24-grpo-3b-curriculum-short/bestof8_eval_30.json \
-  --n 30 \
-  --best_of 8 \
-  --max_new_tokens 96 \
-  --temperature 0.9
-```
-
-## 7. 参数含义
+## 8. 参数含义
 
 | 参数 | 所属脚本 | 含义 |
 | --- | --- | --- |
@@ -180,11 +165,15 @@ CUDA_VISIBLE_DEVICES=0 python game24/bestof_eval.py \
 | `--max_new_tokens` | eval/GRPO | 每个答案最多生成 token 数。 |
 | `--temperature` | best-of/GRPO | 采样温度。越高候选更多样，但错误也可能更多。 |
 | `--n` | eval | 每个 split 评估多少道题。 |
+| `--n_hard` | eval | ToT hard split 900-1000 评估多少道题。 |
 | `--best_of` | `bestof_eval.py` | 每道题采样多少个候选，再由验证器选择正确候选。 |
+| `--task` | SFT/GRPO/eval | `game24` 或 `countdown`，SFT 还支持 `mixed`。 |
+| `--synthetic_target` | `sft_warmup.py` | 合成课程样本的目标值，默认 24。 |
 
-## 8. 重要指标解释
+## 9. 重要指标解释
 
 - ID 解题率：in-distribution solve rate，在训练分布同源的 held-out 可解题上，答案表达式通过验证器的比例。
 - OOD 解题率：out-of-distribution solve rate，在数字范围或构造方式不同的可解题上，答案表达式通过验证器的比例。
 - Greedy：确定性解码，`do_sample=False`，每题只生成 1 个答案，反映模型单次输出能力。
 - Best-of-8：每题采样 8 个候选，使用规则验证器挑出第一个正确答案；它反映“模型候选池里是否包含正确解”，通常高于 greedy。
+- Hard split 难度分桶：official `game-of-24` 自带 `rank` 与 `solved_rate`，评估 JSON 的 `difficulty` 字段会按 solved-rate 区间汇总模型表现。

@@ -1,4 +1,6 @@
-"""Small exact solver for generating 24-point curriculum examples."""
+"""Small exact solver for generating arithmetic curriculum examples."""
+
+from __future__ import annotations
 
 from functools import lru_cache
 from fractions import Fraction
@@ -6,9 +8,15 @@ from itertools import combinations_with_replacement
 from typing import Iterable
 
 
-def solve_24(numbers: Iterable[int], target: int = 24) -> str | None:
+def solve_target(numbers: Iterable[int], target: int = 24) -> str | None:
+    """Return one exact expression that reaches target, or None."""
     items = tuple((Fraction(n), str(int(n))) for n in numbers)
     return _solve(items, Fraction(target))
+
+
+def solve_24(numbers: Iterable[int], target: int = 24) -> str | None:
+    """Backward-compatible 24-point solver wrapper."""
+    return solve_target(numbers, target)
 
 
 @lru_cache(maxsize=None)
@@ -41,12 +49,25 @@ def _solve(items: tuple[tuple[Fraction, str], ...], target: Fraction) -> str | N
     return None
 
 
-def curriculum_examples(low: int, high: int, solvable: bool, limit: int | None = None):
+def curriculum_examples(
+    low: int,
+    high: int,
+    solvable: bool,
+    limit: int | None = None,
+    target: int = 24,
+    num_numbers: int = 4,
+):
+    """Generate deterministic curriculum examples for a fixed target."""
     examples = []
-    for nums in combinations_with_replacement(range(low, high + 1), 4):
-        expr = solve_24(nums)
+    for nums in combinations_with_replacement(range(low, high + 1), num_numbers):
+        expr = solve_target(nums, target=target)
         if (expr is not None) == solvable:
-            examples.append({"numbers": list(nums), "solution": expr, "solvable": solvable})
+            examples.append({
+                "numbers": list(nums),
+                "target": target,
+                "solution": expr,
+                "solvable": solvable,
+            })
             if limit and len(examples) >= limit:
                 break
     return examples
