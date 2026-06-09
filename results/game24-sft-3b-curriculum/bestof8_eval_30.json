@@ -1,0 +1,494 @@
+{
+  "in_distribution": {
+    "dataset_name": "ID",
+    "total": 30,
+    "best_of": 8,
+    "solved": 13,
+    "solve_rate": 0.43333333333333335,
+    "format_correct": 30,
+    "format_rate": 1.0,
+    "hallucinated": 0,
+    "hallucination_rate": null,
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          2,
+          3,
+          6,
+          10
+        ],
+        "expression": "((2-10)*(3-6))",
+        "completion": "<think>Use the expression ((2-10)*(3-6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2-10)*(3-6))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution"
+      },
+      {
+        "numbers": [
+          1,
+          4,
+          7,
+          13
+        ],
+        "expression": "(13+((1*4)+7))",
+        "completion": "<think>Use the expression (13+((1*4)+7)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13+((1*4)+7))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution"
+      },
+      {
+        "numbers": [
+          4,
+          9,
+          9,
+          10
+        ],
+        "expression": "(9-((4-9)-10))",
+        "completion": "<think>Use the expression (9-((4-9)-10)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9-((4-9)-10))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution"
+      },
+      {
+        "numbers": [
+          4,
+          4,
+          10,
+          13
+        ],
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 76.0, expected 24"
+      },
+      {
+        "numbers": [
+          5,
+          6,
+          11,
+          13
+        ],
+        "expression": "(13-((5-6)*11))",
+        "completion": "<think>Use the expression (13-((5-6)*11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((5-6)*11))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution"
+      },
+      {
+        "numbers": [
+          2,
+          2,
+          6,
+          8
+        ],
+        "expression": "((2*6)+(2*8))",
+        "completion": "<think>Use the expression ((2*6)+(2*8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*6)+(2*8))</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 8.0, expected 24"
+      },
+      {
+        "numbers": [
+          5,
+          6,
+          8,
+          13
+        ],
+        "expression": "(13-((5-8)*6))",
+        "completion": "<think>Use the expression (13-((5-8)*6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((5-8)*6))</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is -16.0, expected 24"
+      },
+      {
+        "numbers": [
+          4,
+          8,
+          9,
+          9
+        ],
+        "expression": "((4+9)/(8/9))",
+        "completion": "<think>Use the expression ((4+9)/(8/9)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4+9)/(8/9))</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 64.0, expected 24"
+      },
+      {
+        "numbers": [
+          4,
+          5,
+          6,
+          12
+        ],
+        "expression": "(12/(5/(4+6)))",
+        "completion": "<think>Use the expression (12/(5/(4+6))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(12/(5/(4+6)))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution"
+      },
+      {
+        "numbers": [
+          4,
+          8,
+          10,
+          12
+        ],
+        "expression": "(((4+8)-10)*12)",
+        "completion": "<think>Use the expression (((4+8)-10)*12). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((4+8)-10)*12)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution"
+      }
+    ]
+  },
+  "out_of_distribution": {
+    "dataset_name": "OOD",
+    "total": 30,
+    "best_of": 8,
+    "solved": 13,
+    "solve_rate": 0.43333333333333335,
+    "format_correct": 30,
+    "format_rate": 1.0,
+    "hallucinated": 0,
+    "hallucination_rate": null,
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          10,
+          10,
+          10,
+          12
+        ],
+        "expression": "(10+10)*12/10",
+        "completion": "<think>Use the expression (10+10)*12/10. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10+10)*12/10</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution"
+      },
+      {
+        "numbers": [
+          10,
+          10,
+          10,
+          13
+        ],
+        "expression": "10/10+13+10",
+        "completion": "<think>Use the expression 10/10+13+10. It uses each given number exactly once and evaluates to 24.</think>\n<answer>10/10+13+10</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution"
+      },
+      {
+        "numbers": [
+          10,
+          10,
+          10,
+          14
+        ],
+        "expression": "((10+10)-(10-14))",
+        "completion": "<think>Use the expression ((10+10)-(10-14)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10+10)-(10-14))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution"
+      },
+      {
+        "numbers": [
+          10,
+          10,
+          10,
+          15
+        ],
+        "expression": "((10+10)/(10/15))",
+        "completion": "<think>Use the expression ((10+10)/(10/15)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10+10)/(10/15))</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 20.0, expected 24"
+      },
+      {
+        "numbers": [
+          10,
+          10,
+          11,
+          12
+        ],
+        "expression": "(11+((10/10)+12))",
+        "completion": "<think>Use the expression (11+((10/10)+12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11+((10/10)+12))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution"
+      },
+      {
+        "numbers": [
+          10,
+          10,
+          11,
+          13
+        ],
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 23.0, expected 24"
+      },
+      {
+        "numbers": [
+          10,
+          10,
+          11,
+          14
+        ],
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 60.0, expected 24"
+      },
+      {
+        "numbers": [
+          10,
+          10,
+          11,
+          15
+        ],
+        "expression": "((10+10)-(11-15))",
+        "completion": "<think>Use the expression ((10+10)-(11-15)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10+10)-(11-15))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution"
+      },
+      {
+        "numbers": [
+          10,
+          10,
+          12,
+          12
+        ],
+        "expression": "((10*12)-(10*12))",
+        "completion": "<think>Use the expression ((10*12)-(10*12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10*12)-(10*12))</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Expression error: Division by zero"
+      },
+      {
+        "numbers": [
+          10,
+          10,
+          12,
+          13
+        ],
+        "expression": "(13-((10/10)-12))",
+        "completion": "<think>Use the expression (13-((10/10)-12)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((10/10)-12))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution"
+      }
+    ]
+  },
+  "unsolvable": {
+    "dataset_name": "Unsolvable",
+    "total": 30,
+    "best_of": 8,
+    "solved": 0,
+    "solve_rate": 0.0,
+    "format_correct": 30,
+    "format_rate": 1.0,
+    "hallucinated": 0,
+    "hallucination_rate": 0.0,
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "expression": "(1+1)*(1+1)*10",
+        "completion": "<think>Use the expression (1+1)*(1+1)*10. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(1+1)*(1+1)*10</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 19.0, expected 24"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 48.0, expected 24"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "expression": "(3-1)*1+1",
+        "completion": "<think>Use the expression (3-1)*1+1. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3-1)*1+1</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 60.0, expected 24"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          4
+        ],
+        "expression": "(4+1)*(1+1)",
+        "completion": "<think>Use the expression (4+1)*(1+1). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(4+1)*(1+1)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 5.0, expected 24"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          5
+        ],
+        "expression": "(1+1)*5*1",
+        "completion": "<think>Use the expression (1+1)*5*1. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(1+1)*5*1</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 3.0, expected 24"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          6
+        ],
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 0.8333333333333334, expected 24"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          7
+        ],
+        "expression": "(1+1)*(7-1)",
+        "completion": "<think>Use the expression (1+1)*(7-1). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(1+1)*(7-1)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 12.0, expected 24"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          9
+        ],
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 7.0, expected 24"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          10
+        ],
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 20.0, expected 24"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "expression": "(1+1)*2*24",
+        "completion": "<think>Use the expression (1+1)*2*24. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(1+1)*2*24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 8.0, expected 24"
+      }
+    ]
+  }
+}

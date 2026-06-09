@@ -1,0 +1,13 @@
+{
+  "model": "/data/ysf/.cache/modelscope/Qwen/Qwen2___5-0___5B-Instruct",
+  "lora_r": 16,
+  "train_samples": 1089,
+  "epochs": 3,
+  "total_steps": 3267,
+  "learning_rate": 2e-05,
+  "beta": 0.04,
+  "num_generations": 4,
+  "training_time_seconds": 17734.038007497787,
+  "final_avg_reward": 0.5100000000000005,
+  "timestamp": "2026-06-05T05:35:04.511166"
+}

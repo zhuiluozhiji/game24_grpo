@@ -1,0 +1,13 @@
+{
+  "base_model": "/data/ysf/.cache/modelscope/Qwen/Qwen2___5-3B-Instruct",
+  "init_adapter": "./output/game24-sft-3b-curriculum/final_model",
+  "train_samples": 50,
+  "epochs": 1,
+  "total_steps": 50,
+  "learning_rate": 8e-07,
+  "num_generations": 4,
+  "max_new_tokens": 96,
+  "training_time_seconds": 734.5757863521576,
+  "final_avg_reward": 0.03860000000000003,
+  "timestamp": "2026-06-07T17:11:21.402824"
+}

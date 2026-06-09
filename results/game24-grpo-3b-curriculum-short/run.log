@@ -1,0 +1,44 @@
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.36it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.85it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:01<00:00,  1.75it/s]
+Loading nlile/24-game dataset...
+  Loading cached dataset: /data/ysf/game24_grpo/game24/../dataset_cache/train.json
+Filter:   0%|          | 0/1362 [00:00<?, ? examples/s]Filter: 100%|██████████| 1362/1362 [00:00<00:00, 93311.81 examples/s]
+Filter:   0%|          | 0/1362 [00:00<?, ? examples/s]Filter: 100%|██████████| 1362/1362 [00:00<00:00, 108138.68 examples/s]
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /datasets/test-time-compute/game-of-24/resolve/main/README.md (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7621702ee4d0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 7774c994-6daa-4944-81a3-d0e16c1bc03d)')' thrown while requesting HEAD https://huggingface.co/datasets/test-time-compute/game-of-24/resolve/main/README.md
+Retrying in 1s [Retry 1/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /datasets/test-time-compute/game-of-24/resolve/main/README.md (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7621702ee830>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 68c32f2d-d79c-4d6a-86ed-e1ee5eebb5fa)')' thrown while requesting HEAD https://huggingface.co/datasets/test-time-compute/game-of-24/resolve/main/README.md
+Retrying in 2s [Retry 2/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /datasets/test-time-compute/game-of-24/resolve/main/README.md (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7621702eeb60>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 96a7ec6d-0995-496e-ac35-11cae926550d)')' thrown while requesting HEAD https://huggingface.co/datasets/test-time-compute/game-of-24/resolve/main/README.md
+Retrying in 4s [Retry 3/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /datasets/test-time-compute/game-of-24/resolve/main/README.md (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7621702eee90>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 0f6b5a0f-ec2f-4a99-b961-f3c28c1cb78b)')' thrown while requesting HEAD https://huggingface.co/datasets/test-time-compute/game-of-24/resolve/main/README.md
+Retrying in 8s [Retry 4/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /datasets/test-time-compute/game-of-24/resolve/main/README.md (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7621702ef1c0>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: a40fabcb-6f82-429e-9882-b13214f0a37f)')' thrown while requesting HEAD https://huggingface.co/datasets/test-time-compute/game-of-24/resolve/main/README.md
+Retrying in 8s [Retry 5/5].
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /datasets/test-time-compute/game-of-24/resolve/main/README.md (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7621702eed10>: Failed to establish a new connection: [Errno 101] Network is unreachable'))"), '(Request ID: 5e68bf2a-6888-4178-8b76-ee39025e902e)')' thrown while requesting HEAD https://huggingface.co/datasets/test-time-compute/game-of-24/resolve/main/README.md
+  Solvable examples: 1362
+  Unsolvable examples: 0
+  Train (solvable): 50
+  Test (solvable): 1312
+  Test (unsolvable): 100
+Loading OOD test dataset: test-time-compute/game-of-24...
+  Could not load OOD dataset: Couldn't reach 'test-time-compute/game-of-24' on the Hub (LocalEntryNotFoundError)
+  Falling back to synthetic OOD solvable puzzles.
+GRPO epoch 1:   0%|          | 0/50 [00:00<?, ?it/s]GRPO epoch 1:   2%|▏         | 1/50 [00:15<12:24, 15.19s/it]GRPO epoch 1:   4%|▍         | 2/50 [00:29<11:46, 14.73s/it]GRPO epoch 1:   6%|▌         | 3/50 [00:44<11:38, 14.87s/it]GRPO epoch 1:   8%|▊         | 4/50 [01:00<11:39, 15.20s/it]GRPO epoch 1:  10%|█         | 5/50 [01:14<11:15, 15.00s/it]GRPO epoch 1:  12%|█▏        | 6/50 [01:28<10:43, 14.62s/it]GRPO epoch 1:  14%|█▍        | 7/50 [01:43<10:31, 14.68s/it]GRPO epoch 1:  16%|█▌        | 8/50 [01:59<10:28, 14.95s/it]GRPO epoch 1:  18%|█▊        | 9/50 [02:14<10:11, 14.92s/it]step=10 reward=0.033 acc=-0.018 solved=3/40
+GRPO epoch 1:  20%|██        | 10/50 [02:29<09:58, 14.97s/it]GRPO epoch 1:  22%|██▏       | 11/50 [02:43<09:40, 14.88s/it]GRPO epoch 1:  24%|██▍       | 12/50 [02:57<09:17, 14.66s/it]GRPO epoch 1:  26%|██▌       | 13/50 [03:12<09:05, 14.74s/it]GRPO epoch 1:  28%|██▊       | 14/50 [03:26<08:41, 14.49s/it]GRPO epoch 1:  30%|███       | 15/50 [03:41<08:29, 14.57s/it]GRPO epoch 1:  32%|███▏      | 16/50 [03:56<08:18, 14.65s/it]GRPO epoch 1:  34%|███▍      | 17/50 [04:10<07:59, 14.54s/it]GRPO epoch 1:  36%|███▌      | 18/50 [04:24<07:39, 14.35s/it]GRPO epoch 1:  38%|███▊      | 19/50 [04:38<07:24, 14.32s/it]step=20 reward=0.059 acc=0.010 solved=4/40
+GRPO epoch 1:  40%|████      | 20/50 [04:53<07:13, 14.46s/it]GRPO epoch 1:  42%|████▏     | 21/50 [05:08<07:02, 14.55s/it]GRPO epoch 1:  44%|████▍     | 22/50 [05:22<06:43, 14.41s/it]GRPO epoch 1:  46%|████▌     | 23/50 [05:36<06:29, 14.42s/it]GRPO epoch 1:  48%|████▊     | 24/50 [05:51<06:14, 14.40s/it]GRPO epoch 1:  50%|█████     | 25/50 [06:06<06:04, 14.56s/it]GRPO epoch 1:  52%|█████▏    | 26/50 [06:20<05:48, 14.53s/it]GRPO epoch 1:  54%|█████▍    | 27/50 [06:35<05:37, 14.67s/it]GRPO epoch 1:  56%|█████▌    | 28/50 [06:50<05:23, 14.69s/it]GRPO epoch 1:  58%|█████▊    | 29/50 [07:05<05:09, 14.72s/it]step=30 reward=0.033 acc=-0.017 solved=3/40
+GRPO epoch 1:  60%|██████    | 30/50 [07:20<04:55, 14.80s/it]GRPO epoch 1:  62%|██████▏   | 31/50 [07:34<04:37, 14.58s/it]GRPO epoch 1:  64%|██████▍   | 32/50 [07:49<04:27, 14.85s/it]GRPO epoch 1:  66%|██████▌   | 33/50 [08:04<04:12, 14.85s/it]GRPO epoch 1:  68%|██████▊   | 34/50 [08:18<03:55, 14.69s/it]GRPO epoch 1:  70%|███████   | 35/50 [08:33<03:41, 14.79s/it]GRPO epoch 1:  72%|███████▏  | 36/50 [08:49<03:29, 14.94s/it]GRPO epoch 1:  74%|███████▍  | 37/50 [09:03<03:11, 14.76s/it]GRPO epoch 1:  76%|███████▌  | 38/50 [09:17<02:54, 14.56s/it]GRPO epoch 1:  78%|███████▊  | 39/50 [09:31<02:38, 14.43s/it]step=40 reward=0.033 acc=-0.018 solved=3/40
+GRPO epoch 1:  80%|████████  | 40/50 [09:45<02:22, 14.29s/it]GRPO epoch 1:  82%|████████▏ | 41/50 [09:59<02:07, 14.19s/it]GRPO epoch 1:  84%|████████▍ | 42/50 [10:14<01:54, 14.30s/it]GRPO epoch 1:  86%|████████▌ | 43/50 [10:27<01:37, 13.90s/it]GRPO epoch 1:  88%|████████▊ | 44/50 [10:43<01:26, 14.50s/it]GRPO epoch 1:  90%|█████████ | 45/50 [10:59<01:15, 15.17s/it]GRPO epoch 1:  92%|█████████▏| 46/50 [11:14<01:00, 15.04s/it]GRPO epoch 1:  94%|█████████▍| 47/50 [11:27<00:43, 14.41s/it]GRPO epoch 1:  96%|█████████▌| 48/50 [11:43<00:29, 14.91s/it]GRPO epoch 1:  98%|█████████▊| 49/50 [11:57<00:14, 14.75s/it]step=50 reward=0.033 acc=-0.018 solved=3/40
+GRPO epoch 1: 100%|██████████| 50/50 [12:14<00:00, 15.17s/it]GRPO epoch 1: 100%|██████████| 50/50 [12:14<00:00, 14.68s/it]
+{
+  "base_model": "/data/ysf/.cache/modelscope/Qwen/Qwen2___5-3B-Instruct",
+  "init_adapter": "./output/game24-sft-3b-curriculum/final_model",
+  "train_samples": 50,
+  "epochs": 1,
+  "total_steps": 50,
+  "learning_rate": 8e-07,
+  "num_generations": 4,
+  "max_new_tokens": 96,
+  "training_time_seconds": 734.5757863521576,
+  "final_avg_reward": 0.03860000000000003,
+  "timestamp": "2026-06-07T17:11:21.402824"
+}
