@@ -31,8 +31,11 @@
 | `results/game24-15b-base/` | 正式 1.5B base greedy / best-of-8 评估结果。 |
 | `results/game24-sft-15b-curriculum/` | 正式 1.5B SFT warm-up 训练摘要、评估结果和 loss 曲线。 |
 | `results/game24-grpo-15b-curriculum/` | 正式 1.5B SFT+GRPO 训练摘要、评估结果和 reward/solve 曲线。 |
+| `results/game24-grpo-15b-lr3e-7-s300/` | GRPO 稳定性对照：3e-7 学习率、300 prompts、g8 的评估结果和曲线。 |
+| `results/game24-grpo-15b-lr3e-7-s600/` | GRPO 稳定性对照：3e-7 学习率、600 prompts、g8 的评估结果和曲线。 |
 | `results/logs/summary_15b_mainline.log` | 实验4主线汇总指标。 |
 | `results/logs/run_15b_mainline.log` | 实验4远端完整运行日志。 |
+| `results/logs/run_grpo_ablation.log` | GRPO 超参稳定性对照远端完整运行日志。 |
 | `results/game24-grpo-full/` | 归档 0.5B direct GRPO 预实验结果，不属于正式主线。 |
 | `results/game24-sft-3b-curriculum/` | 归档 3B 课程 SFT 预实验结果，不属于正式主线。 |
 | `results/game24-grpo-3b-curriculum-short/` | 归档 3B SFT 后短程 GRPO 预实验结果，不属于正式主线。 |
@@ -53,4 +56,5 @@
 | `scripts/run_15b_mainline.sh` | 复现题目指定 1.5B 主线实验：base、SFT、GRPO、hard split 评估和曲线。 |
 | `scripts/run_countdown_bonus.sh` | 复现 Countdown 3-4 数字任意目标加分项。 |
 | `scripts/run_ttc_sweep.sh` | 主线跑完后补 best-of-1/4/8/16 verifier-based test-time compute 评估。 |
+| `scripts/run_grpo_ablation.sh` | 基于 1.5B SFT adapter 补跑低学习率 GRPO 稳定性对照。 |
 | `scripts/run_grpo_ablation.sh` | 主线跑完后补低学习率 GRPO 稳定性对照：`3e-7/s300` 和 `3e-7/s600`。 |

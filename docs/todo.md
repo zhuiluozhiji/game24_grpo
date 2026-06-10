@@ -16,7 +16,7 @@
 | 错误类型分析 | 已实现。`quick_eval.py` 和 `bestof_eval.py` 输出 `error_counts`，`summarize_eval.py` 可汇总。 | 跑完后整理各 split 的 `format_error`、`number_mismatch`、`wrong_value`、`invalid_expression`、`hallucination`。 |
 | Hard split 难度分析 | 已补充。评估输出 `difficulty`，包含官方 `solved_rate`、`rank` 和 solved-rate 分桶表现。 | 比较 official OOD 与 ToT hard 900-1000；重点看低 solved-rate 桶是否更难。 |
 | SFT vs GRPO 作用分析 | 已由主线覆盖：base、SFT、SFT+GRPO 三阶段。 | 比较 greedy 与 best-of-N 下 SFT/GRPO 是否提升，说明 GRPO 对候选覆盖和幻觉的影响。 |
-| GRPO 超参稳定性对照 | 已新增 `scripts/run_grpo_ablation.sh`，默认跑 `3e-7/s300` 和 `3e-7/s600`。 | 主线跑完后补跑，比较 OOD/hard solve rate 与 unsolvable hallucination。 |
+| GRPO 超参稳定性对照 | 已完成远端补跑，结果保存在 `results/game24-grpo-15b-lr3e-7-s300/` 和 `results/game24-grpo-15b-lr3e-7-s600/`。 | 在报告中说明低学习率降低 greedy hallucination，但主线 best-of-8 OOD/hard 仍最强。 |
 | Countdown 泛化加分项 | 已有 `scripts/run_countdown_bonus.sh`，reward、prompt、validator 均支持 per-example target。 | 远端跑出独立结果表，即使准确率不高也可作为框架迁移验证。 |
 
 ## 必须补跑
@@ -24,7 +24,7 @@
 1. 1.5B 主线完整实验。
 2. Countdown 加分项实验。
 3. 主线 best-of-N sweep：`best-of-1/4/8/16`。
-4. GRPO 超参稳定性对照：`3e-7/s300`、`3e-7/s600`。
+4. GRPO 超参稳定性对照：`3e-7/s300`、`3e-7/s600`。已完成。
 5. 结果汇总：`summarize_eval.py` 输出的主指标、错误类型、难度分桶。
 6. 训练曲线：SFT loss、GRPO reward/accuracy。
 

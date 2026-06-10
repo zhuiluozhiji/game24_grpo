@@ -1,0 +1,14 @@
+{
+  "base_model": "/data/ysf/models/Qwen2.5-1.5B-Instruct",
+  "init_adapter": "./output/game24-sft-15b-curriculum/final_model",
+  "task": "game24",
+  "train_samples": 300,
+  "epochs": 1,
+  "total_steps": 300,
+  "learning_rate": 3e-07,
+  "num_generations": 8,
+  "max_new_tokens": 96,
+  "training_time_seconds": 6710.812775850296,
+  "final_avg_reward": 0.030762500000000005,
+  "timestamp": "2026-06-10T16:19:15.044055"
+}

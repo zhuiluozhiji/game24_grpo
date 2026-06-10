@@ -122,19 +122,19 @@
 | 1.5B SFT+GRPO | best-of-8 | 待跑 | 待跑 | 待跑 |
 | 1.5B SFT+GRPO | best-of-16 | 待跑 | 待跑 | 待跑 |
 
-## 正式实验 D：GRPO 超参稳定性对照，待远端补跑
+## 正式实验 D：GRPO 超参稳定性对照，已完成远端补跑
 
 目的：回应 RL 训练不稳定的问题。当前主线 `8e-7/s300/g8` 提升了 OOD 与 hard split 的 best-of-8 solve rate，但 greedy 下不可解幻觉率升高。因此补两组低学习率对照，观察是否能在保住 OOD/hard 提升的同时降低 hallucination。
 
 复现命令见 `docs/runbook.md` 第 4.1 节。
 
-计划表格：
-
 | GRPO 配置 | Greedy ID | Greedy OOD | Greedy hard | Greedy unsolvable hallucination | Best-of-8 ID | Best-of-8 OOD | Best-of-8 hard | Best-of-8 unsolvable hallucination |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | `8e-7/s300/g8` 当前主线 | 7.5% | 14.5% | 12.0% | 34.0% | 27.5% | 43.5% | 32.0% | 1.0% |
-| `3e-7/s300/g8` | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 |
-| `3e-7/s600/g8` | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 |
+| `3e-7/s300/g8` | 7.0% | 13.0% | 11.0% | 17.0% | 22.5% | 39.0% | 25.0% | 0.0% |
+| `3e-7/s600/g8` | 6.5% | 15.0% | 11.0% | 25.0% | 28.5% | 41.5% | 31.0% | 2.0% |
+
+结论：低学习率对照确实降低了 greedy 不可解幻觉率，`3e-7/s300` 从主线 34.0% 降到 17.0%，`3e-7/s600` 降到 25.0%。但主线 `8e-7/s300/g8` 仍有最高的 Official OOD best-of-8 43.5% 与 ToT hard best-of-8 32.0%。`3e-7/s600` 的 hard best-of-8 31.0% 接近主线，但不可解 best-of-8 hallucination 为 2.0%，略高于主线 1.0%。因此最终主结果仍建议保留 `8e-7/s300/g8`，低学习率结果作为稳定性对照写入分析。
 
 ## 正式分析 E：Hard split 难度与错误类型
 

@@ -89,3 +89,15 @@ GRPO 输出目录：`output/game24-grpo-15b-curriculum`。
 - `results/game24-grpo-15b-curriculum/plots/grpo_metrics_solved.png`
 
 远端绘图阶段曾因环境中缺少 `pyparsing` 失败；安装补齐后已重新生成曲线。本地 `game24/requirements.txt` 已显式加入该依赖。
+
+## 7. GRPO 超参稳定性补跑
+
+伙伴新增建议要求补跑低学习率 GRPO 对照，用于观察 RL 训练稳定性。该实验不重跑 SFT，而是从同一个 `output/game24-sft-15b-curriculum/final_model` 继续训练。
+
+| GRPO 配置 | Greedy ID | Greedy OOD | Greedy hard | Greedy unsolvable hallucination | Best-of-8 ID | Best-of-8 OOD | Best-of-8 hard | Best-of-8 unsolvable hallucination |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `8e-7/s300/g8` 主线 | 7.5% | 14.5% | 12.0% | 34.0% | 27.5% | 43.5% | 32.0% | 1.0% |
+| `3e-7/s300/g8` | 7.0% | 13.0% | 11.0% | 17.0% | 22.5% | 39.0% | 25.0% | 0.0% |
+| `3e-7/s600/g8` | 6.5% | 15.0% | 11.0% | 25.0% | 28.5% | 41.5% | 31.0% | 2.0% |
+
+稳定性结论：降低学习率能缓解 greedy 下不可解样本 hallucination，但没有带来更强的 best-of-8 OOD/hard 表现。`3e-7/s600` 的 ToT hard best-of-8 31.0% 接近主线 32.0%，但 OOD 仍低于主线，且 best-of-8 不可解 hallucination 略高。因此最终主线仍采用 `8e-7/s300/g8`，低学习率两组作为 ablation 支撑“GRPO 超参会影响 hallucination 与候选池质量”的分析。
