@@ -16,6 +16,7 @@
 | 错误类型分析 | 已实现。`quick_eval.py` 和 `bestof_eval.py` 输出 `error_counts`，`summarize_eval.py` 可汇总。 | 跑完后整理各 split 的 `format_error`、`number_mismatch`、`wrong_value`、`invalid_expression`、`hallucination`。 |
 | Hard split 难度分析 | 已补充。评估输出 `difficulty`，包含官方 `solved_rate`、`rank` 和 solved-rate 分桶表现。 | 比较 official OOD 与 ToT hard 900-1000；重点看低 solved-rate 桶是否更难。 |
 | SFT vs GRPO 作用分析 | 已由主线覆盖：base、SFT、SFT+GRPO 三阶段。 | 比较 greedy 与 best-of-N 下 SFT/GRPO 是否提升，说明 GRPO 对候选覆盖和幻觉的影响。 |
+| GRPO 超参稳定性对照 | 已新增 `scripts/run_grpo_ablation.sh`，默认跑 `3e-7/s300` 和 `3e-7/s600`。 | 主线跑完后补跑，比较 OOD/hard solve rate 与 unsolvable hallucination。 |
 | Countdown 泛化加分项 | 已有 `scripts/run_countdown_bonus.sh`，reward、prompt、validator 均支持 per-example target。 | 远端跑出独立结果表，即使准确率不高也可作为框架迁移验证。 |
 
 ## 必须补跑
@@ -23,17 +24,17 @@
 1. 1.5B 主线完整实验。
 2. Countdown 加分项实验。
 3. 主线 best-of-N sweep：`best-of-1/4/8/16`。
-4. 结果汇总：`summarize_eval.py` 输出的主指标、错误类型、难度分桶。
-5. 训练曲线：SFT loss、GRPO reward/accuracy。
+4. GRPO 超参稳定性对照：`3e-7/s300`、`3e-7/s600`。
+5. 结果汇总：`summarize_eval.py` 输出的主指标、错误类型、难度分桶。
+6. 训练曲线：SFT loss、GRPO reward/accuracy。
 
 ## 等第一轮结果后再决定
 
 这些不是现在必须加入的新主线，避免实验发散。
 
-1. 如果 SFT+GRPO 明显低于 SFT：
-   - 试更小 GRPO 学习率，例如 `3e-7`。
-   - 减少 `GRPO_SAMPLES`，做更短 continuation。
-   - 增强 KL/reference 约束。
+1. 如果 `3e-7/s300` 和 `3e-7/s600` 都明显低于当前主线：
+   - 保留当前 `8e-7/s300` 作为最终主结果。
+   - 报告中解释低学习率更保守但没有带来更好候选覆盖。
 
 2. 如果 SFT 本身很弱：
    - 增加 SFT 样本数或 epoch。

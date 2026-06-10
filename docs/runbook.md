@@ -86,6 +86,7 @@ python -m compileall game24
 bash -n scripts/run_15b_mainline.sh
 bash -n scripts/run_countdown_bonus.sh
 bash -n scripts/run_ttc_sweep.sh
+bash -n scripts/run_grpo_ablation.sh
 ```
 
 检查 solver、validator、target-aware reward：
@@ -146,6 +147,36 @@ grpo_summary.json
 grpo_metrics.json
 plots/*.png
 ```
+
+## 4.1 推荐补跑：GRPO 超参稳定性对照
+
+这一步用于回应“强化学习训练不稳定，需要监控并必要时调整超参数”。它不重跑 SFT，不覆盖第 4 节主线的 `output/game24-grpo-15b-curriculum/`，而是基于已经训练好的 SFT adapter 继续跑两组更保守的 GRPO 对照：
+
+| 输出目录 | GRPO_LR | GRPO_SAMPLES | GRPO_GENERATIONS | 目的 |
+| --- | ---: | ---: | ---: | --- |
+| `output/game24-grpo-15b-lr3e-7-s300/` | 3e-7 | 300 | 8 | 单独验证降低学习率是否能降低 hallucination |
+| `output/game24-grpo-15b-lr3e-7-s600/` | 3e-7 | 600 | 8 | 在低学习率下增加训练步数，看能否保住或提升 OOD/hard |
+
+推荐在第 4 节主线跑完后执行：
+
+```bash
+N_EVAL=200 N_HARD=100 BEST_OF=8 GRPO_GENERATIONS=8 \
+  bash scripts/run_grpo_ablation.sh "$QWEN_15B" 0 2>&1 | tee output/logs/run_grpo_ablation.log
+```
+
+小规模冒烟只跑低学习率 300 samples：
+
+```bash
+GRPO_ABLATIONS="lr3e-7-s300:3e-7:300" N_EVAL=30 N_HARD=30 BEST_OF=4 \
+  bash scripts/run_grpo_ablation.sh "$QWEN_15B" 0 2>&1 | tee output/logs/run_grpo_ablation_smoke.log
+```
+
+判断重点：
+
+- `Official OOD` 和 `ToT hard` 的 greedy / best-of-8 solve rate 是否接近或超过主线 GRPO。
+- `unsolvable` 的 greedy hallucination 是否低于主线 GRPO 的 34.0%。
+- `best-of-8` hallucination 是否继续保持在低水平。
+- `grpo_metrics.json` 和 `plots/` 中 reward、accuracy、solved 曲线是否更平稳。
 
 ## 5. 推荐补跑亮点：Verifier-based test-time compute
 
@@ -233,6 +264,19 @@ python game24/summarize_eval.py \
   2>&1 | tee output/logs/summary_ttc_sweep.log
 ```
 
+补跑 GRPO 超参稳定性对照后，可以单独汇总：
+
+```bash
+python game24/summarize_eval.py \
+  output/game24-grpo-15b-curriculum/quick_eval_200.json \
+  output/game24-grpo-15b-curriculum/bestof8_eval_200.json \
+  output/game24-grpo-15b-lr3e-7-s300/quick_eval_200.json \
+  output/game24-grpo-15b-lr3e-7-s300/bestof8_eval_200.json \
+  output/game24-grpo-15b-lr3e-7-s600/quick_eval_200.json \
+  output/game24-grpo-15b-lr3e-7-s600/bestof8_eval_200.json \
+  2>&1 | tee output/logs/summary_grpo_ablation.log
+```
+
 ## 8. 单独补图
 
 主脚本会自动调用 `plot_metrics.py`。如果中途失败或想重新生成图：
@@ -240,6 +284,8 @@ python game24/summarize_eval.py \
 ```bash
 python game24/plot_metrics.py output/game24-sft-15b-curriculum
 python game24/plot_metrics.py output/game24-grpo-15b-curriculum
+python game24/plot_metrics.py output/game24-grpo-15b-lr3e-7-s300
+python game24/plot_metrics.py output/game24-grpo-15b-lr3e-7-s600
 python game24/plot_metrics.py output/countdown-sft-15b
 python game24/plot_metrics.py output/countdown-grpo-15b
 ```
@@ -258,11 +304,13 @@ python game24/plot_metrics.py output/countdown-grpo-15b
    `SFT / SFT+GRPO` 在 Countdown test 上的 greedy 与 best-of-8。
 4. Test-time compute：
    `greedy / best-of-1 / best-of-4 / best-of-8 / best-of-16` 的 solve rate 曲线。
-5. 错误类型统计：
+5. GRPO 超参稳定性对照：
+   `8e-7/s300`、`3e-7/s300`、`3e-7/s600` 的 OOD、hard、hallucination 对比。
+6. 错误类型统计：
    `format_error / number_mismatch / wrong_value / invalid_expression / refusal_or_no_answer / hallucination`。
-6. Hard split 难度分析：
+7. Hard split 难度分析：
    官方 `solved_rate` 分桶下的模型 solve rate，以及 ToT hard 与普通 OOD 的对比。
-7. 训练曲线：
+8. 训练曲线：
    SFT loss、GRPO reward、GRPO accuracy、solved per group。
 
 ## 10. 打包结果
@@ -272,6 +320,8 @@ tar -czf output/game24_results_$(date +%Y%m%d_%H%M).tar.gz \
   output/game24-15b-base \
   output/game24-sft-15b-curriculum \
   output/game24-grpo-15b-curriculum \
+  output/game24-grpo-15b-lr3e-7-s300 \
+  output/game24-grpo-15b-lr3e-7-s600 \
   output/countdown-sft-15b \
   output/countdown-grpo-15b \
   output/logs

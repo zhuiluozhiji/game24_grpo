@@ -122,7 +122,21 @@
 | 1.5B SFT+GRPO | best-of-8 | 待跑 | 待跑 | 待跑 |
 | 1.5B SFT+GRPO | best-of-16 | 待跑 | 待跑 | 待跑 |
 
-## 正式分析 D：Hard split 难度与错误类型
+## 正式实验 D：GRPO 超参稳定性对照，待远端补跑
+
+目的：回应 RL 训练不稳定的问题。当前主线 `8e-7/s300/g8` 提升了 OOD 与 hard split 的 best-of-8 solve rate，但 greedy 下不可解幻觉率升高。因此补两组低学习率对照，观察是否能在保住 OOD/hard 提升的同时降低 hallucination。
+
+复现命令见 `docs/runbook.md` 第 4.1 节。
+
+计划表格：
+
+| GRPO 配置 | Greedy ID | Greedy OOD | Greedy hard | Greedy unsolvable hallucination | Best-of-8 ID | Best-of-8 OOD | Best-of-8 hard | Best-of-8 unsolvable hallucination |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| `8e-7/s300/g8` 当前主线 | 7.5% | 14.5% | 12.0% | 34.0% | 27.5% | 43.5% | 32.0% | 1.0% |
+| `3e-7/s300/g8` | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 |
+| `3e-7/s600/g8` | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 | 待跑 |
+
+## 正式分析 E：Hard split 难度与错误类型
 
 评估 JSON 会保留并汇总 official `game-of-24` 中的 `rank` 与 `solved_rate`。最终报告建议补两张分析表：
 

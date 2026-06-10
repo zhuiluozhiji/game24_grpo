@@ -53,3 +53,4 @@
 | `scripts/run_15b_mainline.sh` | 复现题目指定 1.5B 主线实验：base、SFT、GRPO、hard split 评估和曲线。 |
 | `scripts/run_countdown_bonus.sh` | 复现 Countdown 3-4 数字任意目标加分项。 |
 | `scripts/run_ttc_sweep.sh` | 主线跑完后补 best-of-1/4/8/16 verifier-based test-time compute 评估。 |
+| `scripts/run_grpo_ablation.sh` | 主线跑完后补低学习率 GRPO 稳定性对照：`3e-7/s300` 和 `3e-7/s600`。 |
