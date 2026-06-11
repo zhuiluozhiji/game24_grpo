@@ -12,7 +12,7 @@
 
 | 亮点 | 当前状态 | 还需要做什么 |
 | --- | --- | --- |
-| Verifier-based test-time compute | 已有 `bestof_eval.py`，新增 `scripts/run_ttc_sweep.sh` 支持 best-of-1/4/8/16 sweep。 | 主线跑完后执行 sweep，并在报告中画 greedy/best-of-N solve-rate 曲线。 |
+| Verifier-based test-time compute | 已完成远端补跑，结果保存在 1.5B base/SFT/GRPO 目录的 `bestof{1,4,8,16}_eval_200.json`。`SFT+GRPO + best-of-16` 在 OOD/ToT hard 上达到 65.5%/49.0%。 | 报告中画 greedy/best-of-N solve-rate 曲线，并强调 verifier 能从候选池筛出正确表达式。 |
 | 错误类型分析 | 已实现。`quick_eval.py` 和 `bestof_eval.py` 输出 `error_counts`，`summarize_eval.py` 可汇总。 | 跑完后整理各 split 的 `format_error`、`number_mismatch`、`wrong_value`、`invalid_expression`、`hallucination`。 |
 | Hard split 难度分析 | 已补充。评估输出 `difficulty`，包含官方 `solved_rate`、`rank` 和 solved-rate 分桶表现。 | 比较 official OOD 与 ToT hard 900-1000；重点看低 solved-rate 桶是否更难。 |
 | SFT vs GRPO 作用分析 | 已由主线覆盖：base、SFT、SFT+GRPO 三阶段。 | 比较 greedy 与 best-of-N 下 SFT/GRPO 是否提升，说明 GRPO 对候选覆盖和幻觉的影响。 |
@@ -23,10 +23,10 @@
 
 1. 1.5B 主线完整实验。
 2. Countdown 加分项实验。已完成。
-3. 主线 best-of-N sweep：`best-of-1/4/8/16`。
+3. 主线 best-of-N sweep：`best-of-1/4/8/16`。已完成。
 4. GRPO 超参稳定性对照：`3e-7/s300`、`3e-7/s600`。已完成。
-5. 结果汇总：`summarize_eval.py` 输出的主指标、错误类型、难度分桶。
-6. 训练曲线：SFT loss、GRPO reward/accuracy。
+5. 结果汇总：`summarize_eval.py` 输出的主指标、错误类型、难度分桶。已完成主线、GRPO 对照、Countdown 与 best-of-N sweep 的轻量结果归档。
+6. 训练曲线：SFT loss、GRPO reward/accuracy。已完成。
 
 ## 等第一轮结果后再决定
 

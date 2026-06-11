@@ -1,0 +1,912 @@
+{
+  "in_distribution": {
+    "dataset_name": "ID",
+    "total": 200,
+    "best_of": 4,
+    "solved": 2,
+    "solve_rate": 0.01,
+    "format_correct": 99,
+    "format_rate": 0.495,
+    "hallucinated": 0,
+    "hallucination_rate": null,
+    "error_counts": {
+      "format_error": 101,
+      "invalid_expression": 43,
+      "wrong_value": 47,
+      "number_mismatch": 6,
+      "refusal_or_no_answer": 1
+    },
+    "difficulty": null,
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          2,
+          3,
+          6,
+          10
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(2, 3, 6, 10)",
+        "completion": "<think>\nTo solve this problem, we need to form expressions that can result in 24 using all the numbers provided (2, 3, 6, 10). Let's start by trying different combinations and see if we can isolate the '1' from the fractions in some way.\n\nOne approach is to multiply or divide these numbers in such a way that we get close to 1 first, which will allow us to subtract or add other values to reach",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 9.0, expected 24",
+        "error_type": "format_error"
+      },
+      {
+        "numbers": [
+          1,
+          4,
+          7,
+          13
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(13 * (7 - 1)) - 4 = 24",
+        "completion": "<think>\nTo solve this problem, we need to create an expression that uses all four numbers provided: 1, 4, 7, and 13. The goal is to achieve a result of 24.\n</think>\n\n<answer>\n(13 * (7 - 1)) - 4 = 24\n</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (asitisthelargestdivisor)",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          4,
+          9,
+          9,
+          10
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(9 * 9 - 4)",
+        "completion": "<think>\nWe need to use all four numbers (4, 9, 9, 10) exactly once in our calculations.\n- We can try combining these numbers to see if we can get close to 24. \n- One approach could be multiplying two of the numbers first, then adding or subtracting from another number.\n</think>\n\n<answer>\n(9 * 9 - 4) + 10 = 24\n</answer",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (9+9=18)",
+        "error_type": "format_error"
+      },
+      {
+        "numbers": [
+          4,
+          4,
+          10,
+          13
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(10 * 4 = 40)",
+        "completion": "<think>\nTo achieve 24 using all four numbers [4, 4, 10, 13] exactly once:\n1. Start by trying multiplication to get close to 24.\n   (10 * 4 = 40)\n\n2. Now, we need to get from 40 to 24. We can do this by dividing by another number that would bring us close enough to 6 (since 40/",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 126.0, expected 24",
+        "error_type": "format_error"
+      },
+      {
+        "numbers": [
+          5,
+          6,
+          11,
+          13
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(6 * (11 - 5)) = 24",
+        "completion": "<think>\nWe can solve this problem by grouping the numbers in such a way that we can get close to the target value of 24.\nOne possible approach is to group 6 * (11 - 5) which equals:\n(6 * 11) - (6 * 5)\n</think>\n\n<answer>(6 * (11 - 5)) = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (13*6-5)*11=24",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          2,
+          2,
+          6,
+          8
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "2 * (8 - 2/6)",
+        "completion": "<think>\n   We start from 6 because it is closest to making up two 2's for the multiplication and can help us get closer.\n   \n   Using 2 * (8 - 2/6)\n</think>\n\n<answer>2 * (8 - 2/6)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 8.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          5,
+          6,
+          8,
+          13
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(5*8-13)*6 = 24",
+        "completion": "<think>\nTo achieve this, we need to construct an expression that uses all four numbers exactly once while respecting the order of operations.\n</think>\n\n<answer>(5*8-13)*6 = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (13-(8/6))*5=24",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          4,
+          8,
+          9,
+          9
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(9 * (8 - 4)) * 9 = 24",
+        "completion": "<think>\nTo achieve 24 with each of these numbers exactly once:\n1. Start by trying combinations that multiply or divide.\n2. Use the multiplication between two large numbers as this will likely get us closer to 24 quickly.\n3. Consider how we can incorporate subtraction or addition to hit our goal.\n</think>\n\n<answer>(9 * (8 - 4)) * 9 = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 4.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          4,
+          5,
+          6,
+          12
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(6 * 4) + 5 - 12 = 24",
+        "completion": "<think>\n   To solve this, first multiply 6 and 4:\n       (6 * 4)\n\nNext, add 5: \n       ((6 * 4) + 5)\n\nLastly, subtract 12 from that result:\n        (((6 * 4) + 5) - 12)\n</think>\n\n<answer>(6 * 4) + 5 - 12 = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: ((12-6)*4)/5=9",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          4,
+          8,
+          10,
+          12
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(10 - 4) * (12 - 8)",
+        "completion": "<think>\nTo solve this problem, we need to combine the given numbers to achieve a total of 24. We can start by trying different combinations of the operations on the numbers provided.\n</think>\n\n<answer>(10 - 4) * (12 - 8)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution",
+        "error_type": null
+      }
+    ]
+  },
+  "out_of_distribution": {
+    "dataset_name": "OOD",
+    "total": 200,
+    "best_of": 4,
+    "solved": 5,
+    "solve_rate": 0.025,
+    "format_correct": 97,
+    "format_rate": 0.485,
+    "hallucinated": 0,
+    "hallucination_rate": null,
+    "error_counts": {
+      "format_error": 103,
+      "wrong_value": 50,
+      "invalid_expression": 37,
+      "number_mismatch": 4,
+      "refusal_or_no_answer": 1
+    },
+    "difficulty": {
+      "items_with_solved_rate": 200,
+      "avg_dataset_solved_rate": 0.9698299999999992,
+      "items_with_rank": 200,
+      "avg_rank": 100.5,
+      "bucket_stats": {
+        "75-100%": {
+          "total": 200,
+          "solved": 5,
+          "solve_rate": 0.025
+        }
+      }
+    },
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          1,
+          1,
+          4,
+          6
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 1,
+        "dataset_solved_rate": 0.992,
+        "expression": "(4*(6-1)",
+        "completion": "<think>\nWe can start by trying different combinations:\n- (1+1)*4 gives us 8.\n- 1*4+6 = 10.\n- (4-1)/1 = 3.\nNone of these directly lead to 24.\n\nAnother approach involves adding/subtracting after multiplication/division:\n- ((4/1)-1)+6 = 9.\n- (4*(6-1)) = 20.\n\nFinally,",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Unbalanced parentheses",
+        "error_type": "format_error"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          11,
+          11
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 2,
+        "dataset_solved_rate": 0.996,
+        "expression": "(11 * 11)",
+        "completion": "<think>\nLet's try to create a combination that multiplies 11 by itself while avoiding unnecessary complexity.\n</think>\n\n<answer>(11 * 11)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 11.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          3,
+          8
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 3,
+        "dataset_solved_rate": 0.992,
+        "expression": "(8 * (3 - 1/1)) = 24",
+        "completion": "<think>\nTo achieve the result of 24 using all the numbers [1, 1, 3, 8] exactly once, let's consider different combinations:\n- Multiplication can help raise numbers to powers that might be easier.\n- Addition and subtraction will need careful placement to balance out other elements for reaching 24.\n</think>\n\n<answer>\n(8 * (3 - 1/1)) = 24\n</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (1*3-8)*1=24",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          8
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 4,
+        "dataset_solved_rate": 0.988,
+        "expression": "(1 * 1) * (8 - (1 / 1)) = 24",
+        "completion": "<think>\nTo solve this problem, we need to create an expression that results in 24 using all four 1's along with one 8 and the basic arithmetic operators: +, -, *, /. One way to do this is:\n(1 * 1) * (8 - (1 / 1))\n</think>\n\n<answer>(1 * 1) * (8 - (1 / 1)) = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (Againthisisn'tright)",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 5,
+        "dataset_solved_rate": 0.9940000000000001,
+        "expression": "6*6-6-6",
+        "completion": "<think>\nFirst try adding all the numbers: 6+6+6+6 = 24\n</think>\n\n<answer>6*6-6-6</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          2,
+          12
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 6,
+        "dataset_solved_rate": 0.991,
+        "expression": "((-1 + 1/3)",
+        "completion": "<think>\nTo reach 24 using all the given numbers exactly once, we can start by trying different combinations of addition and subtraction.\nIf we subtract one from another, it gives us -8.\nNext, let's try adding three times the second number: (1 + 2 * 12) = 25.\nNow, if we add these two results together and multiply by -2, we get:\n((-1 + 1/3) * (-",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (12-1/1)*(12-1)=24",
+        "error_type": "format_error"
+      },
+      {
+        "numbers": [
+          1,
+          2,
+          2,
+          6
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 7,
+        "dataset_solved_rate": 0.992,
+        "expression": "(6 * 4 - 2) * 2 = 24",
+        "completion": "<think>\nTo achieve this, we can start by combining two factors that sum up to 24 or are close to it using multiplication or division.\n</think>\n\n<answer>(6 * 4 - 2) * 2 = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 3.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          10,
+          12
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 8,
+        "dataset_solved_rate": 0.99,
+        "expression": "10 * (12 - 1 - 1)",
+        "completion": "<think>\nWe can try combining the numbers in different ways:\n- Let's start with 10 - 1: This gives us 9.\n- Now add 12 to 9: We get 21.\n- Finally, subtract 1 from 21 to get 20.\n</think>\n\n<answer>10 * (12 - 1 - 1)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Expression error: Invalid characters in expression: (12-1=11\\)",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          2,
+          2,
+          10,
+          10
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 9,
+        "dataset_solved_rate": 0.982,
+        "expression": "2 * 10 - 6",
+        "completion": "<think>\nTo get 24 using all numbers exactly once:\n1. Start with 2*10 = 20\n2. Now we need (to reach 24), add one more to it: 24 - 6 = 24\n\nSo our final result is:\n\n2 * 10 - 6\n</think>\n\n<answer>2 * 10 - 6</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 144.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          12
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 10,
+        "dataset_solved_rate": 0.992,
+        "expression": "(12 * 1)",
+        "completion": "<think>\nLet's try combining the numbers in different ways to see if we can achieve 24:\n- (1 * 1 * 1 - 12): This gives us a very low result.\n- 12 * 1 - 1: This also results in a quite small number.\n\nLet's consider some combinations where the multiplication or division could help:\n- (12 * 1) + 1: We get close but still far from",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (1*1)+13=24",
+        "error_type": "format_error"
+      }
+    ]
+  },
+  "unsolvable": {
+    "dataset_name": "Unsolvable",
+    "total": 100,
+    "best_of": 4,
+    "solved": 0,
+    "solve_rate": 0.0,
+    "format_correct": 43,
+    "format_rate": 0.43,
+    "hallucinated": 90,
+    "hallucination_rate": 0.9,
+    "error_counts": {
+      "wrong_value": 25,
+      "format_error": 57,
+      "invalid_expression": 16,
+      "refused": 2
+    },
+    "difficulty": null,
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(1+1)*(1+1)",
+        "completion": "<think>\nTo solve this, we need to combine these four identical digits to get close to twenty-four with different operations.\n</think>\n\n<answer>(1+1)*(1+1)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": true,
+        "had_refusal": false,
+        "reason": "Result is 2.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "",
+        "completion": "<think>\nFirst attempt:\n( (1 - 1) * 2 ) = 0\n\nSecond attempt:\n1 + 1 + 1/2 = 2.5\n\nThird attempt:\n1*2*3+1-1=23\n\nFourth try:\n((1+1)*2)-1=3\n\nNo luck found.\n</think>\n\n<answer></answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": true,
+        "had_refusal": false,
+        "reason": "Result is 1.5, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(1 * (3 - 1)) * 1 = 24",
+        "completion": "<think>\nTo solve this, we can start combining the numbers in different ways to get close to 24.\n</think>\n\n<answer>\n(1 * (3 - 1)) * 1 = 24\n</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": true,
+        "had_refusal": false,
+        "reason": "Result is -2.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          4
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(1 * ((1 + 4)",
+        "completion": "<think>\nTo solve this problem, we need to find a combination of the given numbers that will equal 24 using basic arithmetic operations.\nOne possible way to achieve this is:\n(1 * (1 - 4/1))\nThis equals (1 * (-3)) = -3, but we can't get 24 with these numbers. Let's try another combination:\n(1 * ((1 + 4)/1))\nThis simplifies to (1 *",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": true,
+        "had_refusal": false,
+        "reason": "Result is 3.0, expected 24",
+        "error_type": "format_error"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          5
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "5+5",
+        "completion": "<think>\nWe need to combine these four numbers (1, 1, 1, 5) into one expression that equals 24.\n1. The simplest way would be multiplying 1 * 1 * 1 = 1\n2. Then we multiply this result by 5: 1*5=5\n3. Now add the remaining two ones together: 5+5=10\n4. Finally divide this sum by itself to",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": true,
+        "had_refusal": false,
+        "reason": "Result is 3.0, expected 24",
+        "error_type": "format_error"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          6
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(1 * (1 - 1/6)) * 1 = 24",
+        "completion": "<think>\nTo solve this problem, we need to combine the numbers using different operations to achieve the target value of 24. We can start by trying combinations that might lead us closer to the goal.\n</think>\n\n<answer>(1 * (1 - 1/6)) * 1 = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": true,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (1*1)*6=24",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          7
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "( 1 \\times 1 = 1 \\)",
+        "completion": "<think>\nFirst, we need to multiply two ones together:\n\\( (1 \\times 1) = 1 \\)\n\nThen, subtract this result from another one:  \n\\( (1 - 1) = 0 \\)\n\nNow, add 7 to get close to 24:\n\\( (0 + 7) = 7 \\)\n\nFinally, multiply this result by our first \\( 1 \\times 1 = 1 \\) to get close",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": true,
+        "had_refusal": false,
+        "reason": "Expression error: Unbalanced parentheses",
+        "error_type": "format_error"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          9
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(1 - 1/9)*1*1 = 24",
+        "completion": "<think>\nWe start with the numbers [1, 1, 1, 9]. Let's try different combinations:\n- One possible solution is (1 - 1/9)*1*1 = 9/9 * 1 * 1 = 81/9 = 9\n</think>\n\n<answer>(1 - 1/9)*1*1 = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": true,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (1*1)*9=24",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          10
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(1+1)/(1-1/10)",
+        "completion": "<think>\nTo solve this, we can multiply all the ones together and then divide 2 by that product:\n(1+1)/(1-1/10)\n</think>\n\n<answer>(1+1)/(1-1/10)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": true,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (1*1*1)*10=24",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(2 - 1/2)",
+        "completion": "<think>\nWe need to use the numbers 1, 1, 2, 2 exactly once with the operations +, -, *, /.\nLet's try different combinations:\n- (2 - 1/2)\n- (2 * 1 - 2)/2\n\nBoth attempts don't yield 24. It seems we might be missing a more complex expression or combination.\n</think>\n\n<answer>(2 - 1/2) * (2",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": true,
+        "had_refusal": false,
+        "reason": "Result is 5.0, expected 24",
+        "error_type": "format_error"
+      }
+    ]
+  },
+  "tot_hard_900_1000": {
+    "dataset_name": "ToT Hard 900-1000",
+    "total": 100,
+    "best_of": 4,
+    "solved": 1,
+    "solve_rate": 0.01,
+    "format_correct": 52,
+    "format_rate": 0.52,
+    "hallucinated": 0,
+    "hallucination_rate": null,
+    "error_counts": {
+      "format_error": 48,
+      "invalid_expression": 25,
+      "wrong_value": 24,
+      "number_mismatch": 2
+    },
+    "difficulty": {
+      "items_with_solved_rate": 100,
+      "avg_dataset_solved_rate": 0.85884,
+      "items_with_rank": 100,
+      "avg_rank": 950.5,
+      "bucket_stats": {
+        "75-100%": {
+          "total": 100,
+          "solved": 1,
+          "solve_rate": 0.01
+        }
+      }
+    },
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          4,
+          5,
+          6,
+          10
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 901,
+        "dataset_solved_rate": 0.903,
+        "expression": "(10 \\times 5 = 50\\)",
+        "completion": "<think>\nTo solve this problem, we need to create an equation that uses all four numbers (4, 5, 6, 10) exactly once, including both positive and negative signs, multiplication, division, addition, and subtraction. Here is one possible way to achieve 24:\n\n1. First, we can multiply 10 and 5: \\(10 \\times 5 = 50\\)\n2. Next, subtract 5",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 110.0, expected 24",
+        "error_type": "format_error"
+      },
+      {
+        "numbers": [
+          1,
+          2,
+          4,
+          7
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 902,
+        "dataset_solved_rate": 0.8909999999999999,
+        "expression": "(7 - (1 / 2)) * 4 = 24",
+        "completion": "<think>\nTo solve this problem, we need to form expressions that multiply or divide the numbers to get close to 24 while handling them with +, -, * and /. One possible solution is:\n(7 - (1 / 2)) * 4 = 24\n</think>\n<answer>(7 - (1 / 2)) * 4 = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (4*x+3)/3",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          2,
+          5,
+          8,
+          11
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 903,
+        "dataset_solved_rate": 0.8590000000000001,
+        "expression": "(11 - 8) * (5 - 2)",
+        "completion": "<think>\nTo solve this problem, we need to combine the given numbers (2, 5, 8, 11) using arithmetic operations with parentheses in such a way that the result equals 24.\n</think>\n\n<answer>(11 - 8) * (5 - 2)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 19.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          3,
+          4,
+          4,
+          13
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 904,
+        "dataset_solved_rate": 0.888,
+        "expression": "(4 * 6)",
+        "completion": "<think>\nWe can start by multiplying 4 * 6 which equals 24.\n</think>\n\n<answer>\n(4 * 6)\n</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 12.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 905,
+        "dataset_solved_rate": 0.845,
+        "expression": "(9 * (8 - 7)) + 6 = 24",
+        "completion": "<think>\nWe need to create the expression that equals 24 using all four numbers 6, 7, 8, and 9 exactly once.\n</think>\n\n<answer>(9 * (8 - 7)) + 6 = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 456.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          1,
+          11,
+          11,
+          13
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 906,
+        "dataset_solved_rate": 0.877,
+        "expression": "(11 * (11 - 1)) + 13",
+        "completion": "<think>\nWe need to use all four numbers and the arithmetic operations exactly once to reach a total of 24. One possible way is:\n(11 * (11 - 1)) + 13 = 24\n</think>\n\n<answer>(11 * (11 - 1)) + 13</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (11-1/13)*11=24",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          1,
+          8,
+          10,
+          11
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 907,
+        "dataset_solved_rate": 0.8690000000000001,
+        "expression": "(10 - 1/8) * 11 = 24",
+        "completion": "<think>\nWe can solve this problem by finding valid combinations.\n</think>\n<answer>(10 - 1/8) * 11 = 24</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 22.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          2,
+          3,
+          6,
+          9
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 908,
+        "dataset_solved_rate": 0.9309999999999999,
+        "expression": "(9/3 = 3)",
+        "completion": "<think>\nTo solve this problem, we need to combine the given numbers [2, 3, 6, 9] into a single expression that equals 24. Let's start by considering different combinations:\n\n1. **Consider dividing two numbers**: \n   - (6/2 = 3)\n   - (9/3 = 3)\n   So, we can try combining these results with some operations:\n   \n2. **Adding or subtracting**",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (9*3)-2+6=24",
+        "error_type": "format_error"
+      },
+      {
+        "numbers": [
+          1,
+          3,
+          5,
+          9
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 909,
+        "dataset_solved_rate": 0.9059999999999999,
+        "expression": "1 * (5 - 9)",
+        "completion": "<think>\nTo achieve this, we need to group the numbers in such a way that when multiplied or divided results in 24. Let's start by combining some numbers:\n1 * (5 - 9)\n</think>\n\n<answer>1 * (5 - 9)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: (9-1/3)*5=24",
+        "error_type": "invalid_expression"
+      },
+      {
+        "numbers": [
+          3,
+          3,
+          7,
+          12
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 910,
+        "dataset_solved_rate": 0.845,
+        "expression": "27 - 3",
+        "completion": "<think>\nTo solve this problem, we need to form an equation that uses all four numbers exactly once.\nWe can start by trying different combinations of operations and brackets to see if we can get 24.\nOne possible solution is:\n( (3 * 7) - 12 ) * 3\n\nThis gives us:\n(21 - 12) * 3 = 9 * 3 = 27 - 3 = 24",
+        "is_solved": false,
+        "is_format_correct": false,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Expression error: Invalid characters in expression: 12*7=84",
+        "error_type": "format_error"
+      }
+    ]
+  }
+}

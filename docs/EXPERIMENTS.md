@@ -105,31 +105,41 @@
 
 结论：同一套 prompt、target-aware verifier 和可验证奖励可以迁移到任意 target 的 Countdown 任务；best-of-8 将 solve rate 从约 10%-11% 提升到约 40% 以上，说明测试时候选池覆盖非常关键。本次小规模 Countdown GRPO 没有超过 SFT best-of-8，报告中应将其表述为框架迁移验证与 test-time compute 加分项，而不是声称 Countdown GRPO 显著增益。
 
-## 正式实验 C：Verifier-based test-time compute，待远端补跑
+## 正式实验 C：Verifier-based test-time compute，已完成远端补跑
 
 目的：控制模型和训练阶段不变，只改变测试时采样候选数，分析验证器能否把候选池中的正确表达式筛出来。这比 0.5B/1.5B/3B 模型大小对照更干净，因为唯一变量是 test-time compute。
 
-复现命令见 `docs/runbook.md` 第 5 节。
+复现命令见 `docs/runbook.md` 第 5 节。完整复跑记录见 `docs/experiment_ttc_sweep_summary.md`。主线已经有 best-of-8 结果，因此本次远端补跑缺失的 best-of-1/4/16，并与既有 best-of-8 合并成完整 sweep。
 
-计划表格：
+结果表：
 
 | 模型阶段 | 解码 | ID | Official OOD | ToT hard 900-1000 |
 | --- | --- | ---: | ---: | ---: |
-| 1.5B base | greedy | 待跑 | 待跑 | 待跑 |
-| 1.5B base | best-of-1 | 待跑 | 待跑 | 待跑 |
-| 1.5B base | best-of-4 | 待跑 | 待跑 | 待跑 |
-| 1.5B base | best-of-8 | 待跑 | 待跑 | 待跑 |
-| 1.5B base | best-of-16 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT | greedy | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT | best-of-1 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT | best-of-4 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT | best-of-8 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT | best-of-16 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT+GRPO | greedy | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT+GRPO | best-of-1 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT+GRPO | best-of-4 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT+GRPO | best-of-8 | 待跑 | 待跑 | 待跑 |
-| 1.5B SFT+GRPO | best-of-16 | 待跑 | 待跑 | 待跑 |
+| 1.5B base | greedy | 0.0% | 2.0% | 1.0% |
+| 1.5B base | best-of-1 | 0.5% | 1.0% | 0.0% |
+| 1.5B base | best-of-4 | 1.0% | 2.5% | 1.0% |
+| 1.5B base | best-of-8 | 1.5% | 3.0% | 1.0% |
+| 1.5B base | best-of-16 | 4.0% | 8.5% | 5.0% |
+| 1.5B SFT | greedy | 4.0% | 11.0% | 10.0% |
+| 1.5B SFT | best-of-1 | 3.5% | 7.5% | 3.0% |
+| 1.5B SFT | best-of-4 | 14.5% | 14.0% | 14.0% |
+| 1.5B SFT | best-of-8 | 22.0% | 31.0% | 13.0% |
+| 1.5B SFT | best-of-16 | 33.0% | 47.5% | 37.0% |
+| 1.5B SFT+GRPO | greedy | 7.5% | 14.5% | 12.0% |
+| 1.5B SFT+GRPO | best-of-1 | 4.5% | 10.5% | 2.0% |
+| 1.5B SFT+GRPO | best-of-4 | 15.0% | 25.5% | 14.0% |
+| 1.5B SFT+GRPO | best-of-8 | 27.5% | 43.5% | 32.0% |
+| 1.5B SFT+GRPO | best-of-16 | 44.0% | 65.5% | 49.0% |
+
+不可解 hallucination 随 best-of-N 的变化：
+
+| 模型阶段 | best-of-1 | best-of-4 | best-of-8 | best-of-16 |
+| --- | ---: | ---: | ---: | ---: |
+| 1.5B base | 96.0% | 90.0% | 80.0% | 64.0% |
+| 1.5B SFT | 24.0% | 1.0% | 0.0% | 0.0% |
+| 1.5B SFT+GRPO | 50.0% | 7.0% | 1.0% | 0.0% |
+
+结论：test-time compute 是本项目最清晰的增益来源之一。`1.5B SFT+GRPO` 从 best-of-1 到 best-of-16，Official OOD 从 10.5% 提升到 65.5%，ToT hard 从 2.0% 提升到 49.0%，同时不可解 hallucination 从 50.0% 降到 0.0%。这说明模型单次输出仍不稳定，但候选池里已经包含大量可由 verifier 选出的正确表达式。
 
 ## 正式实验 D：GRPO 超参稳定性对照，已完成远端补跑
 

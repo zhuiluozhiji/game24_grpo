@@ -45,3 +45,5 @@ bash scripts/run_countdown_bonus.sh "$QWEN_15B" 0
 ```bash
 BEST_OF_LIST="1 4 8 16" bash scripts/run_ttc_sweep.sh "$QWEN_15B" 0
 ```
+
+已归档的 sweep 结果显示，`1.5B SFT+GRPO + best-of-16` 在 Official OOD 上达到 65.5%，在 ToT hard 900-1000 上达到 49.0%，不可解 hallucination 为 0.0%。详见 `docs/experiment_ttc_sweep_summary.md`。

@@ -1,0 +1,902 @@
+{
+  "in_distribution": {
+    "dataset_name": "ID",
+    "total": 200,
+    "best_of": 16,
+    "solved": 88,
+    "solve_rate": 0.44,
+    "format_correct": 200,
+    "format_rate": 1.0,
+    "hallucinated": 0,
+    "hallucination_rate": null,
+    "error_counts": {
+      "wrong_value": 74,
+      "refusal_or_no_answer": 38
+    },
+    "difficulty": null,
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          2,
+          3,
+          6,
+          10
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(10-3*2)*6",
+        "completion": "<think>Use the expression (10-3*2)*6. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(10-3*2)*6</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          1,
+          4,
+          7,
+          13
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(((1*4)+7)+13)",
+        "completion": "<think>Use the expression (((1*4)+7)+13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1*4)+7)+13)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          4,
+          9,
+          9,
+          10
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(9-((9-10)*4))",
+        "completion": "<think>Use the expression (9-((9-10)*4)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9-((9-10)*4))</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 44.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          4,
+          4,
+          10,
+          13
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(((4/4)+10)+13)",
+        "completion": "<think>Use the expression (((4/4)+10)+13). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((4/4)+10)+13)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          5,
+          6,
+          11,
+          13
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 28.8, expected 24",
+        "error_type": "refusal_or_no_answer"
+      },
+      {
+        "numbers": [
+          2,
+          2,
+          6,
+          8
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "((2*(2+6))-8)",
+        "completion": "<think>Use the expression ((2*(2+6))-8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((2*(2+6))-8)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is -8.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          5,
+          6,
+          8,
+          13
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "((5+13)/(6/8))",
+        "completion": "<think>Use the expression ((5+13)/(6/8)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((5+13)/(6/8))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          4,
+          8,
+          9,
+          9
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "((4-(9/9))*8)",
+        "completion": "<think>Use the expression ((4-(9/9))*8). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((4-(9/9))*8)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          4,
+          5,
+          6,
+          12
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 60.0, expected 24",
+        "error_type": "refusal_or_no_answer"
+      },
+      {
+        "numbers": [
+          4,
+          8,
+          10,
+          12
+        ],
+        "target": 24,
+        "source": "nlile/24-game",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(8+4)*(12-10)",
+        "completion": "<think>Use the expression (8+4)*(12-10). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(8+4)*(12-10)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution",
+        "error_type": null
+      }
+    ]
+  },
+  "out_of_distribution": {
+    "dataset_name": "OOD",
+    "total": 200,
+    "best_of": 16,
+    "solved": 131,
+    "solve_rate": 0.655,
+    "format_correct": 200,
+    "format_rate": 1.0,
+    "hallucinated": 0,
+    "hallucination_rate": null,
+    "error_counts": {
+      "refusal_or_no_answer": 31,
+      "wrong_value": 38
+    },
+    "difficulty": {
+      "items_with_solved_rate": 200,
+      "avg_dataset_solved_rate": 0.9698299999999992,
+      "items_with_rank": 200,
+      "avg_rank": 100.5,
+      "bucket_stats": {
+        "75-100%": {
+          "total": 200,
+          "solved": 131,
+          "solve_rate": 0.655
+        }
+      }
+    },
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          1,
+          1,
+          4,
+          6
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 1,
+        "dataset_solved_rate": 0.992,
+        "expression": "((1-1+4)*6)",
+        "completion": "<think>Use the expression ((1-1+4)*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((1-1+4)*6)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          11,
+          11
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 2,
+        "dataset_solved_rate": 0.996,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 23.0, expected 24",
+        "error_type": "refusal_or_no_answer"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          3,
+          8
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 3,
+        "dataset_solved_rate": 0.992,
+        "expression": "(3*(8-(1-1)))",
+        "completion": "<think>Use the expression (3*(8-(1-1))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(3*(8-(1-1)))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          8
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 4,
+        "dataset_solved_rate": 0.988,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 8.0, expected 24",
+        "error_type": "refusal_or_no_answer"
+      },
+      {
+        "numbers": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 5,
+        "dataset_solved_rate": 0.9940000000000001,
+        "expression": "((6*6)-(6+6))",
+        "completion": "<think>Use the expression ((6*6)-(6+6)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((6*6)-(6+6))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          2,
+          12
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 6,
+        "dataset_solved_rate": 0.991,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 12.0, expected 24",
+        "error_type": "refusal_or_no_answer"
+      },
+      {
+        "numbers": [
+          1,
+          2,
+          2,
+          6
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 7,
+        "dataset_solved_rate": 0.992,
+        "expression": "(2+2)*6*1",
+        "completion": "<think>Use the expression (2+2)*6*1. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(2+2)*6*1</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          10,
+          12
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 8,
+        "dataset_solved_rate": 0.99,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 22.0, expected 24",
+        "error_type": "refusal_or_no_answer"
+      },
+      {
+        "numbers": [
+          2,
+          2,
+          10,
+          10
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 9,
+        "dataset_solved_rate": 0.982,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 30.0, expected 24",
+        "error_type": "refusal_or_no_answer"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          12
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 10,
+        "dataset_solved_rate": 0.992,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 13.0, expected 24",
+        "error_type": "refusal_or_no_answer"
+      }
+    ]
+  },
+  "unsolvable": {
+    "dataset_name": "Unsolvable",
+    "total": 100,
+    "best_of": 16,
+    "solved": 0,
+    "solve_rate": 0.0,
+    "format_correct": 100,
+    "format_rate": 1.0,
+    "hallucinated": 0,
+    "hallucination_rate": 0.0,
+    "error_counts": {
+      "refused": 100
+    },
+    "difficulty": null,
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "refused",
+        "error_type": "refused"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "refused",
+        "error_type": "refused"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "refused",
+        "error_type": "refused"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          4
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "refused",
+        "error_type": "refused"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          5
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "refused",
+        "error_type": "refused"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          6
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "refused",
+        "error_type": "refused"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          7
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "refused",
+        "error_type": "refused"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          9
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "refused",
+        "error_type": "refused"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          1,
+          10
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "refused",
+        "error_type": "refused"
+      },
+      {
+        "numbers": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "target": 24,
+        "source": "synthetic_unsolvable",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "refused",
+        "error_type": "refused"
+      }
+    ]
+  },
+  "tot_hard_900_1000": {
+    "dataset_name": "ToT Hard 900-1000",
+    "total": 100,
+    "best_of": 16,
+    "solved": 49,
+    "solve_rate": 0.49,
+    "format_correct": 100,
+    "format_rate": 1.0,
+    "hallucinated": 0,
+    "hallucination_rate": null,
+    "error_counts": {
+      "wrong_value": 38,
+      "refusal_or_no_answer": 12,
+      "invalid_expression": 1
+    },
+    "difficulty": {
+      "items_with_solved_rate": 100,
+      "avg_dataset_solved_rate": 0.85884,
+      "items_with_rank": 100,
+      "avg_rank": 950.5,
+      "bucket_stats": {
+        "75-100%": {
+          "total": 100,
+          "solved": 49,
+          "solve_rate": 0.49
+        }
+      }
+    },
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          4,
+          5,
+          6,
+          10
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 901,
+        "dataset_solved_rate": 0.903,
+        "expression": "((10-(4+5))*6)",
+        "completion": "<think>Use the expression ((10-(4+5))*6). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((10-(4+5))*6)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 7.5, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          1,
+          2,
+          4,
+          7
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 902,
+        "dataset_solved_rate": 0.8909999999999999,
+        "expression": "(((1+2)*7)-4)",
+        "completion": "<think>Use the expression (((1+2)*7)-4). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((1+2)*7)-4)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 22.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          2,
+          5,
+          8,
+          11
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 903,
+        "dataset_solved_rate": 0.8590000000000001,
+        "expression": "(11-5)*8/2",
+        "completion": "<think>Use the expression (11-5)*8/2. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(11-5)*8/2</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          3,
+          4,
+          4,
+          13
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 904,
+        "dataset_solved_rate": 0.888,
+        "expression": "((13-(3+4))*4)",
+        "completion": "<think>Use the expression ((13-(3+4))*4). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((13-(3+4))*4)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 905,
+        "dataset_solved_rate": 0.845,
+        "expression": "(9+6-7)*8",
+        "completion": "<think>Use the expression (9+6-7)*8. It uses each given number exactly once and evaluates to 24.</think>\n<answer>(9+6-7)*8</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 17.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          1,
+          11,
+          11,
+          13
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 906,
+        "dataset_solved_rate": 0.877,
+        "expression": "(13-((1-11)-11))",
+        "completion": "<think>Use the expression (13-((1-11)-11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(13-((1-11)-11))</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 20.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          1,
+          8,
+          10,
+          11
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 907,
+        "dataset_solved_rate": 0.8690000000000001,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 23.0, expected 24",
+        "error_type": "refusal_or_no_answer"
+      },
+      {
+        "numbers": [
+          2,
+          3,
+          6,
+          9
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 908,
+        "dataset_solved_rate": 0.9309999999999999,
+        "expression": "(6-2)*(9-3)",
+        "completion": "<think>Use the expression (6-2)*(9-3). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(6-2)*(9-3)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          1,
+          3,
+          5,
+          9
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 909,
+        "dataset_solved_rate": 0.9059999999999999,
+        "expression": "((3*(1+5))+9)",
+        "completion": "<think>Use the expression ((3*(1+5))+9). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((3*(1+5))+9)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 30.0, expected 24",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          3,
+          3,
+          7,
+          12
+        ],
+        "target": 24,
+        "source": "test-time-compute/game-of-24",
+        "rank": 910,
+        "dataset_solved_rate": 0.845,
+        "expression": null,
+        "completion": "<think>I checked the possible arithmetic combinations and did not find a valid way to make 24 using each number exactly once.</think>\n<answer>NO_SOLUTION</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": true,
+        "reason": "Result is 144.0, expected 24",
+        "error_type": "refusal_or_no_answer"
+      }
+    ]
+  }
+}
