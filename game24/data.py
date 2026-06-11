@@ -23,6 +23,9 @@ GAME24_CSV_URL = (
 GAME24_LOCAL_CSV = os.path.join(
     os.path.dirname(__file__), "..", "dataset_cache", "game24_official.csv"
 )
+COUNTDOWN_LOCAL_PARQUET = os.path.join(
+    os.path.dirname(__file__), "..", "dataset_cache", "countdown_tasks_3to4.parquet"
+)
 
 
 def _dataset_split(ds) -> Dataset:
@@ -435,8 +438,12 @@ def load_countdown_dataset(config: DataConfig) -> Dict[str, Dataset]:
         solvable: True
         source: countdown
     """
-    print(f"Loading Countdown dataset: {config.countdown_dataset}...")
-    ds = _dataset_split(load_dataset(config.countdown_dataset))
+    if os.path.exists(COUNTDOWN_LOCAL_PARQUET):
+        print(f"Loading cached Countdown parquet: {COUNTDOWN_LOCAL_PARQUET}")
+        ds = _dataset_split(load_dataset("parquet", data_files=COUNTDOWN_LOCAL_PARQUET))
+    else:
+        print(f"Loading Countdown dataset: {config.countdown_dataset}...")
+        ds = _dataset_split(load_dataset(config.countdown_dataset))
     ds = _normalize_dataset(
         ds,
         source="Jiayi-Pan/Countdown-Tasks-3to4",

@@ -38,6 +38,8 @@ Countdown 加分项：
 bash scripts/run_countdown_bonus.sh "$QWEN_15B" 0
 ```
 
+已归档的 Countdown 结果保存在 `results/countdown-sft-15b/` 和 `results/countdown-grpo-15b/`。在 200 条测试样本上，SFT greedy 为 10.5%，SFT best-of-8 为 42.0%；SFT+GRPO greedy 为 11.0%，SFT+GRPO best-of-8 为 40.5%。远端无法稳定联网时会优先读取 `dataset_cache/countdown_tasks_3to4.parquet`。
+
 主线跑完后补 verifier-based test-time compute：
 
 ```bash

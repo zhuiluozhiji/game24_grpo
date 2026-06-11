@@ -101,3 +101,31 @@ GRPO 输出目录：`output/game24-grpo-15b-curriculum`。
 | `3e-7/s600/g8` | 6.5% | 15.0% | 11.0% | 25.0% | 28.5% | 41.5% | 31.0% | 2.0% |
 
 稳定性结论：降低学习率能缓解 greedy 下不可解样本 hallucination，但没有带来更强的 best-of-8 OOD/hard 表现。`3e-7/s600` 的 ToT hard best-of-8 31.0% 接近主线 32.0%，但 OOD 仍低于主线，且 best-of-8 不可解 hallucination 略高。因此最终主线仍采用 `8e-7/s300/g8`，低学习率两组作为 ablation 支撑“GRPO 超参会影响 hallucination 与候选池质量”的分析。
+
+## 8. Countdown 加分项补跑
+
+伙伴新增建议中的 Countdown 3-4 数字任意目标加分项已完成。远端不能稳定访问 Hugging Face datasets，因此将 `Jiayi-Pan/Countdown-Tasks-3to4` 缓存为 `dataset_cache/countdown_tasks_3to4.parquet`，`game24/data.py` 会优先读取该本地缓存。
+
+```bash
+source /data/ysf/miniconda3/etc/profile.d/conda.sh
+conda activate game24_grpo
+export PYTHONPATH=/data/ysf/game24_grpo
+
+bash scripts/run_countdown_bonus.sh /data/ysf/models/Qwen2.5-1.5B-Instruct 4
+```
+
+训练摘要：
+
+| 阶段 | 训练样本 | Epoch | Step | 学习率 | 训练时间 | 最后指标 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Countdown SFT | 3000 | 1 | 3000 | 8e-5 | 569.7 秒 | final loss 0.0483 |
+| Countdown SFT+GRPO | 300 prompts | 1 | 300 | 8e-7 | 7443.9 秒 | final avg reward 0.0491 |
+
+| 模型阶段 | 解码 | Countdown solve | Format rate | 主要错误 |
+| --- | --- | ---: | ---: | --- |
+| 1.5B Countdown SFT | greedy | 10.5% | 100.0% | `wrong_value=179` |
+| 1.5B Countdown SFT | best-of-8 | 42.0% | 100.0% | `wrong_value=114`, `invalid_expression=2` |
+| 1.5B Countdown SFT+GRPO | greedy | 11.0% | 100.0% | `wrong_value=178` |
+| 1.5B Countdown SFT+GRPO | best-of-8 | 40.5% | 100.0% | `wrong_value=119` |
+
+Countdown 结果说明同一套 target-aware prompt、verifier 和 reward 可以迁移到任意目标数任务。best-of-8 显著高于 greedy，说明 verifier-based test-time compute 在 Countdown 上同样有效；但这组小规模 GRPO 未超过 SFT best-of-8，因此最终报告中应把 Countdown 定位为加分项框架迁移验证。

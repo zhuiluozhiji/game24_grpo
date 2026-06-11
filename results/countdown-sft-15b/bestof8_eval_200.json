@@ -1,0 +1,217 @@
+{
+  "countdown": {
+    "dataset_name": "Countdown",
+    "total": 200,
+    "best_of": 8,
+    "solved": 84,
+    "solve_rate": 0.42,
+    "format_correct": 200,
+    "format_rate": 1.0,
+    "hallucinated": 0,
+    "hallucination_rate": null,
+    "error_counts": {
+      "wrong_value": 114,
+      "invalid_expression": 2
+    },
+    "difficulty": null,
+    "errors": 0,
+    "sample_details": [
+      {
+        "numbers": [
+          26,
+          34,
+          13
+        ],
+        "target": 36,
+        "source": "Jiayi-Pan/Countdown-Tasks-3to4",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(34/(26/13))",
+        "completion": "<think>Use the expression (34/(26/13)). It uses each given number exactly once and evaluates to 36.</think>\n<answer>(34/(26/13))</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 4.615384615384615, expected 36",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          52,
+          21,
+          65,
+          55
+        ],
+        "target": 65,
+        "source": "Jiayi-Pan/Countdown-Tasks-3to4",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "((52+21)-(55-65))",
+        "completion": "<think>Use the expression ((52+21)-(55-65)). It uses each given number exactly once and evaluates to 65.</think>\n<answer>((52+21)-(55-65))</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 21.0, expected 65",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          67,
+          72,
+          12
+        ],
+        "target": 61,
+        "source": "Jiayi-Pan/Countdown-Tasks-3to4",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(67-(72/12))",
+        "completion": "<think>Use the expression (67-(72/12)). It uses each given number exactly once and evaluates to 61.</think>\n<answer>(67-(72/12))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          58,
+          33,
+          85,
+          45
+        ],
+        "target": 51,
+        "source": "Jiayi-Pan/Countdown-Tasks-3to4",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "((33-85)+(58+45))",
+        "completion": "<think>Use the expression ((33-85)+(58+45)). It uses each given number exactly once and evaluates to 51.</think>\n<answer>((33-85)+(58+45))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          99,
+          46,
+          82,
+          77
+        ],
+        "target": 58,
+        "source": "Jiayi-Pan/Countdown-Tasks-3to4",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(((99-46)-77)+82)",
+        "completion": "<think>Use the expression (((99-46)-77)+82). It uses each given number exactly once and evaluates to 58.</think>\n<answer>(((99-46)-77)+82)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          60,
+          55,
+          45,
+          40
+        ],
+        "target": 46,
+        "source": "Jiayi-Pan/Countdown-Tasks-3to4",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "((60/(55-45))+40)",
+        "completion": "<think>Use the expression ((60/(55-45))+40). It uses each given number exactly once and evaluates to 46.</think>\n<answer>((60/(55-45))+40)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          46,
+          51,
+          1
+        ],
+        "target": 96,
+        "source": "Jiayi-Pan/Countdown-Tasks-3to4",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "((46+51)-1)",
+        "completion": "<think>Use the expression ((46+51)-1). It uses each given number exactly once and evaluates to 96.</think>\n<answer>((46+51)-1)</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          51,
+          4,
+          2
+        ],
+        "target": 43,
+        "source": "Jiayi-Pan/Countdown-Tasks-3to4",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "(51-(4*2))",
+        "completion": "<think>Use the expression (51-(4*2)). It uses each given number exactly once and evaluates to 43.</think>\n<answer>(51-(4*2))</answer>",
+        "is_solved": true,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Valid solution",
+        "error_type": null
+      },
+      {
+        "numbers": [
+          54,
+          33,
+          55,
+          3
+        ],
+        "target": 37,
+        "source": "Jiayi-Pan/Countdown-Tasks-3to4",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "((54/(33+55))+3)",
+        "completion": "<think>Use the expression ((54/(33+55))+3). It uses each given number exactly once and evaluates to 37.</think>\n<answer>((54/(33+55))+3)</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 11.0, expected 37",
+        "error_type": "wrong_value"
+      },
+      {
+        "numbers": [
+          64,
+          17,
+          40,
+          39
+        ],
+        "target": 48,
+        "source": "Jiayi-Pan/Countdown-Tasks-3to4",
+        "rank": null,
+        "dataset_solved_rate": null,
+        "expression": "((39-40)+(64+17))",
+        "completion": "<think>Use the expression ((39-40)+(64+17)). It uses each given number exactly once and evaluates to 48.</think>\n<answer>((39-40)+(64+17))</answer>",
+        "is_solved": false,
+        "is_format_correct": true,
+        "is_hallucination": false,
+        "had_refusal": false,
+        "reason": "Result is 80.0, expected 48",
+        "error_type": "wrong_value"
+      }
+    ]
+  }
+}

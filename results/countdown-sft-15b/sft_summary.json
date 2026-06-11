@@ -1,0 +1,11 @@
+{
+  "model": "/data/ysf/models/Qwen2.5-1.5B-Instruct",
+  "task": "countdown",
+  "train_examples": 3000,
+  "epochs": 1,
+  "total_steps": 3000,
+  "learning_rate": 8e-05,
+  "training_time_seconds": 569.6588747501373,
+  "final_loss": 0.04833929240703583,
+  "timestamp": "2026-06-11T10:43:16.257908"
+}

@@ -70,11 +70,11 @@
 
 结论：最佳主线配置为 `1.5B SFT+GRPO + best-of-8`。相比 SFT best-of-8，Official OOD 从 31.0% 提升到 43.5%，ToT hard 从 13.0% 提升到 32.0%，不可解幻觉率保持在 1.0%。
 
-## 正式实验 B：Countdown 加分项，待远端补跑
+## 正式实验 B：Countdown 加分项，已完成远端补跑
 
 目的：参考 TinyZero，将 24 点任务扩展为 3-4 数字凑任意目标数，验证 target-aware prompt、reward 和 verifier 的泛化性。
 
-复现命令见 `docs/runbook.md` 第 6 节，或 `docs/RUNNING.md` 第 5 节。
+复现命令见 `docs/runbook.md` 第 6 节，或 `docs/RUNNING.md` 第 5 节。由于远端 Hugging Face datasets 访问不稳定，本次已缓存 `Jiayi-Pan/Countdown-Tasks-3to4` 的 parquet 到 `dataset_cache/countdown_tasks_3to4.parquet`，代码会优先读取该本地缓存。
 
 计划配置：
 
@@ -87,14 +87,23 @@
 | 默认训练样本 | 3000 SFT + 300 GRPO |
 | 默认评估规模 | 200 |
 
-结果待补：
+训练摘要：
+
+| 阶段 | 训练样本 | Epoch | Step | 学习率 | 训练时间 | 最后指标 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Countdown SFT | 3000 | 1 | 3000 | 8e-5 | 569.7 秒 | final loss 0.0483 |
+| Countdown SFT+GRPO | 300 prompts | 1 | 300 | 8e-7 | 7443.9 秒 | final avg reward 0.0491 |
 
 | 模型阶段 | 解码 | Countdown solve rate | Format rate |
 | --- | --- | ---: | ---: |
-| 1.5B Countdown SFT | greedy | 待跑 | 待跑 |
-| 1.5B Countdown SFT | best-of-8 | 待跑 | 待跑 |
-| 1.5B Countdown SFT+GRPO | greedy | 待跑 | 待跑 |
-| 1.5B Countdown SFT+GRPO | best-of-8 | 待跑 | 待跑 |
+| 1.5B Countdown SFT | greedy | 10.5% | 100.0% |
+| 1.5B Countdown SFT | best-of-8 | 42.0% | 100.0% |
+| 1.5B Countdown SFT+GRPO | greedy | 11.0% | 100.0% |
+| 1.5B Countdown SFT+GRPO | best-of-8 | 40.5% | 100.0% |
+
+错误类型：四组评估均无 hallucination，主要失败模式是 `wrong_value`。其中 SFT greedy 为 `wrong_value=179`，SFT best-of-8 为 `wrong_value=114, invalid_expression=2`，GRPO greedy 为 `wrong_value=178`，GRPO best-of-8 为 `wrong_value=119`。
+
+结论：同一套 prompt、target-aware verifier 和可验证奖励可以迁移到任意 target 的 Countdown 任务；best-of-8 将 solve rate 从约 10%-11% 提升到约 40% 以上，说明测试时候选池覆盖非常关键。本次小规模 Countdown GRPO 没有超过 SFT best-of-8，报告中应将其表述为框架迁移验证与 test-time compute 加分项，而不是声称 Countdown GRPO 显著增益。
 
 ## 正式实验 C：Verifier-based test-time compute，待远端补跑
 

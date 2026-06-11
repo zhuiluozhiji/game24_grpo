@@ -1,0 +1,6148 @@
+[
+  {
+    "loss": -0.0036468505859375,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (52-(94/(12/63))). It uses each given number exactly once and evaluates to 93.</think>\n<answer>(52-(94/(12/63)))</answer>",
+      "<think>Use the expression ((52/12)+(94-63)). It uses each given number exactly once and evaluates to 93.</think>\n<answer>((52/12)+(94-63))</answer>"
+    ],
+    "step": 1,
+    "epoch": 1,
+    "numbers": [
+      12,
+      52,
+      94,
+      63
+    ],
+    "target": 93
+  },
+  {
+    "loss": -0.01467132568359375,
+    "avg_reward": 0.73875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.725,
+    "solved": 6,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((23+15)+26). It uses each given number exactly once and evaluates to 64.</think>\n<answer>((23+15)+26)</answer>",
+      "<think>Use the expression (26+(23+15)). It uses each given number exactly once and evaluates to 64.</think>\n<answer>(26+(23+15))</answer>"
+    ],
+    "step": 2,
+    "epoch": 1,
+    "numbers": [
+      23,
+      15,
+      26
+    ],
+    "target": 64
+  },
+  {
+    "loss": -0.0124969482421875,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((15-16)+45). It uses each given number exactly once and evaluates to 76.</think>\n<answer>((15-16)+45)</answer>",
+      "<think>Use the expression (16+(15*45)). It uses each given number exactly once and evaluates to 76.</think>\n<answer>(16+(15*45))</answer>"
+    ],
+    "step": 3,
+    "epoch": 1,
+    "numbers": [
+      15,
+      16,
+      45
+    ],
+    "target": 76
+  },
+  {
+    "loss": -0.109619140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((34+9)+(20+79)). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((34+9)+(20+79))</answer>",
+      "<think>Use the expression ((79/(34-9))+20). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((79/(34-9))+20)</answer>"
+    ],
+    "step": 4,
+    "epoch": 1,
+    "numbers": [
+      34,
+      20,
+      79,
+      9
+    ],
+    "target": 100
+  },
+  {
+    "loss": -0.115966796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((80+34)-54)*76). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((80+34)-54)*76)</answer>",
+      "<think>Use the expression (((80+34)-54)+76). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(((80+34)-54)+76)</answer>"
+    ],
+    "step": 5,
+    "epoch": 1,
+    "numbers": [
+      80,
+      34,
+      76,
+      54
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0377197265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((85-26)+26). It uses each given number exactly once and evaluates to 86.</think>\n<answer>((85-26)+26)</answer>",
+      "<think>Use the expression ((85+26)-26). It uses each given number exactly once and evaluates to 86.</think>\n<answer>((85+26)-26)</answer>"
+    ],
+    "step": 6,
+    "epoch": 1,
+    "numbers": [
+      85,
+      26,
+      26
+    ],
+    "target": 86
+  },
+  {
+    "loss": 0.0010223388671875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((45-47)+(25+18)). It uses each given number exactly once and evaluates to 45.</think>\n<answer>((45-47)+(25+18))</answer>",
+      "<think>Use the expression ((25+18)-(45/47)). It uses each given number exactly once and evaluates to 45.</think>\n<answer>((25+18)-(45/47))</answer>"
+    ],
+    "step": 7,
+    "epoch": 1,
+    "numbers": [
+      25,
+      18,
+      47,
+      45
+    ],
+    "target": 45
+  },
+  {
+    "loss": -0.0090789794921875,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((83/(29-12))+4). It uses each given number exactly once and evaluates to 70.</think>\n<answer>((83/(29-12))+4)</answer>",
+      "<think>Use the expression (83-((29-12)-4)). It uses each given number exactly once and evaluates to 70.</think>\n<answer>(83-((29-12)-4))</answer>"
+    ],
+    "step": 8,
+    "epoch": 1,
+    "numbers": [
+      29,
+      12,
+      4,
+      83
+    ],
+    "target": 70
+  },
+  {
+    "loss": -0.0155792236328125,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5875,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (49-(14+83)). It uses each given number exactly once and evaluates to 48.</think>\n<answer>(49-(14+83))</answer>",
+      "<think>Use the expression ((14+83)-49). It uses each given number exactly once and evaluates to 48.</think>\n<answer>((14+83)-49)</answer>"
+    ],
+    "step": 9,
+    "epoch": 1,
+    "numbers": [
+      14,
+      83,
+      49
+    ],
+    "target": 48
+  },
+  {
+    "loss": 0.00603485107421875,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (89-(84-95)). It uses each given number exactly once and evaluates to 100.</think>\n<answer>(89-(84-95))</answer>",
+      "<think>Use the expression ((84+89)-95). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((84+89)-95)</answer>"
+    ],
+    "step": 10,
+    "epoch": 1,
+    "numbers": [
+      84,
+      89,
+      95
+    ],
+    "target": 100
+  },
+  {
+    "loss": -0.11456298828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((99-87)+(19+70)). It uses each given number exactly once and evaluates to 97.</think>\n<answer>((99-87)+(19+70))</answer>",
+      "<think>Use the expression ((19/(99/87))-70). It uses each given number exactly once and evaluates to 97.</think>\n<answer>((19/(99/87))-70)</answer>"
+    ],
+    "step": 11,
+    "epoch": 1,
+    "numbers": [
+      99,
+      87,
+      70,
+      19
+    ],
+    "target": 97
+  },
+  {
+    "loss": -0.110595703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((50/53)*(72-90)). It uses each given number exactly once and evaluates to 36.</think>\n<answer>((50/53)*(72-90))</answer>",
+      "<think>Use the expression ((53-50)*(90/72)). It uses each given number exactly once and evaluates to 36.</think>\n<answer>((53-50)*(90/72))</answer>"
+    ],
+    "step": 12,
+    "epoch": 1,
+    "numbers": [
+      50,
+      90,
+      53,
+      72
+    ],
+    "target": 36
+  },
+  {
+    "loss": 0.00496673583984375,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((22-29)+69). It uses each given number exactly once and evaluates to 62.</think>\n<answer>((22-29)+69)</answer>",
+      "<think>Use the expression ((22+29)-69). It uses each given number exactly once and evaluates to 62.</think>\n<answer>((22+29)-69)</answer>"
+    ],
+    "step": 13,
+    "epoch": 1,
+    "numbers": [
+      22,
+      29,
+      69
+    ],
+    "target": 62
+  },
+  {
+    "loss": -0.00262451171875,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8+11)+57). It uses each given number exactly once and evaluates to 60.</think>\n<answer>((8+11)+57)</answer>",
+      "<think>Use the expression ((8+11)+57). It uses each given number exactly once and evaluates to 60.</think>\n<answer>((8+11)+57)</answer>"
+    ],
+    "step": 14,
+    "epoch": 1,
+    "numbers": [
+      8,
+      11,
+      57
+    ],
+    "target": 60
+  },
+  {
+    "loss": -0.00504302978515625,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((93+60)-74). It uses each given number exactly once and evaluates to 79.</think>\n<answer>((93+60)-74)</answer>",
+      "<think>Use the expression ((93-60)+74). It uses each given number exactly once and evaluates to 79.</think>\n<answer>((93-60)+74)</answer>"
+    ],
+    "step": 15,
+    "epoch": 1,
+    "numbers": [
+      93,
+      60,
+      74
+    ],
+    "target": 79
+  },
+  {
+    "loss": -0.1046142578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((66/4)+(78-81)). It uses each given number exactly once and evaluates to 65.</think>\n<answer>((66/4)+(78-81))</answer>",
+      "<think>Use the expression ((81-78)*(66/4)). It uses each given number exactly once and evaluates to 65.</think>\n<answer>((81-78)*(66/4))</answer>"
+    ],
+    "step": 16,
+    "epoch": 1,
+    "numbers": [
+      66,
+      78,
+      4,
+      81
+    ],
+    "target": 65
+  },
+  {
+    "loss": -0.0027618408203125,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3*(81/63)). It uses each given number exactly once and evaluates to 15.</think>\n<answer>(3*(81/63))</answer>",
+      "<think>Use the expression ((81-63)-3). It uses each given number exactly once and evaluates to 15.</think>\n<answer>((81-63)-3)</answer>"
+    ],
+    "step": 17,
+    "epoch": 1,
+    "numbers": [
+      81,
+      63,
+      3
+    ],
+    "target": 15
+  },
+  {
+    "loss": -0.0152435302734375,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.44999999999999996,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((67+69)/69). It uses each given number exactly once and evaluates to 71.</think>\n<answer>((67+69)/69)</answer>",
+      "<think>Use the expression ((67+69)/69). It uses each given number exactly once and evaluates to 71.</think>\n<answer>((67+69)/69)</answer>"
+    ],
+    "step": 18,
+    "epoch": 1,
+    "numbers": [
+      67,
+      69,
+      69
+    ],
+    "target": 71
+  },
+  {
+    "loss": -0.0330810546875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (19-(22-12)). It uses each given number exactly once and evaluates to 29.</think>\n<answer>(19-(22-12))</answer>",
+      "<think>Use the expression ((22+12)-19). It uses each given number exactly once and evaluates to 29.</think>\n<answer>((22+12)-19)</answer>"
+    ],
+    "step": 19,
+    "epoch": 1,
+    "numbers": [
+      22,
+      12,
+      19
+    ],
+    "target": 29
+  },
+  {
+    "loss": -0.12286376953125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (30-((88/2)+92)). It uses each given number exactly once and evaluates to 27.</think>\n<answer>(30-((88/2)+92))</answer>",
+      "<think>Use the expression (2*(92/(88-30))). It uses each given number exactly once and evaluates to 27.</think>\n<answer>(2*(92/(88-30)))</answer>"
+    ],
+    "step": 20,
+    "epoch": 1,
+    "numbers": [
+      2,
+      88,
+      92,
+      30
+    ],
+    "target": 27
+  },
+  {
+    "loss": 0.0009613037109375,
+    "avg_reward": 0.346875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (33-(47-70)). It uses each given number exactly once and evaluates to 10.</think>\n<answer>(33-(47-70))</answer>",
+      "<think>Use the expression ((47-70)+33). It uses each given number exactly once and evaluates to 10.</think>\n<answer>((47-70)+33)</answer>"
+    ],
+    "step": 21,
+    "epoch": 1,
+    "numbers": [
+      47,
+      70,
+      33
+    ],
+    "target": 10
+  },
+  {
+    "loss": -0.01032257080078125,
+    "avg_reward": 0.869375,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.8625,
+    "solved": 7,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8*15)-77). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((8*15)-77)</answer>",
+      "<think>Use the expression ((8+15)+77). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((8+15)+77)</answer>"
+    ],
+    "step": 22,
+    "epoch": 1,
+    "numbers": [
+      8,
+      15,
+      77
+    ],
+    "target": 100
+  },
+  {
+    "loss": 0.019016265869140625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((41+30)-9). It uses each given number exactly once and evaluates to 80.</think>\n<answer>((41+30)-9)</answer>",
+      "<think>Use the expression ((41+30)-9). It uses each given number exactly once and evaluates to 80.</think>\n<answer>((41+30)-9)</answer>"
+    ],
+    "step": 23,
+    "epoch": 1,
+    "numbers": [
+      41,
+      30,
+      9
+    ],
+    "target": 80
+  },
+  {
+    "loss": -0.04449462890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((70-71)+65). It uses each given number exactly once and evaluates to 65.</think>\n<answer>((70-71)+65)</answer>",
+      "<think>Use the expression ((70+71)-65). It uses each given number exactly once and evaluates to 65.</think>\n<answer>((70+71)-65)</answer>"
+    ],
+    "step": 24,
+    "epoch": 1,
+    "numbers": [
+      70,
+      71,
+      65
+    ],
+    "target": 65
+  },
+  {
+    "loss": -0.0022735595703125,
+    "avg_reward": 0.869375,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.8625,
+    "solved": 7,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8+97)-6). It uses each given number exactly once and evaluates to 99.</think>\n<answer>((8+97)-6)</answer>",
+      "<think>Use the expression ((8+97)-6). It uses each given number exactly once and evaluates to 99.</think>\n<answer>((8+97)-6)</answer>"
+    ],
+    "step": 25,
+    "epoch": 1,
+    "numbers": [
+      8,
+      97,
+      6
+    ],
+    "target": 99
+  },
+  {
+    "loss": -0.009429931640625,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (39-(88/28)). It uses each given number exactly once and evaluates to 77.</think>\n<answer>(39-(88/28))</answer>",
+      "<think>Use the expression (39-(88-28)). It uses each given number exactly once and evaluates to 77.</think>\n<answer>(39-(88-28))</answer>"
+    ],
+    "step": 26,
+    "epoch": 1,
+    "numbers": [
+      88,
+      28,
+      39
+    ],
+    "target": 77
+  },
+  {
+    "loss": -0.114990234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4*(33+59))/2). It uses each given number exactly once and evaluates to 98.</think>\n<answer>((4*(33+59))/2)</answer>",
+      "<think>Use the expression (59-(33/(4-2))). It uses each given number exactly once and evaluates to 98.</think>\n<answer>(59-(33/(4-2)))</answer>"
+    ],
+    "step": 27,
+    "epoch": 1,
+    "numbers": [
+      33,
+      4,
+      2,
+      59
+    ],
+    "target": 98
+  },
+  {
+    "loss": -0.04388427734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((24+80)/30). It uses each given number exactly once and evaluates to 74.</think>\n<answer>((24+80)/30)</answer>",
+      "<think>Use the expression (30-(24-80)). It uses each given number exactly once and evaluates to 74.</think>\n<answer>(30-(24-80))</answer>"
+    ],
+    "step": 28,
+    "epoch": 1,
+    "numbers": [
+      24,
+      80,
+      30
+    ],
+    "target": 74
+  },
+  {
+    "loss": -0.047210693359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (67-(54/3)). It uses each given number exactly once and evaluates to 16.</think>\n<answer>(67-(54/3))</answer>",
+      "<think>Use the expression ((54-67)+3). It uses each given number exactly once and evaluates to 16.</think>\n<answer>((54-67)+3)</answer>"
+    ],
+    "step": 29,
+    "epoch": 1,
+    "numbers": [
+      54,
+      67,
+      3
+    ],
+    "target": 16
+  },
+  {
+    "loss": -0.09918212890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((58+28)-(11-7)). It uses each given number exactly once and evaluates to 73.</think>\n<answer>((58+28)-(11-7))</answer>",
+      "<think>Use the expression ((11+(58-28))-7). It uses each given number exactly once and evaluates to 73.</think>\n<answer>((11+(58-28))-7)</answer>"
+    ],
+    "step": 30,
+    "epoch": 1,
+    "numbers": [
+      58,
+      28,
+      11,
+      7
+    ],
+    "target": 73
+  },
+  {
+    "loss": -0.0338287353515625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (31-(62-30)). It uses each given number exactly once and evaluates to 32.</think>\n<answer>(31-(62-30))</answer>",
+      "<think>Use the expression ((62-30)+31). It uses each given number exactly once and evaluates to 32.</think>\n<answer>((62-30)+31)</answer>"
+    ],
+    "step": 31,
+    "epoch": 1,
+    "numbers": [
+      62,
+      30,
+      31
+    ],
+    "target": 32
+  },
+  {
+    "loss": -0.114990234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((74+81)/39)*66). It uses each given number exactly once and evaluates to 71.</think>\n<answer>(((74+81)/39)*66)</answer>",
+      "<think>Use the expression ((74+39)-(66-81)). It uses each given number exactly once and evaluates to 71.</think>\n<answer>((74+39)-(66-81))</answer>"
+    ],
+    "step": 32,
+    "epoch": 1,
+    "numbers": [
+      74,
+      39,
+      66,
+      81
+    ],
+    "target": 71
+  },
+  {
+    "loss": -0.06170654296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (33+(57+4)). It uses each given number exactly once and evaluates to 75.</think>\n<answer>(33+(57+4))</answer>",
+      "<think>Use the expression ((57+4)-33). It uses each given number exactly once and evaluates to 75.</think>\n<answer>((57+4)-33)</answer>"
+    ],
+    "step": 33,
+    "epoch": 1,
+    "numbers": [
+      57,
+      4,
+      33
+    ],
+    "target": 75
+  },
+  {
+    "loss": -0.0079803466796875,
+    "avg_reward": 0.4775,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.45,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (56+(38*12)). It uses each given number exactly once and evaluates to 82.</think>\n<answer>(56+(38*12))</answer>",
+      "<think>Use the expression ((56+38)-12). It uses each given number exactly once and evaluates to 82.</think>\n<answer>((56+38)-12)</answer>"
+    ],
+    "step": 34,
+    "epoch": 1,
+    "numbers": [
+      56,
+      38,
+      12
+    ],
+    "target": 82
+  },
+  {
+    "loss": -0.13665771484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((10-(13-29))-99). It uses each given number exactly once and evaluates to 93.</think>\n<answer>((10-(13-29))-99)</answer>",
+      "<think>Use the expression (29-(99/(10-13))). It uses each given number exactly once and evaluates to 93.</think>\n<answer>(29-(99/(10-13)))</answer>"
+    ],
+    "step": 35,
+    "epoch": 1,
+    "numbers": [
+      10,
+      13,
+      29,
+      99
+    ],
+    "target": 93
+  },
+  {
+    "loss": -0.006134033203125,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.31249999999999994,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((52-38)+63). It uses each given number exactly once and evaluates to 49.</think>\n<answer>((52-38)+63)</answer>",
+      "<think>Use the expression (63/(52/38)). It uses each given number exactly once and evaluates to 49.</think>\n<answer>(63/(52/38))</answer>"
+    ],
+    "step": 36,
+    "epoch": 1,
+    "numbers": [
+      52,
+      38,
+      63
+    ],
+    "target": 49
+  },
+  {
+    "loss": 0.01134490966796875,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2+75)-59). It uses each given number exactly once and evaluates to 67.</think>\n<answer>((2+75)-59)</answer>",
+      "<think>Use the expression ((2+75)-59). It uses each given number exactly once and evaluates to 67.</think>\n<answer>((2+75)-59)</answer>"
+    ],
+    "step": 37,
+    "epoch": 1,
+    "numbers": [
+      2,
+      75,
+      59
+    ],
+    "target": 67
+  },
+  {
+    "loss": -0.10858154296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (62-((95+14)/39)). It uses each given number exactly once and evaluates to 20.</think>\n<answer>(62-((95+14)/39))</answer>",
+      "<think>Use the expression ((62+39)-(95/14)). It uses each given number exactly once and evaluates to 20.</think>\n<answer>((62+39)-(95/14))</answer>"
+    ],
+    "step": 38,
+    "epoch": 1,
+    "numbers": [
+      95,
+      14,
+      39,
+      62
+    ],
+    "target": 20
+  },
+  {
+    "loss": -0.0234222412109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((9+69)-74). It uses each given number exactly once and evaluates to 45.</think>\n<answer>((9+69)-74)</answer>",
+      "<think>Use the expression ((9+69)-74). It uses each given number exactly once and evaluates to 45.</think>\n<answer>((9+69)-74)</answer>"
+    ],
+    "step": 39,
+    "epoch": 1,
+    "numbers": [
+      9,
+      69,
+      74
+    ],
+    "target": 45
+  },
+  {
+    "loss": -0.0016326904296875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((88+66)/20). It uses each given number exactly once and evaluates to 15.</think>\n<answer>((88+66)/20)</answer>",
+      "<think>Use the expression ((88+66)/20). It uses each given number exactly once and evaluates to 15.</think>\n<answer>((88+66)/20)</answer>"
+    ],
+    "step": 40,
+    "epoch": 1,
+    "numbers": [
+      88,
+      66,
+      20
+    ],
+    "target": 15
+  },
+  {
+    "loss": -0.13311767578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (44-((20+28)/90)). It uses each given number exactly once and evaluates to 70.</think>\n<answer>(44-((20+28)/90))</answer>",
+      "<think>Use the expression ((44*20)-(28+90)). It uses each given number exactly once and evaluates to 70.</think>\n<answer>((44*20)-(28+90))</answer>"
+    ],
+    "step": 41,
+    "epoch": 1,
+    "numbers": [
+      44,
+      20,
+      28,
+      90
+    ],
+    "target": 70
+  },
+  {
+    "loss": -0.00201416015625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((38+51)-30). It uses each given number exactly once and evaluates to 43.</think>\n<answer>((38+51)-30)</answer>",
+      "<think>Use the expression (38-(51/30)). It uses each given number exactly once and evaluates to 43.</think>\n<answer>(38-(51/30))</answer>"
+    ],
+    "step": 42,
+    "epoch": 1,
+    "numbers": [
+      38,
+      51,
+      30
+    ],
+    "target": 43
+  },
+  {
+    "loss": 0.000244140625,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((52+48)-78). It uses each given number exactly once and evaluates to 74.</think>\n<answer>((52+48)-78)</answer>",
+      "<think>Use the expression ((52+48)-78). It uses each given number exactly once and evaluates to 74.</think>\n<answer>((52+48)-78)</answer>"
+    ],
+    "step": 43,
+    "epoch": 1,
+    "numbers": [
+      52,
+      48,
+      78
+    ],
+    "target": 74
+  },
+  {
+    "loss": -0.1141357421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((53-38)+(69+42)). It uses each given number exactly once and evaluates to 96.</think>\n<answer>((53-38)+(69+42))</answer>",
+      "<think>Use the expression ((69-42)+(38+53)). It uses each given number exactly once and evaluates to 96.</think>\n<answer>((69-42)+(38+53))</answer>"
+    ],
+    "step": 44,
+    "epoch": 1,
+    "numbers": [
+      69,
+      42,
+      53,
+      38
+    ],
+    "target": 96
+  },
+  {
+    "loss": -0.003387451171875,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((74-32)+(19+17)). It uses each given number exactly once and evaluates to 78.</think>\n<answer>((74-32)+(19+17))</answer>",
+      "<think>Use the expression (32-((19-17)+74)). It uses each given number exactly once and evaluates to 78.</think>\n<answer>(32-((19-17)+74))</answer>"
+    ],
+    "step": 45,
+    "epoch": 1,
+    "numbers": [
+      19,
+      17,
+      74,
+      32
+    ],
+    "target": 78
+  },
+  {
+    "loss": -0.13177490234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((23+97)-(30+88)). It uses each given number exactly once and evaluates to 92.</think>\n<answer>((23+97)-(30+88))</answer>",
+      "<think>Use the expression ((23-97)+(30*88)). It uses each given number exactly once and evaluates to 92.</think>\n<answer>((23-97)+(30*88))</answer>"
+    ],
+    "step": 46,
+    "epoch": 1,
+    "numbers": [
+      23,
+      97,
+      88,
+      30
+    ],
+    "target": 92
+  },
+  {
+    "loss": -0.020416259765625,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5875,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((4-96)+74). It uses each given number exactly once and evaluates to 26.</think>\n<answer>((4-96)+74)</answer>",
+      "<think>Use the expression ((4+96)-74). It uses each given number exactly once and evaluates to 26.</think>\n<answer>((4+96)-74)</answer>"
+    ],
+    "step": 47,
+    "epoch": 1,
+    "numbers": [
+      4,
+      96,
+      74
+    ],
+    "target": 26
+  },
+  {
+    "loss": -0.112152099609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((43-86)+(18+71)). It uses each given number exactly once and evaluates to 76.</think>\n<answer>((43-86)+(18+71))</answer>",
+      "<think>Use the expression ((43-86)+(18+71)). It uses each given number exactly once and evaluates to 76.</think>\n<answer>((43-86)+(18+71))</answer>"
+    ],
+    "step": 48,
+    "epoch": 1,
+    "numbers": [
+      18,
+      71,
+      86,
+      43
+    ],
+    "target": 76
+  },
+  {
+    "loss": -0.0116424560546875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (69/(12-40)). It uses each given number exactly once and evaluates to 41.</think>\n<answer>(69/(12-40))</answer>",
+      "<think>Use the expression ((69-12)-40). It uses each given number exactly once and evaluates to 41.</think>\n<answer>((69-12)-40)</answer>"
+    ],
+    "step": 49,
+    "epoch": 1,
+    "numbers": [
+      69,
+      12,
+      40
+    ],
+    "target": 41
+  },
+  {
+    "loss": -0.04052734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((36+66)/20). It uses each given number exactly once and evaluates to 10.</think>\n<answer>((36+66)/20)</answer>",
+      "<think>Use the expression ((36+66)/20). It uses each given number exactly once and evaluates to 10.</think>\n<answer>((36+66)/20)</answer>"
+    ],
+    "step": 50,
+    "epoch": 1,
+    "numbers": [
+      36,
+      66,
+      20
+    ],
+    "target": 10
+  },
+  {
+    "loss": -0.13909912109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((26*13)/(2-32)). It uses each given number exactly once and evaluates to 71.</think>\n<answer>((26*13)/(2-32))</answer>",
+      "<think>Use the expression ((2+32)+(26*13)). It uses each given number exactly once and evaluates to 71.</think>\n<answer>((2+32)+(26*13))</answer>"
+    ],
+    "step": 51,
+    "epoch": 1,
+    "numbers": [
+      26,
+      2,
+      13,
+      32
+    ],
+    "target": 71
+  },
+  {
+    "loss": -0.01551055908203125,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (59-(14+52)). It uses each given number exactly once and evaluates to 21.</think>\n<answer>(59-(14+52))</answer>",
+      "<think>Use the expression (52-(14+59)). It uses each given number exactly once and evaluates to 21.</think>\n<answer>(52-(14+59))</answer>"
+    ],
+    "step": 52,
+    "epoch": 1,
+    "numbers": [
+      14,
+      59,
+      52
+    ],
+    "target": 21
+  },
+  {
+    "loss": -0.138427734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((26-15)/(17/20)). It uses each given number exactly once and evaluates to 32.</think>\n<answer>((26-15)/(17/20))</answer>",
+      "<think>Use the expression ((17-26)+(15+20)). It uses each given number exactly once and evaluates to 32.</think>\n<answer>((17-26)+(15+20))</answer>"
+    ],
+    "step": 53,
+    "epoch": 1,
+    "numbers": [
+      17,
+      20,
+      15,
+      26
+    ],
+    "target": 32
+  },
+  {
+    "loss": -0.003448486328125,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5875000000000001,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((65-62)+96). It uses each given number exactly once and evaluates to 31.</think>\n<answer>((65-62)+96)</answer>",
+      "<think>Use the expression ((65+62)-96). It uses each given number exactly once and evaluates to 31.</think>\n<answer>((65+62)-96)</answer>"
+    ],
+    "step": 54,
+    "epoch": 1,
+    "numbers": [
+      65,
+      62,
+      96
+    ],
+    "target": 31
+  },
+  {
+    "loss": -0.0459136962890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((91+16)-80). It uses each given number exactly once and evaluates to 96.</think>\n<answer>((91+16)-80)</answer>",
+      "<think>Use the expression ((91+16)-80). It uses each given number exactly once and evaluates to 96.</think>\n<answer>((91+16)-80)</answer>"
+    ],
+    "step": 55,
+    "epoch": 1,
+    "numbers": [
+      91,
+      16,
+      80
+    ],
+    "target": 96
+  },
+  {
+    "loss": -0.107421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (48/(65-(25*16))). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(48/(65-(25*16)))</answer>",
+      "<think>Use the expression ((16+65)/(25/48)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((16+65)/(25/48))</answer>"
+    ],
+    "step": 56,
+    "epoch": 1,
+    "numbers": [
+      25,
+      48,
+      16,
+      65
+    ],
+    "target": 24
+  },
+  {
+    "loss": 0.00372314453125,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((90+10)-(89-91)). It uses each given number exactly once and evaluates to 98.</think>\n<answer>((90+10)-(89-91))</answer>",
+      "<think>Use the expression (((90-91)+89)/10). It uses each given number exactly once and evaluates to 98.</think>\n<answer>(((90-91)+89)/10)</answer>"
+    ],
+    "step": 57,
+    "epoch": 1,
+    "numbers": [
+      90,
+      10,
+      89,
+      91
+    ],
+    "target": 98
+  },
+  {
+    "loss": -0.12188720703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((18-3)+(44+22)). It uses each given number exactly once and evaluates to 51.</think>\n<answer>((18-3)+(44+22))</answer>",
+      "<think>Use the expression (3+(18/(44/22))). It uses each given number exactly once and evaluates to 51.</think>\n<answer>(3+(18/(44/22)))</answer>"
+    ],
+    "step": 58,
+    "epoch": 1,
+    "numbers": [
+      44,
+      22,
+      3,
+      18
+    ],
+    "target": 51
+  },
+  {
+    "loss": -0.12744140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((84/(60-4))-72). It uses each given number exactly once and evaluates to 76.</think>\n<answer>((84/(60-4))-72)</answer>",
+      "<think>Use the expression (84-((60/4)-72)). It uses each given number exactly once and evaluates to 76.</think>\n<answer>(84-((60/4)-72))</answer>"
+    ],
+    "step": 59,
+    "epoch": 1,
+    "numbers": [
+      60,
+      4,
+      84,
+      72
+    ],
+    "target": 76
+  },
+  {
+    "loss": -0.11944580078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((66-70)+(94+65)). It uses each given number exactly once and evaluates to 33.</think>\n<answer>((66-70)+(94+65))</answer>",
+      "<think>Use the expression ((66+65)-(94-70)). It uses each given number exactly once and evaluates to 33.</think>\n<answer>((66+65)-(94-70))</answer>"
+    ],
+    "step": 60,
+    "epoch": 1,
+    "numbers": [
+      94,
+      66,
+      70,
+      65
+    ],
+    "target": 33
+  },
+  {
+    "loss": -0.0148468017578125,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.31249999999999994,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((90+22)-26). It uses each given number exactly once and evaluates to 86.</think>\n<answer>((90+22)-26)</answer>",
+      "<think>Use the expression (26-(90-22)). It uses each given number exactly once and evaluates to 86.</think>\n<answer>(26-(90-22))</answer>"
+    ],
+    "step": 61,
+    "epoch": 1,
+    "numbers": [
+      90,
+      22,
+      26
+    ],
+    "target": 86
+  },
+  {
+    "loss": 0.001926422119140625,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8+13)+64). It uses each given number exactly once and evaluates to 69.</think>\n<answer>((8+13)+64)</answer>",
+      "<think>Use the expression ((8+13)+64). It uses each given number exactly once and evaluates to 69.</think>\n<answer>((8+13)+64)</answer>"
+    ],
+    "step": 62,
+    "epoch": 1,
+    "numbers": [
+      8,
+      13,
+      64
+    ],
+    "target": 69
+  },
+  {
+    "loss": -0.0075225830078125,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((69/(74-1))+91). It uses each given number exactly once and evaluates to 52.</think>\n<answer>((69/(74-1))+91)</answer>",
+      "<think>Use the expression ((91-(74+1))+69). It uses each given number exactly once and evaluates to 52.</think>\n<answer>((91-(74+1))+69)</answer>"
+    ],
+    "step": 63,
+    "epoch": 1,
+    "numbers": [
+      74,
+      1,
+      91,
+      69
+    ],
+    "target": 52
+  },
+  {
+    "loss": -0.09814453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((58-68)+(87+43)). It uses each given number exactly once and evaluates to 74.</think>\n<answer>((58-68)+(87+43))</answer>",
+      "<think>Use the expression (58-(68/(87-43))). It uses each given number exactly once and evaluates to 74.</think>\n<answer>(58-(68/(87-43)))</answer>"
+    ],
+    "step": 64,
+    "epoch": 1,
+    "numbers": [
+      87,
+      43,
+      58,
+      68
+    ],
+    "target": 74
+  },
+  {
+    "loss": -0.146240234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (65+((2*42)-38)). It uses each given number exactly once and evaluates to 50.</think>\n<answer>(65+((2*42)-38))</answer>",
+      "<think>Use the expression ((65+38)/(42-2)). It uses each given number exactly once and evaluates to 50.</think>\n<answer>((65+38)/(42-2))</answer>"
+    ],
+    "step": 65,
+    "epoch": 1,
+    "numbers": [
+      65,
+      2,
+      42,
+      38
+    ],
+    "target": 50
+  },
+  {
+    "loss": -0.02593994140625,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.45,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((28+44)/2). It uses each given number exactly once and evaluates to 36.</think>\n<answer>((28+44)/2)</answer>",
+      "<think>Use the expression (28-(44/2)). It uses each given number exactly once and evaluates to 36.</think>\n<answer>(28-(44/2))</answer>"
+    ],
+    "step": 66,
+    "epoch": 1,
+    "numbers": [
+      28,
+      44,
+      2
+    ],
+    "target": 36
+  },
+  {
+    "loss": 0.00726318359375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((65+36)/9). It uses each given number exactly once and evaluates to 61.</think>\n<answer>((65+36)/9)</answer>",
+      "<think>Use the expression (65-(36/9)). It uses each given number exactly once and evaluates to 61.</think>\n<answer>(65-(36/9))</answer>"
+    ],
+    "step": 67,
+    "epoch": 1,
+    "numbers": [
+      65,
+      36,
+      9
+    ],
+    "target": 61
+  },
+  {
+    "loss": -0.060882568359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (42+52-3). It uses each given number exactly once and evaluates to 66.</think>\n<answer>(42+52-3)</answer>",
+      "<think>Use the expression (3-(42-52)). It uses each given number exactly once and evaluates to 66.</think>\n<answer>(3-(42-52))</answer>"
+    ],
+    "step": 68,
+    "epoch": 1,
+    "numbers": [
+      42,
+      52,
+      3
+    ],
+    "target": 66
+  },
+  {
+    "loss": 0.001861572265625,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5874999999999999,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (69+(53-62)). It uses each given number exactly once and evaluates to 60.</think>\n<answer>(69+(53-62))</answer>",
+      "<think>Use the expression ((69+53)-62). It uses each given number exactly once and evaluates to 60.</think>\n<answer>((69+53)-62)</answer>"
+    ],
+    "step": 69,
+    "epoch": 1,
+    "numbers": [
+      69,
+      53,
+      62
+    ],
+    "target": 60
+  },
+  {
+    "loss": -0.14324951171875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((7+41)+(54/6)). It uses each given number exactly once and evaluates to 94.</think>\n<answer>((7+41)+(54/6))</answer>",
+      "<think>Use the expression ((7*6)+(54+41)). It uses each given number exactly once and evaluates to 94.</think>\n<answer>((7*6)+(54+41))</answer>"
+    ],
+    "step": 70,
+    "epoch": 1,
+    "numbers": [
+      7,
+      54,
+      6,
+      41
+    ],
+    "target": 94
+  },
+  {
+    "loss": -0.003753662109375,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (37-(69-80)). It uses each given number exactly once and evaluates to 26.</think>\n<answer>(37-(69-80))</answer>",
+      "<think>Use the expression (69-(80/37)). It uses each given number exactly once and evaluates to 26.</think>\n<answer>(69-(80/37))</answer>"
+    ],
+    "step": 71,
+    "epoch": 1,
+    "numbers": [
+      69,
+      80,
+      37
+    ],
+    "target": 26
+  },
+  {
+    "loss": -0.094512939453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((73+98)-(52+86)). It uses each given number exactly once and evaluates to 43.</think>\n<answer>((73+98)-(52+86))</answer>",
+      "<think>Use the expression ((73-98)+(86/52)). It uses each given number exactly once and evaluates to 43.</think>\n<answer>((73-98)+(86/52))</answer>"
+    ],
+    "step": 72,
+    "epoch": 1,
+    "numbers": [
+      73,
+      98,
+      86,
+      52
+    ],
+    "target": 43
+  },
+  {
+    "loss": -0.0160369873046875,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (47-(98/12)). It uses each given number exactly once and evaluates to 63.</think>\n<answer>(47-(98/12))</answer>",
+      "<think>Use the expression (98/(47+12)). It uses each given number exactly once and evaluates to 63.</think>\n<answer>(98/(47+12))</answer>"
+    ],
+    "step": 73,
+    "epoch": 1,
+    "numbers": [
+      47,
+      98,
+      12
+    ],
+    "target": 63
+  },
+  {
+    "loss": -0.13421630859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2*(25+17))-79). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((2*(25+17))-79)</answer>",
+      "<think>Use the expression ((2+17)+(25+79)). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((2+17)+(25+79))</answer>"
+    ],
+    "step": 74,
+    "epoch": 1,
+    "numbers": [
+      2,
+      25,
+      79,
+      17
+    ],
+    "target": 100
+  },
+  {
+    "loss": -0.13507080078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((94+(99+6))/81). It uses each given number exactly once and evaluates to 15.</think>\n<answer>((94+(99+6))/81)</answer>",
+      "<think>Use the expression (94-((99+6)/81)). It uses each given number exactly once and evaluates to 15.</think>\n<answer>(94-((99+6)/81))</answer>"
+    ],
+    "step": 75,
+    "epoch": 1,
+    "numbers": [
+      99,
+      6,
+      94,
+      81
+    ],
+    "target": 15
+  },
+  {
+    "loss": -0.068511962890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (82/(29+1)). It uses each given number exactly once and evaluates to 54.</think>\n<answer>(82/(29+1))</answer>",
+      "<think>Use the expression ((82-29)-1). It uses each given number exactly once and evaluates to 54.</think>\n<answer>((82-29)-1)</answer>"
+    ],
+    "step": 76,
+    "epoch": 1,
+    "numbers": [
+      82,
+      29,
+      1
+    ],
+    "target": 54
+  },
+  {
+    "loss": -0.14520263671875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (69-(23/(2+24))). It uses each given number exactly once and evaluates to 22.</think>\n<answer>(69-(23/(2+24)))</answer>",
+      "<think>Use the expression (((23/2)-24)+69). It uses each given number exactly once and evaluates to 22.</think>\n<answer>(((23/2)-24)+69)</answer>"
+    ],
+    "step": 77,
+    "epoch": 1,
+    "numbers": [
+      23,
+      2,
+      69,
+      24
+    ],
+    "target": 22
+  },
+  {
+    "loss": -0.00347900390625,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8+97)-(66-72)). It uses each given number exactly once and evaluates to 99.</think>\n<answer>((8+97)-(66-72))</answer>",
+      "<think>Use the expression ((72/(8-66))+97). It uses each given number exactly once and evaluates to 99.</think>\n<answer>((72/(8-66))+97)</answer>"
+    ],
+    "step": 78,
+    "epoch": 1,
+    "numbers": [
+      8,
+      66,
+      97,
+      72
+    ],
+    "target": 99
+  },
+  {
+    "loss": -0.1207275390625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (14/((97-55)/21)). It uses each given number exactly once and evaluates to 28.</think>\n<answer>(14/((97-55)/21))</answer>",
+      "<think>Use the expression (97-((14+55)/21)). It uses each given number exactly once and evaluates to 28.</think>\n<answer>(97-((14+55)/21))</answer>"
+    ],
+    "step": 79,
+    "epoch": 1,
+    "numbers": [
+      14,
+      55,
+      97,
+      21
+    ],
+    "target": 28
+  },
+  {
+    "loss": 0.004543304443359375,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((58+37)-35). It uses each given number exactly once and evaluates to 29.</think>\n<answer>((58+37)-35)</answer>",
+      "<think>Use the expression (35/(58/37)). It uses each given number exactly once and evaluates to 29.</think>\n<answer>(35/(58/37))</answer>"
+    ],
+    "step": 80,
+    "epoch": 1,
+    "numbers": [
+      58,
+      37,
+      35
+    ],
+    "target": 29
+  },
+  {
+    "loss": -0.11187744140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (2*(41/(10/64))). It uses each given number exactly once and evaluates to 85.</think>\n<answer>(2*(41/(10/64)))</answer>",
+      "<think>Use the expression ((41-64)+(10*2)). It uses each given number exactly once and evaluates to 85.</think>\n<answer>((41-64)+(10*2))</answer>"
+    ],
+    "step": 81,
+    "epoch": 1,
+    "numbers": [
+      10,
+      2,
+      41,
+      64
+    ],
+    "target": 85
+  },
+  {
+    "loss": 0.0035552978515625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3-(68/(65-46))). It uses each given number exactly once and evaluates to 37.</think>\n<answer>(3-(68/(65-46)))</answer>",
+      "<think>Use the expression ((3*(68-65))-46). It uses each given number exactly once and evaluates to 37.</think>\n<answer>((3*(68-65))-46)</answer>"
+    ],
+    "step": 82,
+    "epoch": 1,
+    "numbers": [
+      68,
+      3,
+      46,
+      65
+    ],
+    "target": 37
+  },
+  {
+    "loss": -0.10809326171875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((48+40)-(7+84)). It uses each given number exactly once and evaluates to 63.</think>\n<answer>((48+40)-(7+84))</answer>",
+      "<think>Use the expression ((84/(48-7))*40). It uses each given number exactly once and evaluates to 63.</think>\n<answer>((84/(48-7))*40)</answer>"
+    ],
+    "step": 83,
+    "epoch": 1,
+    "numbers": [
+      48,
+      40,
+      7,
+      84
+    ],
+    "target": 63
+  },
+  {
+    "loss": -0.095245361328125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((45+55)-(84-94)). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((45+55)-(84-94))</answer>",
+      "<think>Use the expression ((45-(84-94))-55). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((45-(84-94))-55)</answer>"
+    ],
+    "step": 84,
+    "epoch": 1,
+    "numbers": [
+      84,
+      94,
+      45,
+      55
+    ],
+    "target": 100
+  },
+  {
+    "loss": 0.00112152099609375,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((47+14)-3). It uses each given number exactly once and evaluates to 30.</think>\n<answer>((47+14)-3)</answer>",
+      "<think>Use the expression (3-(47-14)). It uses each given number exactly once and evaluates to 30.</think>\n<answer>(3-(47-14))</answer>"
+    ],
+    "step": 85,
+    "epoch": 1,
+    "numbers": [
+      47,
+      14,
+      3
+    ],
+    "target": 30
+  },
+  {
+    "loss": -0.11956787109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((85+15)-54)/24). It uses each given number exactly once and evaluates to 21.</think>\n<answer>(((85+15)-54)/24)</answer>",
+      "<think>Use the expression ((54-24)/(85/15)). It uses each given number exactly once and evaluates to 21.</think>\n<answer>((54-24)/(85/15))</answer>"
+    ],
+    "step": 86,
+    "epoch": 1,
+    "numbers": [
+      85,
+      15,
+      54,
+      24
+    ],
+    "target": 21
+  },
+  {
+    "loss": -0.1092529296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((73/(6-77))+20). It uses each given number exactly once and evaluates to 44.</think>\n<answer>((73/(6-77))+20)</answer>",
+      "<think>Use the expression ((6*77)-(73+20)). It uses each given number exactly once and evaluates to 44.</think>\n<answer>((6*77)-(73+20))</answer>"
+    ],
+    "step": 87,
+    "epoch": 1,
+    "numbers": [
+      6,
+      77,
+      73,
+      20
+    ],
+    "target": 44
+  },
+  {
+    "loss": -0.0324859619140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (84-(64-99)). It uses each given number exactly once and evaluates to 49.</think>\n<answer>(84-(64-99))</answer>",
+      "<think>Use the expression (64-(99/84)). It uses each given number exactly once and evaluates to 49.</think>\n<answer>(64-(99/84))</answer>"
+    ],
+    "step": 88,
+    "epoch": 1,
+    "numbers": [
+      64,
+      99,
+      84
+    ],
+    "target": 49
+  },
+  {
+    "loss": -0.136474609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (73-(6/(9/3))). It uses each given number exactly once and evaluates to 28.</think>\n<answer>(73-(6/(9/3)))</answer>",
+      "<think>Use the expression ((3+6)+(73/9)). It uses each given number exactly once and evaluates to 28.</think>\n<answer>((3+6)+(73/9))</answer>"
+    ],
+    "step": 89,
+    "epoch": 1,
+    "numbers": [
+      9,
+      3,
+      6,
+      73
+    ],
+    "target": 28
+  },
+  {
+    "loss": -0.099609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (90-(52/(20/61))). It uses each given number exactly once and evaluates to 90.</think>\n<answer>(90-(52/(20/61)))</answer>",
+      "<think>Use the expression (90-((52+20)-61)). It uses each given number exactly once and evaluates to 90.</think>\n<answer>(90-((52+20)-61))</answer>"
+    ],
+    "step": 90,
+    "epoch": 1,
+    "numbers": [
+      52,
+      20,
+      90,
+      61
+    ],
+    "target": 90
+  },
+  {
+    "loss": -0.130126953125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((18-(20-26))-86). It uses each given number exactly once and evaluates to 69.</think>\n<answer>((18-(20-26))-86)</answer>",
+      "<think>Use the expression (26-(86/(20-18))). It uses each given number exactly once and evaluates to 69.</think>\n<answer>(26-(86/(20-18)))</answer>"
+    ],
+    "step": 91,
+    "epoch": 1,
+    "numbers": [
+      20,
+      26,
+      18,
+      86
+    ],
+    "target": 69
+  },
+  {
+    "loss": -0.1343994140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((33-78)+86). It uses each given number exactly once and evaluates to 52.</think>\n<answer>(((33-78)+86)</answer>",
+      "<think>Use the expression (78-((77/33)+76)). It uses each given number exactly once and evaluates to 52.</think>\n<answer>(78-((77/33)+76))</answer>"
+    ],
+    "step": 92,
+    "epoch": 1,
+    "numbers": [
+      77,
+      33,
+      78,
+      86
+    ],
+    "target": 52
+  },
+  {
+    "loss": -0.1678466796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (92-((51-2)*9)). It uses each given number exactly once and evaluates to 16.</think>\n<answer>(92-((51-2)*9))</answer>",
+      "<think>Use the expression ((2-51)+(9*92)). It uses each given number exactly once and evaluates to 16.</think>\n<answer>((2-51)+(9*92))</answer>"
+    ],
+    "step": 93,
+    "epoch": 1,
+    "numbers": [
+      2,
+      92,
+      9,
+      51
+    ],
+    "target": 16
+  },
+  {
+    "loss": -0.0112457275390625,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (77+(1*12)). It uses each given number exactly once and evaluates to 88.</think>\n<answer>(77+(1*12))</answer>",
+      "<think>Use the expression (77-(1+12)). It uses each given number exactly once and evaluates to 88.</think>\n<answer>(77-(1+12))</answer>"
+    ],
+    "step": 94,
+    "epoch": 1,
+    "numbers": [
+      77,
+      1,
+      12
+    ],
+    "target": 88
+  },
+  {
+    "loss": -0.03741455078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((87+64)-77). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((87+64)-77)</answer>",
+      "<think>Use the expression ((87+64)-77). It uses each given number exactly once and evaluates to 100.</think>\n<answer>((87+64)-77)</answer>"
+    ],
+    "step": 95,
+    "epoch": 1,
+    "numbers": [
+      87,
+      64,
+      77
+    ],
+    "target": 100
+  },
+  {
+    "loss": -0.01491546630859375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (5+55-8). It uses each given number exactly once and evaluates to 58.</think>\n<answer>(5+55-8)</answer>",
+      "<think>Use the expression (55-(8-5)). It uses each given number exactly once and evaluates to 58.</think>\n<answer>(55-(8-5))</answer>"
+    ],
+    "step": 96,
+    "epoch": 1,
+    "numbers": [
+      5,
+      8,
+      55
+    ],
+    "target": 58
+  },
+  {
+    "loss": -0.12689208984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (58-(31+(43+81))). It uses each given number exactly once and evaluates to 11.</think>\n<answer>(58-(31+(43+81)))</answer>",
+      "<think>Use the expression (58-(31/(43-81))). It uses each given number exactly once and evaluates to 11.</think>\n<answer>(58-(31/(43-81)))</answer>"
+    ],
+    "step": 97,
+    "epoch": 1,
+    "numbers": [
+      43,
+      81,
+      31,
+      58
+    ],
+    "target": 11
+  },
+  {
+    "loss": -0.0150604248046875,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (32*(24/(14-6))). It uses each given number exactly once and evaluates to 92.</think>\n<answer>(32*(24/(14-6)))</answer>",
+      "<think>Use the expression (6+(32/(24-14))). It uses each given number exactly once and evaluates to 92.</think>\n<answer>(6+(32/(24-14)))</answer>"
+    ],
+    "step": 98,
+    "epoch": 1,
+    "numbers": [
+      32,
+      24,
+      14,
+      6
+    ],
+    "target": 92
+  },
+  {
+    "loss": -0.0113372802734375,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5874999999999999,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (1+13+17). It uses each given number exactly once and evaluates to 31.</think>\n<answer>(1+13+17)</answer>",
+      "<think>Use the expression ((1+13)+17). It uses each given number exactly once and evaluates to 31.</think>\n<answer>((1+13)+17)</answer>"
+    ],
+    "step": 99,
+    "epoch": 1,
+    "numbers": [
+      1,
+      13,
+      17
+    ],
+    "target": 31
+  },
+  {
+    "loss": -0.12237548828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (25+(67/(1-41))). It uses each given number exactly once and evaluates to 83.</think>\n<answer>(25+(67/(1-41)))</answer>",
+      "<think>Use the expression (41-((67+1)-25)). It uses each given number exactly once and evaluates to 83.</think>\n<answer>(41-((67+1)-25))</answer>"
+    ],
+    "step": 100,
+    "epoch": 1,
+    "numbers": [
+      67,
+      1,
+      41,
+      25
+    ],
+    "target": 83
+  },
+  {
+    "loss": 0.003665924072265625,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((31+16)+82). It uses each given number exactly once and evaluates to 97.</think>\n<answer>((31+16)+82)</answer>",
+      "<think>Use the expression (82-(31-16)). It uses each given number exactly once and evaluates to 97.</think>\n<answer>(82-(31-16))</answer>"
+    ],
+    "step": 101,
+    "epoch": 1,
+    "numbers": [
+      31,
+      16,
+      82
+    ],
+    "target": 97
+  },
+  {
+    "loss": -0.0105438232421875,
+    "avg_reward": 0.346875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (42/(14-19)). It uses each given number exactly once and evaluates to 47.</think>\n<answer>(42/(14-19))</answer>",
+      "<think>Use the expression (42-(14-19)). It uses each given number exactly once and evaluates to 47.</think>\n<answer>(42-(14-19))</answer>"
+    ],
+    "step": 102,
+    "epoch": 1,
+    "numbers": [
+      14,
+      19,
+      42
+    ],
+    "target": 47
+  },
+  {
+    "loss": -0.006072998046875,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((5*(55+1))/10). It uses each given number exactly once and evaluates to 28.</think>\n<answer>((5*(55+1))/10)</answer>",
+      "<think>Use the expression (10+(1*(5+55))). It uses each given number exactly once and evaluates to 28.</think>\n<answer>(10+(1*(5+55)))</answer>"
+    ],
+    "step": 103,
+    "epoch": 1,
+    "numbers": [
+      5,
+      55,
+      10,
+      1
+    ],
+    "target": 28
+  },
+  {
+    "loss": -0.1151123046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((9*(64+69))/97). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((9*(64+69))/97)</answer>",
+      "<think>Use the expression ((69/(9-64))+97). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((69/(9-64))+97)</answer>"
+    ],
+    "step": 104,
+    "epoch": 1,
+    "numbers": [
+      9,
+      64,
+      97,
+      69
+    ],
+    "target": 83
+  },
+  {
+    "loss": -0.1055908203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((27+(44+44))/48). It uses each given number exactly once and evaluates to 38.</think>\n<answer>((27+(44+44))/48)</answer>",
+      "<think>Use the expression (27-(44/(44/48))). It uses each given number exactly once and evaluates to 38.</think>\n<answer>(27-(44/(44/48)))</answer>"
+    ],
+    "step": 105,
+    "epoch": 1,
+    "numbers": [
+      44,
+      44,
+      48,
+      27
+    ],
+    "target": 38
+  },
+  {
+    "loss": -0.17022705078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (5*(56/(64+17))). It uses each given number exactly once and evaluates to 10.</think>\n<answer>(5*(56/(64+17)))</answer>",
+      "<think>Use the expression ((64-5)-((56+17)/2)). It uses each given number exactly once and evaluates to 10.</think>\n<answer>((64-5)-((56+17)/2))</answer>"
+    ],
+    "step": 106,
+    "epoch": 1,
+    "numbers": [
+      64,
+      56,
+      17,
+      5
+    ],
+    "target": 10
+  },
+  {
+    "loss": -0.0008087158203125,
+    "avg_reward": 0.346875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((93-56)+61). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((93-56)+61)</answer>",
+      "<think>Use the expression (61-(93-56)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(61-(93-56))</answer>"
+    ],
+    "step": 107,
+    "epoch": 1,
+    "numbers": [
+      93,
+      56,
+      61
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.1099853515625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((83-13)/(25/42)). It uses each given number exactly once and evaluates to 53.</think>\n<answer>((83-13)/(25/42))</answer>",
+      "<think>Use the expression (13-((25+42)/83)). It uses each given number exactly once and evaluates to 53.</think>\n<answer>(13-((25+42)/83))</answer>"
+    ],
+    "step": 108,
+    "epoch": 1,
+    "numbers": [
+      25,
+      42,
+      13,
+      83
+    ],
+    "target": 53
+  },
+  {
+    "loss": -0.130615234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8+60)/(80/13)). It uses each given number exactly once and evaluates to 44.</think>\n<answer>((8+60)/(80/13))</answer>",
+      "<think>Use the expression ((80-8)+(13+60)). It uses each given number exactly once and evaluates to 44.</think>\n<answer>((80-8)+(13+60))</answer>"
+    ],
+    "step": 109,
+    "epoch": 1,
+    "numbers": [
+      13,
+      8,
+      60,
+      80
+    ],
+    "target": 44
+  },
+  {
+    "loss": -0.11199951171875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (98/(31-(50/16))). It uses each given number exactly once and evaluates to 34.</think>\n<answer>(98/(31-(50/16)))</answer>",
+      "<think>Use the expression ((16-31)+(50+98)). It uses each given number exactly once and evaluates to 34.</think>\n<answer>((16-31)+(50+98))</answer>"
+    ],
+    "step": 110,
+    "epoch": 1,
+    "numbers": [
+      50,
+      98,
+      31,
+      16
+    ],
+    "target": 34
+  },
+  {
+    "loss": -0.0128173828125,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (61-(27/(50/1))). It uses each given number exactly once and evaluates to 38.</think>\n<answer>(61-(27/(50/1)))</answer>",
+      "<think>Use the expression (50/(1+(61-27))). It uses each given number exactly once and evaluates to 38.</think>\n<answer>(50/(1+(61-27)))</answer>"
+    ],
+    "step": 111,
+    "epoch": 1,
+    "numbers": [
+      50,
+      27,
+      1,
+      61
+    ],
+    "target": 38
+  },
+  {
+    "loss": -0.004119873046875,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (68-((60/21)*5)). It uses each given number exactly once and evaluates to 65.</think>\n<answer>(68-((60/21)*5))</answer>",
+      "<think>Use the expression ((60/5)+(68-21)). It uses each given number exactly once and evaluates to 65.</think>\n<answer>((60/5)+(68-21))</answer>"
+    ],
+    "step": 112,
+    "epoch": 1,
+    "numbers": [
+      60,
+      21,
+      5,
+      68
+    ],
+    "target": 65
+  },
+  {
+    "loss": -0.0169677734375,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.31249999999999994,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (42-(35-76)). It uses each given number exactly once and evaluates to 69.</think>\n<answer>(42-(35-76))</answer>",
+      "<think>Use the expression ((35+76)-42). It uses each given number exactly once and evaluates to 69.</think>\n<answer>((35+76)-42)</answer>"
+    ],
+    "step": 113,
+    "epoch": 1,
+    "numbers": [
+      35,
+      76,
+      42
+    ],
+    "target": 69
+  },
+  {
+    "loss": -0.1280517578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (61-((98+27)/17)). It uses each given number exactly once and evaluates to 47.</think>\n<answer>(61-((98+27)/17))</answer>",
+      "<think>Use the expression ((27+61)/(98-17)). It uses each given number exactly once and evaluates to 47.</think>\n<answer>((27+61)/(98-17))</answer>"
+    ],
+    "step": 114,
+    "epoch": 1,
+    "numbers": [
+      98,
+      27,
+      17,
+      61
+    ],
+    "target": 47
+  },
+  {
+    "loss": -0.10052490234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((58-80)+(83/89)). It uses each given number exactly once and evaluates to 85.</think>\n<answer>((58-80)+(83/89))</answer>",
+      "<think>Use the expression ((58-83)+(80+89)). It uses each given number exactly once and evaluates to 85.</think>\n<answer>((58-83)+(80+89))</answer>"
+    ],
+    "step": 115,
+    "epoch": 1,
+    "numbers": [
+      80,
+      89,
+      58,
+      83
+    ],
+    "target": 85
+  },
+  {
+    "loss": -0.00257110595703125,
+    "avg_reward": 0.21625000000000005,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.17499999999999996,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((96-97)+85). It uses each given number exactly once and evaluates to 86.</think>\n<answer>((96-97)+85)</answer>",
+      "<think>Use the expression ((96+85)-97). It uses each given number exactly once and evaluates to 86.</think>\n<answer>((96+85)-97)</answer>"
+    ],
+    "step": 116,
+    "epoch": 1,
+    "numbers": [
+      96,
+      85,
+      97
+    ],
+    "target": 86
+  },
+  {
+    "loss": -0.0417938232421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((1+62)-23). It uses each given number exactly once and evaluates to 38.</think>\n<answer>((1+62)-23)</answer>",
+      "<think>Use the expression (62-(1*23)). It uses each given number exactly once and evaluates to 38.</think>\n<answer>(62-(1*23))</answer>"
+    ],
+    "step": 117,
+    "epoch": 1,
+    "numbers": [
+      1,
+      62,
+      23
+    ],
+    "target": 38
+  },
+  {
+    "loss": -0.11712646484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((16+59)/(85-83)). It uses each given number exactly once and evaluates to 77.</think>\n<answer>((16+59)-(85-83))</answer>",
+      "<think>Use the expression ((83-59)/(16/85)). It uses each given number exactly once and evaluates to 77.</think>\n<answer>((83-59)/(16/85))</answer>"
+    ],
+    "step": 118,
+    "epoch": 1,
+    "numbers": [
+      16,
+      85,
+      83,
+      59
+    ],
+    "target": 77
+  },
+  {
+    "loss": -0.1153564453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((34-31)*(38-17)). It uses each given number exactly once and evaluates to 44.</think>\n<answer>((34-31)*(38-17))</answer>",
+      "<think>Use the expression ((34-17)+(31+38)). It uses each given number exactly once and evaluates to 44.</think>\n<answer>((34-17)+(31+38))</answer>"
+    ],
+    "step": 119,
+    "epoch": 1,
+    "numbers": [
+      31,
+      38,
+      34,
+      17
+    ],
+    "target": 44
+  },
+  {
+    "loss": -0.1175537109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((28*30)-(56+88)). It uses each given number exactly once and evaluates to 44.</think>\n<answer>((28*30)-(56+88))</answer>",
+      "<think>Use the expression (((28*88)/30)-56). It uses each given number exactly once and evaluates to 44.</think>\n<answer>(((28*88)/30)-56)</answer>"
+    ],
+    "step": 120,
+    "epoch": 1,
+    "numbers": [
+      28,
+      88,
+      30,
+      56
+    ],
+    "target": 44
+  },
+  {
+    "loss": -0.04693603515625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((25+35)/35). It uses each given number exactly once and evaluates to 26.</think>\n<answer>((25+35)/35)</answer>",
+      "<think>Use the expression ((25+35)/35). It uses each given number exactly once and evaluates to 26.</think>\n<answer>((25+35)/35)</answer>"
+    ],
+    "step": 121,
+    "epoch": 1,
+    "numbers": [
+      25,
+      35,
+      35
+    ],
+    "target": 26
+  },
+  {
+    "loss": 0.0043792724609375,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((22+54)/(79-98)). It uses each given number exactly once and evaluates to 51.</think>\n<answer>((22+54)/(79-98))</answer>",
+      "<think>Use the expression ((22-(79-98))/54). It uses each given number exactly once and evaluates to 51.</think>\n<answer>((22-(79-98))/54)</answer>"
+    ],
+    "step": 122,
+    "epoch": 1,
+    "numbers": [
+      79,
+      98,
+      54,
+      22
+    ],
+    "target": 51
+  },
+  {
+    "loss": -0.01506805419921875,
+    "avg_reward": 0.73875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.725,
+    "solved": 6,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (98-(59-52)). It uses each given number exactly once and evaluates to 91.</think>\n<answer>(98-(59-52))</answer>",
+      "<think>Use the expression ((59-98)+52). It uses each given number exactly once and evaluates to 91.</think>\n<answer>((59-98)+52)</answer>"
+    ],
+    "step": 123,
+    "epoch": 1,
+    "numbers": [
+      59,
+      98,
+      52
+    ],
+    "target": 91
+  },
+  {
+    "loss": -0.128662109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((63+5)-(99/19)). It uses each given number exactly once and evaluates to 12.</think>\n<answer>((63+5)-(99/19))</answer>",
+      "<think>Use the expression (((63-1)/5)+99). It uses each given number exactly once and evaluates to 12.</think>\n<answer>(((63-1)/5)+99)</answer>"
+    ],
+    "step": 124,
+    "epoch": 1,
+    "numbers": [
+      63,
+      5,
+      99,
+      19
+    ],
+    "target": 12
+  },
+  {
+    "loss": -0.1435546875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((82/(18/12))-5). It uses each given number exactly once and evaluates to 58.</think>\n<answer>((82/(18/12))-5)</answer>",
+      "<think>Use the expression ((5+82)/(12/18)). It uses each given number exactly once and evaluates to 58.</think>\n<answer>((5+82)/(12/18))</answer>"
+    ],
+    "step": 125,
+    "epoch": 1,
+    "numbers": [
+      12,
+      5,
+      18,
+      82
+    ],
+    "target": 58
+  },
+  {
+    "loss": -0.10528564453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((17+2)+(68-41)). It uses each given number exactly once and evaluates to 35.</think>\n<answer>((17+2)+(68-41))</answer>",
+      "<think>Use the expression (41-(68/(17/2))). It uses each given number exactly once and evaluates to 35.</think>\n<answer>(41-(68/(17/2)))</answer>"
+    ],
+    "step": 126,
+    "epoch": 1,
+    "numbers": [
+      17,
+      2,
+      68,
+      41
+    ],
+    "target": 35
+  },
+  {
+    "loss": -0.008544921875,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5874999999999999,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((41-43)+98). It uses each given number exactly once and evaluates to 96.</think>\n<answer>((41-43)+98)</answer>",
+      "<think>Use the expression (43-(41-98)). It uses each given number exactly once and evaluates to 96.</think>\n<answer>(43-(41-98))</answer>"
+    ],
+    "step": 127,
+    "epoch": 1,
+    "numbers": [
+      41,
+      98,
+      43
+    ],
+    "target": 96
+  },
+  {
+    "loss": 0.002105712890625,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((36-31)+(63/86)). It uses each given number exactly once and evaluates to 90.</think>\n<answer>((36-31)+(63/86))</answer>",
+      "<think>Use the expression ((63/(36/31))-86). It uses each given number exactly once and evaluates to 90.</think>\n<answer>((63/(36/31))-86)</answer>"
+    ],
+    "step": 128,
+    "epoch": 1,
+    "numbers": [
+      36,
+      31,
+      86,
+      63
+    ],
+    "target": 90
+  },
+  {
+    "loss": 0.0074310302734375,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((96+12)-59). It uses each given number exactly once and evaluates to 67.</think>\n<answer>((96+12)-59)</answer>",
+      "<think>Use the expression ((96/12)+59). It uses each given number exactly once and evaluates to 67.</think>\n<answer>((96/12)+59)</answer>"
+    ],
+    "step": 129,
+    "epoch": 1,
+    "numbers": [
+      96,
+      12,
+      59
+    ],
+    "target": 67
+  },
+  {
+    "loss": -0.004058837890625,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (97/(78/5)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(97/(78/5))</answer>",
+      "<think>Use the expression ((78-5)+97). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((78-5)+97)</answer>"
+    ],
+    "step": 130,
+    "epoch": 1,
+    "numbers": [
+      78,
+      5,
+      97
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.11578369140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((36-33)+(6+57)). It uses each given number exactly once and evaluates to 55.</think>\n<answer>((36-33)+(6+57))</answer>",
+      "<think>Use the expression ((57-33)/(6/36)). It uses each given number exactly once and evaluates to 55.</think>\n<answer>((57-33)/(6/36))</answer>"
+    ],
+    "step": 131,
+    "epoch": 1,
+    "numbers": [
+      6,
+      57,
+      36,
+      33
+    ],
+    "target": 55
+  },
+  {
+    "loss": -0.09735107421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((11-58)+(52+41)). It uses each given number exactly once and evaluates to 36.</think>\n<answer>((11-58)+(52+41))</answer>",
+      "<think>Use the expression (58-((52+41)/11)). It uses each given number exactly once and evaluates to 36.</think>\n<answer>(58-((52+41)/11))</answer>"
+    ],
+    "step": 132,
+    "epoch": 1,
+    "numbers": [
+      52,
+      41,
+      11,
+      58
+    ],
+    "target": 36
+  },
+  {
+    "loss": -0.09906005859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((83-92)+(64/64)). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((83-92)+(64/64))</answer>",
+      "<think>Use the expression ((83/64)*(92-64)). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((83/64)*(92-64))</answer>"
+    ],
+    "step": 133,
+    "epoch": 1,
+    "numbers": [
+      83,
+      64,
+      64,
+      92
+    ],
+    "target": 83
+  },
+  {
+    "loss": -0.0155029296875,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.44999999999999996,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((26-1)+24). It uses each given number exactly once and evaluates to 51.</think>\n<answer>((26-1)+24)</answer>",
+      "<think>Use the expression ((1+26)+24). It uses each given number exactly once and evaluates to 51.</think>\n<answer>((1+26)+24)</answer>"
+    ],
+    "step": 134,
+    "epoch": 1,
+    "numbers": [
+      1,
+      26,
+      24
+    ],
+    "target": 51
+  },
+  {
+    "loss": -0.00164794921875,
+    "avg_reward": 0.73875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.7250000000000001,
+    "solved": 6,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((76-38)+95). It uses each given number exactly once and evaluates to 57.</think>\n<answer>((76-38)+95)</answer>",
+      "<think>Use the expression (95-(76-38)). It uses each given number exactly once and evaluates to 57.</think>\n<answer>(95-(76-38))</answer>"
+    ],
+    "step": 135,
+    "epoch": 1,
+    "numbers": [
+      76,
+      38,
+      95
+    ],
+    "target": 57
+  },
+  {
+    "loss": -0.0860595703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (1+38-21). It uses each given number exactly once and evaluates to 59.</think>\n<answer>(1+38-21)</answer>",
+      "<think>Use the expression (1+38)+21. It uses each given number exactly once and evaluates to 59.</think>\n<answer>(1+38)+21</answer>"
+    ],
+    "step": 136,
+    "epoch": 1,
+    "numbers": [
+      1,
+      38,
+      21
+    ],
+    "target": 59
+  },
+  {
+    "loss": -0.10205078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((40/64)*(90-38)). It uses each given number exactly once and evaluates to 42.</think>\n<answer>((40/64)*(90-38))</answer>",
+      "<think>Use the expression ((40/(64/90))-38). It uses each given number exactly once and evaluates to 42.</think>\n<answer>((40/(64/90))-38)</answer>"
+    ],
+    "step": 137,
+    "epoch": 1,
+    "numbers": [
+      64,
+      90,
+      38,
+      40
+    ],
+    "target": 42
+  },
+  {
+    "loss": -0.11041259765625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((46/(41-10))+37). It uses each given number exactly once and evaluates to 14.</think>\n<answer>((46/(41-10))+37)</answer>",
+      "<think>Use the expression (37-(10+(46-41))). It uses each given number exactly once and evaluates to 14.</think>\n<answer>(37-(10+(46-41)))</answer>"
+    ],
+    "step": 138,
+    "epoch": 1,
+    "numbers": [
+      46,
+      41,
+      37,
+      10
+    ],
+    "target": 14
+  },
+  {
+    "loss": 0.0033416748046875,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((44+20)+54). It uses each given number exactly once and evaluates to 78.</think>\n<answer>((44+20)+54)</answer>",
+      "<think>Use the expression (54-(44-20)). It uses each given number exactly once and evaluates to 78.</think>\n<answer>(54-(44-20))</answer>"
+    ],
+    "step": 139,
+    "epoch": 1,
+    "numbers": [
+      44,
+      20,
+      54
+    ],
+    "target": 78
+  },
+  {
+    "loss": -0.0362701416015625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (48-(42/10)). It uses each given number exactly once and evaluates to 60.</think>\n<answer>(48-(42/10))</answer>",
+      "<think>Use the expression (48-(42-10)). It uses each given number exactly once and evaluates to 60.</think>\n<answer>(48-(42-10))</answer>"
+    ],
+    "step": 140,
+    "epoch": 1,
+    "numbers": [
+      42,
+      10,
+      48
+    ],
+    "target": 60
+  },
+  {
+    "loss": -0.005462646484375,
+    "avg_reward": 0.346875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((84/12)+98). It uses each given number exactly once and evaluates to 91.</think>\n<answer>((84/12)+98)</answer>",
+      "<think>Use the expression ((12+84)-98). It uses each given number exactly once and evaluates to 91.</think>\n<answer>((12+84)-98)</answer>"
+    ],
+    "step": 141,
+    "epoch": 1,
+    "numbers": [
+      12,
+      84,
+      98
+    ],
+    "target": 91
+  },
+  {
+    "loss": -0.11724853515625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((36+(6*90))/6). It uses each given number exactly once and evaluates to 78.</think>\n<answer>((36+(6*90))/6)</answer>",
+      "<think>Use the expression ((81-6)-(36/90)). It uses each given number exactly once and evaluates to 78.</think>\n<answer>((81-6)-(36/90))</answer>"
+    ],
+    "step": 142,
+    "epoch": 1,
+    "numbers": [
+      6,
+      36,
+      90,
+      81
+    ],
+    "target": 78
+  },
+  {
+    "loss": -0.01641845703125,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((24+76)-2). It uses each given number exactly once and evaluates to 98.</think>\n<answer>((24+76)-2)</answer>",
+      "<think>Use the expression (2*(24+76)). It uses each given number exactly once and evaluates to 98.</think>\n<answer>(2*(24+76))</answer>"
+    ],
+    "step": 143,
+    "epoch": 1,
+    "numbers": [
+      24,
+      76,
+      2
+    ],
+    "target": 98
+  },
+  {
+    "loss": -0.11712646484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (76-(26/(5-60))). It uses each given number exactly once and evaluates to 94.</think>\n<answer>(76-(26/(5-60)))</answer>",
+      "<think>Use the expression ((5+76)-(60/26)). It uses each given number exactly once and evaluates to 94.</think>\n<answer>((5+76)-(60/26))</answer>"
+    ],
+    "step": 144,
+    "epoch": 1,
+    "numbers": [
+      5,
+      76,
+      60,
+      26
+    ],
+    "target": 94
+  },
+  {
+    "loss": -0.1192626953125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (33-((98-58)+47)). It uses each given number exactly once and evaluates to 26.</think>\n<answer>(33-((98-58)+47))</answer>",
+      "<think>Use the expression ((33-47)+(98+58)). It uses each given number exactly once and evaluates to 26.</think>\n<answer>((33-47)+(98+58))</answer>"
+    ],
+    "step": 145,
+    "epoch": 1,
+    "numbers": [
+      98,
+      58,
+      47,
+      33
+    ],
+    "target": 26
+  },
+  {
+    "loss": -0.13873291015625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((90-86)*(24-27)). It uses each given number exactly once and evaluates to 21.</think>\n<answer>((90-86)*(24-27))</answer>",
+      "<think>Use the expression ((27/(24+90))+86). It uses each given number exactly once and evaluates to 21.</think>\n<answer>((27/(24+90))+86)</answer>"
+    ],
+    "step": 146,
+    "epoch": 1,
+    "numbers": [
+      24,
+      90,
+      86,
+      27
+    ],
+    "target": 21
+  },
+  {
+    "loss": -0.11981201171875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((53-20)-(17+19)). It uses each given number exactly once and evaluates to 37.</think>\n<answer>((53-20)-(17+19))</answer>",
+      "<think>Use the expression (53/(17+(20-19))). It uses each given number exactly once and evaluates to 37.</think>\n<answer>(53/(17+(20-19)))</answer>"
+    ],
+    "step": 147,
+    "epoch": 1,
+    "numbers": [
+      53,
+      20,
+      19,
+      17
+    ],
+    "target": 37
+  },
+  {
+    "loss": -0.10723876953125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((61+73)/(12/46)). It uses each given number exactly once and evaluates to 98.</think>\n<answer>((61+73)/(12/46))</answer>",
+      "<think>Use the expression (46-((61-73)+12)). It uses each given number exactly once and evaluates to 98.</think>\n<answer>(46-((61-73)+12))</answer>"
+    ],
+    "step": 148,
+    "epoch": 1,
+    "numbers": [
+      61,
+      73,
+      46,
+      12
+    ],
+    "target": 98
+  },
+  {
+    "loss": -0.00177001953125,
+    "avg_reward": 0.346875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((87+96)-75). It uses each given number exactly once and evaluates to 84.</think>\n<answer>((87+96)-75)</answer>",
+      "<think>Use the expression ((87+96)-75). It uses each given number exactly once and evaluates to 84.</think>\n<answer>((87+96)-75)</answer>"
+    ],
+    "step": 149,
+    "epoch": 1,
+    "numbers": [
+      87,
+      96,
+      75
+    ],
+    "target": 84
+  },
+  {
+    "loss": -0.007476806640625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((61-54)+82). It uses each given number exactly once and evaluates to 33.</think>\n<answer>((61-54)+82)</answer>",
+      "<think>Use the expression (82-(61-54)). It uses each given number exactly once and evaluates to 33.</think>\n<answer>(82-(61-54))</answer>"
+    ],
+    "step": 150,
+    "epoch": 1,
+    "numbers": [
+      61,
+      54,
+      82
+    ],
+    "target": 33
+  },
+  {
+    "loss": 0.000885009765625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((17-64)+63)-26). It uses each given number exactly once and evaluates to 44.</think>\n<answer>(((17-64)+63)-26)</answer>",
+      "<think>Use the expression (63-((17+64)/26)). It uses each given number exactly once and evaluates to 44.</think>\n<answer>(63-((17+64)/26))</answer>"
+    ],
+    "step": 151,
+    "epoch": 1,
+    "numbers": [
+      17,
+      64,
+      63,
+      26
+    ],
+    "target": 44
+  },
+  {
+    "loss": -0.00687408447265625,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((93+26)-29). It uses each given number exactly once and evaluates to 96.</think>\n<answer>((93+26)-29)</answer>",
+      "<think>Use the expression (93/(26-29)). It uses each given number exactly once and evaluates to 96.</think>\n<answer>(93/(26-29))</answer>"
+    ],
+    "step": 152,
+    "epoch": 1,
+    "numbers": [
+      93,
+      26,
+      29
+    ],
+    "target": 96
+  },
+  {
+    "loss": -0.0069122314453125,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.44999999999999996,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (83/(78-24)). It uses each given number exactly once and evaluates to 19.</think>\n<answer>(83/(78-24))</answer>",
+      "<think>Use the expression (24-(83-78)). It uses each given number exactly once and evaluates to 19.</think>\n<answer>(24-(83-78))</answer>"
+    ],
+    "step": 153,
+    "epoch": 1,
+    "numbers": [
+      83,
+      78,
+      24
+    ],
+    "target": 19
+  },
+  {
+    "loss": -0.015411376953125,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.17500000000000002,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (32-(57-33)). It uses each given number exactly once and evaluates to 58.</think>\n<answer>(32-(57-33))</answer>",
+      "<think>Use the expression (57/(32/33)). It uses each given number exactly once and evaluates to 58.</think>\n<answer>(57/(32/33))</answer>"
+    ],
+    "step": 154,
+    "epoch": 1,
+    "numbers": [
+      57,
+      33,
+      32
+    ],
+    "target": 58
+  },
+  {
+    "loss": -0.14300537109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (62+((23-21)*31)). It uses each given number exactly once and evaluates to 13.</think>\n<answer>(62+((23-21)*31))</answer>",
+      "<think>Use the expression (62+((21-23)*31)). It uses each given number exactly once and evaluates to 13.</think>\n<answer>(62+((21-23)*31))</answer>"
+    ],
+    "step": 155,
+    "epoch": 1,
+    "numbers": [
+      62,
+      23,
+      21,
+      31
+    ],
+    "target": 13
+  },
+  {
+    "loss": -0.1182861328125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((96/(94-6))-88). It uses each given number exactly once and evaluates to 76.</think>\n<answer>((96/(94-6))-88)</answer>",
+      "<think>Use the expression ((94-96)+(6/88)). It uses each given number exactly once and evaluates to 76.</think>\n<answer>((94-96)+(6/88))</answer>"
+    ],
+    "step": 156,
+    "epoch": 1,
+    "numbers": [
+      94,
+      96,
+      88,
+      6
+    ],
+    "target": 76
+  },
+  {
+    "loss": -0.1263427734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (7-(18/(72/36))). It uses each given number exactly once and evaluates to 67.</think>\n<answer>(7-(18/(72/36)))</answer>",
+      "<think>Use the expression ((7+72)-(36/18)). It uses each given number exactly once and evaluates to 67.</think>\n<answer>((7+72)-(36/18))</answer>"
+    ],
+    "step": 157,
+    "epoch": 1,
+    "numbers": [
+      72,
+      36,
+      7,
+      18
+    ],
+    "target": 67
+  },
+  {
+    "loss": -0.0630950927734375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((14+21)-17). It uses each given number exactly once and evaluates to 56.</think>\n<answer>((14+21)-17)</answer>",
+      "<think>Use the expression ((14+21)-17). It uses each given number exactly once and evaluates to 56.</think>\n<answer>((14+21)-17)</answer>"
+    ],
+    "step": 158,
+    "epoch": 1,
+    "numbers": [
+      14,
+      21,
+      17
+    ],
+    "target": 56
+  },
+  {
+    "loss": -0.0035247802734375,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (72/(1-30/29)). It uses each given number exactly once and evaluates to 72.</think>\n<answer>(72/(1-30/29))</answer>",
+      "<think>Use the expression ((72-30)+29). It uses each given number exactly once and evaluates to 72.</think>\n<answer>((72-30)+29)</answer>"
+    ],
+    "step": 159,
+    "epoch": 1,
+    "numbers": [
+      72,
+      30,
+      29
+    ],
+    "target": 72
+  },
+  {
+    "loss": 0.0108795166015625,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((31-98)+99). It uses each given number exactly once and evaluates to 31.</think>\n<answer>((31-98)+99)</answer>",
+      "<think>Use the expression ((31-98)+99). It uses each given number exactly once and evaluates to 31.</think>\n<answer>((31-98)+99)</answer>"
+    ],
+    "step": 160,
+    "epoch": 1,
+    "numbers": [
+      31,
+      98,
+      99
+    ],
+    "target": 31
+  },
+  {
+    "loss": -0.052764892578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((60-99)+2). It uses each given number exactly once and evaluates to 78.</think>\n<answer>((60-99)+2)</answer>",
+      "<think>Use the expression (2-(60-99)). It uses each given number exactly once and evaluates to 78.</think>\n<answer>(2-(60-99))</answer>"
+    ],
+    "step": 161,
+    "epoch": 1,
+    "numbers": [
+      60,
+      99,
+      2
+    ],
+    "target": 78
+  },
+  {
+    "loss": -0.10125732421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (82-((97+55)/29)). It uses each given number exactly once and evaluates to 95.</think>\n<answer>(82-((97+55)/29))</answer>",
+      "<think>Use the expression ((29/(97-55))+82). It uses each given number exactly once and evaluates to 95.</think>\n<answer>((29/(97-55))+82)</answer>"
+    ],
+    "step": 162,
+    "epoch": 1,
+    "numbers": [
+      97,
+      55,
+      82,
+      29
+    ],
+    "target": 95
+  },
+  {
+    "loss": -0.0103607177734375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.17500000000000002,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (27/(93-16)). It uses each given number exactly once and evaluates to 50.</think>\n<answer>(27/(93-16))</answer>",
+      "<think>Use the expression ((93+16)-27). It uses each given number exactly once and evaluates to 50.</think>\n<answer>((93+16)-27)</answer>"
+    ],
+    "step": 163,
+    "epoch": 1,
+    "numbers": [
+      93,
+      16,
+      27
+    ],
+    "target": 50
+  },
+  {
+    "loss": -0.1112060546875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((14/42)*(34+46)). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((14/42)*(34+46))</answer>",
+      "<think>Use the expression ((14-(34-46))-42). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((14-(34-46))-42)</answer>"
+    ],
+    "step": 164,
+    "epoch": 1,
+    "numbers": [
+      34,
+      46,
+      14,
+      42
+    ],
+    "target": 83
+  },
+  {
+    "loss": -0.0136260986328125,
+    "avg_reward": 0.4775,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.45,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (67-(10+67)). It uses each given number exactly once and evaluates to 10.</think>\n<answer>(67-(10+67))</answer>",
+      "<think>Use the expression ((10+67)-67). It uses each given number exactly once and evaluates to 10.</think>\n<answer>((10+67)-67)</answer>"
+    ],
+    "step": 165,
+    "epoch": 1,
+    "numbers": [
+      10,
+      67,
+      67
+    ],
+    "target": 10
+  },
+  {
+    "loss": -0.100341796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((15+(31-97))+19). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((15+(31-97))+19)</answer>",
+      "<think>Use the expression (97-((31/19)*15)). It uses each given number exactly once and evaluates to 83.</think>\n<answer>(97-((31/19)*15))</answer>"
+    ],
+    "step": 166,
+    "epoch": 1,
+    "numbers": [
+      31,
+      97,
+      15,
+      19
+    ],
+    "target": 83
+  },
+  {
+    "loss": -0.007598876953125,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.31249999999999994,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((84-32)+47). It uses each given number exactly once and evaluates to 69.</think>\n<answer>((84-32)+47)</answer>",
+      "<think>Use the expression ((84+32)-47). It uses each given number exactly once and evaluates to 69.</think>\n<answer>((84+32)-47)</answer>"
+    ],
+    "step": 167,
+    "epoch": 1,
+    "numbers": [
+      84,
+      32,
+      47
+    ],
+    "target": 69
+  },
+  {
+    "loss": -0.1595458984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((53+84)/(2*71)). It uses each given number exactly once and evaluates to 44.</think>\n<answer>((53+84)/(2*71))</answer>",
+      "<think>Use the expression (71/(53-(2*84))). It uses each given number exactly once and evaluates to 44.</think>\n<answer>(71/(53-(2*84)))</answer>"
+    ],
+    "step": 168,
+    "epoch": 1,
+    "numbers": [
+      53,
+      2,
+      84,
+      71
+    ],
+    "target": 44
+  },
+  {
+    "loss": -0.10693359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((38-65)+(67+87)). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((38-65)+(67+87))</answer>",
+      "<think>Use the expression (38-((67-65)-87)). It uses each given number exactly once and evaluates to 83.</think>\n<answer>(38-((67-65)-87))</answer>"
+    ],
+    "step": 169,
+    "epoch": 1,
+    "numbers": [
+      67,
+      65,
+      87,
+      38
+    ],
+    "target": 83
+  },
+  {
+    "loss": -0.02132415771484375,
+    "avg_reward": 0.73875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.7250000000000001,
+    "solved": 6,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((49+80)-72). It uses each given number exactly once and evaluates to 57.</think>\n<answer>((49+80)-72)</answer>",
+      "<think>Use the expression ((49+80)-72). It uses each given number exactly once and evaluates to 57.</think>\n<answer>((49+80)-72)</answer>"
+    ],
+    "step": 170,
+    "epoch": 1,
+    "numbers": [
+      49,
+      80,
+      72
+    ],
+    "target": 57
+  },
+  {
+    "loss": -0.020477294921875,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.44999999999999996,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (20+(50-21)). It uses each given number exactly once and evaluates to 51.</think>\n<answer>(20+(50-21))</answer>",
+      "<think>Use the expression ((50+21)-20). It uses each given number exactly once and evaluates to 51.</think>\n<answer>((50+21)-20)</answer>"
+    ],
+    "step": 171,
+    "epoch": 1,
+    "numbers": [
+      50,
+      21,
+      20
+    ],
+    "target": 51
+  },
+  {
+    "loss": -0.0107269287109375,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5874999999999999,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (57-(15+23)). It uses each given number exactly once and evaluates to 19.</think>\n<answer>(57-(15+23))</answer>",
+      "<think>Use the expression ((15+23)-57). It uses each given number exactly once and evaluates to 19.</think>\n<answer>((15+23)-57)</answer>"
+    ],
+    "step": 172,
+    "epoch": 1,
+    "numbers": [
+      15,
+      23,
+      57
+    ],
+    "target": 19
+  },
+  {
+    "loss": -0.08416748046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (81/(9+81)). It uses each given number exactly once and evaluates to 18.</think>\n<answer>(81/(9+81))</answer>",
+      "<think>Use the expression (81/(9+81)). It uses each given number exactly once and evaluates to 18.</think>\n<answer>(81/(9+81))</answer>"
+    ],
+    "step": 173,
+    "epoch": 1,
+    "numbers": [
+      81,
+      9,
+      81
+    ],
+    "target": 18
+  },
+  {
+    "loss": -0.000396728515625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((15+9)+(57+91)). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((15+9)+(57+91))</answer>",
+      "<think>Use the expression (15-((57-91)+9)). It uses each given number exactly once and evaluates to 83.</think>\n<answer>(15-((57-91)+9))</answer>"
+    ],
+    "step": 174,
+    "epoch": 1,
+    "numbers": [
+      57,
+      91,
+      15,
+      9
+    ],
+    "target": 83
+  },
+  {
+    "loss": -0.0149688720703125,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.44999999999999996,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((73+23)-3). It uses each given number exactly once and evaluates to 93.</think>\n<answer>((73+23)-3)</answer>",
+      "<think>Use the expression ((73+23)-3). It uses each given number exactly once and evaluates to 93.</think>\n<answer>((73+23)-3)</answer>"
+    ],
+    "step": 175,
+    "epoch": 1,
+    "numbers": [
+      73,
+      23,
+      3
+    ],
+    "target": 93
+  },
+  {
+    "loss": -0.00372314453125,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((35+58)/(19-18)). It uses each given number exactly once and evaluates to 14.</think>\n<answer>((35+58)/(19-18))</answer>",
+      "<think>Use the expression ((18+(35+19))-58). It uses each given number exactly once and evaluates to 14.</think>\n<answer>((18+(35+19))-58)</answer>"
+    ],
+    "step": 176,
+    "epoch": 1,
+    "numbers": [
+      35,
+      19,
+      18,
+      58
+    ],
+    "target": 14
+  },
+  {
+    "loss": -0.010650634765625,
+    "avg_reward": 0.346875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((54-99)+43). It uses each given number exactly once and evaluates to 88.</think>\n<answer>((54-99)+43)</answer>",
+      "<think>Use the expression ((54-99)+43). It uses each given number exactly once and evaluates to 88.</think>\n<answer>((54-99)+43)</answer>"
+    ],
+    "step": 177,
+    "epoch": 1,
+    "numbers": [
+      54,
+      99,
+      43
+    ],
+    "target": 88
+  },
+  {
+    "loss": 0.0016937255859375,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((24*5)-53). It uses each given number exactly once and evaluates to 67.</think>\n<answer>((24*5)-53)</answer>",
+      "<think>Use the expression ((24+5)+53). It uses each given number exactly once and evaluates to 67.</think>\n<answer>((24+5)+53)</answer>"
+    ],
+    "step": 178,
+    "epoch": 1,
+    "numbers": [
+      24,
+      5,
+      53
+    ],
+    "target": 67
+  },
+  {
+    "loss": -0.03363037109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((92+33)-66). It uses each given number exactly once and evaluates to 46.</think>\n<answer>((92+33)-66)</answer>",
+      "<think>Use the expression ((92+33)-66). It uses each given number exactly once and evaluates to 46.</think>\n<answer>((92+33)-66)</answer>"
+    ],
+    "step": 179,
+    "epoch": 1,
+    "numbers": [
+      92,
+      33,
+      66
+    ],
+    "target": 46
+  },
+  {
+    "loss": -0.13238525390625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (26-((55/7)+13)). It uses each given number exactly once and evaluates to 47.</think>\n<answer>(26-((55/7)+13))</answer>",
+      "<think>Use the expression ((55+13)-(7*26)). It uses each given number exactly once and evaluates to 47.</think>\n<answer>((55+13)-(7*26))</answer>"
+    ],
+    "step": 180,
+    "epoch": 1,
+    "numbers": [
+      55,
+      7,
+      26,
+      13
+    ],
+    "target": 47
+  },
+  {
+    "loss": -0.007816314697265625,
+    "avg_reward": 0.869375,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.8625,
+    "solved": 7,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((70+24)-42). It uses each given number exactly once and evaluates to 52.</think>\n<answer>((70+24)-42)</answer>",
+      "<think>Use the expression ((70+24)-42). It uses each given number exactly once and evaluates to 52.</think>\n<answer>((70+24)-42)</answer>"
+    ],
+    "step": 181,
+    "epoch": 1,
+    "numbers": [
+      70,
+      24,
+      42
+    ],
+    "target": 52
+  },
+  {
+    "loss": -0.007965087890625,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5874999999999999,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((71-71)+87). It uses each given number exactly once and evaluates to 87.</think>\n<answer>((71-71)+87)</answer>",
+      "<think>Use the expression ((71-71)+87). It uses each given number exactly once and evaluates to 87.</think>\n<answer>((71-71)+87)</answer>"
+    ],
+    "step": 182,
+    "epoch": 1,
+    "numbers": [
+      71,
+      71,
+      87
+    ],
+    "target": 87
+  },
+  {
+    "loss": -0.0277099609375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((57+22)-54). It uses each given number exactly once and evaluates to 66.</think>\n<answer>((57+22)-54)</answer>",
+      "<think>Use the expression ((57-22)+54). It uses each given number exactly once and evaluates to 66.</think>\n<answer>((57-22)+54)</answer>"
+    ],
+    "step": 183,
+    "epoch": 1,
+    "numbers": [
+      57,
+      22,
+      54
+    ],
+    "target": 66
+  },
+  {
+    "loss": -0.1055908203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((89/(94/21))-54). It uses each given number exactly once and evaluates to 80.</think>\n<answer>((89/(94/21))-54)</answer>",
+      "<think>Use the expression ((94+21)-(89/54)). It uses each given number exactly once and evaluates to 80.</think>\n<answer>((94+21)-(89/54))</answer>"
+    ],
+    "step": 184,
+    "epoch": 1,
+    "numbers": [
+      94,
+      21,
+      54,
+      89
+    ],
+    "target": 80
+  },
+  {
+    "loss": -0.106201171875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (78-(73/(50/96))). It uses each given number exactly once and evaluates to 39.</think>\n<answer>(78-(73/(50/96)))</answer>",
+      "<think>Use the expression ((78-73)*(50-96)). It uses each given number exactly once and evaluates to 39.</think>\n<answer>((78-73)*(50-96))</answer>"
+    ],
+    "step": 185,
+    "epoch": 1,
+    "numbers": [
+      50,
+      96,
+      78,
+      73
+    ],
+    "target": 39
+  },
+  {
+    "loss": -0.064453125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (95-(27*4)). It uses each given number exactly once and evaluates to 17.</think>\n<answer>(95-(27*4))</answer>",
+      "<think>Use the expression ((27+95)/4). It uses each given number exactly once and evaluates to 17.</think>\n<answer>((27+95)/4)</answer>"
+    ],
+    "step": 186,
+    "epoch": 1,
+    "numbers": [
+      27,
+      95,
+      4
+    ],
+    "target": 17
+  },
+  {
+    "loss": -0.000331878662109375,
+    "avg_reward": 0.869375,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.8625,
+    "solved": 7,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (13-(18-73)). It uses each given number exactly once and evaluates to 78.</think>\n<answer>(13-(18-73))</answer>",
+      "<think>Use the expression ((18-13)+73). It uses each given number exactly once and evaluates to 78.</think>\n<answer>((18-13)+73)</answer>"
+    ],
+    "step": 187,
+    "epoch": 1,
+    "numbers": [
+      18,
+      73,
+      13
+    ],
+    "target": 78
+  },
+  {
+    "loss": -0.00490570068359375,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (33-(78/8)). It uses each given number exactly once and evaluates to 53.</think>\n<answer>(33-(78/8))</answer>",
+      "<think>Use the expression (33-(78/8)). It uses each given number exactly once and evaluates to 53.</think>\n<answer>(33-(78/8))</answer>"
+    ],
+    "step": 188,
+    "epoch": 1,
+    "numbers": [
+      33,
+      78,
+      8
+    ],
+    "target": 53
+  },
+  {
+    "loss": -0.0124359130859375,
+    "avg_reward": 0.73875,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.7250000000000001,
+    "solved": 6,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((39+24)+30). It uses each given number exactly once and evaluates to 93.</think>\n<answer>((39+24)+30)</answer>",
+      "<think>Use the expression (30+(39+24)). It uses each given number exactly once and evaluates to 93.</think>\n<answer>(30+(39+24))</answer>"
+    ],
+    "step": 189,
+    "epoch": 1,
+    "numbers": [
+      39,
+      24,
+      30
+    ],
+    "target": 93
+  },
+  {
+    "loss": -0.011474609375,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5874999999999999,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((64+31)-43). It uses each given number exactly once and evaluates to 52.</think>\n<answer>((64+31)-43)</answer>",
+      "<think>Use the expression (64/(31-43)). It uses each given number exactly once and evaluates to 52.</think>\n<answer>(64/(31-43))</answer>"
+    ],
+    "step": 190,
+    "epoch": 1,
+    "numbers": [
+      64,
+      31,
+      43
+    ],
+    "target": 52
+  },
+  {
+    "loss": 0.0051422119140625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((34+20)-44). It uses each given number exactly once and evaluates to 58.</think>\n<answer>((34+20)-44)</answer>",
+      "<think>Use the expression ((34+20)-44). It uses each given number exactly once and evaluates to 58.</think>\n<answer>((34+20)-44)</answer>"
+    ],
+    "step": 191,
+    "epoch": 1,
+    "numbers": [
+      34,
+      20,
+      44
+    ],
+    "target": 58
+  },
+  {
+    "loss": -0.00104522705078125,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (2+(37-5)). It uses each given number exactly once and evaluates to 47.</think>\n<answer>(2+(37-5))</answer>",
+      "<think>Use the expression (37-(5/2)). It uses each given number exactly once and evaluates to 47.</think>\n<answer>(37-(5/2))</answer>"
+    ],
+    "step": 192,
+    "epoch": 1,
+    "numbers": [
+      2,
+      37,
+      5
+    ],
+    "target": 47
+  },
+  {
+    "loss": -0.11541748046875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((80-79)+39). The expression uses each given number exactly once and evaluates to 75.</think>\n<answer>(((80-79)+39)</answer>",
+      "<think>Use the expression ((35/(80-79))+39). It uses each given number exactly once and evaluates to 75.</think>\n<answer>((35/(80-79))+39)</answer>"
+    ],
+    "step": 193,
+    "epoch": 1,
+    "numbers": [
+      80,
+      79,
+      35,
+      39
+    ],
+    "target": 75
+  },
+  {
+    "loss": -0.11358642578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((47-3)+(86-17)). It uses each given number exactly once and evaluates to 50.</think>\n<answer>((47-3)+(86-17))</answer>",
+      "<think>Use the expression (47-(86/(3-17))). It uses each given number exactly once and evaluates to 50.</think>\n<answer>(47-(86/(3-17)))</answer>"
+    ],
+    "step": 194,
+    "epoch": 1,
+    "numbers": [
+      3,
+      86,
+      17,
+      47
+    ],
+    "target": 50
+  },
+  {
+    "loss": -0.14483642578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((5-96)+(84*1)). It uses each given number exactly once and evaluates to 75.</think>\n<answer>((5-96)+(84*1))</answer>",
+      "<think>Use the expression ((1-84)+(5+96)). It uses each given number exactly once and evaluates to 75.</think>\n<answer>((1-84)+(5+96))</answer>"
+    ],
+    "step": 195,
+    "epoch": 1,
+    "numbers": [
+      5,
+      96,
+      84,
+      1
+    ],
+    "target": 75
+  },
+  {
+    "loss": -0.070892333984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((3+72)-39). It uses each given number exactly once and evaluates to 59.</think>\n<answer>((3+72)-39)</answer>",
+      "<think>Use the expression (39-(3-72)). It uses each given number exactly once and evaluates to 59.</think>\n<answer>(39-(3-72))</answer>"
+    ],
+    "step": 196,
+    "epoch": 1,
+    "numbers": [
+      3,
+      72,
+      39
+    ],
+    "target": 59
+  },
+  {
+    "loss": -0.11712646484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((84-34)/(14/57)). It uses each given number exactly once and evaluates to 75.</think>\n<answer>((84-34)/(14/57))</answer>",
+      "<think>Use the expression (34-((14+84)/57)). It uses each given number exactly once and evaluates to 75.</think>\n<answer>(34-((14+84)/57))</answer>"
+    ],
+    "step": 197,
+    "epoch": 1,
+    "numbers": [
+      14,
+      84,
+      34,
+      57
+    ],
+    "target": 75
+  },
+  {
+    "loss": -0.005950927734375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (28-(59-70)). It uses each given number exactly once and evaluates to 17.</think>\n<answer>(28-(59-70))</answer>",
+      "<think>Use the expression (70-(59-28)). It uses each given number exactly once and evaluates to 17.</think>\n<answer>(70-(59-28))</answer>"
+    ],
+    "step": 198,
+    "epoch": 1,
+    "numbers": [
+      59,
+      70,
+      28
+    ],
+    "target": 17
+  },
+  {
+    "loss": 0.00325775146484375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3*(95-21)). It uses each given number exactly once and evaluates to 88.</think>\n<answer>(3*(95-21))</answer>",
+      "<think>Use the expression (95-(21/3)). It uses each given number exactly once and evaluates to 88.</think>\n<answer>(95-(21/3))</answer>"
+    ],
+    "step": 199,
+    "epoch": 1,
+    "numbers": [
+      95,
+      21,
+      3
+    ],
+    "target": 88
+  },
+  {
+    "loss": 0.008968353271484375,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((12+74)-42). It uses each given number exactly once and evaluates to 20.</think>\n<answer>((12+74)-42)</answer>",
+      "<think>Use the expression (74-(12+42)). It uses each given number exactly once and evaluates to 20.</think>\n<answer>(74-(12+42))</answer>"
+    ],
+    "step": 200,
+    "epoch": 1,
+    "numbers": [
+      12,
+      74,
+      42
+    ],
+    "target": 20
+  },
+  {
+    "loss": -0.13641357421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (9-(64/(90/1))). It uses each given number exactly once and evaluates to 55.</think>\n<answer>(9-(64/(90/1)))</answer>",
+      "<think>Use the expression ((1*(90+64))/9). It uses each given number exactly once and evaluates to 55.</think>\n<answer>((1*(90+64))/9)</answer>"
+    ],
+    "step": 201,
+    "epoch": 1,
+    "numbers": [
+      90,
+      1,
+      64,
+      9
+    ],
+    "target": 55
+  },
+  {
+    "loss": -0.00098419189453125,
+    "avg_reward": 0.21625000000000005,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.17499999999999993,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (10+(95-45)). It uses each given number exactly once and evaluates to 60.</think>\n<answer>(10+(95-45))</answer>",
+      "<think>Use the expression (10+(95-45)). It uses each given number exactly once and evaluates to 60.</think>\n<answer>(10+(95-45))</answer>"
+    ],
+    "step": 202,
+    "epoch": 1,
+    "numbers": [
+      95,
+      45,
+      10
+    ],
+    "target": 60
+  },
+  {
+    "loss": -0.108154296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (68-(46/(58-69))). It uses each given number exactly once and evaluates to 33.</think>\n<answer>(68-(46/(58-69)))</answer>",
+      "<think>Use the expression ((46-68)+(58+69)). It uses each given number exactly once and evaluates to 33.</think>\n<answer>((46-68)+(58+69))</answer>"
+    ],
+    "step": 203,
+    "epoch": 1,
+    "numbers": [
+      58,
+      69,
+      68,
+      46
+    ],
+    "target": 33
+  },
+  {
+    "loss": -0.12237548828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((34-84)+(95+17)). It uses each given number exactly once and evaluates to 53.</think>\n<answer>((34-84)+(95+17))</answer>",
+      "<think>Use the expression ((17-(95-34))+84). It uses each given number exactly once and evaluates to 53.</think>\n<answer>((17-(95-34))+84)</answer>"
+    ],
+    "step": 204,
+    "epoch": 1,
+    "numbers": [
+      95,
+      34,
+      17,
+      84
+    ],
+    "target": 53
+  },
+  {
+    "loss": -0.157958984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2*(24-21))+67). It uses each given number exactly once and evaluates to 40.</think>\n<answer>((2*(24-21))+67)</answer>",
+      "<think>Use the expression (21-(2*(24-67))). It uses each given number exactly once and evaluates to 40.</think>\n<answer>(21-(2*(24-67)))</answer>"
+    ],
+    "step": 205,
+    "epoch": 1,
+    "numbers": [
+      24,
+      21,
+      2,
+      67
+    ],
+    "target": 40
+  },
+  {
+    "loss": -0.1546630859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((2*(32+34))-91). It uses each given number exactly once and evaluates to 55.</think>\n<answer>((2*(32+34))-91)</answer>",
+      "<think>Use the expression ((34-32)+(2+91)). It uses each given number exactly once and evaluates to 55.</think>\n<answer>((34-32)+(2+91))</answer>"
+    ],
+    "step": 206,
+    "epoch": 1,
+    "numbers": [
+      2,
+      91,
+      32,
+      34
+    ],
+    "target": 55
+  },
+  {
+    "loss": 0.00307464599609375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (60-(34-44)). It uses each given number exactly once and evaluates to 50.</think>\n<answer>(60-(34-44))</answer>",
+      "<think>Use the expression ((34-44)+60). It uses each given number exactly once and evaluates to 50.</think>\n<answer>((34-44)+60)</answer>"
+    ],
+    "step": 207,
+    "epoch": 1,
+    "numbers": [
+      34,
+      44,
+      60
+    ],
+    "target": 50
+  },
+  {
+    "loss": 0.00556182861328125,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((20+93)-85). It uses each given number exactly once and evaluates to 12.</think>\n<answer>((20+93)-85)</answer>",
+      "<think>Use the expression ((20+93)-85). It uses each given number exactly once and evaluates to 12.</think>\n<answer>((20+93)-85)</answer>"
+    ],
+    "step": 208,
+    "epoch": 1,
+    "numbers": [
+      20,
+      93,
+      85
+    ],
+    "target": 12
+  },
+  {
+    "loss": -0.0210418701171875,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.44999999999999996,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (29-11). It uses each given number exactly once and evaluates to 34.</think>\n<answer>(29-11)</answer>",
+      "<think>Use the expression (74-(29+11)). It uses each given number exactly once and evaluates to 34.</think>\n<answer>(74-(29+11))</answer>"
+    ],
+    "step": 209,
+    "epoch": 1,
+    "numbers": [
+      29,
+      11,
+      74
+    ],
+    "target": 34
+  },
+  {
+    "loss": -0.0516204833984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((77-33)+56). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((77-33)+56)</answer>",
+      "<think>Use the expression ((77+33)-56). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((77+33)-56)</answer>"
+    ],
+    "step": 210,
+    "epoch": 1,
+    "numbers": [
+      77,
+      33,
+      56
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0187835693359375,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.44999999999999996,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((9+38)-34). It uses each given number exactly once and evaluates to 13.</think>\n<answer>((9+38)-34)</answer>",
+      "<think>Use the expression ((9+38)-34). It uses each given number exactly once and evaluates to 13.</think>\n<answer>((9+38)-34)</answer>"
+    ],
+    "step": 211,
+    "epoch": 1,
+    "numbers": [
+      9,
+      38,
+      34
+    ],
+    "target": 13
+  },
+  {
+    "loss": 0.002262115478515625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((85+64)-44). It uses each given number exactly once and evaluates to 65.</think>\n<answer>((85+64)-44)</answer>",
+      "<think>Use the expression (44-(85-64)). It uses each given number exactly once and evaluates to 65.</think>\n<answer>(44-(85-64))</answer>"
+    ],
+    "step": 212,
+    "epoch": 1,
+    "numbers": [
+      85,
+      64,
+      44
+    ],
+    "target": 65
+  },
+  {
+    "loss": -0.10968017578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((78+51)-(2*69)). It uses each given number exactly once and evaluates to 98.</think>\n<answer>((78+51)-(2*69))</answer>",
+      "<think>Use the expression ((78/(2*69))+51). It uses each given number exactly once and evaluates to 98.</think>\n<answer>((78/(2*69))+51)</answer>"
+    ],
+    "step": 213,
+    "epoch": 1,
+    "numbers": [
+      78,
+      2,
+      69,
+      51
+    ],
+    "target": 98
+  },
+  {
+    "loss": -0.12548828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (17/(19-(84/22))). It uses each given number exactly once and evaluates to 13.</think>\n<answer>(17/(19-(84/22)))</answer>",
+      "<think>Use the expression ((22-(17+19))+84). It uses each given number exactly once and evaluates to 13.</think>\n<answer>((22-(17+19))+84)</answer>"
+    ],
+    "step": 214,
+    "epoch": 1,
+    "numbers": [
+      17,
+      84,
+      19,
+      22
+    ],
+    "target": 13
+  },
+  {
+    "loss": -0.085906982421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (7*(79-21)). It uses each given number exactly once and evaluates to 65.</think>\n<answer>(7*(79-21))</answer>",
+      "<think>Use the expression (79-(7+21)). It uses each given number exactly once and evaluates to 65.</think>\n<answer>(79-(7+21))</answer>"
+    ],
+    "step": 215,
+    "epoch": 1,
+    "numbers": [
+      79,
+      21,
+      7
+    ],
+    "target": 65
+  },
+  {
+    "loss": -0.043670654296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (53/(50-13)). It uses each given number exactly once and evaluates to 39.</think>\n<answer>(53/(50-13))</answer>",
+      "<think>Use the expression ((53-50)+13). It uses each given number exactly once and evaluates to 39.</think>\n<answer>((53-50)+13)</answer>"
+    ],
+    "step": 216,
+    "epoch": 1,
+    "numbers": [
+      53,
+      50,
+      13
+    ],
+    "target": 39
+  },
+  {
+    "loss": -0.05010986328125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((26+28)/24). It uses each given number exactly once and evaluates to 22.</think>\n<answer>((26+28)/24)</answer>",
+      "<think>Use the expression ((26+28)/24). It uses each given number exactly once and evaluates to 22.</think>\n<answer>((26+28)/24)</answer>"
+    ],
+    "step": 217,
+    "epoch": 1,
+    "numbers": [
+      26,
+      28,
+      24
+    ],
+    "target": 22
+  },
+  {
+    "loss": -0.031402587890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (93-(31-30)). It uses each given number exactly once and evaluates to 90.</think>\n<answer>(93-(31-30))</answer>",
+      "<think>Use the expression (93-(31-30)). It uses each given number exactly once and evaluates to 90.</think>\n<answer>(93-(31-30))</answer>"
+    ],
+    "step": 218,
+    "epoch": 1,
+    "numbers": [
+      31,
+      30,
+      93
+    ],
+    "target": 90
+  },
+  {
+    "loss": -0.00543975830078125,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((99+79)-42). It uses each given number exactly once and evaluates to 62.</think>\n<answer>((99+79)-42)</answer>",
+      "<think>Use the expression (42-(99-79)). It uses each given number exactly once and evaluates to 62.</think>\n<answer>(42-(99-79))</answer>"
+    ],
+    "step": 219,
+    "epoch": 1,
+    "numbers": [
+      99,
+      79,
+      42
+    ],
+    "target": 62
+  },
+  {
+    "loss": -0.0040283203125,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((51-60)+(78+76)). It uses each given number exactly once and evaluates to 42.</think>\n<answer>((51-60)+(78+76))</answer>",
+      "<think>Use the expression (((78-76)*51)-60). It uses each given number exactly once and evaluates to 42.</think>\n<answer>(((78-76)*51)-60)</answer>"
+    ],
+    "step": 220,
+    "epoch": 1,
+    "numbers": [
+      78,
+      76,
+      51,
+      60
+    ],
+    "target": 42
+  },
+  {
+    "loss": -0.00152587890625,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.31249999999999994,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (76-(39+24)). It uses each given number exactly once and evaluates to 13.</think>\n<answer>(76-(39+24))</answer>",
+      "<think>Use the expression ((39+24)-76). It uses each given number exactly once and evaluates to 13.</think>\n<answer>((39+24)-76)</answer>"
+    ],
+    "step": 221,
+    "epoch": 1,
+    "numbers": [
+      39,
+      24,
+      76
+    ],
+    "target": 13
+  },
+  {
+    "loss": -0.0158233642578125,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (37-((39-95)+12)). It uses each given number exactly once and evaluates to 81.</think>\n<answer>(37-((39-95)+12))</answer>",
+      "<think>Use the expression (95-((39*37)/12)). It uses each given number exactly once and evaluates to 81.</think>\n<answer>(95-((39*37)/12))</answer>"
+    ],
+    "step": 222,
+    "epoch": 1,
+    "numbers": [
+      39,
+      95,
+      12,
+      37
+    ],
+    "target": 81
+  },
+  {
+    "loss": -0.1102294921875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((80+25)-(26+56)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((80+25)-(26+56))</answer>",
+      "<think>Use the expression ((80/56)*(26-25)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>((80/56)*(26-25))</answer>"
+    ],
+    "step": 223,
+    "epoch": 1,
+    "numbers": [
+      80,
+      25,
+      56,
+      26
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.057159423828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((27+83)/83). It uses each given number exactly once and evaluates to 28.</think>\n<answer>((27+83)/83)</answer>",
+      "<think>Use the expression ((27+83)-83). It uses each given number exactly once and evaluates to 28.</think>\n<answer>((27+83)-83)</answer>"
+    ],
+    "step": 224,
+    "epoch": 1,
+    "numbers": [
+      27,
+      83,
+      83
+    ],
+    "target": 28
+  },
+  {
+    "loss": -0.115478515625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (59-(10/(23/6))). It uses each given number exactly once and evaluates to 86.</think>\n<answer>(59-(10/(23/6)))</answer>",
+      "<think>Use the expression (6+(23/(59-10))). It uses each given number exactly once and evaluates to 86.</think>\n<answer>(6+(23/(59-10)))</answer>"
+    ],
+    "step": 225,
+    "epoch": 1,
+    "numbers": [
+      23,
+      6,
+      59,
+      10
+    ],
+    "target": 86
+  },
+  {
+    "loss": -0.09454345703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((68+88)/(94/25)). It uses each given number exactly once and evaluates to 87.</think>\n<answer>((68+88)/(94/25))</answer>",
+      "<think>Use the expression ((68-25)+(94/88)). It uses each given number exactly once and evaluates to 87.</think>\n<answer>((68-25)+(94/88))</answer>"
+    ],
+    "step": 226,
+    "epoch": 1,
+    "numbers": [
+      68,
+      25,
+      94,
+      88
+    ],
+    "target": 87
+  },
+  {
+    "loss": -0.291259765625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (60/(80-(69-6))). It uses each given number exactly once and evaluates to 51.</think>\n<answer>(60/(80-(69-6)))</answer>",
+      "<think>Use the expression ((6+80)-(60+69)). It uses each given number exactly once and evaluates to 51.</think>\n<answer>((6+80)-(60+69))</answer>"
+    ],
+    "step": 227,
+    "epoch": 1,
+    "numbers": [
+      60,
+      69,
+      80,
+      6
+    ],
+    "target": 51
+  },
+  {
+    "loss": -0.0471954345703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (15-(66-91)). It uses each given number exactly once and evaluates to 10.</think>\n<answer>(15-(66-91))</answer>",
+      "<think>Use the expression ((66-91)+15). It uses each given number exactly once and evaluates to 10.</think>\n<answer>((66-91)+15)</answer>"
+    ],
+    "step": 228,
+    "epoch": 1,
+    "numbers": [
+      66,
+      91,
+      15
+    ],
+    "target": 10
+  },
+  {
+    "loss": -0.11065673828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((16/(27-19))+60). It uses each given number exactly once and evaluates to 90.</think>\n<answer>((16/(27-19))+60)</answer>",
+      "<think>Use the expression ((16-19)+(27+60)). It uses each given number exactly once and evaluates to 90.</think>\n<answer>((16-19)+(27+60))</answer>"
+    ],
+    "step": 229,
+    "epoch": 1,
+    "numbers": [
+      27,
+      19,
+      16,
+      60
+    ],
+    "target": 90
+  },
+  {
+    "loss": -0.048004150390625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (52-(26+14)). It uses each given number exactly once and evaluates to 16.</think>\n<answer>(52-(26+14))</answer>",
+      "<think>Use the expression (52/(26/14)). It uses each given number exactly once and evaluates to 16.</think>\n<answer>(52/(26/14))</answer>"
+    ],
+    "step": 230,
+    "epoch": 1,
+    "numbers": [
+      26,
+      14,
+      52
+    ],
+    "target": 16
+  },
+  {
+    "loss": 0.00140380859375,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (26-(97-32)). It uses each given number exactly once and evaluates to 39.</think>\n<answer>(26-(97-32))</answer>",
+      "<think>Use the expression ((97-32)-26). It uses each given number exactly once and evaluates to 39.</think>\n<answer>((97-32)-26)</answer>"
+    ],
+    "step": 231,
+    "epoch": 1,
+    "numbers": [
+      97,
+      32,
+      26
+    ],
+    "target": 39
+  },
+  {
+    "loss": -0.12457275390625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((23-15)+(57+5)). It uses each given number exactly once and evaluates to 37.</think>\n<answer>((23-15)+(57+5))</answer>",
+      "<think>Use the expression ((23-15)+(57/5)). It uses each given number exactly once and evaluates to 37.</think>\n<answer>((23-15)+(57/5))</answer>"
+    ],
+    "step": 232,
+    "epoch": 1,
+    "numbers": [
+      57,
+      5,
+      15,
+      23
+    ],
+    "target": 37
+  },
+  {
+    "loss": -0.01023101806640625,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5875,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((45+63)-58). It uses each given number exactly once and evaluates to 50.</think>\n<answer>((45+63)-58)</answer>",
+      "<think>Use the expression ((45+63)-58). It uses each given number exactly once and evaluates to 50.</think>\n<answer>((45+63)-58)</answer>"
+    ],
+    "step": 233,
+    "epoch": 1,
+    "numbers": [
+      45,
+      63,
+      58
+    ],
+    "target": 50
+  },
+  {
+    "loss": -0.111572265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (9+((25-76)+19)). It uses each given number exactly once and evaluates to 61.</think>\n<answer>(9+((25-76)+19))</answer>",
+      "<think>Use the expression ((25-76)+(9*19)). It uses each given number exactly once and evaluates to 61.</think>\n<answer>((25-76)+(9*19))</answer>"
+    ],
+    "step": 234,
+    "epoch": 1,
+    "numbers": [
+      25,
+      76,
+      9,
+      19
+    ],
+    "target": 61
+  },
+  {
+    "loss": -0.079345703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((8-80)+20). It uses each given number exactly once and evaluates to 10.</think>\n<answer>((8-80)+20)</answer>",
+      "<think>Use the expression ((8+80)-20). It uses each given number exactly once and evaluates to 10.</think>\n<answer>((8+80)-20)</answer>"
+    ],
+    "step": 235,
+    "epoch": 1,
+    "numbers": [
+      8,
+      80,
+      20
+    ],
+    "target": 10
+  },
+  {
+    "loss": -0.00554656982421875,
+    "avg_reward": 0.085625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (84/(94-31)). It uses each given number exactly once and evaluates to 41.</think>\n<answer>(84/(94-31))</answer>",
+      "<think>Use the expression ((84-94)+31). It uses each given number exactly once and evaluates to 41.</think>\n<answer>((84-94)+31)</answer>"
+    ],
+    "step": 236,
+    "epoch": 1,
+    "numbers": [
+      84,
+      94,
+      31
+    ],
+    "target": 41
+  },
+  {
+    "loss": -0.103271484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((92-51)+61)-78). It uses each given number exactly once and evaluates to 58.</think>\n<answer>(((92-51)+61)-78)</answer>",
+      "<think>Use the expression ((51-61)+(92+78)). It uses each given number exactly once and evaluates to 58.</think>\n<answer>((51-61)+(92+78))</answer>"
+    ],
+    "step": 237,
+    "epoch": 1,
+    "numbers": [
+      92,
+      51,
+      61,
+      78
+    ],
+    "target": 58
+  },
+  {
+    "loss": 0.018096923828125,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (41-(50/4)). It uses each given number exactly once and evaluates to 36.</think>\n<answer>(41-(50/4))</answer>",
+      "<think>Use the expression ((41+50)/4). It uses each given number exactly once and evaluates to 36.</think>\n<answer>((41+50)/4)</answer>"
+    ],
+    "step": 238,
+    "epoch": 1,
+    "numbers": [
+      41,
+      50,
+      4
+    ],
+    "target": 36
+  },
+  {
+    "loss": -0.0140380859375,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (1+((47-46)+24)). It uses each given number exactly once and evaluates to 68.</think>\n<answer>(1+((47-46)+24))</answer>",
+      "<think>Use the expression (24-(1-(47-46))). It uses each given number exactly once and evaluates to 68.</think>\n<answer>(24-(1-(47-46)))</answer>"
+    ],
+    "step": 239,
+    "epoch": 1,
+    "numbers": [
+      47,
+      46,
+      24,
+      1
+    ],
+    "target": 68
+  },
+  {
+    "loss": -0.156005859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (64-(6/(80/6))). It uses each given number exactly once and evaluates to 61.</think>\n<answer>(64-(6/(80/6)))</answer>",
+      "<think>Use the expression ((6*(80/6))-(35-64)). It uses each given number exactly once and evaluates to 61.</think>\n<answer>((6*(80/6))-(35-64))</answer>"
+    ],
+    "step": 240,
+    "epoch": 1,
+    "numbers": [
+      80,
+      6,
+      64,
+      35
+    ],
+    "target": 61
+  },
+  {
+    "loss": -0.00289154052734375,
+    "avg_reward": 0.21625000000000003,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (89-(35-30)). It uses each given number exactly once and evaluates to 94.</think>\n<answer>(89-(35-30))</answer>",
+      "<think>Use the expression ((35+30)-89). It uses each given number exactly once and evaluates to 94.</think>\n<answer>((35+30)-89)</answer>"
+    ],
+    "step": 241,
+    "epoch": 1,
+    "numbers": [
+      35,
+      30,
+      89
+    ],
+    "target": 94
+  },
+  {
+    "loss": -0.0255584716796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (23-(9-28)). It uses each given number exactly once and evaluates to 45.</think>\n<answer>(23-(9-28))</answer>",
+      "<think>Use the expression ((9+28)-23). It uses each given number exactly once and evaluates to 45.</think>\n<answer>((9+28)-23)</answer>"
+    ],
+    "step": 242,
+    "epoch": 1,
+    "numbers": [
+      9,
+      28,
+      23
+    ],
+    "target": 45
+  },
+  {
+    "loss": -0.12298583984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (31-((32+39)/5)). It uses each given number exactly once and evaluates to 18.</think>\n<answer>(31-((32+39)/5))</answer>",
+      "<think>Use the expression ((31+(5+39))/32). It uses each given number exactly once and evaluates to 18.</think>\n<answer>((31+(5+39))/32)</answer>"
+    ],
+    "step": 243,
+    "epoch": 1,
+    "numbers": [
+      5,
+      31,
+      32,
+      39
+    ],
+    "target": 18
+  },
+  {
+    "loss": -0.00099945068359375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.17500000000000002,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (84/(77-57)). It uses each given number exactly once and evaluates to 64.</think>\n<answer>(84/(77-57))</answer>",
+      "<think>Use the expression ((77-57)+84). It uses each given number exactly once and evaluates to 64.</think>\n<answer>((77-57)+84)</answer>"
+    ],
+    "step": 244,
+    "epoch": 1,
+    "numbers": [
+      77,
+      57,
+      84
+    ],
+    "target": 64
+  },
+  {
+    "loss": -0.0526885986328125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (84/(7-65)). It uses each given number exactly once and evaluates to 77.</think>\n<answer>(84/(7-65))</answer>",
+      "<think>Use the expression ((84+7)-65). It uses each given number exactly once and evaluates to 77.</think>\n<answer>((84+7)-65)</answer>"
+    ],
+    "step": 245,
+    "epoch": 1,
+    "numbers": [
+      84,
+      7,
+      65
+    ],
+    "target": 77
+  },
+  {
+    "loss": -0.12054443359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (81-((28-35)+33)). It uses each given number exactly once and evaluates to 41.</think>\n<answer>(81-((28-35)+33))</answer>",
+      "<think>Use the expression (35-(81/(28-33))). It uses each given number exactly once and evaluates to 41.</think>\n<answer>(35-(81/(28-33)))</answer>"
+    ],
+    "step": 246,
+    "epoch": 1,
+    "numbers": [
+      28,
+      35,
+      81,
+      33
+    ],
+    "target": 41
+  },
+  {
+    "loss": -0.00079345703125,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.44999999999999996,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (63-(36/88)). It uses each given number exactly once and evaluates to 61.</think>\n<answer>(63-(36/88))</answer>",
+      "<think>Use the expression ((63+36)-88). It uses each given number exactly once and evaluates to 61.</think>\n<answer>((63+36)-88)</answer>"
+    ],
+    "step": 247,
+    "epoch": 1,
+    "numbers": [
+      63,
+      36,
+      88
+    ],
+    "target": 61
+  },
+  {
+    "loss": 0.011383056640625,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (2-(4-9)). It uses each given number exactly once and evaluates to 10.</think>\n<answer>(2-(4-9))</answer>",
+      "<think>Use the expression ((4+9)-2). It uses each given number exactly once and evaluates to 10.</think>\n<answer>((4+9)-2)</answer>"
+    ],
+    "step": 248,
+    "epoch": 1,
+    "numbers": [
+      4,
+      9,
+      2
+    ],
+    "target": 10
+  },
+  {
+    "loss": -0.1097412109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((58-(71-15))-13). It uses each given number exactly once and evaluates to 66.</think>\n<answer>((58-(71-15))-13)</answer>",
+      "<think>Use the expression (58-(71/(15-13))). It uses each given number exactly once and evaluates to 66.</think>\n<answer>(58-(71/(15-13)))</answer>"
+    ],
+    "step": 249,
+    "epoch": 1,
+    "numbers": [
+      71,
+      15,
+      13,
+      58
+    ],
+    "target": 66
+  },
+  {
+    "loss": -0.00069427490234375,
+    "avg_reward": 0.21624999999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.17500000000000002,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((61/61)+71). It uses each given number exactly once and evaluates to 70.</think>\n<answer>((61/61)+71)</answer>",
+      "<think>Use the expression (71-(61/61)). It uses each given number exactly once and evaluates to 70.</think>\n<answer>(71-(61/61))</answer>"
+    ],
+    "step": 250,
+    "epoch": 1,
+    "numbers": [
+      61,
+      61,
+      71
+    ],
+    "target": 70
+  },
+  {
+    "loss": -0.0989990234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((87+55)-(91-98)). It uses each given number exactly once and evaluates to 96.</think>\n<answer>((87+55)-(91-98))</answer>",
+      "<think>Use the expression ((98-91)+(87-55)). It uses each given number exactly once and evaluates to 96.</think>\n<answer>((98-91)+(87-55))</answer>"
+    ],
+    "step": 251,
+    "epoch": 1,
+    "numbers": [
+      87,
+      55,
+      98,
+      91
+    ],
+    "target": 96
+  },
+  {
+    "loss": -0.14404296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((1*(85-83))+94). It uses each given number exactly once and evaluates to 48.</think>\n<answer>((1*(85-83))+94)</answer>",
+      "<think>Use the expression (1*((94-85)*83)). It uses each given number exactly once and evaluates to 48.</think>\n<answer>(1*((94-85)*83))</answer>"
+    ],
+    "step": 252,
+    "epoch": 1,
+    "numbers": [
+      85,
+      1,
+      94,
+      83
+    ],
+    "target": 48
+  },
+  {
+    "loss": 0.013759613037109375,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((7+43)-19). It uses each given number exactly once and evaluates to 17.</think>\n<answer>((7+43)-19)</answer>",
+      "<think>Use the expression ((7+43)-19). It uses each given number exactly once and evaluates to 17.</think>\n<answer>((7+43)-19)</answer>"
+    ],
+    "step": 253,
+    "epoch": 1,
+    "numbers": [
+      7,
+      43,
+      19
+    ],
+    "target": 17
+  },
+  {
+    "loss": -0.115234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((60/(2-64))+65). It uses each given number exactly once and evaluates to 71.</think>\n<answer>((60/(2-64))+65)</answer>",
+      "<think>Use the expression ((60+65)-(2*64)). It uses each given number exactly once and evaluates to 71.</think>\n<answer>((60+65)-(2*64))</answer>"
+    ],
+    "step": 254,
+    "epoch": 1,
+    "numbers": [
+      60,
+      2,
+      65,
+      64
+    ],
+    "target": 71
+  },
+  {
+    "loss": -0.0368194580078125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((24+98)-19). It uses each given number exactly once and evaluates to 93.</think>\n<answer>((24+98)-19)</answer>",
+      "<think>Use the expression ((24+98)-19). It uses each given number exactly once and evaluates to 93.</think>\n<answer>((24+98)-19)</answer>"
+    ],
+    "step": 255,
+    "epoch": 1,
+    "numbers": [
+      24,
+      98,
+      19
+    ],
+    "target": 93
+  },
+  {
+    "loss": -0.077117919921875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (3*(54-14)). It uses each given number exactly once and evaluates to 32.</think>\n<answer>(3*(54-14))</answer>",
+      "<think>Use the expression (3-(54-14)). It uses each given number exactly once and evaluates to 32.</think>\n<answer>(3-(54-14))</answer>"
+    ],
+    "step": 256,
+    "epoch": 1,
+    "numbers": [
+      54,
+      14,
+      3
+    ],
+    "target": 32
+  },
+  {
+    "loss": -0.0069427490234375,
+    "avg_reward": 0.21625000000000003,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (18-(89-71)). It uses each given number exactly once and evaluates to 36.</think>\n<answer>(18-(89-71))</answer>",
+      "<think>Use the expression (89-(71/18)). It uses each given number exactly once and evaluates to 36.</think>\n<answer>(89-(71/18))</answer>"
+    ],
+    "step": 257,
+    "epoch": 1,
+    "numbers": [
+      89,
+      71,
+      18
+    ],
+    "target": 36
+  },
+  {
+    "loss": -0.05181884765625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((6+27)-36). It uses each given number exactly once and evaluates to 15.</think>\n<answer>((6+27)-36)</answer>",
+      "<think>Use the expression ((6+27)-36). It uses each given number exactly once and evaluates to 15.</think>\n<answer>((6+27)-36)</answer>"
+    ],
+    "step": 258,
+    "epoch": 1,
+    "numbers": [
+      6,
+      27,
+      36
+    ],
+    "target": 15
+  },
+  {
+    "loss": -0.01108551025390625,
+    "avg_reward": 0.608125,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.5875,
+    "solved": 5,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (99/(34-76)). It uses each given number exactly once and evaluates to 11.</think>\n<answer>(99/(34-76))</answer>",
+      "<think>Use the expression ((34+76)-99). It uses each given number exactly once and evaluates to 11.</think>\n<answer>((34+76)-99)</answer>"
+    ],
+    "step": 259,
+    "epoch": 1,
+    "numbers": [
+      34,
+      76,
+      99
+    ],
+    "target": 11
+  },
+  {
+    "loss": -0.0684051513671875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((14-32)+2). It uses each given number exactly once and evaluates to 20.</think>\n<answer>((14-32)+2)</answer>",
+      "<think>Use the expression (2*(14+32)). It uses each given number exactly once and evaluates to 20.</think>\n<answer>(2*(14+32))</answer>"
+    ],
+    "step": 260,
+    "epoch": 1,
+    "numbers": [
+      14,
+      32,
+      2
+    ],
+    "target": 20
+  },
+  {
+    "loss": -0.051055908203125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (90-(56-83)). It uses each given number exactly once and evaluates to 63.</think>\n<answer>(90-(56-83))</answer>",
+      "<think>Use the expression ((56+83)-90). It uses each given number exactly once and evaluates to 63.</think>\n<answer>((56+83)-90)</answer>"
+    ],
+    "step": 261,
+    "epoch": 1,
+    "numbers": [
+      56,
+      83,
+      90
+    ],
+    "target": 63
+  },
+  {
+    "loss": -0.15484619140625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((38-2)+(73/9)). It uses each given number exactly once and evaluates to 17.</think>\n<answer>((38-2)+(73/9))</answer>",
+      "<think>Use the expression ((9*73)-(2+38)). It uses each given number exactly once and evaluates to 17.</think>\n<answer>((9*73)-(2+38))</answer>"
+    ],
+    "step": 262,
+    "epoch": 1,
+    "numbers": [
+      9,
+      73,
+      38,
+      2
+    ],
+    "target": 17
+  },
+  {
+    "loss": -0.11431884765625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((67-(56-14))+62). It uses each given number exactly once and evaluates to 75.</think>\n<answer>((67-(56-14))+62)</answer>",
+      "<think>Use the expression ((62-67)+(56/14)). It uses each given number exactly once and evaluates to 75.</think>\n<answer>((62-67)+(56/14))</answer>"
+    ],
+    "step": 263,
+    "epoch": 1,
+    "numbers": [
+      56,
+      14,
+      62,
+      67
+    ],
+    "target": 75
+  },
+  {
+    "loss": 0.0025634765625,
+    "avg_reward": 0.4775,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.45,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((86+80)/40). It uses each given number exactly once and evaluates to 84.</think>\n<answer>((86+80)/40)</answer>",
+      "<think>Use the expression (86-(80/40)). It uses each given number exactly once and evaluates to 84.</think>\n<answer>(86-(80/40))</answer>"
+    ],
+    "step": 264,
+    "epoch": 1,
+    "numbers": [
+      86,
+      80,
+      40
+    ],
+    "target": 84
+  },
+  {
+    "loss": -0.1314697265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (((16-26)+73). The expression uses each given number exactly once and evaluates to 72.</think>\n<answer>(((16-26)+73)</answer>",
+      "<think>Use the expression ((16*(10+26))-73). It uses each given number exactly once and evaluates to 72.</think>\n<answer>((16*(10+26))-73)</answer>"
+    ],
+    "step": 265,
+    "epoch": 1,
+    "numbers": [
+      16,
+      26,
+      73,
+      10
+    ],
+    "target": 72
+  },
+  {
+    "loss": 0.0054168701171875,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((62+48)-45). It uses each given number exactly once and evaluates to 59.</think>\n<answer>((62+48)-45)</answer>",
+      "<think>Use the expression ((62-48)+45). It uses each given number exactly once and evaluates to 59.</think>\n<answer>((62-48)+45)</answer>"
+    ],
+    "step": 266,
+    "epoch": 1,
+    "numbers": [
+      62,
+      48,
+      45
+    ],
+    "target": 59
+  },
+  {
+    "loss": -0.117919921875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((25-60)+(19*80)). It uses each given number exactly once and evaluates to 14.</think>\n<answer>((25-60)+(19*80))</answer>",
+      "<think>Use the expression ((25/(19-60))+80). It uses each given number exactly once and evaluates to 14.</think>\n<answer>((25/(19-60))+80)</answer>"
+    ],
+    "step": 267,
+    "epoch": 1,
+    "numbers": [
+      19,
+      25,
+      80,
+      60
+    ],
+    "target": 14
+  },
+  {
+    "loss": 1.52587890625e-05,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((59+69)-(61-67)). It uses each given number exactly once and evaluates to 57.</think>\n<answer>((59+69)-(61-67))</answer>",
+      "<think>Use the expression (((61-67)+59)-69). It uses each given number exactly once and evaluates to 57.</think>\n<answer>(((61-67)+59)-69)</answer>"
+    ],
+    "step": 268,
+    "epoch": 1,
+    "numbers": [
+      61,
+      67,
+      59,
+      69
+    ],
+    "target": 57
+  },
+  {
+    "loss": 0.0102386474609375,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((33-51)+1). It uses each given number exactly once and evaluates to 18.</think>\n<answer>((33-51)+1)</answer>",
+      "<think>Use the expression ((33-51)+1). It uses each given number exactly once and evaluates to 18.</think>\n<answer>((33-51)+1)</answer>"
+    ],
+    "step": 269,
+    "epoch": 1,
+    "numbers": [
+      33,
+      51,
+      1
+    ],
+    "target": 18
+  },
+  {
+    "loss": -0.14227294921875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((56-7)+(9/56)). It uses each given number exactly once and evaluates to 55.</think>\n<answer>((56-7)+(9/56))</answer>",
+      "<think>Use the expression ((56-56)+(7+9)). It uses each given number exactly once and evaluates to 55.</think>\n<answer>((56-56)+(7+9))</answer>"
+    ],
+    "step": 270,
+    "epoch": 1,
+    "numbers": [
+      56,
+      7,
+      9,
+      56
+    ],
+    "target": 55
+  },
+  {
+    "loss": -0.0595855712890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((29+5)-41). It uses each given number exactly once and evaluates to 14.</think>\n<answer>((29+5)-41)</answer>",
+      "<think>Use the expression (41-(29+5)). It uses each given number exactly once and evaluates to 14.</think>\n<answer>(41-(29+5))</answer>"
+    ],
+    "step": 271,
+    "epoch": 1,
+    "numbers": [
+      29,
+      5,
+      41
+    ],
+    "target": 14
+  },
+  {
+    "loss": -0.14361572265625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((27-21)*(44/47)). It uses each given number exactly once and evaluates to 12.</think>\n<answer>((27-21)*(44/47))</answer>",
+      "<think>Use the expression ((44+47)-(27-21)). It uses each given number exactly once and evaluates to 12.</think>\n<answer>((44+47)-(27-21))</answer>"
+    ],
+    "step": 272,
+    "epoch": 1,
+    "numbers": [
+      44,
+      21,
+      47,
+      27
+    ],
+    "target": 12
+  },
+  {
+    "loss": -0.11614990234375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (37+((36-64)+94)). It uses each given number exactly once and evaluates to 85.</think>\n<answer>(37+((36-64)+94))</answer>",
+      "<think>Use the expression ((36-64)+(37+94)). It uses each given number exactly once and evaluates to 85.</think>\n<answer>((36-64)+(37+94))</answer>"
+    ],
+    "step": 273,
+    "epoch": 1,
+    "numbers": [
+      36,
+      64,
+      94,
+      37
+    ],
+    "target": 85
+  },
+  {
+    "loss": -0.1170654296875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((97/(60/3))-59). It uses each given number exactly once and evaluates to 72.</think>\n<answer>((97/(60/3))-59)</answer>",
+      "<think>Use the expression (((60*59)/3)-97). It uses each given number exactly once and evaluates to 72.</think>\n<answer>(((60*59)/3)-97)</answer>"
+    ],
+    "step": 274,
+    "epoch": 1,
+    "numbers": [
+      60,
+      3,
+      59,
+      97
+    ],
+    "target": 72
+  },
+  {
+    "loss": -0.00335693359375,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((40+86)/14). It uses each given number exactly once and evaluates to 60.</think>\n<answer>((40+86)/14)</answer>",
+      "<think>Use the expression ((40+86)-14). It uses each given number exactly once and evaluates to 60.</think>\n<answer>((40+86)-14)</answer>"
+    ],
+    "step": 275,
+    "epoch": 1,
+    "numbers": [
+      40,
+      86,
+      14
+    ],
+    "target": 60
+  },
+  {
+    "loss": -0.02142333984375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (57-(19-94)). It uses each given number exactly once and evaluates to 97.</think>\n<answer>(57-(19-94))</answer>",
+      "<think>Use the expression ((19+94)-57). It uses each given number exactly once and evaluates to 97.</think>\n<answer>((19+94)-57)</answer>"
+    ],
+    "step": 276,
+    "epoch": 1,
+    "numbers": [
+      19,
+      94,
+      57
+    ],
+    "target": 97
+  },
+  {
+    "loss": -0.005615234375,
+    "avg_reward": 0.21625,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.175,
+    "solved": 2,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((43/7)+18). It uses each given number exactly once and evaluates to 54.</think>\n<answer>((43/7)+18)</answer>",
+      "<think>Use the expression ((43-7)+18). It uses each given number exactly once and evaluates to 54.</think>\n<answer>((43-7)+18)</answer>"
+    ],
+    "step": 277,
+    "epoch": 1,
+    "numbers": [
+      7,
+      43,
+      18
+    ],
+    "target": 54
+  },
+  {
+    "loss": -0.150146484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (18-((20/2)+26)). It uses each given number exactly once and evaluates to 26.</think>\n<answer>(18-((20/2)+26))</answer>",
+      "<think>Use the expression ((2*(20+2))/18). It uses each given number exactly once and evaluates to 26.</think>\n<answer>((2*(20+2))/18)</answer>"
+    ],
+    "step": 278,
+    "epoch": 1,
+    "numbers": [
+      20,
+      2,
+      18,
+      26
+    ],
+    "target": 26
+  },
+  {
+    "loss": -0.1142578125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (67-((41/55)*23)). It uses each given number exactly once and evaluates to 58.</think>\n<answer>(67-((41/55)*23))</answer>",
+      "<think>Use the expression (((41-23)+55)-67). It uses each given number exactly once and evaluates to 58.</think>\n<answer>(((41-23)+55)-67)</answer>"
+    ],
+    "step": 279,
+    "epoch": 1,
+    "numbers": [
+      41,
+      55,
+      67,
+      23
+    ],
+    "target": 58
+  },
+  {
+    "loss": -0.00368499755859375,
+    "avg_reward": 0.08562499999999998,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((94+88)-57). It uses each given number exactly once and evaluates to 63.</think>\n<answer>((94+88)-57)</answer>",
+      "<think>Use the expression (88/(94-57)). It uses each given number exactly once and evaluates to 63.</think>\n<answer>(88/(94-57))</answer>"
+    ],
+    "step": 280,
+    "epoch": 1,
+    "numbers": [
+      94,
+      88,
+      57
+    ],
+    "target": 63
+  },
+  {
+    "loss": -0.1456298828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((81-(79/79))-71). It uses each given number exactly once and evaluates to 87.</think>\n<answer>((81-(79/79))-71)</answer>",
+      "<think>Use the expression ((81-(79+79))+71). It uses each given number exactly once and evaluates to 87.</think>\n<answer>((81-(79+79))+71)</answer>"
+    ],
+    "step": 281,
+    "epoch": 1,
+    "numbers": [
+      79,
+      79,
+      81,
+      71
+    ],
+    "target": 87
+  },
+  {
+    "loss": 0.0177154541015625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (91/(3+37)). It uses each given number exactly once and evaluates to 51.</think>\n<answer>(91/(3+37))</answer>",
+      "<think>Use the expression ((3+91)-37). It uses each given number exactly once and evaluates to 51.</think>\n<answer>((3+91)-37)</answer>"
+    ],
+    "step": 282,
+    "epoch": 1,
+    "numbers": [
+      3,
+      91,
+      37
+    ],
+    "target": 51
+  },
+  {
+    "loss": -0.11871337890625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((66-12)/(53/55)). It uses each given number exactly once and evaluates to 30.</think>\n<answer>((66-12)/(53/55))</answer>",
+      "<think>Use the expression ((53-66)+(55+12)). It uses each given number exactly once and evaluates to 30.</think>\n<answer>((53-66)+(55+12))</answer>"
+    ],
+    "step": 283,
+    "epoch": 1,
+    "numbers": [
+      53,
+      66,
+      55,
+      12
+    ],
+    "target": 30
+  },
+  {
+    "loss": -0.042144775390625,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((27+38)-4). It uses each given number exactly once and evaluates to 44.</think>\n<answer>((27+38)-4)</answer>",
+      "<think>Use the expression ((27+38)-4). It uses each given number exactly once and evaluates to 44.</think>\n<answer>((27+38)-4)</answer>"
+    ],
+    "step": 284,
+    "epoch": 1,
+    "numbers": [
+      27,
+      38,
+      4
+    ],
+    "target": 44
+  },
+  {
+    "loss": -0.0429534912109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((21+63)-90). It uses each given number exactly once and evaluates to 87.</think>\n<answer>((21+63)-90)</answer>",
+      "<think>Use the expression ((21-63)+90). It uses each given number exactly once and evaluates to 87.</think>\n<answer>((21-63)+90)</answer>"
+    ],
+    "step": 285,
+    "epoch": 1,
+    "numbers": [
+      21,
+      63,
+      90
+    ],
+    "target": 87
+  },
+  {
+    "loss": -0.0055694580078125,
+    "avg_reward": 0.08562499999999997,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.03750000000000002,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((33*(57-4))-67). It uses each given number exactly once and evaluates to 92.</think>\n<answer>((33*(57-4))-67)</answer>",
+      "<think>Use the expression (4*((33+57)-67)). It uses each given number exactly once and evaluates to 92.</think>\n<answer>(4*((33+57)-67))</answer>"
+    ],
+    "step": 286,
+    "epoch": 1,
+    "numbers": [
+      33,
+      4,
+      57,
+      67
+    ],
+    "target": 92
+  },
+  {
+    "loss": -0.138031005859375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((94/69)*(98-94)). It uses each given number exactly once and evaluates to 36.</think>\n<answer>((94/69)*(98-94))</answer>",
+      "<think>Use the expression (69-(94/(98-94))). It uses each given number exactly once and evaluates to 36.</think>\n<answer>(69-(94/(98-94)))</answer>"
+    ],
+    "step": 287,
+    "epoch": 1,
+    "numbers": [
+      98,
+      94,
+      2,
+      69
+    ],
+    "target": 36
+  },
+  {
+    "loss": -0.10125732421875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (39-((67-79)+56)). It uses each given number exactly once and evaluates to 77.</think>\n<answer>(39-((67-79)+56))</answer>",
+      "<think>Use the expression ((79-56)*(67/39)). It uses each given number exactly once and evaluates to 77.</think>\n<answer>((79-56)*(67/39))</answer>"
+    ],
+    "step": 288,
+    "epoch": 1,
+    "numbers": [
+      67,
+      79,
+      39,
+      56
+    ],
+    "target": 77
+  },
+  {
+    "loss": -0.0413818359375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((98-6)-82). It uses each given number exactly once and evaluates to 30.</think>\n<answer>((98-6)-82)</answer>",
+      "<think>Use the expression (82-(98-6)). It uses each given number exactly once and evaluates to 30.</think>\n<answer>(82-(98-6))</answer>"
+    ],
+    "step": 289,
+    "epoch": 1,
+    "numbers": [
+      98,
+      6,
+      82
+    ],
+    "target": 30
+  },
+  {
+    "loss": -0.0039215087890625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (83-((10/15)*40)). It uses each given number exactly once and evaluates to 98.</think>\n<answer>(83-((10/15)*40))</answer>",
+      "<think>Use the expression ((15-40)+(10+83)). It uses each given number exactly once and evaluates to 98.</think>\n<answer>((15-40)+(10+83))</answer>"
+    ],
+    "step": 290,
+    "epoch": 1,
+    "numbers": [
+      10,
+      15,
+      40,
+      83
+    ],
+    "target": 98
+  },
+  {
+    "loss": -0.046722412109375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (77/(31/11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(77/(31/11))</answer>",
+      "<think>Use the expression (77/(31-11)). It uses each given number exactly once and evaluates to 24.</think>\n<answer>(77/(31-11))</answer>"
+    ],
+    "step": 291,
+    "epoch": 1,
+    "numbers": [
+      31,
+      11,
+      77
+    ],
+    "target": 24
+  },
+  {
+    "loss": -0.0011138916015625,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.45,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (91-(71-81)). It uses each given number exactly once and evaluates to 81.</think>\n<answer>(91-(71-81))</answer>",
+      "<think>Use the expression (91-(71-81)). It uses each given number exactly once and evaluates to 81.</think>\n<answer>(91-(71-81))</answer>"
+    ],
+    "step": 292,
+    "epoch": 1,
+    "numbers": [
+      71,
+      81,
+      91
+    ],
+    "target": 81
+  },
+  {
+    "loss": -0.16143798828125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (8*(63/(8/36))). It uses each given number exactly once and evaluates to 61.</think>\n<answer>(8*(63/(8/36)))</answer>",
+      "<think>Use the expression (8+(63/(8-36))). It uses each given number exactly once and evaluates to 61.</think>\n<answer>(8+(63/(8-36)))</answer>"
+    ],
+    "step": 293,
+    "epoch": 1,
+    "numbers": [
+      8,
+      36,
+      88,
+      63
+    ],
+    "target": 61
+  },
+  {
+    "loss": -0.01416015625,
+    "avg_reward": 0.08562499999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.037500000000000006,
+    "solved": 1,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (79-((78/2)+44)). It uses each given number exactly once and evaluates to 42.</think>\n<answer>(79-((78/2)+44))</answer>",
+      "<think>Use the expression ((79-2)/(78/44)). It uses each given number exactly once and evaluates to 42.</think>\n<answer>((79-2)/(78/44))</answer>"
+    ],
+    "step": 294,
+    "epoch": 1,
+    "numbers": [
+      78,
+      44,
+      79,
+      2
+    ],
+    "target": 42
+  },
+  {
+    "loss": -0.0126190185546875,
+    "avg_reward": 0.34687500000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.3125,
+    "solved": 3,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (37+(86-28)). It uses each given number exactly once and evaluates to 77.</think>\n<answer>(37+(86-28))</answer>",
+      "<think>Use the expression ((86+28)-37). It uses each given number exactly once and evaluates to 77.</think>\n<answer>((86+28)-37)</answer>"
+    ],
+    "step": 295,
+    "epoch": 1,
+    "numbers": [
+      86,
+      28,
+      37
+    ],
+    "target": 77
+  },
+  {
+    "loss": -0.16131591796875,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((82/(8/81))-7). It uses each given number exactly once and evaluates to 48.</think>\n<answer>((82/(8/81))-7)</answer>",
+      "<think>Use the expression (7-(81/(8+82))). It uses each given number exactly once and evaluates to 48.</think>\n<answer>(7-(81/(8+82)))</answer>"
+    ],
+    "step": 296,
+    "epoch": 1,
+    "numbers": [
+      81,
+      8,
+      82,
+      7
+    ],
+    "target": 48
+  },
+  {
+    "loss": 0.0010986328125,
+    "avg_reward": 0.47750000000000004,
+    "avg_format": 1.0,
+    "avg_accuracy": 0.45,
+    "solved": 4,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((47+59)-71). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((47+59)-71)</answer>",
+      "<think>Use the expression ((47+59)-71). It uses each given number exactly once and evaluates to 83.</think>\n<answer>((47+59)-71)</answer>"
+    ],
+    "step": 297,
+    "epoch": 1,
+    "numbers": [
+      47,
+      59,
+      71
+    ],
+    "target": 83
+  },
+  {
+    "loss": -0.1182861328125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (63-((2-11)+16)). It uses each given number exactly once and evaluates to 84.</think>\n<answer>(63-((2-11)+16))</answer>",
+      "<think>Use the expression ((11-16)+(2*63)). It uses each given number exactly once and evaluates to 84.</think>\n<answer>((11-16)+(2*63))</answer>"
+    ],
+    "step": 298,
+    "epoch": 1,
+    "numbers": [
+      2,
+      11,
+      63,
+      16
+    ],
+    "target": 84
+  },
+  {
+    "loss": -0.126220703125,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression (78/(2*(13-12))). It uses each given number exactly once and evaluates to 58.</think>\n<answer>(78/(2*(13-12)))</answer>",
+      "<think>Use the expression ((78+13)-(2*12)). It uses each given number exactly once and evaluates to 58.</think>\n<answer>((78+13)-(2*12))</answer>"
+    ],
+    "step": 299,
+    "epoch": 1,
+    "numbers": [
+      78,
+      13,
+      2,
+      12
+    ],
+    "target": 58
+  },
+  {
+    "loss": -0.10540771484375,
+    "avg_reward": -0.04499999999999999,
+    "avg_format": 1.0,
+    "avg_accuracy": -0.09999999999999999,
+    "solved": 0,
+    "num_generations": 8,
+    "samples": [
+      "<think>Use the expression ((22+86)-(52+61)). It uses each given number exactly once and evaluates to 15.</think>\n<answer>((22+86)-(52+61))</answer>",
+      "<think>Use the expression (((22+86)/52)+61). It uses each given number exactly once and evaluates to 15.</think>\n<answer>(((22+86)/52)+61)</answer>"
+    ],
+    "step": 300,
+    "epoch": 1,
+    "numbers": [
+      22,
+      86,
+      52,
+      61
+    ],
+    "target": 15
+  }
+]

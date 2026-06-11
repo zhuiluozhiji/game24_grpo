@@ -1,0 +1,14 @@
+{
+  "base_model": "/data/ysf/models/Qwen2.5-1.5B-Instruct",
+  "init_adapter": "./output/countdown-sft-15b/final_model",
+  "task": "countdown",
+  "train_samples": 300,
+  "epochs": 1,
+  "total_steps": 300,
+  "learning_rate": 8e-07,
+  "num_generations": 8,
+  "max_new_tokens": 96,
+  "training_time_seconds": 7443.864721059799,
+  "final_avg_reward": 0.049050000000000045,
+  "timestamp": "2026-06-11T13:07:37.674541"
+}

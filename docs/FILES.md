@@ -28,14 +28,18 @@
 | --- | --- |
 | `dataset_cache/train.json` | `nlile/24-game` 训练缓存，避免复现时必须联网下载数据。 |
 | `dataset_cache/game24_official.csv` | `test-time-compute/game-of-24` 官方评估集缓存，用于 official OOD 和 ToT hard 900-1000。 |
+| `dataset_cache/countdown_tasks_3to4.parquet` | `Jiayi-Pan/Countdown-Tasks-3to4` 本地缓存，用于远端无法稳定访问 Hugging Face datasets 时复现 Countdown 加分项。 |
 | `results/game24-15b-base/` | 正式 1.5B base greedy / best-of-8 评估结果。 |
 | `results/game24-sft-15b-curriculum/` | 正式 1.5B SFT warm-up 训练摘要、评估结果和 loss 曲线。 |
 | `results/game24-grpo-15b-curriculum/` | 正式 1.5B SFT+GRPO 训练摘要、评估结果和 reward/solve 曲线。 |
 | `results/game24-grpo-15b-lr3e-7-s300/` | GRPO 稳定性对照：3e-7 学习率、300 prompts、g8 的评估结果和曲线。 |
 | `results/game24-grpo-15b-lr3e-7-s600/` | GRPO 稳定性对照：3e-7 学习率、600 prompts、g8 的评估结果和曲线。 |
+| `results/countdown-sft-15b/` | Countdown SFT 训练摘要、greedy/best-of-8 评估结果和 loss 曲线。 |
+| `results/countdown-grpo-15b/` | Countdown SFT+GRPO 训练摘要、greedy/best-of-8 评估结果和 reward/solve 曲线。 |
 | `results/logs/summary_15b_mainline.log` | 实验4主线汇总指标。 |
 | `results/logs/run_15b_mainline.log` | 实验4远端完整运行日志。 |
 | `results/logs/run_grpo_ablation.log` | GRPO 超参稳定性对照远端完整运行日志。 |
+| `results/logs/run_countdown_bonus.log` | Countdown 加分项远端完整运行日志。 |
 | `results/game24-grpo-full/` | 归档 0.5B direct GRPO 预实验结果，不属于正式主线。 |
 | `results/game24-sft-3b-curriculum/` | 归档 3B 课程 SFT 预实验结果，不属于正式主线。 |
 | `results/game24-grpo-3b-curriculum-short/` | 归档 3B SFT 后短程 GRPO 预实验结果，不属于正式主线。 |
