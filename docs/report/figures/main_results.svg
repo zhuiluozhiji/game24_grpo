@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #111827; }
+.title { font-size: 24px; font-weight: 700; }
+.axis { font-size: 13px; fill: #6b7280; }
+.label { font-size: 13px; }
+.small { font-size: 12px; fill: #6b7280; }
+.value { font-size: 12px; font-weight: 600; }
+</style>
+<text class="title" x="490.0" y="38" text-anchor="middle">Main Results: Greedy vs Best-of-16</text>
+<line x1="84" y1="480.0" x2="934" y2="480.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="484.0" text-anchor="end">0%</text>
+<line x1="84" y1="365.7" x2="934" y2="365.7" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="369.7" text-anchor="end">20%</text>
+<line x1="84" y1="251.4" x2="934" y2="251.4" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="255.4" text-anchor="end">40%</text>
+<line x1="84" y1="137.1" x2="934" y2="137.1" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="141.1" text-anchor="end">60%</text>
+<line x1="84" y1="80" x2="84" y2="480" stroke="#9ca3af"/>
+<line x1="84" y1="480" x2="934" y2="480" stroke="#9ca3af"/>
+<text class="axis" x="225.7" y="514" text-anchor="middle">ID</text>
+<rect x="160.7" y="480.0" width="38.0" height="0.0" rx="3" fill="#64748b"/>
+<text class="value" x="179.7" y="474.0" text-anchor="middle">0.0</text>
+<rect x="206.7" y="291.4" width="38.0" height="188.6" rx="3" fill="#2563eb"/>
+<text class="value" x="225.7" y="285.4" text-anchor="middle">33.0</text>
+<rect x="252.7" y="228.6" width="38.0" height="251.4" rx="3" fill="#dc2626"/>
+<text class="value" x="271.7" y="222.6" text-anchor="middle">44.0</text>
+<text class="axis" x="509.0" y="514" text-anchor="middle">Official OOD</text>
+<rect x="444.0" y="468.6" width="38.0" height="11.4" rx="3" fill="#64748b"/>
+<text class="value" x="463.0" y="462.6" text-anchor="middle">2.0</text>
+<rect x="490.0" y="208.6" width="38.0" height="271.4" rx="3" fill="#2563eb"/>
+<text class="value" x="509.0" y="202.6" text-anchor="middle">47.5</text>
+<rect x="536.0" y="105.7" width="38.0" height="374.3" rx="3" fill="#dc2626"/>
+<text class="value" x="555.0" y="99.7" text-anchor="middle">65.5</text>
+<text class="axis" x="792.3" y="514" text-anchor="middle">ToT hard</text>
+<rect x="727.3" y="474.3" width="38.0" height="5.7" rx="3" fill="#64748b"/>
+<text class="value" x="746.3" y="468.3" text-anchor="middle">1.0</text>
+<rect x="773.3" y="268.6" width="38.0" height="211.4" rx="3" fill="#2563eb"/>
+<text class="value" x="792.3" y="262.6" text-anchor="middle">37.0</text>
+<rect x="819.3" y="200.0" width="38.0" height="280.0" rx="3" fill="#dc2626"/>
+<text class="value" x="838.3" y="194.0" text-anchor="middle">49.0</text>
+<rect x="92" y="518" width="14" height="14" fill="#64748b" rx="2"/>
+<text class="label" x="114" y="530">Base greedy</text>
+<rect x="260" y="518" width="14" height="14" fill="#2563eb" rx="2"/>
+<text class="label" x="282" y="530">SFT best-of-16</text>
+<rect x="428" y="518" width="14" height="14" fill="#dc2626" rx="2"/>
+<text class="label" x="450" y="530">SFT+GRPO best-of-16</text>
+</svg>

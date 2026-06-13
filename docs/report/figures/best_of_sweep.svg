@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #111827; }
+.title { font-size: 24px; font-weight: 700; }
+.axis { font-size: 13px; fill: #6b7280; }
+.label { font-size: 13px; }
+.small { font-size: 12px; fill: #6b7280; }
+.value { font-size: 12px; font-weight: 600; }
+</style>
+<text class="title" x="490.0" y="38" text-anchor="middle">Verifier-based Test-time Compute: SFT+GRPO</text>
+<line x1="84" y1="480.0" x2="934" y2="480.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="484.0" text-anchor="end">0%</text>
+<line x1="84" y1="422.9" x2="934" y2="422.9" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="426.9" text-anchor="end">10%</text>
+<line x1="84" y1="365.7" x2="934" y2="365.7" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="369.7" text-anchor="end">20%</text>
+<line x1="84" y1="308.6" x2="934" y2="308.6" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="312.6" text-anchor="end">30%</text>
+<line x1="84" y1="251.4" x2="934" y2="251.4" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="255.4" text-anchor="end">40%</text>
+<line x1="84" y1="194.3" x2="934" y2="194.3" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="198.3" text-anchor="end">50%</text>
+<line x1="84" y1="137.1" x2="934" y2="137.1" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="141.1" text-anchor="end">60%</text>
+<line x1="84" y1="80.0" x2="934" y2="80.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="84.0" text-anchor="end">70%</text>
+<line x1="84" y1="80" x2="84" y2="480" stroke="#9ca3af"/>
+<line x1="84" y1="480" x2="934" y2="480" stroke="#9ca3af"/>
+<text class="axis" x="84.0" y="514" text-anchor="middle">greedy</text>
+<text class="axis" x="296.5" y="514" text-anchor="middle">bo1</text>
+<text class="axis" x="509.0" y="514" text-anchor="middle">bo4</text>
+<text class="axis" x="721.5" y="514" text-anchor="middle">bo8</text>
+<text class="axis" x="934.0" y="514" text-anchor="middle">bo16</text>
+<polyline points="84.0,437.1 296.5,454.3 509.0,394.3 721.5,322.9 934.0,228.6" fill="none" stroke="#16a34a" stroke-width="3"/>
+<circle cx="84.0" cy="437.1" r="5" fill="#16a34a"/>
+<circle cx="296.5" cy="454.3" r="5" fill="#16a34a"/>
+<circle cx="509.0" cy="394.3" r="5" fill="#16a34a"/>
+<circle cx="721.5" cy="322.9" r="5" fill="#16a34a"/>
+<circle cx="934.0" cy="228.6" r="5" fill="#16a34a"/>
+<text class="value" x="84.0" y="427.1" text-anchor="middle">7.5</text>
+<text class="value" x="296.5" y="444.3" text-anchor="middle">4.5</text>
+<text class="value" x="509.0" y="384.3" text-anchor="middle">15.0</text>
+<text class="value" x="721.5" y="312.9" text-anchor="middle">27.5</text>
+<text class="value" x="934.0" y="218.6" text-anchor="middle">44.0</text>
+<polyline points="84.0,397.1 296.5,420.0 509.0,334.3 721.5,231.4 934.0,105.7" fill="none" stroke="#2563eb" stroke-width="3"/>
+<circle cx="84.0" cy="397.1" r="5" fill="#2563eb"/>
+<circle cx="296.5" cy="420.0" r="5" fill="#2563eb"/>
+<circle cx="509.0" cy="334.3" r="5" fill="#2563eb"/>
+<circle cx="721.5" cy="231.4" r="5" fill="#2563eb"/>
+<circle cx="934.0" cy="105.7" r="5" fill="#2563eb"/>
+<text class="value" x="84.0" y="387.1" text-anchor="middle">14.5</text>
+<text class="value" x="296.5" y="410.0" text-anchor="middle">10.5</text>
+<text class="value" x="509.0" y="324.3" text-anchor="middle">25.5</text>
+<text class="value" x="721.5" y="221.4" text-anchor="middle">43.5</text>
+<text class="value" x="934.0" y="95.7" text-anchor="middle">65.5</text>
+<polyline points="84.0,411.4 296.5,468.6 509.0,400.0 721.5,297.1 934.0,200.0" fill="none" stroke="#dc2626" stroke-width="3"/>
+<circle cx="84.0" cy="411.4" r="5" fill="#dc2626"/>
+<circle cx="296.5" cy="468.6" r="5" fill="#dc2626"/>
+<circle cx="509.0" cy="400.0" r="5" fill="#dc2626"/>
+<circle cx="721.5" cy="297.1" r="5" fill="#dc2626"/>
+<circle cx="934.0" cy="200.0" r="5" fill="#dc2626"/>
+<text class="value" x="84.0" y="401.4" text-anchor="middle">12.0</text>
+<text class="value" x="296.5" y="458.6" text-anchor="middle">2.0</text>
+<text class="value" x="509.0" y="390.0" text-anchor="middle">14.0</text>
+<text class="value" x="721.5" y="287.1" text-anchor="middle">32.0</text>
+<text class="value" x="934.0" y="190.0" text-anchor="middle">49.0</text>
+<line x1="92" y1="518" x2="112" y2="518" stroke="#16a34a" stroke-width="3"/>
+<circle cx="102" cy="518" r="4" fill="#16a34a"/>
+<text class="label" x="120" y="523">ID</text>
+<line x1="246" y1="518" x2="266" y2="518" stroke="#2563eb" stroke-width="3"/>
+<circle cx="256" cy="518" r="4" fill="#2563eb"/>
+<text class="label" x="274" y="523">Official OOD</text>
+<line x1="400" y1="518" x2="420" y2="518" stroke="#dc2626" stroke-width="3"/>
+<circle cx="410" cy="518" r="4" fill="#dc2626"/>
+<text class="label" x="428" y="523">ToT hard</text>
+</svg>
