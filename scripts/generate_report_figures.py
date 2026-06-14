@@ -140,36 +140,182 @@ def draw_line_chart(title: str, labels: list[str], lines: list[tuple[str, str, l
     write_svg_png(name, svg_root(width, height, "\n".join(body)))
 
 
-def draw_framework() -> None:
-    width, height = 1120, 560
-    boxes = [
-        (70, 115, 190, 90, "Datasets", "24-game / official / Countdown"),
-        (330, 115, 190, 90, "Prompt", "target-aware R1 format"),
-        (590, 115, 190, 90, "SFT Warm-up", "format + expressions + refusal"),
-        (850, 115, 190, 90, "GRPO RLVR", "group rewards from verifier"),
-        (590, 335, 190, 90, "Best-of-N", "sample candidate pool"),
-        (850, 335, 190, 90, "Verifier", "AST check + target value"),
-        (330, 335, 190, 90, "Analysis", "errors / hard split / hallucination"),
-        (70, 335, 190, 90, "Report", "solve rate + limits"),
+def draw_error_breakdown() -> None:
+    width, height = 980, 560
+    area = chart_area(width, height)
+    path = "results/game24-grpo-15b-curriculum/bestof16_eval_200.json"
+    data = read_json(path)
+    groups = [
+        ("ID", "in_distribution"),
+        ("Official OOD", "out_of_distribution"),
+        ("ToT hard", "tot_hard_900_1000"),
     ]
-    body = [f'<text class="title" x="{width/2}" y="46" text-anchor="middle">Overall RLVR Pipeline for Game-of-24</text>']
-    def arrow(x1, y1, x2, y2):
-        return f'''<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="#374151" stroke-width="2" marker-end="url(#arrow)"/>'''
-    body.append('''<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#374151"/></marker></defs>''')
-    for i in range(3):
-        x1 = boxes[i][0] + boxes[i][2]
-        y = boxes[i][1] + boxes[i][3] / 2
-        x2 = boxes[i + 1][0]
-        body.append(arrow(x1 + 12, y, x2 - 12, y))
-    body.append(arrow(945, 205, 945, 335))
-    body.append(arrow(850, 380, 780, 380))
-    body.append(arrow(590, 380, 520, 380))
-    body.append(arrow(330, 380, 260, 380))
-    for x, y, w, h, title, sub in boxes:
-        body.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>')
-        body.append(f'<text class="label" x="{x+w/2}" y="{y+36}" text-anchor="middle" font-weight="700">{esc(title)}</text>')
-        body.append(f'<text class="small" x="{x+w/2}" y="{y+62}" text-anchor="middle">{esc(sub)}</text>')
-    write_svg_png("framework", svg_root(width, height, "\n".join(body)))
+    error_types = [
+        ("wrong_value", "#dc2626"),
+        ("refusal_or_no_answer", "#2563eb"),
+        ("invalid_expression", "#ea580c"),
+        ("number_mismatch", "#7c3aed"),
+        ("format_error", "#64748b"),
+    ]
+    body = [f'<text class="title" x="{width/2}" y="38" text-anchor="middle">Error Breakdown among Failed Cases: SFT+GRPO Best-of-16</text>']
+    body.append(add_axes(area, 100, ticks=(0, 20, 40, 60, 80, 100)))
+    group_w = area["w"] / len(groups)
+    bar_w = 88
+    for gi, (label, split) in enumerate(groups):
+        center = area["x"] + group_w * (gi + 0.5)
+        counts = data[split]["error_counts"]
+        total_errors = sum(counts.values())
+        y_cursor = area["y"] + area["h"]
+        body.append(f'<text class="axis" x="{center:.1f}" y="{area["y"]+area["h"]+34}" text-anchor="middle">{esc(label)}</text>')
+        body.append(f'<text class="small" x="{center:.1f}" y="{area["y"]+area["h"]+54}" text-anchor="middle">errors={total_errors}</text>')
+        for err, color in error_types:
+            value = counts.get(err, 0)
+            if value <= 0:
+                continue
+            share = value / total_errors * 100 if total_errors else 0
+            h = (share / 100) * area["h"]
+            y_cursor -= h
+            x = center - bar_w / 2
+            body.append(f'<rect x="{x:.1f}" y="{y_cursor:.1f}" width="{bar_w}" height="{h:.1f}" fill="{color}"/>')
+            if h >= 18:
+                body.append(f'<text class="value" x="{center:.1f}" y="{y_cursor+h/2+4:.1f}" text-anchor="middle" fill="#ffffff">{share:.0f}%</text>')
+        solved = data[split]["solved"]
+        body.append(f'<text class="value" x="{center:.1f}" y="{y_cursor-8:.1f}" text-anchor="middle">solved={solved}</text>')
+    legend_x, legend_y = area["x"] + 10, height - 48
+    for i, (err, color) in enumerate(error_types):
+        x = legend_x + i * 172
+        body.append(f'<rect x="{x}" y="{legend_y}" width="14" height="14" fill="{color}" rx="2"/>')
+        body.append(f'<text class="small" x="{x+20}" y="{legend_y+12}">{esc(err)}</text>')
+    write_svg_png("error_breakdown", svg_root(width, height, "\n".join(body)))
+
+
+def draw_main_results() -> None:
+    width, height = 1180, 580
+    panel_w = 500
+    area1 = {"x": 80, "y": 100, "w": panel_w, "h": 330}
+    area2 = {"x": 640, "y": 100, "w": panel_w, "h": 330}
+    groups = ["ID", "Official OOD", "ToT hard"]
+    stages = [
+        ("Base", COLORS["base"], "results/game24-15b-base"),
+        ("SFT", COLORS["sft"], "results/game24-sft-15b-curriculum"),
+        ("SFT+GRPO", COLORS["grpo"], "results/game24-grpo-15b-curriculum"),
+    ]
+    body = [f'<text class="title" x="{width/2}" y="38" text-anchor="middle">Main Results under Matched Decoding Settings</text>']
+
+    def panel(area: dict, title: str, filename: str) -> None:
+        body.append(f'<text class="label" x="{area["x"]+area["w"]/2}" y="{area["y"]-28}" text-anchor="middle" font-weight="700">{esc(title)}</text>')
+        body.append(add_axes(area, 50, ticks=(0, 10, 20, 30, 40, 50)))
+        group_w = area["w"] / len(groups)
+        bar_w = min(34, group_w / (len(stages) + 1.0))
+        for gi, group in enumerate(groups):
+            center = area["x"] + group_w * (gi + 0.5)
+            split = ["in_distribution", "out_of_distribution", "tot_hard_900_1000"][gi]
+            body.append(f'<text class="axis" x="{center:.1f}" y="{area["y"]+area["h"]+34}" text-anchor="middle">{esc(group)}</text>')
+            for si, (stage, color, base) in enumerate(stages):
+                value = game24_metric(f"{base}/{filename}", split)
+                x = center - (len(stages) * bar_w) / 2 + si * bar_w + 3
+                y = y_map(value, 50, area)
+                h = area["y"] + area["h"] - y
+                body.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_w-6:.1f}" height="{h:.1f}" rx="3" fill="{color}"/>')
+                if value >= 3:
+                    body.append(f'<text class="value" x="{x+(bar_w-6)/2:.1f}" y="{y-6:.1f}" text-anchor="middle">{value:.1f}</text>')
+
+    panel(area1, "Greedy decoding", "quick_eval_200.json")
+    panel(area2, "Verifier best-of-8", "bestof8_eval_200.json")
+    legend_y = height - 48
+    for i, (stage, color, _base) in enumerate(stages):
+        x = 360 + i * 150
+        body.append(f'<rect x="{x}" y="{legend_y}" width="14" height="14" fill="{color}" rx="2"/>')
+        body.append(f'<text class="label" x="{x+22}" y="{legend_y+12}">{esc(stage)}</text>')
+    write_svg_png("main_results", svg_root(width, height, "\n".join(body)))
+
+
+def draw_difficulty_analysis() -> None:
+    width, height = 1080, 560
+    panel_w = 440
+    area1 = {"x": 90, "y": 100, "w": panel_w, "h": 330}
+    area2 = {"x": 610, "y": 100, "w": panel_w, "h": 330}
+    data = read_json("results/game24-grpo-15b-curriculum/bestof16_eval_200.json")
+    splits = [
+        ("Official OOD", "out_of_distribution", COLORS["sft"]),
+        ("ToT hard", "tot_hard_900_1000", COLORS["grpo"]),
+    ]
+    body = [f'<text class="title" x="{width/2}" y="38" text-anchor="middle">Official Difficulty vs Model Performance</text>']
+
+    def panel(area: dict, title: str, values: list[float], suffix: str, max_value: float = 100) -> None:
+        body.append(f'<text class="label" x="{area["x"]+area["w"]/2}" y="{area["y"]-28}" text-anchor="middle" font-weight="700">{esc(title)}</text>')
+        body.append(add_axes(area, max_value, ticks=(0, 20, 40, 60, 80, 100)))
+        group_w = area["w"] / len(splits)
+        bar_w = 76
+        for i, ((label, _split, color), value) in enumerate(zip(splits, values)):
+            center = area["x"] + group_w * (i + 0.5)
+            y = y_map(value, max_value, area)
+            h = area["y"] + area["h"] - y
+            body.append(f'<rect x="{center-bar_w/2:.1f}" y="{y:.1f}" width="{bar_w}" height="{h:.1f}" rx="4" fill="{color}"/>')
+            body.append(f'<text class="value" x="{center:.1f}" y="{y-8:.1f}" text-anchor="middle">{value:.1f}{suffix}</text>')
+            body.append(f'<text class="axis" x="{center:.1f}" y="{area["y"]+area["h"]+34}" text-anchor="middle">{esc(label)}</text>')
+
+    official_values = [
+        pct(data[split]["difficulty"]["avg_dataset_solved_rate"])
+        for _label, split, _color in splits
+    ]
+    model_values = [
+        pct(data[split]["solve_rate"])
+        for _label, split, _color in splits
+    ]
+    panel(area1, "Official avg solved rate", official_values, "%")
+    panel(area2, "Model solve rate (best-of-16)", model_values, "%")
+
+    rank_y = 488
+    body.append(f'<text class="small" x="{width/2}" y="{rank_y}" text-anchor="middle">Avg rank: Official OOD = 100.5, ToT hard = 950.5. Higher rank indicates harder official benchmark items.</text>')
+    write_svg_png("difficulty_analysis", svg_root(width, height, "\n".join(body)))
+
+
+def draw_case_study_bestof() -> None:
+    width, height = 1120, 560
+    body = [f'<text class="title" x="{width/2}" y="38" text-anchor="middle">Case Study: Candidate Budget Reveals a Correct Expression</text>']
+    body.append('''<defs><marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#374151"/></marker></defs>''')
+    body.append(f'<rect x="54" y="70" width="1012" height="430" rx="18" fill="#f8fafc" stroke="#93c5fd" stroke-width="2" stroke-dasharray="8 8"/>')
+    body.append(f'<path d="M54 70 H490 L445 118 H54 Z" fill="#bfdbfe"/>')
+    body.append(f'<text x="76" y="103" font-size="20" font-weight="700">Verifier-based best-of-N selection</text>')
+
+    body.append(f'<rect x="90" y="150" width="210" height="230" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>')
+    body.append(f'<text class="label" x="195" y="188" text-anchor="middle" font-weight="700">Problem</text>')
+    body.append(f'<text class="small" x="195" y="226" text-anchor="middle">numbers = [2, 3, 6, 10]</text>')
+    body.append(f'<text class="small" x="195" y="254" text-anchor="middle">target = 24</text>')
+    body.append(f'<text class="small" x="195" y="304" text-anchor="middle">Verifier checks:</text>')
+    body.append(f'<text class="small" x="195" y="330" text-anchor="middle">AST + numbers + target</text>')
+
+    rows = [
+        ("Greedy", "(10-((2-3)*6))", "wrong_value", "#ef4444", "×"),
+        ("Best-of-8", "((6-(2-3))*10)", "wrong_value", "#ef4444", "×"),
+        ("Best-of-16", "(10-3*2)*6", "correct", "#16a34a", "✓"),
+    ]
+    x0, y0 = 380, 145
+    body.append(f'<rect x="{x0}" y="{y0}" width="450" height="250" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>')
+    body.append(f'<text class="label" x="{x0+225}" y="{y0+36}" text-anchor="middle" font-weight="700">Candidate outputs from the same model</text>')
+    for i, (mode, expr, verdict, color, mark) in enumerate(rows):
+        y = y0 + 68 + i * 58
+        fill = "#ecfdf5" if verdict == "correct" else "#fff7ed"
+        stroke = "#16a34a" if verdict == "correct" else "#fed7aa"
+        body.append(f'<rect x="{x0+24}" y="{y}" width="402" height="42" rx="8" fill="{fill}" stroke="{stroke}" stroke-width="1.3"/>')
+        body.append(f'<text class="small" x="{x0+44}" y="{y+26}" font-weight="700">{esc(mode)}</text>')
+        body.append(f'<text class="small" x="{x0+142}" y="{y+26}" font-family="Menlo, monospace">{esc(expr)}</text>')
+        body.append(f'<text x="{x0+344}" y="{y+27}" font-size="18" fill="{color}" font-weight="700">{mark}</text>')
+        body.append(f'<text class="small" x="{x0+366}" y="{y+26}" fill="{color}">{esc(verdict)}</text>')
+
+    body.append(f'<line x1="312" y1="265" x2="360" y2="265" stroke="#374151" stroke-width="2.5" marker-end="url(#arrow2)"/>')
+    body.append(f'<line x1="842" y1="265" x2="890" y2="265" stroke="#374151" stroke-width="2.5" marker-end="url(#arrow2)"/>')
+
+    body.append(f'<rect x="905" y="170" width="130" height="170" rx="12" fill="#ecfdf5" stroke="#86efac" stroke-width="1.5"/>')
+    body.append(f'<text class="label" x="970" y="214" text-anchor="middle" font-weight="700">Selected</text>')
+    body.append(f'<text x="970" y="260" text-anchor="middle" font-size="38" fill="#16a34a" font-weight="700">✓</text>')
+    body.append(f'<text class="small" x="970" y="296" text-anchor="middle">best-of-16</text>')
+    body.append(f'<text class="small" x="970" y="320" text-anchor="middle">passes verifier</text>')
+
+    body.append(f'<rect x="245" y="420" width="630" height="48" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>')
+    body.append(f'<text class="label" x="560" y="450" text-anchor="middle">Increasing candidate budget exposes a valid expression; the symbolic verifier extracts it from the sampled pool.</text>')
+    write_svg_png("case_study_bestof", svg_root(width, height, "\n".join(body)))
 
 
 def game24_metric(path: str, split: str, key: str = "solve_rate") -> float:
@@ -177,32 +323,7 @@ def game24_metric(path: str, split: str, key: str = "solve_rate") -> float:
 
 
 def main() -> None:
-    draw_framework()
-
-    groups = ["ID", "Official OOD", "ToT hard"]
-    draw_grouped_bars(
-        "Main Results: Greedy vs Best-of-16",
-        groups,
-        [
-            ("Base greedy", COLORS["base"], [
-                game24_metric("results/game24-15b-base/quick_eval_200.json", "in_distribution"),
-                game24_metric("results/game24-15b-base/quick_eval_200.json", "out_of_distribution"),
-                game24_metric("results/game24-15b-base/quick_eval_200.json", "tot_hard_900_1000"),
-            ]),
-            ("SFT best-of-16", COLORS["sft"], [
-                game24_metric("results/game24-sft-15b-curriculum/bestof16_eval_200.json", "in_distribution"),
-                game24_metric("results/game24-sft-15b-curriculum/bestof16_eval_200.json", "out_of_distribution"),
-                game24_metric("results/game24-sft-15b-curriculum/bestof16_eval_200.json", "tot_hard_900_1000"),
-            ]),
-            ("SFT+GRPO best-of-16", COLORS["grpo"], [
-                game24_metric("results/game24-grpo-15b-curriculum/bestof16_eval_200.json", "in_distribution"),
-                game24_metric("results/game24-grpo-15b-curriculum/bestof16_eval_200.json", "out_of_distribution"),
-                game24_metric("results/game24-grpo-15b-curriculum/bestof16_eval_200.json", "tot_hard_900_1000"),
-            ]),
-        ],
-        "main_results",
-        70,
-    )
+    draw_main_results()
 
     labels = ["greedy", "bo1", "bo4", "bo8", "bo16"]
     paths = [
@@ -279,6 +400,9 @@ def main() -> None:
         "countdown",
         50,
     )
+    draw_error_breakdown()
+    draw_difficulty_analysis()
+    draw_case_study_bestof()
 
 
 if __name__ == "__main__":

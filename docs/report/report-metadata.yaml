@@ -1,0 +1,31 @@
+title: "基于 GRPO 与可验证奖励的 24 点游戏求解"
+author: '黄晗\quad 刘泽晖\quad 王子朔\quad 赵一帆\quad 叶顺凡'
+college: "计算机科学与技术学院"
+major: "计算机科学与技术"
+advisor: "汤斯亮"
+date: "2026 年 6 月 14 日"
+course: "自然语言处理导论"
+report_type: "实验报告"
+header-includes:
+  - \usepackage{calc}
+  - \usepackage{longtable}
+  - \usepackage{xurl}
+  - \usepackage[most]{tcolorbox}
+  - \usepackage{fvextra}
+  - \graphicspath{{./}{../}}
+  - \makeatletter\def\fps@figure{H}\makeatother
+  - \newcounter{none}
+  - \Urlmuskip=0mu plus 2mu
+  - \definecolor{zjucodebg}{HTML}{F7F9FC}
+  - \definecolor{zjucodeframe}{HTML}{D7E1F0}
+  - \definecolor{zjucodebar}{HTML}{3B82F6}
+  - \RecustomVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\small,breaklines=true,breakanywhere=true}
+  - \renewenvironment{Shaded}{\vspace{0.35em}\begin{tcolorbox}[enhanced,breakable,colback=zjucodebg,colframe=zjucodeframe,boxrule=0.45pt,leftrule=2.2pt,arc=1.6mm,left=1.8mm,right=1.8mm,top=1.2mm,bottom=1.2mm]}{\end{tcolorbox}\vspace{0.25em}}
+  - \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+  - \newsavebox{\pandocboundedbox}
+  - \providecommand{\pandocbounded}[1]{#1}
+  - \renewcommand{\pandocbounded}[1]{\sbox{\pandocboundedbox}{#1}\ifdim\wd\pandocboundedbox>\linewidth\resizebox{\linewidth}{!}{#1}\else#1\fi}
+abstract: |
+  本次实验我们面向 24 点游戏构建了一个可验证奖励强化学习（RLVR）实验系统。给定 4 个 1-13 之间的整数，模型需要按照 R1 风格输出一个只使用四则运算和括号的表达式，并且每个输入数字恰好使用一次、结果等于 24。实验以 Qwen2.5-1.5B-Instruct 为主线，采用 SFT warm-up 建立基本表达式生成能力，再使用 GRPO 进行可验证奖励强化学习。
+
+  最终结果显示，SFT+GRPO + verifier best-of-16 在 Official OOD split 上达到 65.5%，在 Tree of Thoughts hard split 900-1000 上达到 49.0%，不可解样本幻觉率为 0.0%。除主任务外，项目还将验证器、prompt 与 reward 扩展为 target-aware 形式，在 Countdown 任意目标数任务上完成加分项验证。

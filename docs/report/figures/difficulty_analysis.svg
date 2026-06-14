@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="560" viewBox="0 0 1080 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #111827; }
+.title { font-size: 24px; font-weight: 700; }
+.axis { font-size: 13px; fill: #6b7280; }
+.label { font-size: 13px; }
+.small { font-size: 12px; fill: #6b7280; }
+.value { font-size: 12px; font-weight: 600; }
+</style>
+<text class="title" x="540.0" y="38" text-anchor="middle">Official Difficulty vs Model Performance</text>
+<text class="label" x="310.0" y="72" text-anchor="middle" font-weight="700">Official avg solved rate</text>
+<line x1="90" y1="430.0" x2="530" y2="430.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="76" y="434.0" text-anchor="end">0%</text>
+<line x1="90" y1="364.0" x2="530" y2="364.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="76" y="368.0" text-anchor="end">20%</text>
+<line x1="90" y1="298.0" x2="530" y2="298.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="76" y="302.0" text-anchor="end">40%</text>
+<line x1="90" y1="232.0" x2="530" y2="232.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="76" y="236.0" text-anchor="end">60%</text>
+<line x1="90" y1="166.0" x2="530" y2="166.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="76" y="170.0" text-anchor="end">80%</text>
+<line x1="90" y1="100.0" x2="530" y2="100.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="76" y="104.0" text-anchor="end">100%</text>
+<line x1="90" y1="100" x2="90" y2="430" stroke="#9ca3af"/>
+<line x1="90" y1="430" x2="530" y2="430" stroke="#9ca3af"/>
+<rect x="162.0" y="110.0" width="76" height="320.0" rx="4" fill="#2563eb"/>
+<text class="value" x="200.0" y="102.0" text-anchor="middle">97.0%</text>
+<text class="axis" x="200.0" y="464" text-anchor="middle">Official OOD</text>
+<rect x="382.0" y="146.6" width="76" height="283.4" rx="4" fill="#dc2626"/>
+<text class="value" x="420.0" y="138.6" text-anchor="middle">85.9%</text>
+<text class="axis" x="420.0" y="464" text-anchor="middle">ToT hard</text>
+<text class="label" x="830.0" y="72" text-anchor="middle" font-weight="700">Model solve rate (best-of-16)</text>
+<line x1="610" y1="430.0" x2="1050" y2="430.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="596" y="434.0" text-anchor="end">0%</text>
+<line x1="610" y1="364.0" x2="1050" y2="364.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="596" y="368.0" text-anchor="end">20%</text>
+<line x1="610" y1="298.0" x2="1050" y2="298.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="596" y="302.0" text-anchor="end">40%</text>
+<line x1="610" y1="232.0" x2="1050" y2="232.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="596" y="236.0" text-anchor="end">60%</text>
+<line x1="610" y1="166.0" x2="1050" y2="166.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="596" y="170.0" text-anchor="end">80%</text>
+<line x1="610" y1="100.0" x2="1050" y2="100.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="596" y="104.0" text-anchor="end">100%</text>
+<line x1="610" y1="100" x2="610" y2="430" stroke="#9ca3af"/>
+<line x1="610" y1="430" x2="1050" y2="430" stroke="#9ca3af"/>
+<rect x="682.0" y="213.8" width="76" height="216.2" rx="4" fill="#2563eb"/>
+<text class="value" x="720.0" y="205.8" text-anchor="middle">65.5%</text>
+<text class="axis" x="720.0" y="464" text-anchor="middle">Official OOD</text>
+<rect x="902.0" y="268.3" width="76" height="161.7" rx="4" fill="#dc2626"/>
+<text class="value" x="940.0" y="260.3" text-anchor="middle">49.0%</text>
+<text class="axis" x="940.0" y="464" text-anchor="middle">ToT hard</text>
+<text class="small" x="540.0" y="488" text-anchor="middle">Avg rank: Official OOD = 100.5, ToT hard = 950.5. Higher rank indicates harder official benchmark items.</text>
+</svg>

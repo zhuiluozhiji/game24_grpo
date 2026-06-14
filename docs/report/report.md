@@ -1,16 +1,10 @@
-# 基于 GRPO 与可验证奖励的 24 点游戏求解实验报告
-
-## 摘要
-
-本项目面向 24 点游戏构建了一个可验证奖励强化学习（RLVR）实验系统。给定 4 个 1-13 之间的整数，模型需要按照 `<think>...</think><answer>...</answer>` 格式输出一个只使用四则运算和括号的表达式，并且每个输入数字恰好使用一次、结果等于 24。实验以 `Qwen2.5-1.5B-Instruct` 为主线，采用 SFT warm-up 建立基本表达式生成能力，再使用 GRPO 进行可验证奖励强化学习。
-
-最终结果显示，`SFT+GRPO + verifier best-of-16` 在 Official OOD split 上达到 **65.5%**，在 Tree of Thoughts hard split 900-1000 上达到 **49.0%**，不可解样本幻觉率为 **0.0%**。除主任务外，项目还将验证器、prompt 与 reward 扩展为 target-aware 形式，在 Countdown 任意目标数任务上完成加分项验证。
-
-## 1. 引言与贡献
+# 引言与贡献
 
 24 点游戏是一个典型的小规模组合推理任务。它既要求模型理解自然语言 prompt，又要求模型完成离散搜索、算术计算和格式约束。更重要的是，答案是否正确可以由程序严格验证，因此它非常适合作为 RLVR 场景：不需要人工偏好标注，也不需要训练额外奖励模型。
 
-本项目的主要贡献如下：
+相关工作为本项目提供了三条技术脉络：DeepSeekMath 提出 GRPO，以组内相对奖励降低策略优化成本[1]；DeepSeek-R1 与 Logic-RL 展示了规则奖励强化学习对推理能力的激励作用[2,7]；Tree of Thoughts 在 24 点任务上验证了多路径搜索的价值[5]，TinyZero 则将类似思想用于 Countdown 等可验证算术任务[6]。本项目在此基础上采用更轻量的 SFT+GRPO 与符号验证器组合，并参考 TRL 和 Open-R1 的开放训练工具链[9-10]。
+
+本次实验我们的主要工作和亮点如下：
 
 1. 构建了 `Qwen2.5-1.5B-Instruct` 的完整训练闭环：base evaluation、SFT warm-up、SFT 后 GRPO continuation。
 2. 将 24 点任务统一建模为 `(numbers, target) -> expression`，使同一套 verifier/reward 可迁移到 Countdown 任意目标数任务。
@@ -18,11 +12,9 @@
 4. 使用 verifier-based test-time compute，将模型输出建模为候选表达式生成，并用程序验证器筛选正确解。
 5. 对结果进行错误类型、hard split 难度和 GRPO 超参稳定性分析，避免只报告单一准确率。
 
-![整体框架](figures/framework.png)
+# 任务定义与挑战分析
 
-## 2. 任务定义与挑战分析
-
-### 2.1 任务定义
+## 任务定义
 
 24 点主任务输入为 4 个整数：
 
@@ -46,23 +38,25 @@ target = 24
 
 对于不可解输入，模型应输出 `NO_SOLUTION`，而不是强行编造表达式。
 
-### 2.2 主要挑战
+## 主要挑战
 
 **组合搜索空间大。** 24 点求解涉及数字排列、运算符选择和括号结构组合。模型需要隐式完成离散搜索，而不是简单记忆答案。
 
 **奖励稀疏。** 只有完整表达式通过验证器时才获得准确率奖励，部分正确的中间步骤通常无法直接得分。
 
-**格式与语义双重约束。** 模型既要遵守 R1 风格输出模板，又要保证 `<answer>` 内表达式真实可执行、可验证。
+**格式与语义双重约束。** 模型既要遵守 DeepSeek-R1 类 `<think>/<answer>` 输出模板[2]，又要保证 `<answer>` 内表达式真实可执行、可验证。
 
 **不可解样本存在幻觉风险。** 大语言模型倾向于生成看似合理的答案。对不可解样本，如果没有单独建模，模型可能始终输出一个错误表达式。
 
 **强化学习训练不稳定。** GRPO 可以提升候选池质量，但也可能扰动 SFT 后的拒答行为，导致 greedy 下 hallucination 上升。
 
-## 3. 问题建模与创新设计
+# 问题建模与创新设计
 
-### 3.1 Target-aware 统一建模
+![方法总图](figures/method_overview.png)
 
-本项目没有将验证器写死为 24，而是将任务统一表示为：
+## Target-aware 统一建模
+
+我们没有将验证器写死为 24，而是将任务统一表示为：
 
 ```text
 (numbers, target) -> expression
@@ -70,33 +64,33 @@ target = 24
 
 24 点是 `target=24` 的特例。Countdown 任务则使用每条样本自己的 target，因此 prompt、reward、verifier 和 evaluation 均可复用。这使系统从固定 24 点求解器扩展为通用的小规模算术目标构造器。
 
-### 3.2 Verifier-based RLVR
+## Verifier-based RLVR
 
 奖励不依赖人工标注或奖励模型，而由程序验证器直接给出。验证器基于 AST 安全解析表达式，过滤非法语法、非法数字使用和错误结果。这样的奖励完全可复现，也避免了自然语言奖励模型在算术任务上的不稳定判断。
 
-### 3.3 不可解样本的 Hallucination 建模
+## 不可解样本的 Hallucination 建模
 
-本项目将不可解样本作为独立 split。若模型在不可解题中输出错误表达式，则记为 hallucination；若输出 `NO_SOLUTION` 或等价拒答，则视为正确拒答。该设计把任务从“只求解可解题”扩展为“求解与可解性判断”的联合问题。
+我们将不可解样本作为独立 split。若模型在不可解题中输出错误表达式，则记为 hallucination；若输出 `NO_SOLUTION` 或等价拒答，则视为正确拒答。该设计把任务从“只求解可解题”扩展为“求解与可解性判断”的联合问题。
 
-### 3.4 Verifier-based Test-time Compute
+## Verifier-based Test-time Compute
 
-单次 greedy 输出无法充分反映模型候选池中的潜在能力。为此，本项目在测试时采样多个候选，并用验证器选择第一个正确表达式。该过程等价于：
+单次 greedy 输出无法充分反映模型候选池中的潜在能力。为此，我们在测试时采样多个候选，并用验证器选择第一个正确表达式。该过程等价于：
 
 ```text
 language model -> candidate pool -> verifier selection
 ```
 
-这与 Tree of Thoughts 和 TinyZero 的思想一致，但实现更轻量：不需要人工打分，也不需要额外搜索模型。
+这与 Tree of Thoughts[5] 和 TinyZero[6] 的思想一致，但实现更轻量：不需要人工打分，也不需要额外搜索模型。
 
-## 4. 方法
+# 方法
 
-### 4.1 Prompt 与输出格式
+## Prompt 与输出格式
 
 训练和评估均使用 R1 风格模板：
 
 ```text
 <think>
-可以写出简短推理过程。
+brief reasoning process
 </think>
 <answer>
 (1+2+3)*4
@@ -105,7 +99,7 @@ language model -> candidate pool -> verifier selection
 
 评估时只验证 `<answer>` 中的表达式。这样既保留 reasoning 格式，又避免将自然语言推理文本纳入算术验证。
 
-### 4.2 安全表达式验证器
+## 安全表达式验证器
 
 验证器执行以下步骤：
 
@@ -115,7 +109,7 @@ language model -> candidate pool -> verifier selection
 4. 统计表达式中出现的数字，与输入 multiset 精确匹配。
 5. 计算表达式值，判断是否满足 `abs(value - target) <= 1e-6`。
 
-### 4.3 奖励函数
+## 奖励函数
 
 GRPO 训练使用格式奖励和准确率奖励的加权组合：
 
@@ -123,11 +117,13 @@ GRPO 训练使用格式奖励和准确率奖励的加权组合：
 R = w_f R_format + w_a R_accuracy
 ```
 
+![Verifier/reward 构造](figures/verifier_reward.png)
+
 其中 `R_format` 检查 `<think>` 与 `<answer>` 标签是否完整，`R_accuracy` 检查答案是否通过验证器。对于不可解样本，正确拒答获得正向奖励，乱编表达式受到惩罚。
 
-### 4.4 SFT Warm-up
+## SFT Warm-up
 
-直接对基础模型做 GRPO 容易学到格式捷径，例如只输出固定标签或固定数字。为缓解稀疏奖励问题，本项目先使用可验证表达式进行 SFT warm-up，使模型具备：
+直接对基础模型做 GRPO 容易学到格式捷径，例如只输出固定标签或固定数字。为缓解稀疏奖励问题，我们先使用可验证表达式进行 SFT warm-up，使模型具备：
 
 1. 稳定输出 R1 格式的能力；
 2. 生成合法表达式的基本能力；
@@ -135,9 +131,9 @@ R = w_f R_format + w_a R_accuracy
 
 SFT 后再进行 GRPO，强化学习主要用于改善候选表达式质量，而不是从零学习格式。
 
-### 4.5 GRPO 训练
+## GRPO 训练
 
-GRPO 对同一个 prompt 采样一组候选，根据组内相对奖励计算优势。设同组奖励为 `r_1, ..., r_G`，则第 `i` 个候选的优势为：
+GRPO 对同一个 prompt 采样一组候选，根据组内相对奖励计算优势[1]。设同组奖励为 `r_1, ..., r_G`，则第 `i` 个候选的优势为：
 
 ```text
 A_i = (r_i - mean(r)) / (std(r) + epsilon)
@@ -145,7 +141,7 @@ A_i = (r_i - mean(r)) / (std(r) + epsilon)
 
 训练流程如下：
 
-```text
+```python
 for prompt in training_prompts:
     candidates = sample(model, prompt, G)
     rewards = [verifier_reward(c) for c in candidates]
@@ -153,13 +149,13 @@ for prompt in training_prompts:
     update_policy_with_GRPO(candidates, advantages)
 ```
 
-本项目主线使用 `GRPO_SAMPLES=300`、`GRPO_GENERATIONS=8`，并补充低学习率对照以分析训练稳定性。
+本次实验主线使用 `GRPO_SAMPLES=300`、`GRPO_GENERATIONS=8`，并补充低学习率对照以分析训练稳定性。
 
-### 4.6 Best-of-N Verifier 解码
+## Best-of-N Verifier 解码
 
 评估阶段的 best-of-N 不改变模型参数，只增加测试时采样候选数：
 
-```text
+```python
 for problem in test_set:
     candidates = sample(model, problem, N)
     for candidate in candidates:
@@ -170,64 +166,125 @@ for problem in test_set:
     return failed
 ```
 
+![Best-of-N 机制图](figures/bestof_mechanism.png)
+
 该方法将语言模型作为候选生成器，将精确验证交给程序完成。
 
-## 5. 实验设置
+# 实验与结果分析
 
-### 5.1 数据集与评估 Split
+## 实验设置
 
-| Split | 来源 | 用途 | 规模 |
-| --- | --- | --- | ---: |
-| ID | `nlile/24-game` held-out | 分布内可解题评估 | 200 |
-| Official OOD | `test-time-compute/game-of-24` | 官方分布外泛化评估 | 200 |
-| ToT hard 900-1000 | official benchmark indices 900:1000 | Tree of Thoughts 常用难题 | 100 |
-| Unsolvable | `nlile/24-game` 不可解样本 | 幻觉检测 | 100 |
-| Countdown | `Jiayi-Pan/Countdown-Tasks-3to4` | 任意目标数加分项 | 200 |
+### 数据集与评估 Split
+
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\linewidth}{|>{\columncolor{zjutablefirst}}p{2.7cm}|p{3.0cm}|Y|Z|}
+\hline
+\rowcolor{zjutablehead}\textbf{Split} & \textbf{来源} & \textbf{用途} & \textbf{规模} \\
+\hline
+ID & nlile/24-game[11] & 分布内可解题评估 & 200 \\
+\hline
+Official OOD & game-of-24[12] & 官方分布外泛化评估 & 200 \\
+\hline
+ToT hard 900-1000 & game-of-24 indices 900:1000[5,12] & Tree of Thoughts 常用难题 & 100 \\
+\hline
+Unsolvable & nlile/24-game 不可解样本 & 幻觉检测 & 100 \\
+\hline
+Countdown & Countdown-Tasks-3to4[13] & 任意目标数加分项 & 200 \\
+\hline
+\end{tabularx}
+\end{table}
 
 Official OOD 和 ToT hard 来自同一个 official game-of-24 benchmark。ToT hard 是其中 indices 900-1000 的 100 道困难题，平均官方 solved rate 更低、平均 rank 更高。
 
-### 5.2 训练配置
+### 训练配置
 
-| 项目 | 设置 |
-| --- | --- |
-| Backbone | `Qwen2.5-1.5B-Instruct` |
-| 参数高效微调 | LoRA |
-| 主线流程 | base eval -> SFT warm-up -> GRPO continuation |
-| SFT 学习率 | `8e-5` |
-| GRPO 主线学习率 | `8e-7` |
-| GRPO prompt 数 | 300 |
-| GRPO num generations | 8 |
-| 解码方式 | greedy, best-of-1/4/8/16 |
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{0.92\linewidth}{|>{\columncolor{zjutablefirst}}p{3.2cm}|Y|}
+\hline
+\rowcolor{zjutablehead}\textbf{项目} & \textbf{设置} \\
+\hline
+Backbone & \texttt{Qwen2.5-1.5B-Instruct}[3-4] \\
+\hline
+参数高效微调 & LoRA[8] \\
+\hline
+主线流程 & base eval $\rightarrow$ SFT warm-up $\rightarrow$ GRPO continuation \\
+\hline
+SFT 学习率 & \texttt{8e-5} \\
+\hline
+GRPO 主线学习率 & \texttt{8e-7} \\
+\hline
+GRPO prompt 数 & 300 \\
+\hline
+GRPO num generations & 8 \\
+\hline
+解码方式 & greedy, best-of-1/4/8/16 \\
+\hline
+\end{tabularx}
+\end{table}
 
-### 5.3 评价指标
+训练实现使用 Hugging Face TRL 的 GRPOTrainer，并参考 Open-R1 的开放 SFT/GRPO 工作流[9-10]。
 
-| 指标 | 含义 |
-| --- | --- |
-| Solve rate | 表达式合法、数字使用正确且结果等于 target 的比例 |
-| Format rate | 输出是否满足 `<think>...</think><answer>...</answer>` |
-| Hallucination rate | 不可解样本上仍输出错误表达式的比例 |
-| Error counts | `format_error`、`number_mismatch`、`wrong_value`、`invalid_expression` 等错误计数 |
-| Difficulty | official benchmark 的 `solved_rate` 与 `rank` 聚合 |
+### 评价指标
 
-## 6. 实验结果与分析
+\begin{table}[H]
+\centering
+\small
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{|>{\columncolor{zjutablefirst}}p{3.5cm}|Y|}
+\hline
+\rowcolor{zjutablehead}\textbf{指标} & \textbf{含义} \\
+\hline
+Solve rate & 表达式合法、数字使用正确且结果等于 target 的比例 \\
+\hline
+Format rate & 输出是否满足 \texttt{<think>...</think><answer>...</answer>} \\
+\hline
+Hallucination rate & 不可解样本上仍输出错误表达式的比例 \\
+\hline
+Error counts & \texttt{format\_error}、\texttt{number\_mismatch}、\texttt{wrong\_value}、\texttt{invalid\_expression} 等错误计数 \\
+\hline
+Difficulty & official benchmark 的 \texttt{solved\_rate} 与 \texttt{rank} 聚合 \\
+\hline
+\end{tabularx}
+\end{table}
 
-### 6.1 主结果：Base vs SFT vs SFT+GRPO
+## 主结果：Base vs SFT vs SFT+GRPO
 
-| 模型阶段 | 解码 | ID | Official OOD | ToT hard | 不可解幻觉 | Format |
-| --- | --- | ---: | ---: | ---: | ---: | ---: |
-| Base | greedy | 0.0% | 2.0% | 1.0% | 100.0% | 49.0% |
-| Base | best-of-8 | 1.5% | 3.0% | 1.0% | 80.0% | 42.5% |
-| SFT | greedy | 4.0% | 11.0% | 10.0% | 4.0% | 100.0% |
-| SFT | best-of-8 | 22.0% | 31.0% | 13.0% | 0.0% | 100.0% |
-| SFT+GRPO | greedy | 7.5% | 14.5% | 12.0% | 34.0% | 100.0% |
-| SFT+GRPO | best-of-8 | 27.5% | 43.5% | 32.0% | 1.0% | 100.0% |
-| SFT+GRPO | best-of-16 | **44.0%** | **65.5%** | **49.0%** | **0.0%** | 100.0% |
+\begin{table}[H]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{1.18}
+\begin{tabularx}{\linewidth}{|>{\columncolor{zjutablefirst}}p{2.0cm}|p{1.55cm}|Z|Z|Z|Z|Z|}
+\hline
+\rowcolor{zjutablehead}\textbf{模型阶段} & \textbf{解码} & \textbf{ID} & \textbf{Official OOD} & \textbf{ToT hard} & \textbf{不可解幻觉} & \textbf{Format} \\
+\hline
+Base & greedy & 0.0\% & 2.0\% & 1.0\% & 100.0\% & 49.0\% \\
+\hline
+Base & best-of-8 & 1.5\% & 3.0\% & 1.0\% & 80.0\% & 42.5\% \\
+\hline
+SFT & greedy & 4.0\% & 11.0\% & 10.0\% & 4.0\% & 100.0\% \\
+\hline
+SFT & best-of-8 & 22.0\% & 31.0\% & 13.0\% & 0.0\% & 100.0\% \\
+\hline
+SFT+GRPO & greedy & 7.5\% & 14.5\% & 12.0\% & 34.0\% & 100.0\% \\
+\hline
+SFT+GRPO & best-of-8 & 27.5\% & 43.5\% & 32.0\% & 1.0\% & 100.0\% \\
+\hline
+SFT+GRPO & best-of-16 & \textbf{44.0\%} & \textbf{65.5\%} & \textbf{49.0\%} & \textbf{0.0\%} & 100.0\% \\
+\hline
+\end{tabularx}
+\end{table}
 
 ![主结果柱状图](figures/main_results.png)
 
-基础模型几乎无法稳定完成任务，且不可解样本幻觉率达到 100%。SFT 后 format rate 达到 100%，不可解幻觉显著下降，说明 warm-up 解决了格式和拒答基础能力。GRPO 在 greedy 下提升有限，但在 best-of-N 下显著提升 OOD 和 hard split，说明它主要改善候选池质量。
+基础模型几乎无法稳定完成任务，且不可解样本幻觉率达到 100%。SFT 后 format rate 达到 100%，不可解幻觉显著下降，说明 warm-up 解决了格式和拒答基础能力。图中分别在 greedy 与 best-of-8 两种一致解码设置下比较三个训练阶段：GRPO 在 greedy 下提升有限，但在 best-of-8 下显著提升 OOD 和 hard split，说明它主要改善候选池质量。
 
-### 6.2 Verifier-based Test-time Compute
+## Verifier-based Test-time Compute
 
 | 解码 | ID | Official OOD | ToT hard | 不可解幻觉 |
 | --- | ---: | ---: | ---: | ---: |
@@ -239,15 +296,19 @@ Official OOD 和 ToT hard 来自同一个 official game-of-24 benchmark。ToT ha
 
 ![Best-of-N 曲线](figures/best_of_sweep.png)
 
-best-of-N 是本项目最明显的增益来源。对 `SFT+GRPO`，Official OOD 从 best-of-1 的 10.5% 提升到 best-of-16 的 65.5%，ToT hard 从 2.0% 提升到 49.0%。这说明模型单次输出仍不稳定，但候选池中已经包含大量可由 verifier 筛出的正确表达式。
+![Best-of-N 定性案例](figures/case_study_bestof.png)
 
-### 6.3 不可解样本 Hallucination 分析
+以输入 `[2,3,6,10]` 为例，greedy 和 best-of-8 记录的候选均因 `wrong_value` 未通过验证，而 best-of-16 生成了合法表达式 `(10-3*2)*6=24`。该案例直观说明：增加候选预算并不改变模型参数，而是提高正确表达式进入候选池的概率，再由符号验证器完成可靠筛选。
+
+best-of-N 是我们本次实验最明显的增益来源。对 `SFT+GRPO`，Official OOD 从 best-of-1 的 10.5% 提升到 best-of-16 的 65.5%，ToT hard 从 2.0% 提升到 49.0%。这说明模型单次输出仍不稳定，但候选池中已经包含大量可由 verifier 筛出的正确表达式。
+
+## 不可解样本 Hallucination 分析
 
 ![不可解幻觉率](figures/hallucination.png)
 
 不可解样本用于检查模型是否会强行编造答案。Base 在 best-of-1 到 best-of-16 下幻觉率仍高达 96.0% 到 64.0%。SFT 显著改善拒答能力，best-of-8 后幻觉率降为 0.0%。`SFT+GRPO` 的 greedy 幻觉率升至 34.0%，说明 RL 更新会扰动拒答行为；但 verifier best-of-16 最终将幻觉率降到 0.0%。
 
-### 6.4 GRPO 训练稳定性与超参对照
+## GRPO 训练稳定性与超参对照
 
 | GRPO 配置 | Greedy OOD | Greedy hard | Greedy 幻觉 | Best-of-8 OOD | Best-of-8 hard | Best-of-8 幻觉 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -259,7 +320,7 @@ best-of-N 是本项目最明显的增益来源。对 `SFT+GRPO`，Official OOD �
 
 低学习率能缓解 greedy 下的不可解幻觉，其中 `3e-7/s300` 将 greedy 幻觉率从 34.0% 降至 17.0%。但主线 `8e-7/s300/g8` 在 best-of-8 的 OOD 与 ToT hard 上仍最强。因此最终采用主线配置作为主要结果，并将低学习率实验作为训练稳定性分析。
 
-### 6.5 训练曲线
+## 训练曲线
 
 ![SFT loss](figures/sft_loss.png)
 
@@ -269,7 +330,7 @@ best-of-N 是本项目最明显的增益来源。对 `SFT+GRPO`，Official OOD �
 
 SFT loss 持续下降，说明 warm-up 阶段稳定学习了输出格式和表达式模式。GRPO 的 reward 与 solved per group 存在波动，符合强化学习训练不稳定的预期。主线 GRPO 最后 50 step 的平均 reward 为 0.0412，平均 solved per group 为 0.66，说明训练后期候选池中正确表达式比例有所增加。
 
-### 6.6 错误类型分析
+## 错误类型分析
 
 以最终 `SFT+GRPO + best-of-16` 为例，主要错误如下：
 
@@ -280,18 +341,22 @@ SFT loss 持续下降，说明 warm-up 阶段稳定学习了输出格式和表�
 | ToT hard | `wrong_value=38`, `refusal_or_no_answer=12`, `invalid_expression=1` |
 | Unsolvable | `refused=100` |
 
-SFT 后格式错误基本消失，剩余错误主要是 `wrong_value`，即表达式合法但计算结果不等于目标值。这说明瓶颈已经从“格式学习”转向“算术搜索与组合推理”。在不可解 split 上，最终配置 100 个样本全部拒答，说明 verifier-based selection 能有效抑制幻觉。
+![错误类型堆叠图](figures/error_breakdown.png)
 
-### 6.7 Hard Split 难度分析
+SFT 后格式错误基本消失，最终配置的失败样本主要由 `wrong_value` 与 `refusal_or_no_answer` 构成，其中 ToT hard 的失败样本中约 75% 为 `wrong_value`。这说明瓶颈已经从“格式学习”转向“算术搜索与组合推理”。在不可解 split 上，最终配置 100 个样本全部拒答，说明 verifier-based selection 能有效抑制幻觉。
+
+## Hard Split 难度分析
 
 | Split | 样本数 | 官方平均 solved rate | 平均 rank | SFT+GRPO best-of-16 |
 | --- | ---: | ---: | ---: | ---: |
 | Official OOD | 200 | 96.98% | 100.5 | 65.5% |
 | ToT hard 900-1000 | 100 | 85.88% | 950.5 | 49.0% |
 
+![Hard split 难度分析](figures/difficulty_analysis.png)
+
 ToT hard 来自 official benchmark 的 indices 900-1000，平均 rank 明显更高，官方 solved rate 更低，因此比普通 OOD 更困难。模型在 hard split 上仍达到 49.0%，说明 verifier best-of-N 不只提升简单题，也能提升困难组合题表现。
 
-### 6.8 Countdown 加分项
+## Countdown 加分项
 
 Countdown 任务将输入扩展为 3-4 个数字和任意 target，用于验证 target-aware 框架是否可迁移。
 
@@ -306,7 +371,9 @@ Countdown 任务将输入扩展为 3-4 个数字和任意 target，用于验证 
 
 Countdown 结果证明同一套 prompt、target-aware verifier 和 reward 可以迁移到任意目标数构造任务。best-of-8 相比 greedy 提升明显，但小规模 Countdown GRPO 未超过 SFT best-of-8，因此该部分更适合作为框架迁移验证，而不是声称 GRPO 在 Countdown 上带来显著增益。
 
-## 7. 局限性
+# 结论
+
+## 局限性
 
 1. **Greedy 成功率仍低。** 最终模型 greedy OOD 只有 14.5%，说明模型尚未稳定内化完整算术搜索策略。
 2. **Best-of-N 带来额外推理成本。** best-of-16 显著提升性能，但每题需要采样更多候选。
@@ -314,39 +381,71 @@ Countdown 结果证明同一套 prompt、target-aware verifier 和 reward 可以
 4. **Countdown GRPO 增益有限。** Countdown 上 SFT best-of-8 为 42.0%，SFT+GRPO best-of-8 为 40.5%，说明任意目标任务仍需要更充分训练。
 5. **训练规模较小。** 主线 GRPO 只使用 300 prompts，结果更适合作为小规模 RLVR 验证，而非性能上限。
 
-## 8. 结论
+## 总结
 
-本项目完成了基于 `Qwen2.5-1.5B-Instruct` 的 24 点游戏 RLVR 实验。SFT warm-up 解决了基础模型格式不稳和不可解幻觉问题，GRPO 进一步提升了候选池质量，而 verifier-based best-of-N 将 OOD 和 hard split 表现显著放大。最终 `SFT+GRPO + best-of-16` 在 Official OOD 上达到 65.5%，在 ToT hard 上达到 49.0%，不可解幻觉率为 0.0%。
+本次实验我们完成了基于 `Qwen2.5-1.5B-Instruct` 的 24 点游戏 RLVR 实验。SFT warm-up 解决了基础模型格式不稳和不可解幻觉问题，GRPO 进一步提升了候选池质量，而 verifier-based best-of-N 将 OOD 和 hard split 表现显著放大。最终 `SFT+GRPO + best-of-16` 在 Official OOD 上达到 65.5%，在 ToT hard 上达到 49.0%，不可解幻觉率为 0.0%。
 
 从建模角度看，项目不只是复现 GRPO，而是围绕 24 点任务补充了 target-aware 扩展、不可解幻觉评估、test-time verifier selection、错误类型诊断和 hard split 难度分析。这些设计使实验结果更可解释，也更适合作为 RLVR 在小规模可验证推理任务上的完整案例。
 
-## 9. 附录：复现命令与结果路径
+# 参考文献
 
-### 9.1 主线实验
+\small
+\sloppy
+
+1. Shao Z, Wang P, Zhu Q, et al. DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models[EB/OL]. arXiv:2402.03300, 2024. <https://arxiv.org/abs/2402.03300>.
+2. DeepSeek-AI, Guo D, Yang D, et al. DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning[EB/OL]. arXiv:2501.12948, 2025. <https://arxiv.org/abs/2501.12948>.
+3. Yang A, Yang B, Zhang B, et al. Qwen2.5 Technical Report[EB/OL]. arXiv:2412.15115, 2024. <https://arxiv.org/abs/2412.15115>.
+4. Qwen Team. Qwen2.5-1.5B-Instruct Model Card[EB/OL]. Hugging Face, 2024. <https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct>.
+5. Yao S, Yu D, Zhao J, et al. Tree of Thoughts: Deliberate Problem Solving with Large Language Models[C]//Advances in Neural Information Processing Systems. 2023. <https://arxiv.org/abs/2305.10601>.
+6. Pan J, et al. TinyZero: Minimal Reproduction of DeepSeek R1-Zero[EB/OL]. GitHub, 2025. <https://github.com/Jiayi-Pan/TinyZero>.
+7. Xie T, Gao Z, Ren Q, et al. Logic-RL: Unleashing LLM Reasoning with Rule-Based Reinforcement Learning[EB/OL]. arXiv:2502.14768, 2025. <https://arxiv.org/abs/2502.14768>.
+8. Hu E J, Shen Y, Wallis P, et al. LoRA: Low-Rank Adaptation of Large Language Models[C]//International Conference on Learning Representations. 2022. <https://arxiv.org/abs/2106.09685>.
+9. Hugging Face. TRL GRPO Trainer Documentation[EB/OL]. <https://huggingface.co/docs/trl/en/grpo_trainer>.
+10. Hugging Face. Open-R1: A Fully Open Reproduction of DeepSeek-R1[EB/OL]. GitHub, 2025. <https://github.com/huggingface/open-r1>.
+11. nlile. 24-game Dataset[DB/OL]. Hugging Face. <https://huggingface.co/datasets/nlile/24-game>.
+12. test-time-compute. Game-of-24 Dataset[DB/OL]. Hugging Face. <https://huggingface.co/datasets/test-time-compute/game-of-24>.
+13. Pan J. Countdown-Tasks-3to4 Dataset[DB/OL]. Hugging Face. <https://huggingface.co/datasets/Jiayi-Pan/Countdown-Tasks-3to4>.
+
+\normalsize
+\fussy
+
+# 附录：复现命令与结果路径
+
+## 主线实验
 
 ```bash
 export PYTHONPATH=$PWD
 export QWEN_15B=/path/to/Qwen2.5-1.5B-Instruct
 
-N_EVAL=200 N_HARD=100 BEST_OF=8 GRPO_SAMPLES=300 GRPO_GENERATIONS=8 \
-  bash scripts/run_15b_mainline.sh "$QWEN_15B" 0
+export N_EVAL=200
+export N_HARD=100
+export BEST_OF=8
+export GRPO_SAMPLES=300
+export GRPO_GENERATIONS=8
+bash scripts/run_15b_mainline.sh "$QWEN_15B" 0
 ```
 
-### 9.2 Best-of-N Sweep
+## Best-of-N Sweep
 
 ```bash
-N_EVAL=200 N_HARD=100 BEST_OF_LIST="1 4 8 16" \
-  bash scripts/run_ttc_sweep.sh "$QWEN_15B" 0
+export N_EVAL=200
+export N_HARD=100
+export BEST_OF_LIST="1 4 8 16"
+bash scripts/run_ttc_sweep.sh "$QWEN_15B" 0
 ```
 
-### 9.3 Countdown 加分项
+## Countdown 加分项
 
 ```bash
-COUNTDOWN_TRAIN=3000 COUNTDOWN_EVAL=200 BEST_OF=8 GRPO_SAMPLES=300 GRPO_GENERATIONS=8 \
-  bash scripts/run_countdown_bonus.sh "$QWEN_15B" 0
+export COUNTDOWN_TRAIN=3000
+export COUNTDOWN_EVAL=200
+export BEST_OF=8
+export GRPO_SAMPLES=300
+export GRPO_GENERATIONS=8
+bash scripts/run_countdown_bonus.sh "$QWEN_15B" 0
 ```
 
-### 9.4 关键结果路径
+## 关键结果路径
 
 | 内容 | 路径 |
 | --- | --- |

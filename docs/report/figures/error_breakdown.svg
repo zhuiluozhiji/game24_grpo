@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>
+text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #111827; }
+.title { font-size: 24px; font-weight: 700; }
+.axis { font-size: 13px; fill: #6b7280; }
+.label { font-size: 13px; }
+.small { font-size: 12px; fill: #6b7280; }
+.value { font-size: 12px; font-weight: 600; }
+</style>
+<text class="title" x="490.0" y="38" text-anchor="middle">Error Breakdown among Failed Cases: SFT+GRPO Best-of-16</text>
+<line x1="84" y1="480.0" x2="934" y2="480.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="484.0" text-anchor="end">0%</text>
+<line x1="84" y1="400.0" x2="934" y2="400.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="404.0" text-anchor="end">20%</text>
+<line x1="84" y1="320.0" x2="934" y2="320.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="324.0" text-anchor="end">40%</text>
+<line x1="84" y1="240.0" x2="934" y2="240.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="244.0" text-anchor="end">60%</text>
+<line x1="84" y1="160.0" x2="934" y2="160.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="164.0" text-anchor="end">80%</text>
+<line x1="84" y1="80.0" x2="934" y2="80.0" stroke="#e5e7eb" stroke-width="1"/>
+<text class="axis" x="70" y="84.0" text-anchor="end">100%</text>
+<line x1="84" y1="80" x2="84" y2="480" stroke="#9ca3af"/>
+<line x1="84" y1="480" x2="934" y2="480" stroke="#9ca3af"/>
+<text class="axis" x="225.7" y="514" text-anchor="middle">ID</text>
+<text class="small" x="225.7" y="534" text-anchor="middle">errors=112</text>
+<rect x="181.7" y="215.7" width="88" height="264.3" fill="#dc2626"/>
+<text class="value" x="225.7" y="351.9" text-anchor="middle" fill="#ffffff">66%</text>
+<rect x="181.7" y="80.0" width="88" height="135.7" fill="#2563eb"/>
+<text class="value" x="225.7" y="151.9" text-anchor="middle" fill="#ffffff">34%</text>
+<text class="value" x="225.7" y="72.0" text-anchor="middle">solved=88</text>
+<text class="axis" x="509.0" y="514" text-anchor="middle">Official OOD</text>
+<text class="small" x="509.0" y="534" text-anchor="middle">errors=69</text>
+<rect x="465.0" y="259.7" width="88" height="220.3" fill="#dc2626"/>
+<text class="value" x="509.0" y="373.9" text-anchor="middle" fill="#ffffff">55%</text>
+<rect x="465.0" y="80.0" width="88" height="179.7" fill="#2563eb"/>
+<text class="value" x="509.0" y="173.9" text-anchor="middle" fill="#ffffff">45%</text>
+<text class="value" x="509.0" y="72.0" text-anchor="middle">solved=131</text>
+<text class="axis" x="792.3" y="514" text-anchor="middle">ToT hard</text>
+<text class="small" x="792.3" y="534" text-anchor="middle">errors=51</text>
+<rect x="748.3" y="182.0" width="88" height="298.0" fill="#dc2626"/>
+<text class="value" x="792.3" y="335.0" text-anchor="middle" fill="#ffffff">75%</text>
+<rect x="748.3" y="87.8" width="88" height="94.1" fill="#2563eb"/>
+<text class="value" x="792.3" y="138.9" text-anchor="middle" fill="#ffffff">24%</text>
+<rect x="748.3" y="80.0" width="88" height="7.8" fill="#ea580c"/>
+<text class="value" x="792.3" y="72.0" text-anchor="middle">solved=49</text>
+<rect x="94" y="512" width="14" height="14" fill="#dc2626" rx="2"/>
+<text class="small" x="114" y="524">wrong_value</text>
+<rect x="266" y="512" width="14" height="14" fill="#2563eb" rx="2"/>
+<text class="small" x="286" y="524">refusal_or_no_answer</text>
+<rect x="438" y="512" width="14" height="14" fill="#ea580c" rx="2"/>
+<text class="small" x="458" y="524">invalid_expression</text>
+<rect x="610" y="512" width="14" height="14" fill="#7c3aed" rx="2"/>
+<text class="small" x="630" y="524">number_mismatch</text>
+<rect x="782" y="512" width="14" height="14" fill="#64748b" rx="2"/>
+<text class="small" x="802" y="524">format_error</text>
+</svg>
